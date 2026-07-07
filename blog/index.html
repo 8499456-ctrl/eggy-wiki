@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Eggy Wiki</title>
+<meta name="description" content="Eggy Party blog — latest news, tips, and guides.">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--pink:#FF6B9D;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--pink);text-decoration:none}a:hover{color:#E85382}
+header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
+.page-header{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,rgba(255,240,245,0.9),rgba(255,248,225,0.9))}
+.page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}.page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
+.container{max-width:800px;margin:0 auto;padding:0 24px}section{padding:36px 0}
+.blog-card{background:var(--bg-card);border-radius:24px;padding:20px 24px;margin-bottom:16px;box-shadow:var(--shadow);display:block;color:var(--text)!important;transition:all .3s cubic-bezier(.34,1.56,.64,1);transform:perspective(800px) rotateX(0deg)}
+.blog-card:hover{transform:perspective(800px) rotateX(1deg) translateY(-3px);box-shadow:0 8px 32px rgba(255,107,157,0.12)}
+.blog-card h2{font-size:18px;color:var(--pink);margin-bottom:4px}
+.blog-card .meta{font-size:12px;color:#bbb;margin-bottom:6px}
+.blog-card p{font-size:14px;color:var(--text-dim)}
+.tag{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;background:var(--blue);color:#fff;margin-right:6px}
+footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
+footer .container{max-width:1100px;margin:0 auto}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+.footer-bottom{font-size:13px;opacity:0.7}
+@media(max-width:640px){.page-header h1{font-size:24px}.header-inner{flex-direction:column;gap:10px}nav{justify-content:center}}
+</style>
+</head>
+<body>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="../index.html">Home</a><a href="../characters.html">Characters</a><a href="../maps.html">Maps</a><a href="../outfits.html">Outfits</a><a href="../beginner.html">Guide</a><a href="../codes.html">Codes</a><a href="index.html">Blog</a><a href="../forum.html">Forum</a></nav></div></header>
+<div class="page-header"><h1>📝 Blog</h1><p>Latest Eggy Party news, tips, and updates.</p></div>
+<section class="container">
+  <a href="new-season-4-preview.html" class="blog-card"><span class="tag">News</span><h2>Season 4 Preview: What's Coming</h2><div class="meta">July 6, 2026</div><p>New maps, outfits, and game modes coming in Season 4. Here's everything we know so far.</p></a>
+  <a href="#" class="blog-card"><span class="tag">Guide</span><h2>How to Win at Survival Mode</h2><div class="meta">July 5, 2026</div><p>Pro tips for surviving longer and being the last egg standing.</p></a>
+  <a href="#" class="blog-card"><span class="tag">Codes</span><h2>July 2026 Code List</h2><div class="meta">July 1, 2026</div><p>All active codes for July 2026 — updated weekly.</p></a>
+</section>
+<footer><div class="container"><div class="footer-links"><a href="../index.html">Home</a><a href="index.html">Blog</a><a href="../forum.html">Forum</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
+</body>
+</html>
