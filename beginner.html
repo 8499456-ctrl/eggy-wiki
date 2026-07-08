@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beginner's Guide — Eggy Wiki</title>
-  <meta name="description" content="New to Eggy Party? Start here — beginner tips, controls, game modes, and first steps.">
+  <meta name="description" content="New to Eggy Party? Start here — complete beginner's guide covering controls, game modes, tips, and first-week goals.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--pink:#FF6B9D;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--text-muted:#bbb;--shadow:0 4px 24px rgba(255,107,157,0.08)}
     html{scroll-behavior:smooth}
     body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
-    a{color:var(--pink);text-decoration:none}a:hover{color:#E85382}
+    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
     header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
     .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
     .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
@@ -21,15 +21,21 @@
     .page-header{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,rgba(255,240,245,0.9),rgba(255,248,225,0.9))}
     .page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}.page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
     .container{max-width:800px;margin:0 auto;padding:0 24px}
-    section{padding:32px 0}
+    section{padding:28px 0}
+    .toc{background:var(--bg-card);border-radius:24px;padding:20px 24px;margin-bottom:24px;box-shadow:var(--shadow)}
+    .toc h3{font-size:16px;color:var(--pink);margin-bottom:8px}.toc ul{list-style:none}.toc ul li{margin-bottom:4px;font-size:14px}
+    .toc ul li a{color:var(--text-dim)}.toc ul li a:hover{color:var(--pink)}
     .guide-card{background:var(--bg-card);border-radius:24px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px;transition:all .2s}
     .guide-card:hover{box-shadow:0 8px 32px rgba(255,107,157,0.12)}
-    .guide-card h2{font-size:18px;color:var(--pink);margin-bottom:8px}
-    .guide-card h2 .num{display:inline-block;width:28px;height:28px;background:var(--pink);color:#fff;text-align:center;line-height:28px;border-radius:50%;font-size:14px;margin-right:8px}
-    .guide-card p{font-size:14px;color:var(--text-dim);margin-bottom:6px}
-    .guide-card ul{padding-left:20px;margin:8px 0;list-style-type:none}
-    .guide-card ul li{font-size:14px;color:var(--text-dim);margin-bottom:4px;position:relative;padding-left:16px}
+    .guide-card h2{font-size:20px;color:var(--pink);margin-bottom:10px}
+    .guide-card h2 .num{display:inline-block;width:32px;height:32px;background:var(--pink);color:#fff;text-align:center;line-height:32px;border-radius:50%;font-size:16px;margin-right:10px}
+    .guide-card h3{font-size:16px;color:var(--text);margin:14px 0 6px}
+    .guide-card p{font-size:14px;color:var(--text-dim);margin-bottom:8px}
+    .guide-card ul{padding-left:20px;margin:8px 0;list-style:none}
+    .guide-card ul li{font-size:14px;color:var(--text-dim);margin-bottom:6px;padding-left:18px;position:relative}
     .guide-card ul li::before{content:'🥚';position:absolute;left:-4px;font-size:12px}
+    .highlight-green{background:rgba(76,175,80,0.06);border-left:3px solid #4CAF50;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text-dim)}
+    .highlight-pink{background:rgba(255,107,157,0.06);border-left:3px solid var(--pink);border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text-dim)}
     footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
     footer .container{max-width:1100px;margin:0 auto}
     .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
@@ -39,14 +45,129 @@
 </head>
 <body>
 <header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a></nav></div></header>
-<div class="page-header"><h1>🎮 Beginner's Guide</h1><p>New to Eggy Party? Here's everything you need to know to get started!</p></div>
+<div class="page-header"><h1>🎮 Beginner's Guide</h1><p>New to Eggy Party? This comprehensive guide covers everything from download to your first win.</p></div>
+
 <section class="container">
-  <div class="guide-card"><h2><span class="num">1</span>Download & Install</h2><p>Eggy Party is available on iOS, Android, and PC. Search "Eggy Party" in your app store or visit the official website to download. It's free to play!</p></div>
-  <div class="guide-card"><h2><span class="num">2</span>Game Modes</h2><p>There are three main game modes:</p><ul><li><strong>Race Mode</strong> — 8 players race to the finish line. Obstacles and shortcuts everywhere!</li><li><strong>Survival Mode</strong> — Last egg standing wins. Platforms disappear, hazards appear.</li><li><strong>Team Mode</strong> — 4v4 matches with objectives like capture the flag.</li></ul></div>
-  <div class="guide-card"><h2><span class="num">3</span>Basic Controls</h2><p>Swipe to move, tap to jump. Double-tap for a double jump. Hold and swipe to dash. Master these basics before trying advanced techniques!</p></div>
-  <div class="guide-card"><h2><span class="num">4</span>Tips for Beginners</h2><ul><li>Complete daily missions for free rewards</li><li>Save gems for limited-time outfits</li><li>Practice race maps in casual mode first</li><li>Watch the minimap — it shows hazards before they appear</li><li>Join a club to earn team bonuses</li></ul></div>
-  <div class="guide-card"><h2><span class="num">5</span>First Week Goals</h2><p>Day 1-3: Complete tutorial, play 10 races. Day 4-5: Try survival mode, unlock your first outfit. Day 6-7: Join a club, play ranked mode. By week 2, you'll be competing with the best!</p></div>
+  <div class="toc">
+    <h3>📋 Table of Contents</h3>
+    <ul>
+      <li><a href="#download">1. Download & Installation</a></li>
+      <li><a href="#modes">2. Game Modes Explained</a></li>
+      <li><a href="#controls">3. Controls & Mechanics</a></li>
+      <li><a href="#characters">4. Choosing Your Character</a></li>
+      <li><a href="#currencies">5. Currencies & Items</a></li>
+      <li><a href="#tips">6. Tips for Beginners</a></li>
+      <li><a href="#goals">7. First Week Goals</a></li>
+    </ul>
+  </div>
+
+  <div class="guide-card" id="download">
+    <h2><span class="num">1</span>Download & Installation</h2>
+    <p>Eggy Party is a free-to-play mobile and PC game developed by NetEase. It's available on all major platforms:</p>
+    <ul>
+      <li><strong>iOS</strong> — Search "Eggy Party" on the App Store. ~1.2 GB download.</li>
+      <li><strong>Android</strong> — Available on Google Play and the official NetEase website. ~900 MB.</li>
+      <li><strong>PC</strong> — Download from the official Eggy Party website. ~2 GB.</li>
+    </ul>
+    <div class="highlight-green"><strong>💡 Tip:</strong> Download over Wi-Fi — the initial download is large but subsequent updates are much smaller.</div>
+    <p>The game supports cross-platform play, so you can play with friends regardless of device.</p>
+  </div>
+
+  <div class="guide-card" id="modes">
+    <h2><span class="num">2</span>Game Modes Explained</h2>
+    <p>Eggy Party has three permanent game modes plus a rotating event mode:</p>
+    <h3>🏁 Race Mode (8 Players)</h3>
+    <p>The most popular mode. 8 players race through obstacle-filled tracks to reach the finish line. First three to finish get ranked rewards. Key mechanics include jumping over gaps, dodging obstacles, and using shortcuts.</p>
+    <h3>🛡️ Survival Mode (8 Players)</h3>
+    <p>Last egg standing wins. Platforms shrink, disappear, or become hazardous over time. Players can knock each other off platforms. Each match lasts 2-4 minutes.</p>
+    <h3>👥 Team Mode (4v4)</h3>
+    <p>Two teams of four compete in objective-based matches. Modes include Capture the Flag, King of the Hill, and Egg Collection. Communication is key — use the in-game quick chat!</p>
+    <h3>🎪 Event Mode (Limited Time)</h3>
+    <p>Rotating special modes that change every 1-2 weeks. Past events include Egg Frenzy (16-player free-for-all), Zombie Mode, and Gravity Shift.</p>
+  </div>
+
+  <div class="guide-card" id="controls">
+    <h2><span class="num">3</span>Controls & Mechanics</h2>
+    <p>Master these controls to gain an edge over other players:</p>
+    <ul>
+      <li><strong>Move</strong> — Swipe/drag to move your egg in any direction</li>
+      <li><strong>Jump</strong> — Tap to jump. Jump again mid-air for a double jump</li>
+      <li><strong>Dash</strong> — Swipe quickly in a direction to dash (has cooldown)</li>
+      <li><strong>Grab</strong> — Tap the grab button near another player to push or hold them</li>
+      <li><strong>Item Use</strong> — Tap item button when you have a power-up</li>
+    </ul>
+    <h3>Advanced Techniques</h3>
+    <ul>
+      <li><strong>Short Hop</strong> — Quick tap to barely leave the ground. Useful for platform edges.</li>
+      <li><strong>Dash + Jump</strong> — Dash off a platform edge then jump for extended distance.</li>
+      <li><strong>Edge Grab</strong> — If you fall off a platform, you can grab the edge and pull yourself back up if you're close enough.</li>
+    </ul>
+    <div class="highlight-pink"><strong>⚡ Pro tip:</strong> Reduce input lag with a game accelerator. High ping makes advanced techniques nearly impossible. Check our <a href="free-accelerator.html">free accelerator page</a>.</div>
+  </div>
+
+  <div class="guide-card" id="characters">
+    <h2><span class="num">4</span>Choosing Your Character</h2>
+    <p>Your character choice matters! Each egg has unique stats and abilities:</p>
+    <ul>
+      <li><strong>🥚 Classic Egg</strong> — All-rounder. Great for learning the game. Balanced speed and jump.</li>
+      <li><strong>🐰 Bunny Egg</strong> — Higher jump. Ideal for race maps with lots of vertical sections.</li>
+      <li><strong>🦊 Fox Egg</strong> — Faster dash cooldown. Best for advanced players who use dash frequently.</li>
+      <li><strong>🐱 Cat Egg</strong> — Soft landing + faster recovery. #1 recommended for Survival mode.</li>
+      <li><strong>🐼 Panda Egg</strong> — Harder to knock over. Good for Team mode as a defender.</li>
+      <li><strong>🐧 Penguin Egg</strong> — Faster on ice. Situational but dominates ice maps.</li>
+    </ul>
+    <p>Visit our <a href="characters.html">full characters page</a> for detailed stats, unlock conditions, and tier rankings.</p>
+  </div>
+
+  <div class="guide-card" id="currencies">
+    <h2><span class="num">5</span>Currencies & Items</h2>
+    <p>Eggy Party has several currencies. Here's what you need to know:</p>
+    <ul>
+      <li><strong>💎 Gems</strong> — Premium currency. Earned through gameplay, events, and codes. Used for outfits, crates, and battle pass.</li>
+      <li><strong>🪙 Coins</strong> — Free currency. Earned from matches and daily missions. Used for basic items.</li>
+      <li><strong>🎫 Tickets</strong> — Required to enter ranked matches. You get 5 free per day + more from missions.</li>
+      <li><strong>📦 Crates</strong> — Random rewards. Open for a chance at outfits, gems, or coins.</li>
+    </ul>
+    <div class="highlight-green"><strong>💡 Tip:</strong> Save your gems for limited-time outfits. Don't spend them on crates — the drop rates are low. Use our <a href="codes.html">codes page</a> for free gems!</div>
+  </div>
+
+  <div class="guide-card" id="tips">
+    <h2><span class="num">6</span>Tips for Beginners</h2>
+    <h3>🏁 Race Mode Tips</h3>
+    <ul>
+      <li>Learn the shortcuts on each map — they can shave 3-5 seconds off your time</li>
+      <li>Don't always take the shortest path — sometimes the safer route is faster if you avoid mistakes</li>
+      <li>Use double jump conservatively — save it for crossing wide gaps</li>
+      <li>Watch the starting countdown — a good start puts you ahead of half the players immediately</li>
+    </ul>
+    <h3>🛡️ Survival Mode Tips</h3>
+    <ul>
+      <li>Stay on the edges during the first 30 seconds — the center is a war zone</li>
+      <li>Let other players fight — avoid confrontation until the late game</li>
+      <li>Always have an escape route planned</li>
+      <li>Save shield power-ups for the final moments</li>
+    </ul>
+    <h3>👥 Team Mode Tips</h3>
+    <ul>
+      <li>Stick with your team — solo players get picked off easily</li>
+      <li>Use quick chat to communicate (tap the speech bubble icon)</li>
+      <li>Designate roles: 1-2 attackers, 1 defender, 1 flex</li>
+    </ul>
+  </div>
+
+  <div class="guide-card" id="goals">
+    <h2><span class="num">7</span>First Week Goals</h2>
+    <p>Follow this roadmap to go from complete beginner to competitive player in one week:</p>
+    <ul>
+      <li><strong>Day 1-2:</strong> Complete all tutorial missions. Play 10 casual races. Unlock your first outfit.</li>
+      <li><strong>Day 3-4:</strong> Try Survival mode. Practice advanced techniques (dash+jump, edge grab). Join a club.</li>
+      <li><strong>Day 5-6:</strong> Play ranked mode. Learn 2-3 race map shortcuts. Complete daily missions for rewards.</li>
+      <li><strong>Day 7:</strong> Aim for top 5 in ranked consistently. Start saving for a premium outfit. Join the <a href="forum.html">community forum</a>!</li>
+    </ul>
+    <div class="highlight-pink"><strong>✨ Remember:</strong> Eggy Party is meant to be fun! Don't stress about winning — focus on improving one skill at a time. See you on the leaderboard!</div>
+  </div>
 </section>
+
 <!-- ===== Game Boosters ===== -->
 <div style="max-width:1100px;margin:0 auto 24px;padding:0 24px;">
   <div style="background:#fff;border-radius:24px;padding:16px 20px;box-shadow:0 4px 24px rgba(255,107,157,0.08);display:flex;align-items:center;gap:12px;flex-wrap:wrap;">

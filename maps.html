@@ -3,66 +3,163 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maps — Eggy Wiki</title>
-  <meta name="description" content="Eggy Party maps guide — race maps, survival maps, and team mode strategies.">
+  <meta name="description" content="Eggy Party maps guide — complete race, survival, and team mode map strategies with shortcuts and tips.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--pink:#FF6B9D;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
     html{scroll-behavior:smooth}
     body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-    a{color:var(--pink);text-decoration:none}a:hover{color:#E85382}
+    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
     header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
     .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}
-    .logo span{color:var(--yellow)}
+    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
     nav{display:flex;gap:6px;flex-wrap:wrap}
-    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}
-    nav a:hover{background:rgba(255,255,255,0.25)}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
     .page-header{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,rgba(255,240,245,0.9),rgba(255,248,225,0.9))}
-    .page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}
-    .page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
-    .container{max-width:1100px;margin:0 auto;padding:0 24px}
-    section{padding:36px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+    .page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}.page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}section{padding:36px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
     .card{background:var(--bg-card);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);transition:all .3s cubic-bezier(.34,1.56,.64,1);transform:perspective(800px) rotateX(0deg)}
     .card:hover{transform:perspective(800px) rotateX(2deg) translateY(-4px);box-shadow:0 12px 40px rgba(255,107,157,0.12)}
     .card-img{width:100%;height:150px;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;font-size:48px}
     .card-body{padding:16px}
     .card-body h3{font-size:17px;margin-bottom:4px}
-    .card-body p{font-size:13px;color:var(--text-dim)}
-    .tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;margin:6px 0}
+    .card-body .desc{font-size:13px;color:var(--text-dim);margin-bottom:8px}
+    .card-body .tips{font-size:12px;color:var(--text-dim);border-top:1px solid #f0f0f0;padding-top:8px}
+    .card-body .tips strong{color:var(--pink)}
+    .card-body .tips ul{list-style:none;margin-top:4px}
+    .card-body .tips ul li{padding-left:14px;position:relative;margin-bottom:3px;font-size:12px;line-height:1.6}
+    .card-body .tips ul li::before{content:'💡';position:absolute;left:-4px;font-size:11px}
+    .tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;margin:0 4px 4px 0}
     .tag-race{background:var(--blue);color:#fff}
     .tag-survival{background:var(--pink);color:#fff}
     .tag-team{background:var(--yellow);color:#333}
+    .tag-new{background:var(--green);color:#fff}
     footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
     footer .container{max-width:1100px;margin:0 auto}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}
-    .footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
     .footer-bottom{font-size:13px;opacity:0.7}
     @media(max-width:640px){.page-header h1{font-size:24px}.header-inner{flex-direction:column;gap:10px}nav{justify-content:center}}
   </style>
 </head>
 <body>
-<header>
-  <div class="header-inner">
-    <div class="logo">🥚 Eggy<span>Wiki</span></div>
-    <nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a></nav>
-  </div>
-</header>
-<div class="page-header">
-  <h1>🗺️ Map Guides</h1>
-  <p>Race, survive, and conquer — tips and shortcuts for every map in Eggy Party.</p>
-</div>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a></nav></div></header>
+<div class="page-header"><h1>🗺️ Map Guides</h1><p>Complete map strategies — race shortcuts, survival tactics, and team mode tips for every stage.</p></div>
 <section class="container">
   <div class="grid">
-    <div class="card"><div class="card-img" style="background-image:url('images/eggy_maps1.jpg');">🏁</div><div class="card-body"><span class="tag tag-race">Race</span><h3>Sunflower Sprint</h3><p>A sunny race track through golden fields. Watch for the hidden shortcut behind the windmill!</p></div></div>
-    <div class="card"><div class="card-img" style="background:linear-gradient(135deg,#6BCBFF,#FF8DB5);">🌋</div><div class="card-body"><span class="tag tag-race">Race</span><h3>Volcano Rush</h3><p>Race down the volcano slope. Jump over lava pools and use geysers to launch ahead.</p></div></div>
-    <div class="card"><div class="card-img" style="background:linear-gradient(135deg,#FFD93D,#FF6B9D);">🎪</div><div class="card-body"><span class="tag tag-survival">Survival</span><h3>Candy Arena</h3><p>Last egg standing on a rotating candy-themed platform. Dodge the candy cannons!</p></div></div>
-    <div class="card"><div class="card-img" style="background-image:url('images/eggy_maps2.jpg');">❄️</div><div class="card-body"><span class="tag tag-race">Race</span><h3>Frozen Peak</h3><p>Ice-covered race track with slippery surfaces. Penguin eggs have an advantage here.</p></div></div>
-    <div class="card"><div class="card-img" style="background:linear-gradient(135deg,#FF8DB5,#6BCBFF);">🏰</div><div class="card-body"><span class="tag tag-team">Team</span><h3>Castle Clash</h3><p>4v4 team mode. Capture the flag while avoiding obstacles. Communication is key!</p></div></div>
-    <div class="card"><div class="card-img" style="background:linear-gradient(135deg,#FFD93D,#6BCBFF);">🌊</div><div class="card-body"><span class="tag tag-survival">Survival</span><h3>Underwater Escape</h3><p>Rising water levels! Reach the top platforms before you're swept away.</p></div></div>
+    <div class="card">
+      <div class="card-img" style="background-image:url('images/eggy_maps1.jpg');">🏁</div>
+      <div class="card-body">
+        <span class="tag tag-race">Race</span>
+        <h3>Sunflower Sprint</h3>
+        <div class="desc">A sunny race track through golden fields. Moderate difficulty with one major shortcut.</div>
+        <div class="tips">
+          <strong>💡 Tips:</strong>
+          <ul>
+            <li>The windmill shortcut at the 40% mark saves ~3 seconds — jump onto the rotating blades and ride them to the upper path</li>
+            <li>Penguin Egg's ice slide doesn't work here (no ice surfaces)</li>
+            <li>Watch out for the swinging hay bales at the 70% mark — time your dash through</li>
+            <li>Best character: Fox Egg (dash to chain the shortcuts faster)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(135deg,#6BCBFF,#FF8DB5);">🌋</div>
+      <div class="card-body">
+        <span class="tag tag-race">Race</span>
+        <h3>Volcano Rush</h3>
+        <div class="desc">Race down the volcano slope. Fast-paced with hazardous lava pools.</div>
+        <div class="tips">
+          <strong>💡 Tips:</strong>
+          <ul>
+            <li>The lava geyser at the 25% mark can launch you onto a secret upper path — stand on it for 2 seconds</li>
+            <li>Don't jump over lava pools too early — wait until the last moment for maximum speed</li>
+            <li>Bunny Egg is surprisingly good here — the extra jump height helps skip a segment at the 60% mark</li>
+            <li>Avoid the inner lane on the final straight — the collapsing bridge forces you to detour</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(135deg,#FFD93D,#FF6B9D);">🎪</div>
+      <div class="card-body">
+        <span class="tag tag-survival">Survival</span>
+        <h3>Candy Arena</h3>
+        <div class="desc">Rotating candy-themed platform. Hazards include candy cannons and disappearing tiles.</div>
+        <div class="tips">
+          <strong>💡 Tips:</strong>
+          <ul>
+            <li>The platform rotates clockwise — always move opposite to the rotation to stay centered</li>
+            <li>Candy cannons fire every 10 seconds in a predictable pattern — watch for the telltale sparkle</li>
+            <li>Disappearing tiles follow a set order: memorize it to plan your path</li>
+            <li>Cat Egg is the MVP here — soft landing saves you when tiles disappear beneath you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background-image:url('images/eggy_maps2.jpg');">❄️</div>
+      <div class="card-body">
+        <span class="tag tag-race">Race</span>
+        <span class="tag tag-new">Best for</span>
+        <h3>Frozen Peak</h3>
+        <div class="desc">Ice-covered race track with extremely slippery surfaces. High skill ceiling.</div>
+        <div class="tips">
+          <strong>💡 Tips:</strong>
+          <ul>
+            <li>Penguin Egg is the undisputed king here — 15% ice speed boost is massive</li>
+            <li>Don't use dash on ice unless necessary — you'll slide uncontrollably</li>
+            <li>The hidden ice cave at the 50% mark is faster than the main path but requires precise jumping</li>
+            <li>Momentum is everything — keep moving in smooth curves, not sharp turns</li>
+            <li>Look for the igloo at the 80% mark — jumping through it activates a speed boost</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(135deg,#FF8DB5,#6BCBFF);">🏰</div>
+      <div class="card-body">
+        <span class="tag tag-team">Team</span>
+        <h3>Castle Clash</h3>
+        <div class="desc">4v4 capture the flag. Asymmetric map with two castle bases connected by a bridge.</div>
+        <div class="tips">
+          <strong>💡 Tips:</strong>
+          <ul>
+            <li>Panda Egg is the best defender — hard to knock over when carrying the flag</li>
+            <li>The middle bridge is a death trap — use the underground tunnel instead</li>
+            <li>Assign one player as dedicated flag carrier with max speed build</li>
+            <li>The side cannons can launch you across the map for a quick escape — learn the timing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(135deg,#FFD93D,#6BCBFF);">🌊</div>
+      <div class="card-body">
+        <span class="tag tag-survival">Survival</span>
+        <h3>Underwater Escape</h3>
+        <div class="desc">Rising water levels force players upward. Vertical survival map with multiple elevation levels.</div>
+        <div class="tips">
+          <strong>💡 Tips:</strong>
+          <ul>
+            <li>Always stay one platform level above the water — don't camp at the current waterline</li>
+            <li>Bubbles rising from the depths indicate where the next platform will appear</li>
+            <li>Don't jump to the highest level too early — you'll be exposed to attacks from all sides</li>
+            <li>Stay near the edges during mid-game, move to center in late game</li>
+            <li>Bunny Egg's high jump is useful here for reaching upper platforms quickly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <!-- ===== Game Boosters ===== -->
@@ -88,11 +185,6 @@
   <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
 </div>
 
-<footer>
-  <div class="container">
-    <div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
-    <div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div>
-  </div>
-</footer>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
 </body>
 </html>

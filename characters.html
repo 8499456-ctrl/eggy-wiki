@@ -1,76 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Characters — Eggy Wiki</title>
-  <meta name="description" content="Complete Eggy Party characters guide — all egg characters, abilities, and how to unlock them.">
+  <meta name="description" content="Complete Eggy Party characters guide — all egg characters, stats, abilities, and how to unlock them.">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --pink: #FF6B9D; --pink-light: #FF8DB5; --pink-dark: #E85382;
-      --yellow: #FFD93D; --yellow-light: #FFE680; --blue: #6BCBFF;
-      --bg: #FFF5F8; --bg-card: #FFFFFF; --text: #2D2D2D; --text-dim: #888888;
-      --shadow: 0 4px 24px rgba(255,107,157,0.08);
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    a { color: var(--pink); text-decoration: none; } a:hover { color: var(--pink-dark); }
-    header { background: linear-gradient(135deg, var(--pink), var(--yellow), var(--blue)); padding: 14px 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(255,107,157,0.2); }
-    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 22px; font-weight: 800; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .logo span { color: var(--yellow); }
-    nav { display: flex; gap: 6px; flex-wrap: wrap; }
-    nav a { color: #fff; padding: 6px 14px; border-radius: 30px; font-size: 13px; font-weight: 600; transition: all .2s; }
-    nav a:hover { background: rgba(255,255,255,0.25); }
-    .page-header { text-align: center; padding: 48px 24px 32px; background: linear-gradient(135deg, rgba(255,240,245,0.9), rgba(255,248,225,0.9)); }
-    .page-header h1 { font-size: 32px; font-weight: 800; color: var(--pink); margin-bottom: 8px; }
-    .page-header p { color: var(--text-dim); max-width: 600px; margin: 0 auto; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 36px 0; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
-    .card { background: var(--bg-card); border-radius: 24px; padding: 24px; box-shadow: var(--shadow); transition: all .3s cubic-bezier(.34,1.56,.64,1); transform: perspective(800px) rotateX(0deg); text-align:center; }
-    .card:hover { transform: perspective(800px) rotateX(2deg) translateY(-4px); box-shadow: 0 12px 40px rgba(255,107,157,0.12); }
-    .card .icon { font-size: 48px; margin-bottom: 8px; }
-    .card h3 { font-size: 18px; margin-bottom: 4px; }
-    .card p { font-size: 13px; color: var(--text-dim); }
-    .tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 700; margin: 8px 0; }
-    .tag-rare { background: var(--pink); color: #fff; }
-    .tag-common { background: var(--blue); color: #fff; }
-    .tag-epic { background: var(--yellow); color: #333; }
-    footer { background: linear-gradient(135deg, var(--pink), var(--blue)); padding: 28px 24px 20px; margin-top: 24px; color: #fff; }
-    footer .container { max-width: 1100px; margin: 0 auto; }
-    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 16px; }
-    .footer-links a { color: rgba(255,255,255,0.8); font-size: 14px; } .footer-links a:hover { color: #fff; }
-    .footer-bottom { font-size: 13px; opacity: 0.7; }
-    @media (max-width: 640px) { .page-header h1 { font-size: 24px; } .header-inner { flex-direction: column; gap: 10px; } nav { justify-content: center; } }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
+    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
+    nav{display:flex;gap:6px;flex-wrap:wrap}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
+    .page-header{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,rgba(255,240,245,0.9),rgba(255,248,225,0.9))}
+    .page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}.page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}section{padding:36px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+    .card{background:var(--bg-card);border-radius:24px;padding:24px;box-shadow:var(--shadow);transition:all .3s cubic-bezier(.34,1.56,.64,1);transform:perspective(800px) rotateX(0deg)}
+    .card:hover{transform:perspective(800px) rotateX(2deg) translateY(-4px);box-shadow:0 12px 40px rgba(255,107,157,0.12)}
+    .card .icon{font-size:48px;margin-bottom:4px;text-align:center}
+    .card h3{font-size:18px;margin-bottom:4px;text-align:center}
+    .card .rarity{text-align:center;margin-bottom:8px}
+    .card .desc{font-size:13px;color:var(--text-dim);margin-bottom:10px;text-align:center}
+    .card .stats{display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:12px}
+    .card .stats div{background:var(--bg);border-radius:8px;padding:6px 8px;text-align:center}
+    .card .stats .label{color:var(--text-dim);display:block;font-size:10px;text-transform:uppercase}
+    .card .stats .val{font-weight:700;color:var(--text)}
+    .card .unlock{font-size:12px;color:var(--pink);text-align:center;margin-top:8px;font-weight:600}
+    .tag{display:inline-block;padding:3px 12px;border-radius:12px;font-size:11px;font-weight:700}
+    .tag-common{background:var(--blue);color:#fff}.tag-rare{background:var(--pink);color:#fff}.tag-epic{background:var(--yellow);color:#333}
+    .bar{height:6px;border-radius:3px;margin-top:2px;background:#eee}
+    .bar-fill{height:100%;border-radius:3px}
+    .bar-speed{background:var(--pink)}.bar-jump{background:var(--blue)}.bar-dash{background:var(--yellow)}.bar-defense{background:#4CAF50}
+    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
+    footer .container{max-width:1100px;margin:0 auto}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-bottom{font-size:13px;opacity:0.7}
+    @media(max-width:640px){.page-header h1{font-size:24px}.header-inner{flex-direction:column;gap:10px}nav{justify-content:center}.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-<header>
-  <div class="header-inner">
-    <div class="logo">🥚 Eggy<span>Wiki</span></div>
-    <nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a></nav>
-  </div>
-</header>
-<div class="page-header">
-  <h1>🐣 Egg Characters</h1>
-  <p>Meet all the eggs of Eggy Party — each with unique abilities and styles. More characters coming soon!</p>
-</div>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a></nav></div></header>
+<div class="page-header"><h1>🐣 Egg Characters</h1><p>Complete character guide — stats, abilities, unlock conditions, and tier ratings. Updated for the latest balance patch.</p></div>
 <section class="container">
   <div class="grid">
-    <div class="card"><div class="icon">🥚</div><h3>Classic Egg</h3><span class="tag tag-common">Common</span><p>The original egg. Balanced stats for any game mode.</p></div>
-    <div class="card"><div class="icon">🐰</div><h3>Bunny Egg</h3><span class="tag tag-rare">Rare</span><p>Extra jump height — perfect for race maps.</p></div>
-    <div class="card"><div class="icon">🦊</div><h3>Fox Egg</h3><span class="tag tag-rare">Rare</span><p>Dash ability with reduced cooldown. Great for survival.</p></div>
-    <div class="card"><div class="icon">🐱</div><h3>Cat Egg</h3><span class="tag tag-epic">Epic</span><p>Land softly and recover faster from knockbacks.</p></div>
-    <div class="card"><div class="icon">🐼</div><h3>Panda Egg</h3><span class="tag tag-rare">Rare</span><p>Larger collision hitbox but harder to knock over.</p></div>
-    <div class="card"><div class="icon">🦄</div><h3>Unicorn Egg</h3><span class="tag tag-epic">Epic</span><p>Trails of sparkles — purely cosmetic but fabulous.</p></div>
-    <div class="card"><div class="icon">🐧</div><h3>Penguin Egg</h3><span class="tag tag-common">Common</span><p>Slides faster on ice surfaces. Great on winter maps.</p></div>
-    <div class="card"><div class="icon">🐉</div><h3>Dragon Egg</h3><span class="tag tag-epic">Epic</span><p>Rare limited edition. Grants a fire trail effect.</p></div>
+    <div class="card">
+      <div class="icon">🥚</div>
+      <h3>Classic Egg</h3>
+      <div class="rarity"><span class="tag tag-common">Common</span></div>
+      <div class="desc">The original egg. Balanced stats make it a reliable choice for any game mode.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-speed" style="width:50%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:50%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">10s</span><div class="bar"><div class="bar-fill bar-dash" style="width:40%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:50%"></div></div></div>
+      </div>
+      <div class="unlock">✅ Unlocked by default</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐰</div>
+      <h3>Bunny Egg</h3>
+      <div class="rarity"><span class="tag tag-rare">Rare</span></div>
+      <div class="desc">Extra jump height makes Bunny Egg the king of vertical maps. Ideal for race mode with lots of platforms.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">4/10</span><div class="bar"><div class="bar-fill bar-speed" style="width:40%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">8/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:80%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">10s</span><div class="bar"><div class="bar-fill bar-dash" style="width:40%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">3/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:30%"></div></div></div>
+      </div>
+      <div class="unlock">🔓 Reach Level 15 or 800 gems</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🦊</div>
+      <h3>Fox Egg</h3>
+      <div class="rarity"><span class="tag tag-rare">Rare</span></div>
+      <div class="desc">Reduced dash cooldown makes Fox Egg the #1 pick for advanced players. Great for all modes.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">7/10</span><div class="bar"><div class="bar-fill bar-speed" style="width:70%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:50%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">6s</span><div class="bar"><div class="bar-fill bar-dash" style="width:80%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">4/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:40%"></div></div></div>
+      </div>
+      <div class="unlock">🔓 Reach Level 25 or 1,200 gems</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐱</div>
+      <h3>Cat Egg</h3>
+      <div class="rarity"><span class="tag tag-epic">Epic</span></div>
+      <div class="desc">Lands softly and recovers 40% faster from knockbacks. The definitive survival mode character.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">6/10</span><div class="bar"><div class="bar-fill bar-speed" style="width:60%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">6/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:60%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">10s</span><div class="bar"><div class="bar-fill bar-dash" style="width:40%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">8/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:80%"></div></div></div>
+      </div>
+      <div class="unlock">🔓 Season Pass (Season 3) or 2,000 gems</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐼</div>
+      <h3>Panda Egg</h3>
+      <div class="rarity"><span class="tag tag-rare">Rare</span></div>
+      <div class="desc">Larger size but much harder to knock over. Best for team mode as a front-line defender.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">3/10</span><div class="bar"><div class="bar-fill bar-speed" style="width:30%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">4/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:40%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">12s</span><div class="bar"><div class="bar-fill bar-dash" style="width:20%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">9/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:90%"></div></div></div>
+      </div>
+      <div class="unlock">🔓 Reach Level 35 or 1,500 gems</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐧</div>
+      <h3>Penguin Egg</h3>
+      <div class="rarity"><span class="tag tag-common">Common</span></div>
+      <div class="desc">Slides faster on ice surfaces. Situational but unmatched on ice maps like Frozen Peak.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">5/10*</span><div class="bar"><div class="bar-fill bar-speed" style="width:50%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:50%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">10s</span><div class="bar"><div class="bar-fill bar-dash" style="width:40%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">4/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:40%"></div></div></div>
+      </div>
+      <div class="unlock">🔓 Complete ice map tutorial (Unlocked by default on new accounts)</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🦄</div>
+      <h3>Unicorn Egg</h3>
+      <div class="rarity"><span class="tag tag-epic">Epic</span></div>
+      <div class="desc">Trails of sparkles — purely cosmetic but the flex is real. Stats equal to Classic Egg.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-speed" style="width:50%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:50%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">10s</span><div class="bar"><div class="bar-fill bar-dash" style="width:40%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:50%"></div></div></div>
+      </div>
+      <div class="unlock">🔓 Limited event reward — no longer obtainable</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🐉</div>
+      <h3>Dragon Egg</h3>
+      <div class="rarity"><span class="tag tag-epic">Epic</span></div>
+      <div class="desc">Rare limited edition with fire trail effect. Slightly above-average stats across the board.</div>
+      <div class="stats">
+        <div><span class="label">Speed</span><span class="val">6/10</span><div class="bar"><div class="bar-fill bar-speed" style="width:60%"></div></div></div>
+        <div><span class="label">Jump</span><span class="val">6/10</span><div class="bar"><div class="bar-fill bar-jump" style="width:60%"></div></div></div>
+        <div><span class="label">Dash CD</span><span class="val">9s</span><div class="bar"><div class="bar-fill bar-dash" style="width:50%"></div></div></div>
+        <div><span class="label">Defense</span><span class="val">5/10</span><div class="bar"><div class="bar-fill bar-defense" style="width:50%"></div></div></div>
+      </div>
+      <div class="unlock">🔓 Lunar New Year 2026 event — limited time only</div>
+    </div>
   </div>
 </section>
 <!-- ===== Game Boosters ===== -->
@@ -96,11 +186,6 @@
   <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
 </div>
 
-<footer>
-  <div class="container">
-    <div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
-    <div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party. Built with 🥚 for the community.</div>
-  </div>
-</footer>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
 </body>
 </html>
