@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post — Eggy Wiki Forum</title>
+  <meta name="description" content="Eggy Party community forum post.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
+    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
+    nav{display:flex;gap:6px;flex-wrap:wrap}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
+    .container{max-width:800px;margin:0 auto;padding:0 24px}
+    .page-header{padding:32px 0 16px;text-align:center}
+    .page-header h1{font-size:26px;font-weight:800;color:var(--pink);margin-bottom:4px}.page-header p{font-size:14px;color:var(--text-dim)}
+    .back-link{display:inline-block;margin-bottom:14px;font-size:14px;font-weight:600}
+    .post-header{background:var(--bg-card);border-radius:20px;padding:20px 24px;box-shadow:var(--shadow);margin-bottom:14px}
+    .post-title{font-size:20px;font-weight:700;color:var(--text);}
+    .post-meta{font-size:13px;color:var(--text-dim);margin-top:6px;display:flex;gap:14px;flex-wrap:wrap}
+    .post-meta .pauthor{color:var(--pink);font-weight:600}
+    .post-tags{display:flex;gap:6px;margin-top:8px}
+    .tag{display:inline-block;padding:3px 12px;border-radius:10px;font-size:12px;font-weight:700}
+    .cat-discuss{background:var(--yellow);color:#333}.cat-guide{background:var(--green);color:#fff}.cat-bug{background:#E74C3C;color:#fff}.cat-general{background:var(--blue);color:#fff}.cat-fan{background:#9B59B6;color:#fff}
+    .pin-tag{color:var(--pink);font-size:12px;background:rgba(255,107,157,0.1);padding:2px 10px;border-radius:8px;font-weight:700}
+    .post-content{background:var(--bg-card);border-radius:20px;padding:20px 24px;box-shadow:var(--shadow);margin-bottom:16px}
+    .post-content p{font-size:14px;line-height:1.8;color:var(--text-dim);margin-bottom:10px}
+    .post-content ul,.post-content ol{padding-left:20px;margin-bottom:10px;font-size:14px;color:var(--text-dim);line-height:1.8}
+    .post-content h3{font-size:15px;color:var(--pink);margin:14px 0 6px}
+    .post-content code{background:rgba(255,107,157,0.08);padding:2px 6px;border-radius:4px;font-size:13px;color:var(--pink)}
+    .replies-section{background:var(--bg-card);border-radius:20px;padding:20px 24px;box-shadow:var(--shadow);margin-bottom:16px}
+    .replies-section h3{font-size:16px;font-weight:700;color:var(--pink);margin-bottom:12px}
+    .reply-item{padding:12px 0;border-bottom:1px solid #FFE0EC}
+    .reply-item:last-child{border-bottom:none}
+    .reply-item .rheader{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+    .reply-item .rname{font-size:13px;font-weight:600;color:var(--text)}
+    .reply-item .rtime{font-size:11px;color:var(--text-dim)}
+    .reply-item .rbadge{font-size:10px;padding:2px 8px;border-radius:6px;background:rgba(255,107,157,0.1);color:var(--pink);font-weight:700}
+    .reply-item .rbody{font-size:14px;color:var(--text-dim);line-height:1.6;margin-top:2px}
+    .reply-btn{padding:10px 22px;border:none;border-radius:30px;background:var(--pink);color:#fff;font-weight:700;font-size:14px;cursor:pointer;transition:all .2s;margin-top:12px;font-family:inherit}
+    .reply-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,157,0.3)}
+    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
+    footer .container{max-width:1100px;margin:0 auto}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-bottom{font-size:13px;opacity:0.7}
+    @media(max-width:640px){.page-header h1{font-size:22px}.post-content,.post-header,.replies-section{padding:14px 16px}}
+  </style>
+</head>
+<body>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;">🔍</a></nav></div></header>
+<div class="container">
+  <div class="page-header">
+    <h1>💬 Forum Post</h1>
+    <p id="threadSubtitle">Loading...</p>
+  </div>
+  <div id="threadContainer">
+    <p style="text-align:center;padding:40px;color:var(--text-dim);">Loading post...</p>
+  </div>
+</div>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
+<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
+
+<script>
+const FORUM_THREADS = [
+  { id: 'season4-discussion', title: 'Season 4 Discussion Thread — What do you think so far?', author: 'Wiki', date: '2026-07-09', tag: 'Discussion', tagClass: 'cat-discuss', replies: 12, views: 234,
+    content: '<p>Season 4 is here and it\'s packed with new content! 🎉</p><p>The new Candy Arena changes are really interesting. The rotating platforms feel faster this season — has anyone else noticed that? The timing for some jumps seems tighter than before.</p><h3>New content I\'ve noticed so far:</h3><ul><li>Candy Arena layout changes — new rotation pattern</li><li>Dragon Egg rerun (finally!) — available in the shop</li><li>Balance changes to Fox Egg — dash cooldown slightly increased</li><li>New limited outfits in the Battle Pass</li></ul><p>Also, the Dragon Egg rerun is finally happening! I\'ve been waiting months for this. If you missed the original release, now\'s your chance to grab it.</p><p>What do you think of the new season? Any favorite changes or things you\'re disappointed about?</p>' },
+  { id: 'best-character', title: 'Best starter character for ranked mode?', author: 'NoobEgg', date: '2026-07-08', tag: 'Question', tagClass: 'cat-guide', replies: 28, views: 567,
+    content: '<p>Hey everyone! 👋</p><p>I just hit the required level to play ranked mode. I\'ve been using Classic Egg in casual but I feel like I need something better for ranked.</p><p>I have enough gems to unlock one character. I\'m looking at:</p><ul><li><b>🐰 Bunny Egg</b> — The high jump looks useful for vertical maps</li><li><b>🦊 Fox Egg</b> — Fast dash sounds good but I\'m not that advanced yet</li><li><b>🐱 Cat Egg</b> — Everyone says this is the best for survival, but I play mostly race</li></ul><p>Which one would you recommend for a beginner in ranked? I mainly play Race mode but occasionally try Survival.</p><p>Thanks!</p>' },
+  { id: 'bulu-minty-unlock', title: 'How to unlock Bulu and Minty?', author: 'CollectorEgg', date: '2026-07-07', tag: 'Question', tagClass: 'cat-general', replies: 9, views: 312,
+    content: '<p>I\'ve been playing for a couple weeks and I keep seeing Bulu and Minty in matches. They look so cool! How do I unlock them?</p><p>I checked the character shop but they\'re not listed there. Are they limited edition or do I need to do something special?</p><p>I\'m level 23 if that helps.</p>' },
+  { id: 'frozen-peak-speedrun', title: 'Frozen Peak speedrun competition — submit your times!', author: 'SpeedrunComm', date: '2026-07-06', tag: 'General', tagClass: 'cat-general', replies: 43, views: 892,
+    content: '<p>🏁 <b>Frozen Peak Speedrun Challenge!</b></p><p>Current record: <b>1:42.32</b> by FoxEggPro</p><p>Think you can beat it? We\'re hosting an unofficial speedrun competition for the Frozen Peak race map!</p><h3>Rules:</h3><ul><li>Must be on Frozen Peak, any character allowed</li><li>Record your run (mobile screen recording or PC capture)</li><li>Submit your time by replying to this thread with your video</li><li>Winners get bragging rights + a shoutout on the wiki!</li></ul><h3>Current Leaderboard:</h3><ol><li>🥇 FoxEggPro — 1:42.32</li><li>🥈 PenguinMaster — 1:44.18</li><li>🥉 SlideKing — 1:47.05</li></ol><p>I hope to see more submissions! The hidden ice ramp shortcut is key — check our <a href="guide-shortcuts.html">shortcuts guide</a> for tips!</p>' },
+  { id: 'new-player-tips', title: 'Just started — any tips for a complete newbie?', author: 'FreshEgg', date: '2026-07-05', tag: 'Guide', tagClass: 'cat-guide', replies: 35, views: 701,
+    content: '<p>Hey everyone! I just downloaded Eggy Party yesterday and I\'m having a blast but I\'m also totally lost! 😅</p><p>I\'ve played about 10 matches and I keep coming in 6th-8th place. I watched some videos but they use terms I don\'t understand.</p><p>Can anyone give me some beginner tips? Like:</p><ul><li>Which character should I start with?</li><li>What should I spend my first gems on?</li><li>Is there a way to practice without other players?</li><li>What does "dash jump" mean and how do I do it?</li></ul><p>Any help is appreciated! I really want to get better at this game.</p>' },
+  { id: 'bug-candy-arena', title: '🐛 Bug: Candy Arena tile invisible on mobile', author: 'MobilePlayer', date: '2026-07-04', tag: 'Bug', tagClass: 'cat-bug', replies: 7, views: 156,
+    content: '<p>Found a bug on Candy Arena! 🐛</p><p>On the rotating section, one specific tile on the outer ring (the third tile from the north entrance) is invisible on mobile devices running iOS 18+. I\'ve fallen through it 3 times now!</p><p><b>Steps to reproduce:</b></p><ol><li>Play Candy Arena on iOS 18+</li><li>Go to the outer ring, north entrance</li><li>Step on the third tile from the entrance</li><li>The tile is invisible but you fall through it</li></ol><p><b>Device:</b> iPhone 15 Pro, iOS 18.3</p><p><b>Character:</b> Cat Egg</p><p>Anyone else experiencing this?</p>' },
+  { id: 'penguin-op', title: 'Is Penguin Egg OP on ice maps, or just good?', author: 'IceBreaker', date: '2026-07-03', tag: 'Discussion', tagClass: 'cat-discuss', replies: 19, views: 445,
+    content: '<p>Hot take: Penguin Egg on Frozen Peak isn\'t just good — it\'s borderline overpowered. 🐧❄️</p><p>Let me break it down: Penguin Egg doesn\'t lose speed on ice surfaces. That means on Frozen Peak, other eggs slide and lose 15-20% of their speed on ice patches, while Penguin Egg maintains full traction. Over the course of a full race, that\'s a 5-8 second advantage.</p><p>In a game where races are decided by fractions of a second, Penguin Egg on Frozen Peak is essentially a guaranteed top 3 finish if the player is even halfway decent.</p><p>Should Penguin Egg get nerfed on ice maps? Or is it a legitimate character strength that makes the game more interesting?</p><p>Curious what you all think!</p>' },
+  { id: 'free-gems-guide', title: '💎 Complete guide to farming free gems in 2026', author: 'Wiki', date: '2026-07-02', tag: 'Guide', tagClass: 'cat-guide', replies: 53, views: 1203,
+    content: '<p>Want to save money and still get all the cool outfits? Here\'s my complete guide to farming free gems in Season 4! 💎</p><h3>Daily Gem Sources:</h3><ul><li><b>Daily missions:</b> 30 gems/day (3 missions x 10 gems each)</li><li><b>Free crate:</b> Chance of 10-50 gems per day</li><li><b>Login bonus:</b> 100 gems/week (just log in 5 days)</li></ul><h3>Weekly Gem Sources:</h3><ul><li><b>Weekly missions:</b> 150 gems total</li><li><b>Ranked rewards:</b> 50-200 gems depending on tier</li><li><b>Club contribution:</b> 30 gems if your club is active</li></ul><h3>One-Time Sources:</h3><ul><li><b>Level up rewards:</b> ~500 gems total from level 1-50</li><li><b>Achievements:</b> ~300 gems available</li><li><b>Redeem codes:</b> Check our <a href="codes.html">codes page</a> for active codes!</li></ul><p><b>Monthly total (free):</b> ~1,500-2,000 gems per month if you play daily</p><p>Save your gems for limited-time collab outfits — they\'re usually 960-1,440 gems each and may never return!</p>' },
+  { id: 'team-voice-chat', title: 'Can we get voice chat in team mode?', author: 'SquadLeader', date: '2026-07-01', tag: 'Discussion', tagClass: 'cat-discuss', replies: 31, views: 678,
+    content: '<p>Is it just me or does Team mode desperately need voice chat? 🔊</p><p>The quick chat system is okay for basic stuff, but when you\'re trying to coordinate a Capture the Flag run or organize a defense, typing messages or using preset phrases just doesn\'t cut it.</p><p>I play with a regular team of 4 and we have to use Discord on our phones while playing. It works, but it\'s clunky. I wish we had built-in voice chat like in PUBG Mobile or Call of Duty Mobile.</p><p>What do you think? Would voice chat improve Team mode or would it be a mess with random teammates?</p>' },
+  { id: 'fanart-showcase', title: '🎨 Fan art showcase thread — share your creations!', author: 'ArtEgg', date: '2026-06-30', tag: 'Fan Art', tagClass: 'cat-fan', replies: 67, views: 1432,
+    content: '<p>Hey Eggy Party artists! 🎨</p><p>I wanted to create a thread where we can all share our Eggy Party fan art! Whether it\'s a quick sketch, a digital painting, or even a cosplay — let\'s see what you\'ve created!</p><p>I\'ll start: I drew my Cat Egg character in a superhero pose. I\'m still learning digital art but I\'m pretty happy with how the shading turned out! 🐱💫</p><p>Share your art below! All skill levels welcome — this is a supportive space!</p>' },
+  { id: 'codes-july', title: '🎁 July 2026 redeem codes — active and working!', author: 'Wiki', date: '2026-06-29', tag: 'Guide', tagClass: 'cat-guide', replies: 104, views: 3456,
+    content: '<p>Updated for July 2026! All codes tested and working as of this week. 🎁</p><h3>Active Codes:</h3><ul><li><b>EGGY2026</b> — 100 gems (expires July 31)</li><li><b>SUMMERFUN</b> — Summer Beach Hat cosmetic (new!)</li><li><b>SEASON4BOOST</b> — 2x XP boost for 1 hour</li><li><b>WIKI50</b> — 50 free hours of game accelerator (limited)</li><li><b>BUNNYLOVE</b> — Bunny Ear accessory (expires July 15)</li></ul><h3>How to redeem:</h3><ol><li>Open Eggy Party</li><li>Go to Settings → Redeem Code</li><li>Enter the code exactly as shown</li><li>Tap confirm</li></ol><p>Codes are case-sensitive and usually have limited redemptions. Grab them fast!</p><p>🔗 Full details and more codes: <a href="codes.html">eggywikigames.com/codes</a></p>' }
+];
+
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const container = document.getElementById('threadContainer');
+  const subtitle = document.getElementById('threadSubtitle');
+  const titleEl = document.querySelector('title');
+
+  if (!id) {
+    container.innerHTML = '<div style="text-align:center;padding:40px;"><p style="color:var(--text-dim);">No post specified. <a href="forum.html" style="color:var(--pink);">Go to Forum</a></p></div>';
+    subtitle.textContent = 'No post selected';
+    return;
+  }
+
+  const thread = FORUM_THREADS.find(t => t.id === id);
+  if (!thread) {
+    container.innerHTML = '<div style="text-align:center;padding:40px;"><p style="color:var(--text-dim);">Post not found. <a href="forum.html" style="color:var(--pink);">Go to Forum</a></p></div>';
+    subtitle.textContent = 'Post not found';
+    return;
+  }
+
+  titleEl.textContent = thread.title + ' — Eggy Wiki Forum';
+  subtitle.textContent = thread.title.replace(/^[^\s]+\s/, '');
+
+  // Generate sample replies
+  const replyCount = Math.min(thread.replies, 5);
+  const authors = ['EggFan42', 'DashMaster', 'SurvivalPro', 'RaceKing', 'GemCollector', 'MapExplorer', 'TeamPlayer', 'CrateOpener'];
+  const texts = [
+    'Totally agree! Great post! 🙌',
+    'Thanks for sharing this!',
+    'I had the same experience. Helpful thread!',
+    'Can you explain more about this?',
+    'Awesome, been looking for this info!',
+    'Game changer! Thanks Wiki 🥚',
+    'Tried this and it works perfectly!',
+    'Let me add my experience too...'
+  ];
+  let replies = [];
+  for (let i = 0; i < replyCount; i++) {
+    const d = new Date();
+    d.setDate(d.getDate() - (replyCount - i));
+    replies.push({
+      author: authors[i % authors.length],
+      time: d.toLocaleDateString('en-US', { month:'short', day:'numeric' }),
+      text: texts[i % texts.length],
+      isMember: i % 3 === 0
+    });
+  }
+
+  let html = '';
+  html += '<a href="forum.html" class="back-link">← Back to Forum</a>';
+
+  // Post header
+  html += '<div class="post-header">';
+  html += '<div class="post-title">' + thread.title + '</div>';
+  html += '<div class="post-meta"><span>by: <span class="pauthor">' + thread.author + '</span></span><span>📅 ' + thread.date + '</span><span>💬 ' + thread.replies + ' replies</span><span>👁️ ' + (thread.views >= 1000 ? (thread.views/1000).toFixed(1) + 'k' : thread.views) + '</span></div>';
+  html += '<div class="post-tags"><span class="tag ' + thread.tagClass + '">' + thread.tag + '</span></div>';
+  html += '</div>';
+
+  // Content
+  html += '<div class="post-content">' + thread.content + '</div>';
+
+  // Replies
+  html += '<div class="replies-section">';
+  html += '<h3>💬 Replies (' + thread.replies + ')</h3>';
+  replies.forEach(r => {
+    html += '<div class="reply-item"><div class="rheader"><span class="rname">' + r.author + '</span>' + (r.isMember ? '<span class="rbadge">⚡ Member</span>' : '') + '<span class="rtime">' + r.time + '</span></div><div class="rbody">' + r.text + '</div></div>';
+  });
+  if (thread.replies > replyCount) {
+    html += '<p style="text-align:center;padding:10px;color:var(--text-dim);font-size:13px;">… and ' + (thread.replies - replyCount) + ' more replies. <a href="forum.html" style="color:var(--pink);">Join the discussion</a></p>';
+  }
+  html += '<button class="reply-btn" onclick="alert(\'Reply directly in the comments below! 👇\')">💬 Reply to this post</button>';
+  html += '</div>';
+
+  // Giscus comments
+  html += '<div id="thread-giscus" style="margin-top:20px;"></div>';
+
+  container.innerHTML = html;
+
+  // Mount Giscus for this thread
+  const giscusScript = document.createElement('script');
+  giscusScript.src = 'https://giscus.app/client.js';
+  giscusScript.setAttribute('data-repo', '8499456-ctrl/eggy-wiki');
+  giscusScript.setAttribute('data-repo-id', 'R_kgDOTQdJXg');
+  giscusScript.setAttribute('data-category', 'General');
+  giscusScript.setAttribute('data-category-id', 'DIC_kwDOTQdJXs4DAzRY');
+  giscusScript.setAttribute('data-mapping', 'specific');
+  giscusScript.setAttribute('data-term', 'thread_' + thread.id);
+  giscusScript.setAttribute('data-strict', '1');
+  giscusScript.setAttribute('data-reactions-enabled', '1');
+  giscusScript.setAttribute('data-emit-metadata', '0');
+  giscusScript.setAttribute('data-input-position', 'top');
+  giscusScript.setAttribute('data-theme', 'https://giscus.app/themes/noborder_light.css');
+  giscusScript.setAttribute('data-lang', 'en');
+  giscusScript.setAttribute('crossorigin', 'anonymous');
+  giscusScript.async = true;
+  document.body.appendChild(giscusScript);
+})();
+</script>
+</body>
+</html>
