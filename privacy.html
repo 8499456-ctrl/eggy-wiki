@@ -1,5 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Privacy Policy — Eggy Wiki</title><link rel="icon" type="image/png" href="favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}:root{--pink:#FF6B9D;--bg:#FFF5F8;--text:#2D2D2D;--text-dim:#888}body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;padding:60px 24px}.container{max-width:700px;margin:0 auto}h1{color:var(--pink);margin-bottom:8px}h2{color:var(--pink);margin:24px 0 8px;font-size:18px}p{font-size:14px;color:var(--text-dim);margin-bottom:12px}a{color:var(--pink)}</style></head>
-<body><div class="container"><h1>Privacy Policy</h1><p>Last updated: July 7, 2026</p><p>Eggy Wiki operates the website eggywiki.com. This page explains how we collect, use, and protect your information.</p><h2>Information We Collect</h2><p>We collect minimal information: page views via Cloudflare Web Analytics, and account data (email, hashed password) if you register. No third-party tracking cookies.</p><h2>Third-Party Services</h2><p>We use Google AdSense for advertising. Google may use cookies to deliver relevant ads. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p><h2>Contact</h2><p>Email: st.sqa@163.com</p><a href="index.html">← Back to Home</a></div></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Privacy Policy — Eggy Wiki</title>
+  <meta name="description" content="Eggy Wiki privacy policy — how we handle your data.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--shadow:0 4px 24px rgba(255,107,157,0.08);--border:#FFE0EC;--radius:24px}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
+    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .logo{display:flex;align-items:center}
+    nav{display:flex;gap:6px;flex-wrap:wrap}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}
+    .music-btn {
+      background: #FF6B9D; border: 2px solid #FF6B9D;
+      color: #fff; font-size: 20px;
+      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .25s;
+    }
+    .music-btn:hover { background: #E85382; border-color: #E85382; transform: scale(1.05); }
+    .music-btn.playing { 
+      border-color: #FF6B9D; color: #FF6B9D;
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 4px rgba(255,107,157,0.2); }
+      50% { box-shadow: 0 0 12px rgba(255,107,157,0.4); }
+    }
+    nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
+    .container{max-width:700px;margin:0 auto;padding:40px 24px}
+    h1{color:var(--pink);margin-bottom:8px;font-size:28px}
+    h2{color:var(--pink);margin:24px 0 8px;font-size:18px}
+    p{font-size:14px;color:var(--text-dim);margin-bottom:12px}
+    .back-link{display:inline-block;margin-top:24px;font-weight:600}
+    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;justify-content:center}
+    .footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-bottom{font-size:13px;opacity:0.7}
+  </style>
+</head>
+<body>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="download.html">Download</a><a href="blog/index.html">Blog</a>
+      <button class="music-btn" id="musicBtn" onclick="tm()" title="Play/Pause Eggy Party Theme">🎵</button>
+    </nav></div></header>
+<div class="container">
+  <h1>Privacy Policy</h1>
+  <p>Last updated: July 7, 2026</p>
+  <p>Eggy Wiki operates the website eggywiki.com. This page explains how we collect, use, and protect your information.</p>
+  <h2>Information We Collect</h2>
+  <p>We collect minimal information: page views via Cloudflare Web Analytics, and account data (email, hashed password) if you register. No third-party tracking cookies.</p>
+  <h2>Third-Party Services</h2>
+  <p>We use Google AdSense for advertising. Google may use cookies to deliver relevant ads. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+  <h2>Contact</h2>
+  <p>Email: st.sqa@163.com</p>
+  <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
+<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
+</body>
+</html>

@@ -9,13 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--shadow:0 4px 24px rgba(255,107,157,0.08)}
     html{scroll-behavior:smooth}
     body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
     a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
     header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
     .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
+    .logo{font-size:22px;font-weight:800;color:var(--gold);text-shadow:0 2px 8px rgba(0,0,0,0.1);background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.logo span{color:var(--gold-light);-webkit-text-fill-color:var(--gold-light)}
     nav{display:flex;gap:6px;flex-wrap:wrap}
     nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
     .container{max-width:800px;margin:0 auto;padding:0 24px}
@@ -34,7 +34,7 @@
     .card ul{padding-left:20px;list-style:none;margin:8px 0}
     .card ul li{padding-left:16px;position:relative;margin-bottom:6px}
     .card ul li::before{content:'💡';position:absolute;left:-4px;font-size:13px}
-    .shortcut-box{background:linear-gradient(135deg,rgba(255,217,61,0.08),rgba(255,107,157,0.08));border:1px solid rgba(255,217,61,0.3);border-radius:16px;padding:16px;margin:12px 0}
+    .shortcut-box{background:linear-gradient(135deg,rgba(255,107,157,0.08),rgba(255,107,157,0.08));border:1px solid rgba(255,107,157,0.3);border-radius:16px;padding:16px;margin:12px 0}
     .shortcut-box h4{font-size:15px;color:var(--yellow);margin-bottom:4px}
     .shortcut-box p{font-size:13px;color:var(--text-dim);margin-bottom:0!important}
     .pre-box{background:var(--bg);border-radius:12px;padding:16px;font-size:14px;line-height:1.9;color:var(--text-dim);white-space:pre-wrap;font-family:inherit}
@@ -120,5 +120,7 @@ Late game: Center platforms are safest. The edges are dangerous.</div>
 </article>
 </div>
 <footer><div class="container"><div class="footer-links"><a href="../index.html">Home</a><a href="../blog/index.html">Blog</a><a href="../forum.html">Forum</a><a href="../download.html">Download</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
+<audio id="bgMusic" src="../audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
 </body>
 </html>

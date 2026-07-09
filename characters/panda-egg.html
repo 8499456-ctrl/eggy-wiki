@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panda Egg — Eggy Wiki Characters</title>
-  <meta name="description" content="Panda Egg — Rare rarity character. Panda Egg is the tank of Eggy Party. Its larger hitbox makes it an easier target, but it's also the hardest character to">
+  <meta name="description" content="Panda Egg — The gentle giant — almost impossible to push.">
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -11,44 +11,38 @@
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
     html{scroll-behavior:smooth}
-    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
     a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
     header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
-    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
     .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
     nav{display:flex;gap:6px;flex-wrap:wrap}
-    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
-    .container{max-width:800px;margin:0 auto;padding:0 24px}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
+    .container{max-width:700px;margin:0 auto;padding:0 24px}
     article{padding:40px 0}
     .back-link{display:inline-block;margin-bottom:16px;font-size:14px;font-weight:600}
-    .char-header{text-align:center;margin-bottom:24px}
-    .char-header .icon{font-size:80px;margin-bottom:8px}
-    .char-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:4px}
-    .char-header .rarity{margin-bottom:4px}
-    .char-header .unlock-info{font-size:14px;color:var(--text-dim)}
-    .tag{display:inline-block;padding:3px 14px;border-radius:12px;font-size:13px;font-weight:700}
-    .tag-common{background:var(--blue);color:#fff}.tag-rare{background:var(--pink);color:#fff}.tag-epic{background:var(--yellow);color:#333}
+    .hero{text-align:center;margin-bottom:24px}
+    .hero img{width:200px;height:200px;object-fit:cover;border-radius:24px;background:#FDE8F0;margin-bottom:12px;box-shadow:var(--shadow)}
+    .hero h1{font-size:30px;font-weight:800;color:var(--pink);margin-bottom:4px}
+    .hero .tagline{font-size:15px;color:var(--text-dim);}
+    .tag{display:inline-block;padding:3px 14px;border-radius:12px;font-size:13px;font-weight:700;margin-bottom:8px}
+    .tag-starter{background:var(--blue);color:#fff}.tag-special{background:var(--pink);color:#fff}.tag-limited{background:var(--yellow);color:#333}
     .card{background:var(--bg-card);border-radius:24px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px}
     .card h2{font-size:20px;color:var(--pink);margin-bottom:10px}
-    .card p,.card ul{font-size:14px;color:var(--text-dim)}
-    .card ul{padding-left:20px;list-style:none;margin:8px 0}
-    .card ul li{padding-left:16px;position:relative;margin-bottom:6px}
-    .card ul li::before{content:'🥚';position:absolute;left:-4px;font-size:13px}
-    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-    .stat-box{background:var(--bg);border-radius:12px;padding:12px;text-align:center}
-    .stat-box .label{font-size:11px;color:var(--text-dim);text-transform:uppercase;margin-bottom:2px}
-    .stat-box .val{font-size:22px;font-weight:800;color:var(--text)}
-    .stat-box .bar{height:8px;border-radius:4px;background:#eee;margin-top:6px;overflow:hidden}
-    .stat-box .bar-fill{height:100%;border-radius:4px}
-    .bar-speed{background:var(--pink)}.bar-jump{background:var(--blue)}.bar-dash{background:var(--yellow)}.bar-defense{background:#4CAF50}
+    .card p,.card ul{font-size:14px;color:var(--text-dim);margin-bottom:8px}
+    .card ul{padding-left:20px} .card ul li{margin-bottom:6px}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
+    .stat-box{background:rgba(255,107,157,0.06);border-radius:14px;padding:14px;text-align:center}
+    .stat-box .val{font-size:24px;font-weight:800;color:var(--pink)}
+    .stat-box .lbl{font-size:13px;color:var(--text-dim)}
     .char-nav{display:flex;justify-content:space-between;margin-top:24px}
     .char-nav a{font-size:14px;font-weight:600;padding:8px 16px;border-radius:12px;background:var(--bg-card);box-shadow:var(--shadow);transition:all .2s}
     .char-nav a:hover{transform:translateY(-2px)}
-    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
+    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
     footer .container{max-width:1100px;margin:0 auto}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;justify-content:center}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
     .footer-bottom{font-size:13px;opacity:0.7}
-    @media(max-width:640px){.char-header h1{font-size:26px}.header-inner{flex-direction:column;gap:10px}nav{justify-content:center}}
+    @media(max-width:640px){.hero h1{font-size:24px}.stats-grid{grid-template-columns:1fr 1fr}}
   </style>
 </head>
 <body>
@@ -56,73 +50,35 @@
 <div class="container">
 <article>
   <a href="../characters.html" class="back-link">← Back to Characters</a>
-  <div class="char-header">
-    <div class="icon">🐼</div>
+  <div class="hero">
+    <img src="../images/panda-egg.png" alt="Panda Egg" loading="lazy">
+    <div><span class="tag tag-limited">Limited</span></div>
     <h1>Panda Egg</h1>
-    <div class="rarity"><span class="tag tag-rare">Rare</span></div>
-    <div class="unlock-info">🔓 Reach Level 35 or 1,500 gems</div>
+    <div class="tagline">The gentle giant — almost impossible to push.</div>
   </div>
-
-  <div class="card">
-    <h2>📊 Stats</h2>
-    <div class="stats-grid">
-      <div class="stat-box"><div class="label">Speed</div><div class="val">3/10</div><div class="bar"><div class="bar-fill bar-speed" style="width:30%"></div></div></div>
-      <div class="stat-box"><div class="label">Jump</div><div class="val">4/10</div><div class="bar"><div class="bar-fill bar-jump" style="width:40%"></div></div></div>
-      <div class="stat-box"><div class="label">Dash CD</div><div class="val">12s</div><div class="bar"><div class="bar-fill bar-dash" style="width:80%"></div></div></div>
-      <div class="stat-box"><div class="label">Defense</div><div class="val">9/10</div><div class="bar"><div class="bar-fill bar-defense" style="width:90%"></div></div></div>
-    </div>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="val">3/10</div><div class="lbl">Speed</div></div>
+    <div class="stat-box"><div class="val">3/10</div><div class="lbl">Jump</div></div>
+    <div class="stat-box"><div class="val">9s</div><div class="lbl">Dash CD</div></div>
   </div>
-
   <div class="card">
     <h2>📝 Overview</h2>
-    <p>Panda Egg is the tank of Eggy Party. Its larger hitbox makes it an easier target, but it's also the hardest character to knock over. In team mode, Panda Egg excels as a defender — opponents will struggle to push you off objectives or past your position.</p>
+    <p>Panda Egg is the ultimate tank. With 60% knockback resistance and a slow-but-steady playstyle, Panda Egg is built to absorb hits that would send other characters flying. The trade-off is the lowest speed and jump in the game, plus the longest dash cooldown.</p>
   </div>
-
   <div class="card">
-    <h2>🎮 Best Game Modes</h2>
-    <ul>
-      <li><strong>Race Mode</strong> — Poor — too slow for competitive racing</li>
-      <li><strong>Survival Mode</strong> — Good — extremely hard to eliminate, but lack of mobility is a challenge</li>
-      <li><strong>Team Mode</strong> — Excellent — best defender in the game</li>
-    </ul>
+    <h2>🎯 How to Unlock</h2>
+    <p>Limited character — was available during Season 1: Panda Paradise event. May return in future events or shop rotations.</p>
   </div>
-
   <div class="card">
-    <h2>👍 Tips</h2>
-    <ul>
-      <li>In team mode, stand your ground on objectives — opponents will waste time trying to move you</li>
-<li>The larger hitbox means you get hit more often — use your defense advantage wisely</li>
-<li>Avoid race mode with Panda Egg unless you know the map has lots of knocking hazards</li>
-    </ul>
+    <h2>💡 Pro Tips</h2>
+    <ul><li>Panda Egg is the undisputed king of Survival mode. Let the chaos happen around you.</li><li>In Team mode, Panda Egg is the best flag defender — nothing moves you.</li><li>Never pick Panda Egg on race maps. You will lose. Just don't.</li></ul>
   </div>
-
   <div class="char-nav">
-    <a href="cat-egg.html">← Cat Egg</a>
+    <a href="minty.html">← Minty</a>
     <a href="penguin-egg.html">Penguin Egg →</a>
-  </div>
-
-  <!-- ===== Game Boosters ===== -->
-  <div style="background:#fff;border-radius:24px;padding:16px 20px;margin:32px 0;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-    <span style="font-size:28px;">⚡</span>
-    <div style="flex:1;min-width:200px;">
-      <div style="font-size:14px;font-weight:700;color:var(--pink);">Game Boosters</div>
-      <div style="font-size:12px;color:var(--text-dim);">Lag in Eggy Party? Try a game accelerator.</div>
-    </div>
-    <div style="display:flex;gap:10px;flex-wrap:wrap;font-size:13px;">
-      <a href="../free-accelerator.html" target="_blank" rel="noopener nofollow" style="color:var(--pink);font-weight:600;">🚀 雷神加速器</a>
-      <a href="https://tg.xunyou.com/command/?id=1563075&password=genshinwiki" target="_blank" rel="noopener nofollow" style="color:var(--pink);font-weight:600;">⚡ 迅游加速器</a>
-      <a href="https://www.exitlag.com/refer/10324758" target="_blank" rel="noopener nofollow" style="color:var(--pink);font-weight:600;">🌍 ExitLag (欧美)</a>
-    </div>
-    <span style="font-size:10px;color:#bbb;border:1px solid #eee;border-radius:3px;padding:2px 6px;">Ad</span>
-  </div>
-
-  <!-- ===== AdSense Placeholder ===== -->
-  <div style="text-align:center;padding:20px;margin:24px 0;background:rgba(255,107,157,0.04);border:2px dashed #FFD0DE;border-radius:16px;font-size:13px;color:#bbb;">
-    <span style="font-size:9px;color:#ccc;border:1px solid #ddd;border-radius:3px;padding:0 6px;">Ad</span>
-    <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
   </div>
 </article>
 </div>
-<footer><div class="container"><div class="footer-links"><a href="../index.html">Home</a><a href="../blog/index.html">Blog</a><a href="../forum.html">Forum</a><a href="../download.html">Download</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
+<footer><div class="container"><div class="footer-links"><a href="../index.html">Home</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
 </body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — Eggy Wiki</title>
+  <meta name="description" content="Search Eggy Wiki — find characters, maps, outfits, guides, and more.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
+    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
+    nav{display:flex;gap:6px;flex-wrap:wrap}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
+    .container{max-width:700px;margin:0 auto;padding:0 24px}
+    .page-header{padding:32px 0 16px;text-align:center}
+    .page-header h1{font-size:30px;font-weight:800;color:var(--pink);margin-bottom:4px}
+    .page-header p{font-size:15px;color:var(--text-dim)}
+    .search-box{margin-bottom:24px}
+    .search-box input{width:100%;padding:14px 20px;border:2px solid #FFE0EC;border-radius:30px;font-size:16px;font-family:inherit;outline:none;transition:all .2s;background:#fff}
+    .search-box input:focus{border-color:var(--pink);box-shadow:0 0 0 4px rgba(255,107,157,0.1)}
+    .search-stats{font-size:13px;color:var(--text-dim);margin-bottom:16px}
+    .result-item{background:var(--bg-card);border-radius:20px;padding:18px 22px;box-shadow:var(--shadow);margin-bottom:10px;transition:all .2s;display:block;text-decoration:none!important;color:inherit!important}
+    .result-item:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(255,107,157,0.12)}
+    .result-item h3{font-size:16px;color:var(--pink);margin-bottom:2px}
+    .result-item .url{font-size:12px;color:var(--text-dim);margin-bottom:4px}
+    .result-item p{font-size:13px;color:var(--text-dim);line-height:1.5}
+    .result-item em{background:rgba(255,107,157,0.12);color:var(--pink);font-style:normal;padding:1px 4px;border-radius:4px}
+    .no-results{text-align:center;padding:40px 0;color:var(--text-dim);font-size:15px}
+    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
+    footer .container{max-width:1100px;margin:0 auto}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;justify-content:center}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-bottom{font-size:13px;opacity:0.7}
+    @media(max-width:640px){.page-header h1{font-size:24px}}
+  </style>
+</head>
+<body>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="download.html">Download</a><a href="blog/index.html">Blog</a></nav></div></header>
+<div class="container">
+  <div class="page-header">
+    <h1>🔍 Search</h1>
+    <p>Search characters, maps, outfits, guides, codes, and blog posts</p>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Type to search..." autofocus>
+  </div>
+  <div id="searchResults">
+    <div class="search-stats">Type something above to start searching.</div>
+  </div>
+</div>
+<audio id="bgMusic" loop style="display:none;"></audio>
+<script>
+  var bgm = new Audio('audio/eggy-theme.mp3');
+  bgm.loop = true;
+  var musicPlaying = false;
+  function tm() {
+    var btn = document.getElementById('musicBtn');
+    if (musicPlaying) { bgm.pause(); musicPlaying = false; btn.classList.remove('playing'); }
+    else { bgm.play().then(function(){ musicPlaying = true; btn.classList.add('playing'); }).catch(function(e){ console.log('BGM blocked:', e); }); }
+  }
+</script>
+<script>
+  const pages = [
+    {title:"Home — Eggy Wiki", url:"index.html", desc:"Eggy Party wiki hub — characters, maps, outfits, codes, guides and more"},
+    {title:"Characters — Eggy Wiki", url:"characters.html", desc:"Complete character guide — stats, abilities, unlock conditions, and tier ratings"},
+    {title:"Classic Egg", url:"characters/classic-egg.html", desc:"Balanced starter egg with even stats. Free to play."},
+    {title:"Bunny Egg", url:"characters/bunny-egg.html", desc:"High jump character. Best for vertical maps."},
+    {title:"Fox Egg", url:"characters/fox-egg.html", desc:"Fast dash cooldown. #1 pick for advanced players."},
+    {title:"Cat Egg", url:"characters/cat-egg.html", desc:"Soft landing + 40% faster knockback recovery. Best for survival."},
+    {title:"Panda Egg", url:"characters/panda-egg.html", desc:"Tanky defender. Hard to knock over. Best for team mode."},
+    {title:"Penguin Egg", url:"characters/penguin-egg.html", desc:"Slides faster on ice. Unmatched on Frozen Peak."},
+    {title:"Unicorn Egg", url:"characters/unicorn-egg.html", desc:"Sparkle trail cosmetic. Equal stats to Classic Egg."},
+    {title:"Dragon Egg", url:"characters/dragon-egg.html", desc:"Limited edition with fire trail. Slightly above-average stats."},
+    {title:"Maps — Eggy Wiki", url:"maps.html", desc:"Complete map strategies — race shortcuts, survival tactics, team mode tips"},
+    {title:"Volcano Rush", url:"maps/volcano-rush.html", desc:"Lava race map with collapsing platforms and fire hazards."},
+    {title:"Frozen Peak", url:"maps/frozen-peak.html", desc:"Ice mountain race with shortcuts and slippery surfaces."},
+    {title:"Sunflower Sprint", url:"maps/sunflower-sprint.html", desc:"Sunny race map with bounce pads and flower shortcuts."},
+    {title:"Candy Arena", url:"maps/candy-arena.html", desc:"Sweet-themed survival map with rotating candy platforms."},
+    {title:"Underwater Escape", url:"maps/underwater-escape.html", desc:"Deep-sea survival map with rising water and currents."},
+    {title:"Castle Clash", url:"maps/castle-clash.html", desc:"Medieval team mode map with capture points."},
+    {title:"Outfits — Eggy Wiki", url:"outfits.html", desc:"Complete guide to every outfit — free rewards to limited editions."},
+    {title:"Beginner's Guide — Eggy Wiki", url:"beginner.html", desc:"New player guide covering download, controls, characters, and first win."},
+    {title:"Redeem Codes — Eggy Wiki", url:"codes.html", desc:"Working Eggy Party codes updated regularly. Tap to copy."},
+    {title:"Tier List — Eggy Wiki", url:"tierlist.html", desc:"Best eggs ranked for Race, Survival, and Team modes."},
+    {title:"Forum — Eggy Wiki", url:"forum.html", desc:"Community forum for strategies, tips, and discussion."},
+    {title:"Download — Eggy Wiki", url:"download.html", desc:"Download Eggy Party free on iOS, Android, and PC."},
+    {title:"Free Game Accelerator — Eggy Wiki", url:"free-accelerator.html", desc:"Free game booster tools to reduce lag in Eggy Party."},
+    {title:"Blog — Eggy Wiki", url:"blog/index.html", desc:"Latest Eggy Party news, tips, and updates."},
+    {title:"New Season 4 Preview — Eggy Wiki", url:"blog/new-season-4-preview.html", desc:"Season 4 details: new map Candy Arena, Dragon Egg rerun, balance changes."},
+    {title:"Survival Mode Tips — Eggy Wiki", url:"blog/survival-mode-tips.html", desc:"Master survival mode with positioning, hazard timing, and character picks."},
+    {title:"July 2026 Redeem Codes — Eggy Wiki", url:"blog/july-2026-codes.html", desc:"All active codes for July 2026 with expiration dates and rewards."},
+    {title:"Privacy Policy — Eggy Wiki", url:"privacy.html", desc:"Eggy Wiki privacy policy and data handling."},
+    {title:"Contact — Eggy Wiki", url:"contact.html", desc:"Contact Eggy Wiki team — feedback, suggestions, and support."},
+    {title:"Search — Eggy Wiki", url:"search.html", desc:"Search across all Eggy Wiki pages."},
+    {title:"Golden Egg outfit", url:"outfits/golden-egg.html", desc:"Epic Season 1 Battle Pass reward. Pure gold finish."},
+    {title:"Watermelon outfit", url:"outfits/watermelon.html", desc:"Rare watermelon pattern outfit from the shop."},
+    {title:"Neon Star outfit", url:"outfits/neon-star.html", desc:"Epic glow-in-the-dark star outfit from Neon Festival."},
+    {title:"Ice Crown outfit", url:"outfits/ice-crown.html", desc:"Epic ice crystal crown from Season 2 Diamond ranked."},
+    {title:"Dragon Scales outfit", url:"outfits/dragon-scales.html", desc:"Epic dragon scale armor from Dragon's Lair event."}
+  ];
+
+  const input = document.getElementById('searchInput');
+  const results = document.getElementById('searchResults');
+
+  function search() {
+    const q = input.value.trim().toLowerCase();
+    if (!q) { results.innerHTML = '<div class="search-stats">Type something above to start searching.</div>'; return; }
+    const hits = pages.filter(p => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q));
+    let html = '<div class="search-stats">Found ' + hits.length + ' result' + (hits.length !== 1 ? 's' : '') + '</div>';
+    if (hits.length === 0) { html += '<div class="no-results">No results found. Try a different term.</div>'; }
+    else { hits.forEach(p => { html += '<a class="result-item" href="' + p.url + '"><h3>' + hl(p.title, q) + '</h3><div class="url">' + p.url + '</div><p>' + hl(p.desc, q) + '</p></a>'; }); }
+    results.innerHTML = html;
+  }
+
+  function hl(text, q) {
+    if (!q) return text;
+    const i = text.toLowerCase().indexOf(q);
+    if (i === -1) return text;
+    return text.substring(0, i) + '<em>' + text.substring(i, i + q.length) + '</em>' + text.substring(i + q.length);
+  }
+
+  input.addEventListener('input', search);
+  input.addEventListener('keydown', function(e) { if (e.key === 'Enter') search(); });
+</script>
+</body>
+</html>

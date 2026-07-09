@@ -280,7 +280,26 @@
       nav { justify-content: center; }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
     }
-  </style>
+      .music-btn {
+      background: #FF6B9D; border: 2px solid #FF6B9D;
+      color: #fff; font-size: 20px;
+      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .25s;
+      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
+    }
+    .music-btn:hover { background: #E85382; border-color: #E85382; transform: scale(1.05); }
+    .music-btn.playing { 
+      background: #4CAF50; border-color: #4CAF50; color: #fff;
+      box-shadow: 0 0 12px rgba(76,175,80,0.4);
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 4px rgba(76,175,80,0.2); }
+      50% { box-shadow: 0 0 12px rgba(76,175,80,0.4); }
+    }
+
+    </style>
 </head>
 <body>
 
@@ -297,6 +316,7 @@
       <a href="codes.html">Codes</a>
       <a href="blog/index.html">Blog</a><a href="download.html">Download</a>
       <a href="forum.html">Forum</a>
+    <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
     </nav>
   </div>
 </header>
@@ -444,6 +464,28 @@
     </div>
   </div>
 </footer>
+
+<script>
+  var bgm = new Audio('audio/eggy-theme.mp3');
+  bgm.loop = true;
+  var musicPlaying = false;
+
+  function tm() {
+    var btn = document.getElementById('musicBtn');
+    if (musicPlaying) {
+      bgm.pause();
+      musicPlaying = false;
+      btn.classList.remove('playing');
+    } else {
+      bgm.play().then(function() {
+        musicPlaying = true;
+        btn.classList.add('playing');
+      }).catch(function(e) {
+        console.log('BGM blocked:', e);
+      });
+    }
+  }
+</script>
 
 </body>
 </html>

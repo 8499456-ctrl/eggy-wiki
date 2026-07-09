@@ -130,5 +130,7 @@ function copyCode() {
   });
 }
 </script>
+<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
 </body>
 </html>

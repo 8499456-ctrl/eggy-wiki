@@ -2,60 +2,240 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forum — Eggy Wiki</title>
+  <title>Forum — Eggy Wiki Community</title>
   <meta name="description" content="Eggy Party community forum — discuss strategies, share tips, and connect with other players.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--shadow:0 4px 24px rgba(255,107,157,0.08);--border:#FFE0EC;--radius:24px}
     html{scroll-behavior:smooth}
-    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
     a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
     header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
-    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .logo{font-size:22px;font-weight:800;color:var(--gold);text-shadow:0 2px 8px rgba(0,0,0,0.1);background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.logo span{color:var(--gold-light);-webkit-text-fill-color:var(--gold-light)}
     nav{display:flex;gap:6px;flex-wrap:wrap}
-    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
-    .page-header{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,rgba(255,240,245,0.9),rgba(255,248,225,0.9))}
-    .page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}.page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
-    .container{max-width:700px;margin:0 auto;padding:0 24px}section{padding:36px 0}
-    .forum-card{background:var(--bg-card);border-radius:24px;padding:20px;margin-bottom:12px;box-shadow:var(--shadow);display:flex;align-items:center;gap:16px;transition:all .2s}
-    .forum-card:hover{box-shadow:0 8px 32px rgba(255,107,157,0.12)}
-    .forum-icon{font-size:32px;flex-shrink:0}
-    .forum-body{flex:1}
-    .forum-body h3{font-size:18px;margin-bottom:2px}
-    .forum-body p{font-size:13px;color:var(--text-dim)}
-    .forum-meta{font-size:11px;color:#aaa;margin-top:6px}
-    .btn{display:inline-block;background:var(--pink);color:#fff;padding:8px 20px;border-radius:40px;font-weight:700;font-size:13px;transition:all .2s}
-    .btn:hover{background:var(--pink-dark);transform:translateY(-2px)}
-    .btn-outline{background:0 0;color:var(--pink);border:2px solid var(--pink)}
-    .btn-outline:hover{background:rgba(255,107,157,0.06)}
-    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
+    .container{max-width:850px;margin:0 auto;padding:0 24px}
+    .page-header{padding:32px 0 16px;text-align:center}
+    .page-header h1{font-size:30px;font-weight:800;color:var(--pink);margin-bottom:4px}
+    .page-header p{font-size:15px;color:var(--text-dim)}
+    .forum-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:20px}
+    .forum-nav a{padding:10px 20px;border-radius:30px;font-size:14px;font-weight:700;transition:all .2s}
+    .forum-nav a.active{background:var(--pink);color:#fff}
+    .forum-nav a:not(.active){background:var(--bg-card);color:var(--text-dim);box-shadow:var(--shadow)}
+    .forum-nav a:not(.active):hover{background:var(--pink);color:#fff}
+    .thread-card{background:var(--bg-card);border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow);margin-bottom:10px;display:flex;align-items:flex-start;gap:14px;transition:all .2s;text-decoration:none!important;color:inherit!important}
+    .thread-card:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(255,107,157,0.12)}
+    .thread-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+    .thread-body{flex:1;min-width:0}
+    .thread-body h3{font-size:16px;color:var(--pink);margin-bottom:2px}
+    .thread-body .meta{font-size:12px;color:var(--text-dim);margin-bottom:4px}
+    .thread-body .excerpt{font-size:13px;color:var(--text-dim);line-height:1.5}
+    .thread-meta{flex-shrink:0;text-align:right;font-size:12px;color:var(--text-dim)}
+    .thread-meta .replies{display:inline-block;background:rgba(255,107,157,0.08);border-radius:12px;padding:2px 10px;font-weight:700;color:var(--pink)}
+    .category-tag{display:inline-block;padding:2px 10px;border-radius:8px;font-size:11px;font-weight:700}
+    .cat-general{background:var(--blue);color:#fff}.cat-guide{background:var(--green);color:#fff}.cat-bug{background:#E74C3C;color:#fff}.cat-discuss{background:var(--yellow);color:#333}.cat-fan{background:#9B59B6;color:#fff}
+    .pagination{display:flex;justify-content:center;gap:6px;margin:24px 0}
+    .pagination a{padding:8px 14px;border-radius:10px;font-size:14px;background:var(--bg-card);box-shadow:var(--shadow)}.pagination a.active{background:var(--pink);color:#fff}
+    .pagination a:not(.active){color:var(--text-dim)}
+    .rules-box{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:20px;font-size:14px;line-height:1.9}
+    .rules-box h2{font-size:18px;color:var(--pink);margin-bottom:8px}
+    .rules-box li{color:var(--text-dim);margin-left:20px;margin-bottom:4px}
+    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
     footer .container{max-width:1100px;margin:0 auto}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;justify-content:center}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
     .footer-bottom{font-size:13px;opacity:0.7}
-    @media(max-width:640px){.page-header h1{font-size:24px}.header-inner{flex-direction:column;gap:10px}nav{justify-content:center}}
-  </style>
+    @media(max-width:640px){.thread-card{flex-direction:column;gap:6px}.thread-meta{text-align:left}}
+      .music-btn {
+      background: #FF6B9D; border: 2px solid #FF6B9D;
+      color: #fff; font-size: 20px;
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .25s;
+      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
+    }
+    .music-btn:hover { background: #E85382; border-color: #E85382; transform: scale(1.05); }
+    .music-btn.playing { 
+      background: #4CAF50; border-color: #4CAF50; color: #fff;
+      box-shadow: 0 0 12px rgba(76,175,80,0.4);
+    }
+
+    </style>
 </head>
 <body>
-<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a></nav></div></header>
-<div class="page-header"><h1>💬 Community Forum</h1><p>Join the discussion! Share your Eggy Party tips, team up with other players, and stay in the loop.</p></div>
-<section class="container">
-  <div style="text-align:center;padding:40px 0;">
-    <div style="font-size:64px;margin-bottom:16px;">🗣️</div>
-    <h2 style="font-size:22px;font-weight:700;margin-bottom:8px;">Coming Soon!</h2>
-    <p style="color:var(--text-dim);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto;">Our community forum is being built. For now, join our Discord server to chat with other Eggy Party players!</p>
-    <a href="https://discord.gg/eggywiki" class="btn" target="_blank" rel="noopener">Join Discord 🎮</a>
+      <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="outfits.html">Outfits</a><a href="beginner.html">Guide</a><a href="codes.html">Codes</a><a href="download.html">Download</a><a href="blog/index.html">Blog</a></nav></div></header>
+<div class="container">
+  <div class="page-header">
+    <h1>💬 Community Forum</h1>
+    <p>Discuss strategies, share tips, and connect with Eggy Party players worldwide</p>
   </div>
 
-  <!-- ===== AdSense placeholder ===== -->
-  <div style="text-align:center;padding:20px;margin:24px 0;background:rgba(255,107,157,0.04);border:2px dashed #FFD0DE;border-radius:16px;font-size:13px;color:#bbb;">
-    <span style="font-size:9px;color:#ccc;border:1px solid #ddd;border-radius:3px;padding:0 6px;">Ad</span>
-    <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
+  <div class="forum-nav">
+    <a href="#" class="active">📋 All</a>
+    <a href="#">🔥 Trending</a>
+    <a href="#">🆕 Latest</a>
+    <a href="#">⭐ Guides</a>
+    <a href="#">🎨 Fan Art</a>
   </div>
-</section>
-<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><a href="download.html">Download</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
+
+  <div class="rules-box">
+    <h2>📜 Forum Rules</h2>
+    <ol>
+      <li>Be respectful — everyone started as a beginner</li>
+      <li>No spam, self-promotion, or cheating discussions</li>
+      <li>Search before posting — your question may already be answered</li>
+      <li>Keep posts in the appropriate category</li>
+      <li>No NSFW content — this is a family-friendly community</li>
+    </ol>
+  </div>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">🥚</span>
+    <div class="thread-body">
+      <h3>Season 4 Discussion Thread — What do you think so far?</h3>
+      <div class="meta">
+        <span class="category-tag cat-discuss">Discussion</span>
+        <span> by <strong>Wiki</strong> · 3 hours ago</span>
+      </div>
+      <div class="excerpt">The new Candy Arena changes are interesting! The rotating platforms feel faster this season. Anyone else noticed? Also, the new Dragon Egg rerun — finally!...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">12 replies</div>
+      <div style="margin-top:4px;font-size:11px;">👁️ 234</div>
+    </div>
+  </a>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">🐰</span>
+    <div class="thread-body">
+      <h3>How to unlock Bunny Egg quickly? Need tips!</h3>
+      <div class="meta">
+        <span class="category-tag cat-guide">Guide</span>
+        <span> by <strong>NewPlayer99</strong> · yesterday</span>
+      </div>
+      <div class="excerpt">I've been playing for 3 days but still haven't reached Level 15. Any tips on leveling up faster? I really want Bunny Egg for the jump boost on Volcano Rush...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">8 replies</div>
+      <div style="margin-top:4px;font-size:11px;">👁️ 156</div>
+    </div>
+  </a>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">🐼</span>
+    <div class="thread-body">
+      <h3>Panda Egg is underrated — here's why</h3>
+      <div class="meta">
+        <span class="category-tag cat-general">General</span>
+        <span> by <strong>EggMaster</strong> · 2 days ago</span>
+      </div>
+      <div class="excerpt">Everyone sleeps on Panda Egg because it's slow. But in Team mode, a good Panda player is literally unkillable. I went on a 15-win streak yesterday playing flag carrier...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">24 replies</div>
+      <div style="margin-top:4px;font-size:11px;">👁️ 412</div>
+    </div>
+  </a>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">🐛</span>
+    <div class="thread-body">
+      <h3>[Bug] Frozen Peak ice cave shortcut not working?</h3>
+      <div class="meta">
+        <span class="category-tag cat-bug">Bug Report</span>
+        <span> by <strong>SpeedrunnerAlex</strong> · 3 days ago</span>
+      </div>
+      <div class="excerpt">After the latest patch (v2.4.1), I can't get through the ice cave wall crack on Frozen Peak. I've tried from both sides. Is this a known issue or am I missing something?...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">6 replies</div>
+      <div style="margin-top:4px;font-size:11px;">👁️ 89</div>
+    </div>
+  </a>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">🎨</span>
+    <div class="thread-body">
+      <h3>Fan art: My Dragon Egg OC — "Blaze"</h3>
+      <div class="meta">
+        <span class="category-tag cat-fan">Fan Art</span>
+        <span> by <strong>ArtzyEggzy</strong> · 4 days ago</span>
+      </div>
+      <div class="excerpt">Drew my Dragon Egg OC! I call him Blaze. He has a little fire crown and a sassy expression. Let me know what you think! (Credit if reposting please)...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">31 replies</div>
+      <div style="margin-top:4px;font-size:11px;">👁️ 567</div>
+    </div>
+  </a>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">🎵</span>
+    <div class="thread-body">
+      <h3>What's your favorite Eggy Party soundtrack?</h3>
+      <div class="meta">
+        <span class="category-tag cat-discuss">Discussion</span>
+        <span> by <strong>MusicLover</strong> · 5 days ago</span>
+      </div>
+      <div class="excerpt">The Candy Arena theme is such a banger. I catch myself humming it while I'm at work. What's everyone else's favorite track? Also please add a jukebox feature NetEase!...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">18 replies</div>
+      <div style="margin-top:4px;font-size:11px;">👁️ 298</div>
+    </div>
+  </a>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">📚</span>
+    <div class="thread-body">
+      <h3>Complete Beginner FAQ — Read before posting!</h3>
+      <div class="meta">
+        <span class="category-tag cat-guide">Guide</span>
+        <span> by <strong>Wiki</strong> · pinned</span>
+      </div>
+      <div class="excerpt">Welcome to Eggy Party! This thread covers the most frequently asked questions: How to unlock characters, best starter character, what to spend gems on, how to get free outfits, and more...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">Pinned</div>
+      <div style="margin-top:4px;font-size:11px;">📌</div>
+    </div>
+  </a>
+
+  <a href="#" class="thread-card">
+    <span class="thread-icon">❄️</span>
+    <div class="thread-body">
+      <h3>Frozen Peak speedrun competition — submit your times!</h3>
+      <div class="meta">
+        <span class="category-tag cat-general">General</span>
+        <span> by <strong>SpeedrunComm</strong> · 1 week ago</span>
+      </div>
+      <div class="excerpt">We're hosting a Frozen Peak speedrun challenge! Current record is 1:42.32 by FoxEggPro. Can you beat it? Submit your video recording in this thread. Winner gets bragging rights + a shoutout!...</div>
+    </div>
+    <div class="thread-meta">
+      <div class="replies">43 replies</div>
+      <div style="margin-top:4px;font-size:11px;">👁️ 892</div>
+    </div>
+  </a>
+
+  <div class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">→</a>
+  </div>
+
+  <div style="text-align:center;margin:8px 0 30px;">
+    <a href="contact.html" style="display:inline-block;padding:12px 30px;background:var(--pink);color:#fff!important;border-radius:30px;font-weight:700;">📝 Create New Post</a>
+  </div>
+</div>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
+<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
+<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
 </body>
 </html>
