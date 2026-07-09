@@ -267,6 +267,16 @@
       color: var(--text-light);
       flex-shrink: 0;
     }
+    /* ===== Ad Rent Section ===== */
+    .ad-rent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 20px 0; }
+    .ad-rent-card { background: var(--bg-card); border-radius: 20px; padding: 20px; text-align: center; box-shadow: var(--shadow); transition: all .3s; border: 2px solid var(--border); }
+    .ad-rent-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(255,107,157,0.12); }
+    .ad-rent-card .price { font-size: 24px; font-weight: 800; color: var(--pink); margin: 8px 0; }
+    .ad-rent-card .price span { font-size: 14px; font-weight: 400; color: var(--text-dim); }
+    .ad-rent-card .desc { font-size: 13px; color: var(--text-dim); margin-bottom: 12px; }
+    .ad-rent-card .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; background: var(--yellow); color: #fff; margin-bottom: 8px; }
+    .btn-rent { display: inline-block; padding: 8px 20px; border-radius: 30px; background: var(--pink); color: #fff !important; font-size: 13px; font-weight: 700; transition: all .2s; }
+    .btn-rent:hover { background: var(--pink-dark); transform: scale(1.02); }
 
     /* ===== Footer ===== */
     footer {
@@ -454,6 +464,35 @@ gtag("config", "G-497248KSLQ");
     <div class="hero-btns">
       <a href="forum.html" class="btn-primary">🗣️ Visit the Forum</a>
     </div>
+  </div>
+</section>
+
+<!-- ===== Ad Space for Rent ===== -->
+<section style="padding:36px 24px;background:#fff;">
+  <div class="container">
+    <h2 class="section-title">📢 Advertise Here</h2>
+    <p class="section-sub" style="text-align:center;max-width:600px;margin:0 auto 24px;">Reach thousands of Eggy Party players worldwide. Premium ad spots available for your brand, product, or service.</p>
+    <div class="ad-rent-grid">
+      <div class="ad-rent-card">
+        <div class="badge">⭐ Featured</div>
+        <div class="price">$49<span>/month</span></div>
+        <div class="desc">Hero banner spot — top of homepage. Highest visibility. 728×90 or custom.</div>
+        <a href="contact.html" class="btn-rent">Book Now →</a>
+      </div>
+      <div class="ad-rent-card">
+        <div class="badge">Popular</div>
+        <div class="price">$29<span>/month</span></div>
+        <div class="desc">Sidebar / in-content banner. Appears on all guide pages. 300×250.</div>
+        <a href="contact.html" class="btn-rent">Book Now →</a>
+      </div>
+      <div class="ad-rent-card">
+        <div class="badge">Budget</div>
+        <div class="price">$99<span>/3 months</span></div>
+        <div class="desc">Footer banner or blog post placement. Best value for long-term campaigns.</div>
+        <a href="contact.html" class="btn-rent">Book Now →</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--text-dim);margin-top:8px;">Questions? <a href="contact.html">Contact us</a> for custom packages and partnerships.</p>
   </div>
 </section>
 
