@@ -368,33 +368,28 @@
     /* ===== Left Side Nav ===== */
     .page-layout { display: flex; gap: 8px; max-width: 1100px; margin: 0 auto; padding: 0; }
     .page-main { flex: 1; min-width: 0; }
-    .side-nav {
-      width: 170px; flex-shrink: 0; display: none;
-      position: sticky; top: 80px; align-self: flex-start;
-    }
-    .side-nav-inner {
-      background: var(--bg-card); border-radius: 0 16px 16px 0;
-      padding: 16px 16px 16px 0; box-shadow: var(--shadow);
-    }
-    .side-nav h4 {
-      font-size: 13px; color: var(--pink);
-      margin-bottom: 8px; padding-bottom: 4px;
-      border-bottom: 2px solid var(--border);
-    }
-    .side-nav a {
-      display: block; padding: 6px 12px 6px 0; border-radius: 10px;
-      color: var(--text); font-size: 13px; font-weight: 600;
-      transition: all .2s;
-    }
-    .side-nav a:hover { background: var(--bg); color: var(--pink); }
-    @media (min-width: 901px) { .side-nav { display: block; } }
+    .side-nav { display: none; }
+    .side-nav-inner { display: none; }
+    .side-nav h4 { display: none; }
+    .side-nav a { display: none; }
+    @media (min-width: 901px) { .side-nav { display: none; } }
     @media (max-width: 900px) {
       .page-layout { flex-direction: column; }
-      .side-nav { width: 100%; position: static; display: block; }
-      .side-nav-inner { display: flex; flex-wrap: wrap; gap: 4px; padding: 12px; }
-      .side-nav-inner a { padding: 6px 10px; font-size: 12px; }
-      .side-nav h4 { width: 100%; }
+      .side-nav { display: none; }
     }
+
+    /* ===== Top Quick Links Bar ===== */
+    .top-links-bar {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 6px; padding: 16px 24px; max-width: 1100px; margin: 0 auto;
+    }
+    .top-links-bar a {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: var(--bg-card); padding: 8px 16px; border-radius: 30px;
+      font-size: 13px; font-weight: 600; color: var(--text);
+      box-shadow: var(--shadow); transition: all .2s; text-decoration: none;
+    }
+    .top-links-bar a:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(255,107,157,0.15); color: var(--pink); }
 
     </style>
 <!-- Google tag (gtag.js) -->
@@ -455,23 +450,27 @@ gtag("config", "G-497248KSLQ");
   </div>
 </section>
 
-<div class="page-layout">
-<div class="side-nav">
-  <div class="side-nav-inner">
-    <h4>📚 More Pages</h4>
-    <a href="videos.html">🎬 Videos</a><a href="seasons.html">📅 Seasons</a><a href="achievements.html">🏅 Achievements</a><a href="leaderboard.html">🏆 Rankings</a><a href="items.html">📦 Items</a><a href="blog/index.html">📝 Blog</a>
-    <a href="download.html">📥 Download</a>
-    <a href="tierlist.html">🏆 Tier List</a>
-    <a href="gallery.html">🖼️ Gallery</a>
-    <a href="forum.html">💬 Forum</a>
-    <a href="about.html">ℹ️ About</a>
-    <a href="faq.html">❓ FAQ</a>
-    <a href="privacy.html">🔒 Privacy</a>
-    <a href="contact.html">📧 Contact</a>
-    <a href="bugs.html">🐛 Bugs</a>
-    <a href="search.html">🔍 Search</a>
-  </div>
+<!-- ===== Top Quick Links Bar ===== -->
+<div class="top-links-bar">
+  <a href="videos.html">🎬 Videos</a>
+  <a href="seasons.html">📅 Seasons</a>
+  <a href="achievements.html">🏅 Achievements</a>
+  <a href="leaderboard.html">🏆 Rankings</a>
+  <a href="items.html">📦 Items</a>
+  <a href="blog/index.html">📝 Blog</a>
+  <a href="download.html">📥 Download</a>
+  <a href="tierlist.html">🏆 Tier List</a>
+  <a href="gallery.html">🖼️ Gallery</a>
+  <a href="forum.html">💬 Forum</a>
+  <a href="about.html">ℹ️ About</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="privacy.html">🔒 Privacy</a>
+  <a href="contact.html">📧 Contact</a>
+  <a href="bugs.html">🐛 Bugs</a>
+  <a href="search.html">🔍 Search</a>
 </div>
+
+<div class="page-layout">
 <div class="page-main">
 
 <!-- ===== Quick Links ===== -->
