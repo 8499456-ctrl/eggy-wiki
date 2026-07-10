@@ -363,15 +363,15 @@
     .sidebar a .emoji { margin-right: 8px; }
 
     /* ===== Left Side Nav ===== */
-    .page-layout { display: flex; gap: 12px; max-width: 1100px; margin: 0 auto; padding: 0 8px 0 24px; }
+    .page-layout { display: flex; gap: 8px; max-width: 1100px; margin: 0 auto; padding: 0 0 0 4px; }
     .page-main { flex: 1; min-width: 0; }
     .side-nav {
       width: 200px; flex-shrink: 0; display: none;
       position: sticky; top: 80px; align-self: flex-start;
     }
     .side-nav-inner {
-      background: var(--bg-card); border-radius: 20px;
-      padding: 16px; box-shadow: var(--shadow);
+      background: var(--bg-card); border-radius: 0 16px 16px 0;
+      padding: 16px 16px 16px 8px; box-shadow: var(--shadow);
     }
     .side-nav h4 {
       font-size: 13px; color: var(--pink);
@@ -379,7 +379,7 @@
       border-bottom: 2px solid var(--border);
     }
     .side-nav a {
-      display: block; padding: 6px 12px 6px 4px; border-radius: 10px;
+      display: block; padding: 6px 12px 6px 0; border-radius: 10px;
       color: var(--text); font-size: 13px; font-weight: 600;
       transition: all .2s;
     }
