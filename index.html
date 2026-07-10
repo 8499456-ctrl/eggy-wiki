@@ -298,7 +298,7 @@
       nav { justify-content: center; }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
     }
-      .music-btn {
+    .music-btn {
       background: #FF6B9D; border: 2px solid #FF6B9D;
       color: #fff; font-size: 20px;
       box-shadow: 0 2px 8px rgba(255,107,157,0.3);
@@ -317,6 +317,82 @@
       50% { box-shadow: 0 0 12px rgba(76,175,80,0.4); }
     }
 
+    /* ===== Sidebar ===== */
+    nav .nav-more { display: none; }
+    .sidebar-toggle {
+      background: rgba(255,255,255,0.2);
+      border: none; color: #fff; font-size: 20px;
+      width: 36px; height: 36px; border-radius: 50%;
+      cursor: pointer; display: flex;
+      align-items: center; justify-content: center;
+      transition: all .2s;
+    }
+    .sidebar-toggle:hover { background: rgba(255,255,255,0.35); }
+    .sidebar-overlay {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 200; display: none; opacity: 0; transition: opacity .3s;
+    }
+    .sidebar-overlay.open { display: block; opacity: 1; }
+    .sidebar {
+      position: fixed; top: 0; left: -280px;
+      width: 260px; height: 100vh;
+      background: #fff; z-index: 201;
+      box-shadow: 4px 0 24px rgba(0,0,0,0.1);
+      transition: left .3s cubic-bezier(.34,1.56,.64,1);
+      padding: 24px 16px; overflow-y: auto;
+    }
+    .sidebar.open { left: 0; }
+    .sidebar .close-btn {
+      position: absolute; top: 12px; right: 12px;
+      background: none; border: none; font-size: 24px;
+      cursor: pointer; color: var(--text-dim);
+    }
+    .sidebar .close-btn:hover { color: var(--text); }
+    .sidebar h4 {
+      font-size: 14px; color: var(--pink);
+      margin: 20px 0 8px; padding-bottom: 4px;
+      border-bottom: 2px solid var(--border);
+    }
+    .sidebar a {
+      display: block; padding: 10px 12px; border-radius: 12px;
+      color: var(--text); font-size: 14px; font-weight: 600;
+      transition: all .2s;
+    }
+    .sidebar a:hover { background: var(--bg); color: var(--pink); }
+    .sidebar a .emoji { margin-right: 8px; }
+
+    /* ===== Left Side Nav ===== */
+    .page-layout { display: flex; gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .page-main { flex: 1; min-width: 0; }
+    .side-nav {
+      width: 200px; flex-shrink: 0; display: none;
+      position: sticky; top: 80px; align-self: flex-start;
+    }
+    .side-nav-inner {
+      background: var(--bg-card); border-radius: 20px;
+      padding: 16px; box-shadow: var(--shadow);
+    }
+    .side-nav h4 {
+      font-size: 13px; color: var(--pink);
+      margin-bottom: 8px; padding-bottom: 4px;
+      border-bottom: 2px solid var(--border);
+    }
+    .side-nav a {
+      display: block; padding: 8px 12px; border-radius: 10px;
+      color: var(--text); font-size: 13px; font-weight: 600;
+      transition: all .2s;
+    }
+    .side-nav a:hover { background: var(--bg); color: var(--pink); }
+    @media (min-width: 901px) { .side-nav { display: block; } }
+    @media (max-width: 900px) {
+      .page-layout { flex-direction: column; }
+      .side-nav { width: 100%; position: static; display: block; }
+      .side-nav-inner { display: flex; flex-wrap: wrap; gap: 4px; padding: 12px; }
+      .side-nav-inner a { padding: 6px 10px; font-size: 12px; }
+      .side-nav h4 { width: 100%; }
+    }
+
     </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
@@ -333,6 +409,7 @@ gtag("config", "G-497248KSLQ");
 <!-- ===== Header ===== -->
 <header>
   <div class="header-inner">
+    <button class="sidebar-toggle" onclick="toggleSidebar()" title="More pages">☰</button>
     <div class="logo">🥚 Eggy<span>Wiki</span></div>
     <nav>
       <a href="index.html">Home</a>
@@ -341,12 +418,28 @@ gtag("config", "G-497248KSLQ");
       <a href="outfits.html">Outfits</a>
       <a href="beginner.html">Guide</a>
       <a href="codes.html">Codes</a>
-      <a href="blog/index.html">Blog</a><a href="download.html">Download</a>
-      <a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;margin-left:4px;">🔍</a>
     <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
     </nav>
   </div>
 </header>
+
+<!-- ===== Sidebar Panel ===== -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+<div class="sidebar" id="sidebar">
+  <button class="close-btn" onclick="toggleSidebar()">✕</button>
+  <h4>📚 More</h4>
+  <a href="blog/index.html"><span class="emoji">📝</span>Blog</a>
+  <a href="download.html"><span class="emoji">📥</span>Download</a>
+  <a href="tierlist.html"><span class="emoji">🏆</span>Tier List</a>
+  <a href="gallery.html"><span class="emoji">🖼️</span>Gallery</a>
+  <a href="forum.html"><span class="emoji">💬</span>Forum</a>
+  <a href="about.html"><span class="emoji">ℹ️</span>About</a>
+  <a href="faq.html"><span class="emoji">❓</span>FAQ</a>
+  <a href="privacy.html"><span class="emoji">🔒</span>Privacy</a>
+  <a href="contact.html"><span class="emoji">📧</span>Contact</a>
+  <a href="bugs.html"><span class="emoji">🐛</span>Bugs</a>
+  <a href="search.html"><span class="emoji">🔍</span>Search</a>
+</div>
 
 <!-- ===== Hero ===== -->
 <section class="hero">
@@ -358,6 +451,25 @@ gtag("config", "G-497248KSLQ");
     <a href="codes.html" class="btn-secondary">🎁 Latest Codes</a>
   </div>
 </section>
+
+<div class="page-layout">
+<div class="side-nav">
+  <div class="side-nav-inner">
+    <h4>📚 More Pages</h4>
+    <a href="blog/index.html">📝 Blog</a>
+    <a href="download.html">📥 Download</a>
+    <a href="tierlist.html">🏆 Tier List</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="forum.html">💬 Forum</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="faq.html">❓ FAQ</a>
+    <a href="privacy.html">🔒 Privacy</a>
+    <a href="contact.html">📧 Contact</a>
+    <a href="bugs.html">🐛 Bugs</a>
+    <a href="search.html">🔍 Search</a>
+  </div>
+</div>
+<div class="page-main">
 
 <!-- ===== Quick Links ===== -->
 <section>
@@ -528,6 +640,9 @@ gtag("config", "G-497248KSLQ");
   </div>
 </div>
 
+</div><!-- /page-main -->
+</div><!-- /page-layout -->
+
 <!-- ===== Footer ===== -->
 <footer>
   <div class="container">
@@ -566,6 +681,13 @@ gtag("config", "G-497248KSLQ");
         console.log('BGM blocked:', e);
       });
     }
+  }
+</script>
+
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('open');
   }
 </script>
 
