@@ -65,7 +65,8 @@
       box-shadow: 0 0 12px rgba(76,175,80,0.4);
     }
 
-    </style>
+        .share-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 24px;max-width:1100px;margin:0 auto;flex-wrap:wrap}.share-bar span{font-size:14px;color:var(--text-dim);font-weight:600}.share-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:13px;font-weight:700;color:#fff;text-decoration:none;transition:all .2s}.share-btn:hover{transform:scale(1.1);color:#fff}.share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);border:none;cursor:pointer;font-size:16px;padding:0;color:#fff}
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
 <script>
@@ -219,6 +220,7 @@ gtag("config", "G-497248KSLQ");
   <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
 </div>
 
+<div class="share-bar"><span>Share:</span><a href="https://twitter.com/intent/tweet?url=https://eggywiki.com&text=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-tw">X</a><a href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com" target="_blank" rel="noopener nofollow" class="share-btn share-fb">f</a><a href="https://www.reddit.com/submit?url=https://eggywiki.com&title=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-rd">R</a><button onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent=u2705).catch(()=>{})" class="share-btn share-copy" title="Copy link">U0001f517</button></div>
 <footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><a href="download.html">Download</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div></footer>
 <audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
 <script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
