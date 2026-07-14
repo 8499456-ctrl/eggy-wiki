@@ -42,6 +42,16 @@ nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:
 .info-box h4{color:var(--pink);font-size:15px;margin-bottom:6px}
 footer{text-align:center;padding:28px 24px;color:var(--text-dim);font-size:13px;border-top:1px solid #eee}
 @media(max-width:600px){.page-header h1{font-size:22px}header{padding:10px 16px}.header-inner{flex-direction:column;gap:8px}}
+/* Post Interaction */
+.interact-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:32px 0 8px;padding:14px 18px;background:var(--bg-card);border:2px solid #FFE0EC;border-radius:20px;flex-wrap:wrap}
+.interact-bar .like-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:30px;font-size:14px;font-weight:700;border:2px solid #FFE0EC;background:transparent;color:var(--text-dim);cursor:pointer;transition:all .25s;font-family:inherit}
+.interact-bar .like-btn:hover{border-color:var(--pink);color:var(--pink)}
+.interact-bar .like-btn.liked{background:rgba(255,107,157,0.1);border-color:var(--pink);color:var(--pink)}
+.interact-bar .share-group{display:flex;gap:6px;flex-wrap:wrap}
+.interact-bar .share-group span{font-size:13px;color:var(--text-dim);line-height:32px}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font-size:13px;font-weight:700;color:#fff!important;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.share-btn:hover{transform:scale(1.1);color:#fff!important}
+.share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);font-size:12px}
 </style>
 </head>
 <body>
@@ -120,6 +130,52 @@ footer{text-align:center;padding:28px 24px;color:var(--text-dim);font-size:13px;
 <p>We'll update this page as soon as official details drop. Follow the <a href="index.html" style="color:var(--pink);font-weight:600;">Eggy Wiki Blog</a> for the latest news.</p>
 
   </div>
+
+    </div>
+
+  <!-- ===== Like + Share ===== -->
+  <div class="interact-bar">
+    <button class="like-btn" onclick="toggleLike(this)" id="likeBtn">
+      <span id="likeIcon">🐣</span>
+      <span id="likeCount">0</span>
+      <span>Like</span>
+    </button>
+    <div class="share-group">
+      <span>📤 Share:</span>
+      <a class="share-btn share-tw" href="https://twitter.com/intent/tweet?text=Season%205%20Preview%20-%20Eggy%20Party&url=https://eggywiki.com/blog/season-5-preview.html" target="_blank" rel="noopener" title="Twitter">𝕏</a>
+      <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com/blog/season-5-preview.html" target="_blank" rel="noopener" title="Facebook">f</a>
+      <a class="share-btn share-rd" href="https://www.reddit.com/submit?title=Season%205%20Preview%20-%20Eggy%20Party&url=https://eggywiki.com/blog/season-5-preview.html" target="_blank" rel="noopener" title="Reddit">R</a>
+      <button class="share-btn share-copy" onclick="copyLink(this)" title="Copy link">📋</button>
+    </div>
+  </div>
+
+  <script>
+  function toggleLike(btn) {
+    var count = document.getElementById('likeCount');
+    if (btn.classList.contains('liked')) {
+      btn.classList.remove('liked');
+      count.textContent = Math.max(0, parseInt(count.textContent) - 1);
+    } else {
+      btn.classList.add('liked');
+      count.textContent = parseInt(count.textContent) + 1;
+    }
+    var key = 'liked_' + window.location.pathname;
+    localStorage.setItem(key, btn.classList.contains('liked') ? '1' : '0');
+  }
+  function copyLink(btn) {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      btn.textContent = '✅';
+      setTimeout(function() { btn.textContent = '📋'; }, 2000);
+    });
+  }
+  (function() {
+    var key = 'liked_' + window.location.pathname;
+    if (localStorage.getItem(key) === '1') {
+      var btn = document.getElementById('likeBtn');
+      if (btn) { btn.classList.add('liked'); document.getElementById('likeCount').textContent = '1'; }
+    }
+  })();
+  </script>
 
   <!-- ===== Related Articles ===== -->
   <div style="margin-top:40px;padding-top:28px;border-top:2px solid #FFE0EC;">
