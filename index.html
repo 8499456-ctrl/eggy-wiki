@@ -279,6 +279,17 @@
     .btn-rent { display: inline-block; padding: 8px 20px; border-radius: 30px; background: var(--pink); color: #fff !important; font-size: 13px; font-weight: 700; transition: all .2s; }
     .btn-rent:hover { background: var(--pink-dark); transform: scale(1.02); }
 
+    /* ===== PictTool partner feature ===== */
+    .pict-feature { margin: 8px auto 38px; max-width: 1100px; border-radius: 28px; overflow: hidden; background: linear-gradient(135deg, #25114D 0%, #51258C 54%, #7C3AED 100%); box-shadow: 0 14px 36px rgba(93,42,155,.22); color: #fff; }
+    .pict-feature-inner { display: flex; align-items: center; gap: 22px; padding: 28px 32px; }
+    .pict-feature-icon { width: 68px; height: 68px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 22px; background: rgba(255,255,255,.15); font-size: 34px; box-shadow: inset 0 1px 0 rgba(255,255,255,.22); }
+    .pict-feature-copy { flex: 1; min-width: 0; }
+    .pict-feature-kicker { display: inline-block; margin-bottom: 6px; padding: 3px 9px; border-radius: 99px; background: rgba(255,255,255,.14); font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .pict-feature h2 { margin: 0 0 5px; color: #fff; font-size: 24px; line-height: 1.2; }
+    .pict-feature p { margin: 0; color: rgba(255,255,255,.84); font-size: 14px; max-width: 650px; }
+    .pict-feature-btn { flex: 0 0 auto; padding: 12px 18px; border-radius: 99px; background: #fff; color: #5B21B6 !important; font-weight: 800; font-size: 14px; box-shadow: 0 4px 14px rgba(16,4,40,.22); }
+    .pict-feature-btn:hover { color: #4C1D95 !important; transform: translateY(-2px); }
+
     /* ===== Footer ===== */
     footer {
       background: linear-gradient(135deg, var(--pink), var(--blue));
@@ -301,6 +312,10 @@
       .header-inner { flex-direction: column; gap: 12px; }
       nav { justify-content: center; }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .pict-feature-inner { align-items: flex-start; flex-wrap: wrap; padding: 24px 20px; gap: 15px; }
+      .pict-feature-icon { width: 54px; height: 54px; border-radius:18px; font-size:28px; }
+      .pict-feature h2 { font-size: 20px; }
+      .pict-feature-btn { width: 100%; text-align: center; }
     }
     .music-btn {
       background: #FF6B9D; border: 2px solid #FF6B9D;
@@ -564,6 +579,21 @@ gtag("config", "G-497248KSLQ");
     </div>
   </div>
 </div>
+
+<!-- ===== PictTool Partner Feature ===== -->
+<section style="padding:0 24px;">
+  <div class="pict-feature">
+    <div class="pict-feature-inner">
+      <div class="pict-feature-icon" aria-hidden="true">🎨</div>
+      <div class="pict-feature-copy">
+        <span class="pict-feature-kicker">Creator tool</span>
+        <h2>Make your game screenshots stand out</h2>
+        <p>Create an original fantasy game avatar, turn a photo into a cartoon, add text to a screenshot, or polish an image in seconds — free with PictTool.</p>
+      </div>
+      <a class="pict-feature-btn" href="https://www.picttool.com/" target="_blank" rel="noopener">Try PictTool →</a>
+    </div>
+  </div>
+</section>
 
 <!-- ===== Latest Guides ===== -->
 <section>
