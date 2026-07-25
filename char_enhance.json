@@ -1,0 +1,5121 @@
+{
+  "aether": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Freedom-Sworn",
+      "Primordial Jade Cutter",
+      "Favonius Sword",
+      "Sacrificial Sword"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Traveler (Anemo) + Furina + Faruzan + Bennett",
+      "Traveler (Anemo) + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "lumine": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Freedom-Sworn",
+      "Primordial Jade Cutter",
+      "Favonius Sword",
+      "Sacrificial Sword"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Traveler (Lumine) + Furina + Faruzan + Bennett",
+      "Traveler (Lumine) + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "venti": {
+    "role": "Support (CC)",
+    "weapon": "Bow",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Venti + Furina + Faruzan + Bennett",
+      "Venti + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Valuable team utility",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "kazuha": {
+    "role": "Support",
+    "weapon": "Sword",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Kazuha + Furina + Faruzan + Bennett",
+      "Kazuha + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Valuable team utility",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "xiao": {
+    "role": "Main DPS",
+    "weapon": "Polearm",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Xiao + Furina + Faruzan + Bennett",
+      "Xiao + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "wanderer": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Wanderer + Furina + Faruzan + Bennett",
+      "Wanderer + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "faruzan": {
+    "role": "Support",
+    "weapon": "Bow",
+    "element": "anemo",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Faruzan + Furina + Faruzan + Bennett",
+      "Faruzan + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Valuable team utility",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "jean": {
+    "role": "Healer / Support",
+    "weapon": "Sword",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)",
+      "Tenacity of Millelith (4)",
+      "Ocean-Hued Clam (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Jean + Furina + Faruzan + Bennett",
+      "Jean + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Valuable team utility",
+      "Reliable sustain for any team"
+    ],
+    "weaknesses": [
+      "Limited offensive contributions",
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "sayu": {
+    "role": "Healer",
+    "weapon": "Claymore",
+    "element": "anemo",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)",
+      "Tenacity of Millelith (4)",
+      "Ocean-Hued Clam (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Sayu + Furina + Faruzan + Bennett",
+      "Sayu + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Reliable sustain for any team",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "sucrose": {
+    "role": "Support (EM Share)",
+    "weapon": "Catalyst",
+    "element": "anemo",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Sucrose + Furina + Faruzan + Bennett",
+      "Sucrose + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Valuable team utility",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "heizou": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "anemo",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Heizou + Furina + Faruzan + Bennett",
+      "Heizou + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "lynnette": {
+    "role": "Sub-DPS",
+    "weapon": "Sword",
+    "element": "anemo",
+    "rarity": 4,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)",
+      "Emblem of Severed Fate (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Lynnette + Furina + Faruzan + Bennett",
+      "Lynnette + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "lan_yan": {
+    "role": "Shielder",
+    "weapon": "Catalyst",
+    "element": "anemo",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)",
+      "Tenacity of Millelith (4)",
+      "Ocean-Hued Clam (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / HP%",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Lan Yan + Furina + Faruzan + Bennett",
+      "Lan Yan + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Provides safe play environment",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "mizuki": {
+    "role": "Healer",
+    "weapon": "Catalyst",
+    "element": "anemo",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Viridescent Venerer (4)",
+      "Desert Pavilion Chronicle (4)",
+      "Tenacity of Millelith (4)",
+      "Ocean-Hued Clam (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Mizuki + Furina + Faruzan + Bennett",
+      "Mizuki + Xiangling + Xingqiu + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vayuda Turquoise",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Reliable sustain for any team",
+      "Synergizes well within anemo teams"
+    ],
+    "weaknesses": [
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "zhongli": {
+    "role": "Shielder",
+    "weapon": "Polearm",
+    "element": "geo",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / HP%",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Zhongli + Zhongli + Albedo + Gorou",
+      "Zhongli + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Provides safe play environment",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "albedo": {
+    "role": "Sub-DPS",
+    "weapon": "Sword",
+    "element": "geo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)",
+      "Emblem of Severed Fate (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Albedo + Zhongli + Albedo + Gorou",
+      "Albedo + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "itto": {
+    "role": "Main DPS",
+    "weapon": "Claymore",
+    "element": "geo",
+    "rarity": 5,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Arataki Itto + Zhongli + Albedo + Gorou",
+      "Arataki Itto + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "navia": {
+    "role": "Main DPS",
+    "weapon": "Claymore",
+    "element": "geo",
+    "rarity": 5,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Navia + Zhongli + Albedo + Gorou",
+      "Navia + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "chiori": {
+    "role": "Sub-DPS",
+    "weapon": "Sword",
+    "element": "geo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)",
+      "Emblem of Severed Fate (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Chiori + Zhongli + Albedo + Gorou",
+      "Chiori + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "gorou": {
+    "role": "Support",
+    "weapon": "Bow",
+    "element": "geo",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Gorou + Zhongli + Albedo + Gorou",
+      "Gorou + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Valuable team utility",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "ningguang": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "geo",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Ningguang + Zhongli + Albedo + Gorou",
+      "Ningguang + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "noelle": {
+    "role": "Main DPS / Healer",
+    "weapon": "Claymore",
+    "element": "geo",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Noelle + Zhongli + Albedo + Gorou",
+      "Noelle + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Reliable sustain for any team",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "Limited offensive contributions"
+    ]
+  },
+  "yun_jin": {
+    "role": "Support (NA DMG)",
+    "weapon": "Polearm",
+    "element": "geo",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Yun Jin + Zhongli + Albedo + Gorou",
+      "Yun Jin + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Valuable team utility",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "xilonen": {
+    "role": "Support",
+    "weapon": "Sword",
+    "element": "geo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)",
+      "Noblesse Oblige (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Xilonen + Zhongli + Albedo + Gorou",
+      "Xilonen + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Valuable team utility",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "kachina": {
+    "role": "Sub-DPS",
+    "weapon": "Polearm",
+    "element": "geo",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Archak Petra (4)",
+      "Husk of Opulent Dreams (4)",
+      "Golden Troupe (4)",
+      "Emblem of Severed Fate (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Kachina + Zhongli + Albedo + Gorou",
+      "Kachina + Furina + Xilonen + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Prithiva Topaz",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within geo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "raiden": {
+    "role": "Main DPS / Battery",
+    "weapon": "Polearm",
+    "element": "electro",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Raiden Shogun + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Raiden Shogun + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "yae": {
+    "role": "Sub-DPS",
+    "weapon": "Catalyst",
+    "element": "electro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Yae Miko + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Yae Miko + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "keqing": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "electro",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Keqing + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Keqing + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "cyno": {
+    "role": "Main DPS",
+    "weapon": "Polearm",
+    "element": "electro",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Cyno + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Cyno + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "fischl": {
+    "role": "Sub-DPS",
+    "weapon": "Bow",
+    "element": "electro",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Fischl + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Fischl + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "kuki": {
+    "role": "Healer (Hyperbloom)",
+    "weapon": "Sword",
+    "element": "electro",
+    "rarity": 4,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Kuki Shinobu + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Kuki Shinobu + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Reliable sustain for any team",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "lisa": {
+    "role": "Sub-DPS",
+    "weapon": "Catalyst",
+    "element": "electro",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Lisa + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Lisa + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "razor": {
+    "role": "Main DPS",
+    "weapon": "Claymore",
+    "element": "electro",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Razor + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Razor + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "beidou": {
+    "role": "Sub-DPS",
+    "weapon": "Claymore",
+    "element": "electro",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Beidou + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Beidou + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "clorinde": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "electro",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Clorinde + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Clorinde + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "sethos": {
+    "role": "Main DPS",
+    "weapon": "Bow",
+    "element": "electro",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Sethos + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Sethos + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "ororon": {
+    "role": "Sub-DPS",
+    "weapon": "Bow",
+    "element": "electro",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Ororon + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Ororon + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "variesa": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "electro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Emblem of Severed Fate (4)",
+      "Thundering Fury (4)",
+      "Golden Troupe (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Varesa + Nahida + Xingqiu + Kuki (Hyperbloom)",
+      "Varesa + Fischl + Kazuha + Bennett"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Vajrada Amethyst",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within electro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "nahida": {
+    "role": "Sub-DPS / Support",
+    "weapon": "Catalyst",
+    "element": "dendro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)",
+      "Noblesse Oblige (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Nahida + Nahida + Xingqiu + Kuki",
+      "Nahida + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Valuable team utility"
+    ],
+    "weaknesses": [
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "alhaitham": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "dendro",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Alhaitham + Nahida + Xingqiu + Kuki",
+      "Alhaitham + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within dendro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "tighnari": {
+    "role": "Main DPS",
+    "weapon": "Bow",
+    "element": "dendro",
+    "rarity": 5,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Tighnari + Nahida + Xingqiu + Kuki",
+      "Tighnari + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within dendro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "baizhu": {
+    "role": "Healer / Shielder",
+    "weapon": "Catalyst",
+    "element": "dendro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Baizhu + Nahida + Xingqiu + Kuki",
+      "Baizhu + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Reliable sustain for any team",
+      "Provides safe play environment"
+    ],
+    "weaknesses": [
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "kirara": {
+    "role": "Shielder",
+    "weapon": "Sword",
+    "element": "dendro",
+    "rarity": 4,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / HP%",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Kirara + Nahida + Xingqiu + Kuki",
+      "Kirara + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Provides safe play environment",
+      "Synergizes well within dendro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "yaoyao": {
+    "role": "Healer",
+    "weapon": "Polearm",
+    "element": "dendro",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Yaoyao + Nahida + Xingqiu + Kuki",
+      "Yaoyao + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Reliable sustain for any team",
+      "Synergizes well within dendro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "kaveh": {
+    "role": "Main DPS",
+    "weapon": "Claymore",
+    "element": "dendro",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Kaveh + Nahida + Xingqiu + Kuki",
+      "Kaveh + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Synergizes well within dendro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "collei": {
+    "role": "Sub-DPS",
+    "weapon": "Bow",
+    "element": "dendro",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)",
+      "Emblem of Severed Fate (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Collei + Nahida + Xingqiu + Kuki",
+      "Collei + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within dendro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "emilie": {
+    "role": "Sub-DPS",
+    "weapon": "Polearm",
+    "element": "dendro",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Deepwood Memories (4)",
+      "Gilded Dreams (4)",
+      "Paradise Lost (4)",
+      "Emblem of Severed Fate (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Emilie + Nahida + Xingqiu + Kuki",
+      "Emilie + Furina + Baizhu + Raiden"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Nagadus Emerald",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within dendro teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "furina": {
+    "role": "Sub-DPS / Support",
+    "weapon": "Sword",
+    "best_weapons": [
+      "Splendor of Tranquil Waters",
+      "Festering Desire",
+      "Fleuve Cendre Ferryman",
+      "Skyward Blade"
+    ],
+    "best_artifacts": [
+      "Golden Troupe (4)",
+      "Tenacity (2) + Heart of Depth (2)"
+    ],
+    "main_stats": [
+      "HP% / Hydro DMG / CRIT",
+      "HP% / HP% / Healing Bonus (Healer)"
+    ],
+    "constellation_priority": [
+      "C1: Faster fanfare stacking",
+      "C2: Party healing upgrade",
+      "C6: True potential"
+    ],
+    "best_teams": [
+      "Furina + Furina + Kazuha + Baizhu",
+      "Furina + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Fontemer Unihorn",
+      "Xenochromatic Crystal"
+    ],
+    "talent_materials": [
+      "Teachings of Justice",
+      "Xenochromatic Crystal",
+      "Worldspan Fern"
+    ],
+    "strengths": [
+      "Massive DMG bonus for whole team",
+      "Both DMG and healing in one kit",
+      "Best universal support"
+    ],
+    "weaknesses": [
+      "Team-wide HP drain needs healers",
+      "Without C1 stacks slowly"
+    ]
+  },
+  "neuvillette": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "best_weapons": [
+      "Tome of the Eternal Flow",
+      "Sacrificial Jade",
+      "Prototype Amber",
+      "Lost Prayer"
+    ],
+    "best_artifacts": [
+      "Marechaussee Hunter (4)",
+      "Heart of Depth (4)"
+    ],
+    "main_stats": [
+      "HP% / Hydro DMG / CRIT DMG"
+    ],
+    "constellation_priority": [
+      "C1: Interruption resistance + extra stack",
+      "C3: Burst +3 levels",
+      "C6: Unlimited charged attacks"
+    ],
+    "best_teams": [
+      "Neuvillette + Furina + Kazuha + Baizhu",
+      "Neuvillette + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Burst > Skill"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Fontemer Unihorn",
+      "Xenochromatic Crystal"
+    ],
+    "talent_materials": [
+      "Teachings of Equity",
+      "Xenochromatic Crystal",
+      "Worldspan Fern"
+    ],
+    "strengths": [
+      "Highest charged attack DPS",
+      "Self-sustaining (HP regen)",
+      "AOE monster"
+    ],
+    "weaknesses": [
+      "Vulnerable without C1",
+      "Needs team to trigger reactions"
+    ]
+  },
+  "yelan": {
+    "role": "Sub-DPS",
+    "weapon": "Bow",
+    "element": "hydro",
+    "rarity": 5,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Yelan + Furina + Kazuha + Baizhu",
+      "Yelan + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "xingqiu": {
+    "role": "Sub-DPS",
+    "weapon": "Sword",
+    "element": "hydro",
+    "rarity": 4,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Xingqiu + Furina + Kazuha + Baizhu",
+      "Xingqiu + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "kokomi": {
+    "role": "Healer / Driver",
+    "weapon": "Catalyst",
+    "element": "hydro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Kokomi + Furina + Kazuha + Baizhu",
+      "Kokomi + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Reliable sustain for any team",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "nilou": {
+    "role": "Support (Bloom)",
+    "weapon": "Sword",
+    "element": "hydro",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Nilou + Furina + Kazuha + Baizhu",
+      "Nilou + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Valuable team utility",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "mona": {
+    "role": "Sub-DPS / Buffer",
+    "weapon": "Catalyst",
+    "element": "hydro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Mona + Furina + Kazuha + Baizhu",
+      "Mona + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "tartaglia": {
+    "role": "Main DPS",
+    "weapon": "Bow",
+    "element": "hydro",
+    "rarity": 5,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Tartaglia (Childe) + Furina + Kazuha + Baizhu",
+      "Tartaglia (Childe) + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "ayato": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "hydro",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Ayato + Furina + Kazuha + Baizhu",
+      "Ayato + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "candace": {
+    "role": "Support",
+    "weapon": "Polearm",
+    "element": "hydro",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Candace + Furina + Kazuha + Baizhu",
+      "Candace + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Valuable team utility",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "barbara": {
+    "role": "Healer",
+    "weapon": "Catalyst",
+    "element": "hydro",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Barbara + Furina + Kazuha + Baizhu",
+      "Barbara + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Reliable sustain for any team",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "mualani": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "hydro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Heart of Depth (4)",
+      "Nymph's Dream (4)",
+      "Golden Troupe (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Mualani + Furina + Kazuha + Baizhu",
+      "Mualani + Xiangling + Bennett + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Varunada Lazurite",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within hydro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "hutao": {
+    "role": "Main DPS",
+    "weapon": "Polearm",
+    "element": "pyro",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Hu Tao + Yelan + Xingqiu + Zhongli",
+      "Hu Tao + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "xiangling": {
+    "role": "Sub-DPS",
+    "weapon": "Polearm",
+    "element": "pyro",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Xiangling + Yelan + Xingqiu + Zhongli",
+      "Xiangling + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "bennett": {
+    "role": "Healer / Buffer",
+    "weapon": "Sword",
+    "element": "pyro",
+    "rarity": 4,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Bennett + Yelan + Xingqiu + Zhongli",
+      "Bennett + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Reliable sustain for any team",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "diluc": {
+    "role": "Main DPS",
+    "weapon": "Claymore",
+    "element": "pyro",
+    "rarity": 5,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Diluc + Yelan + Xingqiu + Zhongli",
+      "Diluc + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "klee": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "pyro",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Klee + Yelan + Xingqiu + Zhongli",
+      "Klee + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "yoimiya": {
+    "role": "Main DPS",
+    "weapon": "Bow",
+    "element": "pyro",
+    "rarity": 5,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Yoimiya + Yelan + Xingqiu + Zhongli",
+      "Yoimiya + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "lyney": {
+    "role": "Main DPS",
+    "weapon": "Bow",
+    "element": "pyro",
+    "rarity": 5,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Lyney + Yelan + Xingqiu + Zhongli",
+      "Lyney + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "dehya": {
+    "role": "Sub-DPS",
+    "weapon": "Claymore",
+    "element": "pyro",
+    "rarity": 5,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Dehya + Yelan + Xingqiu + Zhongli",
+      "Dehya + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "arlecchino": {
+    "role": "Main DPS",
+    "weapon": "Polearm",
+    "element": "pyro",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Arlecchino + Yelan + Xingqiu + Zhongli",
+      "Arlecchino + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "amber": {
+    "role": "Sub-DPS",
+    "weapon": "Bow",
+    "element": "pyro",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Amber + Yelan + Xingqiu + Zhongli",
+      "Amber + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "xinyan": {
+    "role": "Sub-DPS",
+    "weapon": "Claymore",
+    "element": "pyro",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Xinyan + Yelan + Xingqiu + Zhongli",
+      "Xinyan + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "yanfei": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "pyro",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Yanfei + Yelan + Xingqiu + Zhongli",
+      "Yanfei + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "thoma": {
+    "role": "Shielder",
+    "weapon": "Polearm",
+    "element": "pyro",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / HP%",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Thoma + Yelan + Xingqiu + Zhongli",
+      "Thoma + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Provides safe play environment",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "chevreuse": {
+    "role": "Support (Overload)",
+    "weapon": "Polearm",
+    "element": "pyro",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Obsidian Codex (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Chevreuse + Yelan + Xingqiu + Zhongli",
+      "Chevreuse + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Valuable team utility",
+      "Synergizes well within pyro teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "mavuika": {
+    "role": "Main DPS",
+    "weapon": "Claymore",
+    "best_weapons": [
+      "A Thousand Blazing Suns",
+      "Beacon of the Reed Sea",
+      "Wolf's Gravestone",
+      "Serpent Spine",
+      "Mailed Flower"
+    ],
+    "best_artifacts": [
+      "Obsidian Codex (4)",
+      "Marechaussee Hunter (4)",
+      "Crimson Witch (4)"
+    ],
+    "main_stats": [
+      "ATK% / Pyro DMG / CRIT",
+      "EM / Pyro DMG / CRIT (Vape)"
+    ],
+    "constellation_priority": [
+      "C1: Enhanced skill uptime",
+      "C2: Increased Pyro DMG",
+      "C6: True potential"
+    ],
+    "best_teams": [
+      "Mavuika + Yelan + Xingqiu + Zhongli",
+      "Mavuika + Bennett + Kazuha + Xiangling"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Smoldering Pearl",
+      "Whopperflower Nectar"
+    ],
+    "talent_materials": [
+      "Teachings of Kindling",
+      "Whopperflower Nectar",
+      "Dvalin's Claw"
+    ],
+    "strengths": [
+      "Highest burst damage in game",
+      "Flexible team building",
+      "Works well with Furina"
+    ],
+    "weaknesses": [
+      "Energy hungry without C1",
+      "Fragile in open world without shield"
+    ]
+  },
+  "ayaka": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Ayaka + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Ayaka + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "ganyu": {
+    "role": "Main DPS",
+    "weapon": "Bow",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Ganyu + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Ganyu + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "shenhe": {
+    "role": "Support (Cryo DMG)",
+    "weapon": "Polearm",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Noblesse Oblige (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Shenhe + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Shenhe + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Valuable team utility",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "eula": {
+    "role": "Main DPS (Physical)",
+    "weapon": "Claymore",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Eula + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Eula + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "chongyun": {
+    "role": "Sub-DPS",
+    "weapon": "Claymore",
+    "element": "cryo",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Chongyun + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Chongyun + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "qiqi": {
+    "role": "Healer",
+    "weapon": "Sword",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Qiqi + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Qiqi + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Reliable sustain for any team",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "diona": {
+    "role": "Shielder / Healer",
+    "weapon": "Bow",
+    "element": "cryo",
+    "rarity": 4,
+    "best_weapons": [
+      "Thundering Pulse",
+      "Aqua Simulacra",
+      "Polar Star",
+      "Stringless",
+      "Favonius Warbow",
+      "Sacrificial Bow"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Diona + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Diona + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Reliable sustain for any team",
+      "Provides safe play environment",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "rosaria": {
+    "role": "Sub-DPS",
+    "weapon": "Polearm",
+    "element": "cryo",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Rosaria + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Rosaria + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Excellent off-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "layla": {
+    "role": "Shielder",
+    "weapon": "Sword",
+    "element": "cryo",
+    "rarity": 4,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / HP%",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Layla + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Layla + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Provides safe play environment",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "May need specific teammates"
+    ]
+  },
+  "mika": {
+    "role": "Healer / Support",
+    "weapon": "Polearm",
+    "element": "cryo",
+    "rarity": 4,
+    "best_weapons": [
+      "Staff of Homa",
+      "Engulfing Lightning",
+      "Primordial Jade Winged-Spear",
+      "The Catch",
+      "Dragon's Bane",
+      "Deathmatch"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Mika + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Mika + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Valuable team utility",
+      "Reliable sustain for any team",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "Damage output is secondary"
+    ]
+  },
+  "freminet": {
+    "role": "Main DPS",
+    "weapon": "Claymore",
+    "element": "cryo",
+    "rarity": 4,
+    "best_weapons": [
+      "Wolf's Gravestone",
+      "Song of Broken Pines",
+      "Beacon of the Reed Sea",
+      "Serpent Spine",
+      "Archaic Petra",
+      "Rainslasher"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Freminet + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Freminet + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Consistent on-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "wriothesley": {
+    "role": "Main DPS",
+    "weapon": "Catalyst",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Wriothesley + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Wriothesley + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "charlotte": {
+    "role": "Healer",
+    "weapon": "Catalyst",
+    "element": "cryo",
+    "rarity": 4,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Tenacity of Millelith (4)"
+    ],
+    "main_stats": [
+      "HP% / HP% / Healing Bonus",
+      "ER / HP% / HP%"
+    ],
+    "constellation_priority": [
+      "C1: QoL improvement",
+      "C2: Significant DMG boost",
+      "C4: Team support",
+      "C6: Core power spike"
+    ],
+    "best_teams": [
+      "Charlotte + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Charlotte + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Reliable sustain for any team",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Lower base stats vs 5-star alternatives",
+      "Limited offensive contributions",
+      "May need specific teammates"
+    ]
+  },
+  "citlali": {
+    "role": "Support",
+    "weapon": "Catalyst",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)",
+      "Noblesse Oblige (4)"
+    ],
+    "main_stats": [
+      "ER / Elemental DMG / CRIT",
+      "ER / EM / CRIT"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Citlali + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Citlali + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Burst ≥ Skill > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Valuable team utility",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Damage output is secondary",
+      "May need specific teammates"
+    ]
+  },
+  "capitano": {
+    "role": "Main DPS",
+    "weapon": "Sword",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Mistsplitter Reforged",
+      "Primordial Jade Cutter",
+      "Freedom-Sworn",
+      "The Alley Flash",
+      "Lion's Roar",
+      "Favonius Sword"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Capitano + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Capitano + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst",
+      "All talents recommended lv.8+"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Consistent on-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "Requires field time",
+      "May need specific teammates"
+    ]
+  },
+  "columbina": {
+    "role": "Sub-DPS",
+    "weapon": "Catalyst",
+    "element": "cryo",
+    "rarity": 5,
+    "best_weapons": [
+      "Lost Prayer to the Sacred Winds",
+      "Skyward Atlas",
+      "Tome of the Eternal Flow",
+      "Widsith",
+      "Solar Pearl",
+      "Favonius Codex"
+    ],
+    "best_artifacts": [
+      "Blizzard Strayer (4)",
+      "Emblem of Severed Fate (4)",
+      "Marechaussee Hunter (4)"
+    ],
+    "main_stats": [
+      "ATK% / Elemental DMG / CRIT",
+      "EM / Elemental DMG / CRIT (Reaction)"
+    ],
+    "constellation_priority": [
+      "C1: Good QoL",
+      "C2: Strong DMG increase",
+      "C4: Team utility",
+      "C6: True potential unlocked"
+    ],
+    "best_teams": [
+      "Columbina + Shenhe + Kazuha + Kokomi (Freeze)",
+      "Columbina + Furina + Charlotte + Kazuha"
+    ],
+    "talent_priority": [
+      "Skill ≥ Burst > Normal Attack"
+    ],
+    "ascension_materials": [
+      "Shivada Jade",
+      "Local Specialty",
+      "Common Enemy Drop",
+      "Boss Material (World Boss)"
+    ],
+    "talent_materials": [
+      "Teachings of [Region Book]",
+      "Common Enemy Drop",
+      "Weekly Boss Drop"
+    ],
+    "strengths": [
+      "Strong base stats and multipliers",
+      "Excellent off-field damage",
+      "Synergizes well within cryo teams"
+    ],
+    "weaknesses": [
+      "May need specific teammates"
+    ]
+  },
+  "hu_tao": {
+    "role": "Main DPS",
+    "weapon": "Polearm",
+    "best_weapons": [
+      "Staff of Homa",
+      "Dragon's Bane",
+      "Deathmatch",
+      "Ballad of the Fjords"
+    ],
+    "best_artifacts": [
+      "Crimson Witch (4)",
+      "Shimenawa (4)"
+    ],
+    "main_stats": [
+      "HP% / Pyro DMG / CRIT",
+      "EM / Pyro DMG / CRIT (Vape)"
+    ],
+    "constellation_priority": [
+      "C1: Charged attack no stamina cost",
+      "C2: Increased blood blossom DMG",
+      "C6: Immortal mode"
+    ],
+    "best_teams": [
+      "Hu Tao + Yelan + Xingqiu + Zhongli",
+      "Hu Tao + Furina + Yelan + Xianyun",
+      "Hu Tao + Xingqiu + Sucrose + Thoma"
+    ],
+    "talent_priority": [
+      "Normal Attack ≥ Skill > Burst"
+    ],
+    "ascension_materials": [
+      "Agnidus Agate",
+      "Juvenile Fang",
+      "Whopperflower Nectar"
+    ],
+    "talent_materials": [
+      "Teachings of Diligence",
+      "Whopperflower Nectar",
+      "Shard of a Foul Legacy"
+    ],
+    "strengths": [
+      "Highest single-target Pyro DPS",
+      "Very strong in Vape teams",
+      "Low investment, high return"
+    ],
+    "weaknesses": [
+      "Hard to play without C1",
+      "HP management critical",
+      "Needs Xingqiu/Yelan"
+    ]
+  }
+}

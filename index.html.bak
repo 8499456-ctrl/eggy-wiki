@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18321892237"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18321892237');
-</script>
   <meta name="baidu_union_verify" content="1aa58870ad218f2c661f1198c0410089">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Genshin Impact Guide 2026 — Best Builds, Tier Lists & Tips</title>
-  <meta name="description" content="Complete Genshin Impact guide. Character builds, weapon rankings, Spiral Abyss tips, artifact recommendations, and elemental reaction guides — updated for version 6.3 Moon of Four.">
-  <link rel="canonical" href="https://genshin-wiki.pages.dev/">
-  <meta name="robots" content="index,follow">
+    <meta name="description" content="Complete Genshin Impact guide. Character builds, weapon rankings, Spiral Abyss tips, artifact recommendations, and elemental reaction guides — updated for version 6.3 Moon of Four.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="comment-embed.css">
   <style>
@@ -136,7 +125,7 @@
       margin: 6px 0;
     }
     /* Push main content right */
-    .hero, section, .ad-wrap, footer {
+    .hero, section, .ad-wrap, #home-comments, footer {
       margin-left: 180px;
     }
     footer { margin-left: 180px; }
@@ -413,7 +402,7 @@
       .sidebar { display: none; }
       .nav-toggle { display: flex; }
       .nav-search { display: none; }
-      .hero, section, .ad-wrap, footer { margin-left: 0; }
+      .hero, section, .ad-wrap, #home-comments, footer { margin-left: 0; }
       footer { margin-left: 0; }
       nav ul {
         display: none;
@@ -481,7 +470,6 @@
     }
     @media (max-width: 768px) {
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      #featured-video > .container > div:first-child { grid-template-columns: 1fr !important; }
     }
   </style>
     <meta property="og:title" content="Genshin Impact Guide & Wiki — Best Teams, Builds, Codes & More">
@@ -524,8 +512,6 @@
       <li><a href="beginner.html">Guides</a></li>
       <li><a href="download.html">Download</a></li>
       <li><a href="codes.html">Codes</a></li>
-      <li><a href="resin-timer.html">⏳ Resin</a></li>
-      <li><a href="videos.html">🎬 Videos</a></li>
       <li><a href="forum.html">Forum</a></li>
       <li><a href="membership.html">Membership</a></li>
       <li><a href="bugs.html">Bugs</a></li>
@@ -555,8 +541,6 @@
         <div style="font-size:12px;font-weight:600;color:var(--gold-light);margin-bottom:4px;" data-i18n="home.sidebar.boosters">⚡ Game Booster</div>
         <div style="font-size:11px;line-height:1.5;color:var(--text-dim);" data-i18n="home.sidebar.boosters.desc">Download slow? Lag in co-op? Try a game accelerator.</div>
         <div style="margin-top:6px;display:flex;flex-direction:column;gap:4px;">
-          <a href="https://gearup.sjv.io/c/7462059/3204502/40222" target="_blank" rel="noopener nofollow" style="font-size:11px;color:var(--teal);">🚀 GearUP Booster →</a>
-          <a href="https://www.exitlag.com/refer/10324758" target="_blank" rel="noopener nofollow" style="font-size:11px;color:var(--teal);">🌍 ExitLag →</a>
           <a href="free-accelerator.html" target="_blank" rel="noopener nofollow" style="font-size:11px;color:var(--teal);">雷神加速器 →</a>
           <a href="https://tg.xunyou.com/command/?id=1563075&password=genshinwiki" target="_blank" rel="noopener nofollow" style="font-size:11px;color:var(--teal);">迅游加速器 →</a>
         </div>
@@ -650,34 +634,6 @@
     </div>
   </section>
 
-  <!-- ============ Essential Tools ============ -->
-  <section id="tools">
-    <div class="container">
-      <h2 class="section-title">Essential <span>Tools</span></h2>
-      <p class="section-sub">The pages people land on most often when they need a quick answer.</p>
-      <div class="card-grid">
-        <a href="tierlist.html" class="card" style="cursor:pointer;text-decoration:none;color:inherit;">
-          <span class="icon-lg">⭐</span>
-          <h3>Tier List</h3>
-          <p>Fast meta snapshots for teams, element picks, and Abyss-ready characters.</p>
-          <span class="tag">Core Page</span>
-        </a>
-        <a href="resin-timer.html" class="card" style="cursor:pointer;text-decoration:none;color:inherit;">
-          <span class="icon-lg">⏳</span>
-          <h3>Resin Timer</h3>
-          <p>Track Original Resin refresh times and plan farming runs without guessing.</p>
-          <span class="tag">Tool</span>
-        </a>
-        <a href="videos.html" class="card" style="cursor:pointer;text-decoration:none;color:inherit;">
-          <span class="icon-lg">🎬</span>
-          <h3>Videos</h3>
-          <p>Official trailers, character demos, and visual references worth revisiting.</p>
-          <span class="tag">Media</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ Redeem Codes ============ -->
   <section id="codes">
     <div class="container">
@@ -710,14 +666,14 @@
 
   <!-- ============ Ad Banner ============ -->
   <div class="container ad-wrap">
-    <div class="ad-banner" style="cursor:default;">
+    <a href="free-accelerator.html" class="ad-banner" target="_blank" rel="noopener nofollow">
       <span class="icon-ad">📢</span>
       <div class="text-ad">
-        <div class="title-ad">Ad Space · Google AdSense</div>
+        <div class="title-ad">Ad Space · Baidu Union</div>
         <div class="desc-ad">Support this site — game recommendations and more. Ad space pending approval.</div>
       </div>
       <span class="ad-tag">Ad</span>
-    </div>
+    </a>
   </div>
 
   <!-- ============ Featured Guides ============ -->
@@ -757,6 +713,9 @@
       </div>
     </div>
   </section>
+
+  <!-- ============ Comment Section ============ -->
+  <div id="home-comments" style="border-top:1px solid var(--border);"></div>
 
   <div class="section">
     <div class="section-title"><a href="bugs.html" style="color:var(--gold-light);text-decoration:none">🐛 Bug Tracker</a></div>
@@ -839,102 +798,7 @@
     </div>
   </section>
 
-  <!-- ============ Featured Videos ============ -->
-  <section id="featured-video">
-    <div class="container">
-      <h2 class="section-title">🎬 Featured <span>Videos</span></h2>
-      <p class="section-sub">Official Genshin Impact trailers, animated shorts, and cinematic moments. <a href="videos.html" style="color:var(--gold);font-size:13px;">View all videos →</a></p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-        <!-- Video 1 -->
-        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#000;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;">
-            <iframe src="https://www.youtube.com/embed/y2Zcmcbrm9s?start=8" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg-card);border-top:1px solid var(--border);">
-            <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">
-              🌙 Winter Night's Lazzo — Fatui Harbingers<br>
-              <span style="color:var(--text-muted);font-size:11px;">Sleep, sleep, child of this world... Fear neither darkness nor silence.</span>
-            </p>
-          </div>
-        </div>
-        <!-- Video 2 -->
-        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#000;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;">
-            <iframe src="https://www.youtube.com/embed/TAlKhARUcoY" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg-card);border-top:1px solid var(--border);">
-            <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">
-              📖 Teyvat Chapter Storyline Trailer<br>
-              <span style="color:var(--text-muted);font-size:11px;">All seven nations unveiled — from Mondstadt to Snezhnaya.</span>
-            </p>
-          </div>
-        </div>
-        <!-- Video 3 -->
-        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#000;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;">
-            <iframe src="https://www.youtube.com/embed/TmaAOV4SJNQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg-card);border-top:1px solid var(--border);">
-            <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">
-              🎭 Fatui Harbingers — A Winter Night's Lazzo<br>
-              <span style="color:var(--text-muted);font-size:11px;">All Harbingers gather to sing, make merry, fall silent, and grieve.</span>
-            </p>
-          </div>
-        </div>
-        <!-- Video 4 -->
-        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#000;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;">
-            <iframe src="https://www.youtube.com/embed/jvXVmvW8ZQw" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div style="padding:10px 14px;background:var(--bg-card);border-top:1px solid var(--border);">
-            <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">
-              👑 The Divine Council — We Will Be Reunited<br>
-              <span style="color:var(--text-muted);font-size:11px;">In the councils of the gods, no human voice is ever heard.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <p style="text-align:center;margin-top:12px;"><a href="videos.html" style="display:inline-block;padding:10px 24px;border-radius:8px;border:1px solid var(--gold);color:var(--gold-light);text-decoration:none;font-size:14px;transition:all .3s;">📺 View All Videos</a></p>
-    </div>
-  </section>
 
-  <!-- ============ Sister Site ============ -->
-  <section id="sister-site">
-    <div class="container">
-      <h2 class="section-title">🌟 Sister <span>Site</span></h2>
-      <p class="section-sub">Check out our other game guides!</p>
-      <div style="text-align:center;margin:16px 0;">
-        <a href="https://eggywiki.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:10px;border:1px solid var(--gold);background:linear-gradient(135deg,rgba(212,168,75,0.1),rgba(75,196,179,0.05));color:var(--gold-light);text-decoration:none;font-size:16px;font-weight:500;transition:all .3s;">
-          <span style="font-size:24px;">🥚</span>
-          <span>Eggy Wiki — Best Eggy Party Guides</span>
-          <span style="font-size:14px;">↗</span>
-        </a>
-      </div>
-      <p style="text-align:center;font-size:12px;color:var(--text-muted);">A fan-made wiki for Eggy Party — builds, tips, and more!</p>
-    </div>
-  </section>
-  <!-- ============ Featured Creator Tool ============ -->
-  <section id="featured-creator-tool">
-    <div class="container">
-      <p style="text-align:center;color:var(--teal);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">✦ Featured player creation tool</p>
-      <h2 class="section-title">🎮 Create Your Original <span>Game Avatar</span></h2>
-      <p class="section-sub">Turn a photo into an original fantasy RPG avatar, community profile picture, or guide cover — free daily creations, no sign-up required.</p>
-      <div style="max-width:760px;margin:24px auto 0;padding:2px;border-radius:18px;background:linear-gradient(135deg,var(--gold),var(--teal),#b47bd4);box-shadow:0 14px 42px rgba(75,196,179,.16);">
-        <a href="https://www.picttool.com/?utm_source=genshinwiki&utm_medium=referral&utm_campaign=featured_creator_tool" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:18px;padding:24px;border-radius:16px;background:linear-gradient(135deg,#182438,#111827);color:var(--text);text-decoration:none;">
-          <span style="font-size:46px;line-height:1;">✨</span>
-          <span style="flex:1;text-align:left;">
-            <strong style="display:block;font-size:21px;color:var(--gold-light);margin-bottom:5px;">PictTool — AI Image Tools for Players</strong>
-            <span style="display:block;color:var(--text-dim);font-size:14px;line-height:1.6;">Fantasy game avatars · cartoon style · art style · new backgrounds · screenshot polish</span>
-          </span>
-          <span style="flex-shrink:0;padding:11px 16px;border-radius:8px;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:#0d1117;font-size:14px;font-weight:800;">Try PictTool ↗</span>
-        </a>
-      </div>
-      <p style="text-align:center;margin-top:12px;font-size:12px;color:var(--text-dim);">Independent creative tool — not affiliated with HoYoverse or any game publisher.</p>
-      <div style="text-align:center;margin-top:22px;">
-        <a href="https://eggywiki.com" target="_blank" rel="noopener" style="color:var(--text-dim);font-size:13px;text-decoration:none;">🥚 Also visit Eggy Wiki — Eggy Party guides ↗</a>
-      </div>
-    </div>
-  </section>
   <!-- ============ Footer ============ -->
   <footer style="position:relative;">
     <div class="age-badge">
@@ -955,7 +819,6 @@
       <a href="forum.html">Forum</a>
       <a href="blog/index.html">📝 Blog</a>
       <a href="premium/best-builds.html">Premium Builds</a>
-      <a href="premium/abyss-strategy.html">Abyss Strategy</a>
       <a href="privacy.html">Privacy</a>
     </div>
     <p>This website is not affiliated with miHoYo / HoYoverse. Data is for reference only.</p>
@@ -1089,185 +952,11 @@
   <script src="i18n.js"></script>
   <script src="char_avatars.js"></script>
   <script src="enhanced-search.js"></script>
-  <script>// ====== Comment Embed — API 版 ======
-// 评论通过 /api/comments 读写，所有用户共享
-// Usage: CommentEmbed.mount('comment-container', { page: 'home', title: 'Comments' })
+  <script src="comment-embed.js"></script>
+  <script>CommentEmbed.mount('home-comments', { page: 'home', title: '💬 Leave a Comment', subtitle: 'Help us improve — share your thoughts on the guides!' });</script>
 
-window.CommentEmbed = {
-  mount: function(containerId, opts) {
-    var el = document.getElementById(containerId);
-    if (!el) return;
-    opts = opts || {};
-    var page = opts.page || 'home';
-    var title = opts.title || '💬 Comments';
-    var subtitle = opts.subtitle || 'Share your thoughts!';
-
-    el.innerHTML =
-      '<div class="comment-section">' +
-        '<h2>' + title + '</h2>' +
-        '<p class="sub">' + subtitle + '</p>' +
-        '<div class="cform">' +
-          '<div class="cerror" id="cerror-' + page + '"></div>' +
-          '<div class="crow">' +
-            '<input type="text" id="cname-' + page + '" placeholder="Your name" maxlength="50" autocomplete="off">' +
-            '<input type="text" id="cemail-' + page + '" placeholder="Email (optional)" maxlength="100" autocomplete="off">' +
-          '</div>' +
-          '<textarea id="ctext-' + page + '" placeholder="Write your comment..." maxlength="2000"></textarea>' +
-          '<div class="bwrap">' +
-            '<span class="charcount"><span id="ccount-' + page + '">0</span>/2000</span>' +
-            '<div style="display:flex;gap:8px;align-items:center;">' +
-              '<span id="membadge-' + page + '" style="display:none;" class="member-tag">✨ Member</span>' +
-              '<button class="btn-post" id="cbtn-' + page + '" onclick="CommentEmbed.post(\'' + page + '\')">Post Comment</button>' +
-            '</div>' +
-          '</div>' +
-        '</div>' +
-        '<div id="clist-' + page + '">' +
-          '<div class="cspin" id="cspin-' + page + '">Loading comments...</div>' +
-        '</div>' +
-      '</div>';
-
-    document.getElementById('ctext-' + page).addEventListener('input', function() {
-      document.getElementById('ccount-' + page).textContent = this.value.length;
-    });
-
-    // 自动填入会员名
-    (function(pg) {
-      var token = localStorage.getItem('auth_token');
-      if (!token) return;
-      fetch('/api/me?token=' + encodeURIComponent(token))
-        .then(function(r) { return r.json(); })
-        .then(function(d) {
-          if (d.member) {
-            document.getElementById('membadge-' + pg).style.display = 'inline';
-            if (d.email) {
-              var ni = document.getElementById('cname-' + pg);
-              ni.value = d.email.split('@')[0];
-              ni.disabled = true;
-              document.getElementById('cemail-' + pg).value = d.email;
-            }
-          }
-        })
-        .catch(function(){});
-    })(page);
-
-    CommentEmbed.load(page);
-  },
-
-  load: function(page) {
-    var listEl = document.getElementById('clist-' + page);
-    var spinEl = document.getElementById('cspin-' + page);
-
-    fetch('/api/comments?page=' + encodeURIComponent(page))
-      .then(function(r) {
-        if (!r.ok) throw new Error('API error');
-        return r.json();
-      })
-      .then(function(data) {
-        if (spinEl) spinEl.style.display = 'none';
-        var comments = data.comments || [];
-        if (comments.length === 0) {
-          listEl.innerHTML += '<div class="cempty">No comments yet. Be the first!</div>';
-          return;
-        }
-        var html = '';
-        for (var i = 0; i < comments.length; i++) {
-          var c = comments[i];
-          var time = new Date(c.createdAt).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric', hour:'2-digit', minute:'2-digit' });
-          html += '<div class="citem">' +
-            '<div class="meta">' +
-              '<span class="name">' + CommentEmbed._esc(c.name) + '</span>' +
-              (c.isMember ? '<span class="mbadge">✨ Member</span>' : '') +
-              '<span class="time">' + time + '</span>' +
-            '</div>' +
-            '<div class="ctext">' + CommentEmbed._esc(c.content) + '</div>' +
-          '</div>';
-        }
-        listEl.innerHTML += html;
-      })
-      .catch(function(err) {
-        if (spinEl) spinEl.style.display = 'none';
-        listEl.innerHTML += '<div class="cerror" style="display:block">Failed to load comments.</div>';
-      });
-  },
-
-  post: function(page) {
-    var name = document.getElementById('cname-' + page).value.trim();
-    var content = document.getElementById('ctext-' + page).value.trim();
-    var email = document.getElementById('cemail-' + page).value.trim() || null;
-    var btn = document.getElementById('cbtn-' + page);
-    var errorEl = document.getElementById('cerror-' + page);
-
-    errorEl.style.display = 'none';
-    if (!name) { CommentEmbed._showError(page, 'Please enter your name.'); return; }
-    if (!content) { CommentEmbed._showError(page, 'Please write something.'); return; }
-
-    var token = localStorage.getItem('auth_token') || '';
-
-    btn.disabled = true;
-    btn.textContent = 'Posting...';
-
-    fetch('/api/comments', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name, content: content, email: email, page: page, token: token }),
-    })
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        if (data.success) {
-          document.getElementById('ctext-' + page).value = '';
-          document.getElementById('ccount-' + page).textContent = '0';
-          var listEl = document.getElementById('clist-' + page);
-          listEl.innerHTML = '<div class="cspin" id="cspin-' + page + '">Loading comments...</div>';
-          CommentEmbed.load(page);
-        } else {
-          CommentEmbed._showError(page, data.error || 'Failed to post.');
-        }
-      })
-      .catch(function(err) {
-        CommentEmbed._showError(page, 'Network error. Please try again.');
-      })
-      .then(function() {
-        btn.disabled = false;
-        btn.textContent = 'Post Comment';
-      });
-  },
-
-  _showError: function(page, msg) {
-    var el = document.getElementById('cerror-' + page);
-    el.textContent = msg;
-    el.style.display = 'block';
-    setTimeout(function() { el.style.display = 'none'; }, 4000);
-  },
-
-  _esc: function(str) {
-    if (!str) return '';
-    var d = document.createElement('div');
-    d.textContent = str;
-    return d.innerHTML;
-  }
-};
-
-// Auto-mount — retry until element exists in DOM
-(function autoMount() {
-  var mounts = [
-    { id: 'forum-comments', opts: { page: 'forum', title: '💬 Forum Comments', subtitle: 'Discuss Genshin Impact!' } },
-  ];
-  var allDone = true;
-  for (var i = 0; i < mounts.length; i++) {
-    var m = mounts[i];
-    var el = document.getElementById(m.id);
-    if (!el) { allDone = false; continue; }
-    if (el.getAttribute('data-mounted')) continue;
-    el.setAttribute('data-mounted', '1');
-    window.CommentEmbed.mount(m.id, m.opts);
-  }
-  if (!allDone) setTimeout(autoMount, 300);
-})();
-
-  <script src="site-comments.js"></script>
-  <!-- Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e6f9bb41564ccead265168e47540c9"}'></script>
 <!-- End Cloudflare Web Analytics -->
-<script>(function(s){s.dataset.zone='11277266',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 </body>
 </html>

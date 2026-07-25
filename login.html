@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Genshin Guide — Sign In</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --bg:#0d1117; --bg-card:#151b23; --bg-card-hover:#1c2333; --border:#21262d; --gold:#d4a84b; --gold-light:#e8c75a; --gold-dark:#c49a3a; --text:#e6edf3; --text-dim:#8b949e; --text-muted:#484f58; --red:#d9604a; --green:#5dbf9a; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,'Segoe UI','Helvetica Neue',sans-serif; min-height:100vh; display:flex; flex-direction:column; overflow-x:hidden; }
+nav { position:fixed; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:12px 28px; background:rgba(13,17,23,0.94); backdrop-filter:blur(12px); z-index:100; border-bottom:1px solid var(--border); }
+.logo { font-size:18px; font-weight:700; }
+.logo span { color:var(--gold); }
+nav ul { list-style:none; display:flex; gap:16px; flex-wrap:wrap; }
+nav ul li a { color:var(--text-dim); text-decoration:none; font-size:13px; padding:4px 8px; border-radius:6px; transition:all .2s; }
+nav ul li a:hover, nav ul li a.active { color:var(--gold); background:rgba(212,168,75,0.1); }
+.login-wrap { flex:1; display:flex; align-items:center; justify-content:center; padding:100px 20px 60px; }
+.login-box { width:100%; max-width:420px; }
+.login-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:40px 36px; }
+.login-card h1 { font-size:24px; text-align:center; margin-bottom:4px; }
+.login-card .sub { font-size:14px; color:var(--text-dim); text-align:center; margin-bottom:28px; }
+.form-group { margin-bottom:18px; }
+.form-group label { display:block; font-size:13px; color:var(--text-dim); margin-bottom:6px; font-weight:500; }
+.form-group input { width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:15px; transition:all .2s; outline:none; }
+.form-group input:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(212,168,75,0.15); }
+.form-group input::placeholder { color:var(--text-muted); }
+.submit-btn { width:100%; padding:14px; border-radius:8px; border:none; background:linear-gradient(135deg,var(--gold-dark),var(--gold)); color:#000; font-size:15px; font-weight:600; cursor:pointer; transition:all .25s; margin-top:8px; }
+.submit-btn:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(212,168,75,.3); }
+.submit-btn:disabled { opacity:.5; cursor:not-allowed; transform:none; box-shadow:none; }
+.toggle-mode { text-align:center; margin-top:18px; font-size:14px; color:var(--text-dim); }
+.toggle-mode a { color:var(--gold-light); cursor:pointer; text-decoration:none; }
+.toggle-mode a:hover { text-decoration:underline; }
+.error-msg { background:rgba(217,96,74,0.12); border:1px solid rgba(217,96,74,0.3); color:var(--red); padding:10px 14px; border-radius:8px; font-size:13px; margin-bottom:16px; display:none; }
+.success-msg { background:rgba(93,191,154,0.12); border:1px solid rgba(93,191,154,0.3); color:var(--green); padding:10px 14px; border-radius:8px; font-size:13px; margin-bottom:16px; display:none; }
+.status-bar { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; padding:12px 16px; border-radius:8px; background:rgba(212,168,75,0.08); border:1px solid rgba(212,168,75,0.2); font-size:13px; display:none; }
+.status-bar .badge { padding:3px 10px; border-radius:12px; font-size:11px; font-weight:600; }
+.badge-free { background:rgba(72,79,88,0.3); color:var(--text-dim); }
+.badge-member { background:rgba(212,168,75,0.2); color:var(--gold-light); }
+.logout-btn { color:var(--text-dim); cursor:pointer; font-size:12px; padding:4px 10px; border-radius:6px; border:1px solid var(--border); background:transparent; transition:all .2s; }
+.logout-btn:hover { border-color:var(--red); color:var(--red); }
+footer { border-top:1px solid var(--border); padding:24px 16px; text-align:center; color:var(--text-dim); font-size:13px; }
+footer .links { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
+footer .links a { color:var(--text-dim); font-size:13px; text-decoration:none; }
+footer .links a:hover { color:var(--gold); }
+@media (max-width:768px) {
+  nav { padding:10px 12px; flex-wrap:wrap; gap:6px; }
+  nav ul { gap:6px; }
+  nav ul li a { font-size:12px; padding:3px 6px; }
+  .login-wrap { padding:80px 14px 40px; }
+  .login-card { padding:28px 20px; }
+}
+.spinner { display:inline-block; width:16px; height:16px; border:2px solid rgba(0,0,0,0.2); border-top-color:#000; border-radius:50%; animation:spin .6s linear infinite; vertical-align:middle; margin-right:6px; }
+@keyframes spin { to { transform:rotate(360deg); } }
+</style>
+<link rel="alternate" hreflang="en" href="https://genshin-wiki.pages.dev/" />
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span>✦</span> Genshin Guide</div>
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="characters.html">Characters</a></li>
+<li><a href="elements.html">Elements</a></li>
+<li><a href="abyss.html">Abyss</a></li>
+<li><a href="weapons.html">Weapons</a></li>
+<li><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a></li>
+<li><a href="materials.html">Materials</a></li>
+<li><a href="beginner.html">Beginner</a></li>
+<li><a href="login.html" class="active">Login</a></li>
+<li><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></li>
+        <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play / Pause BGM">♪</button>
+</ul>
+</nav>
+
+<div class="login-wrap">
+  <div class="login-box">
+
+    <!-- Status bar (shown when logged in) -->
+    <div class="status-bar" id="statusBar">
+      <span id="statusText">Logged in</span>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="badge badge-free" id="statusBadge">Free User</span>
+        <button class="logout-btn" onclick="logout()">Sign Out</button>
+      </div>
+    </div>
+
+    <div class="login-card" id="loginCard">
+      <h1 id="formTitle">Welcome Back ✦</h1>
+      <p class="sub" id="formSub">Sign in to unlock more content</p>
+
+      <!-- Error / Success Messages -->
+      <div class="error-msg" id="errorMsg"></div>
+      <div class="success-msg" id="successMsg"></div>
+
+      <!-- Auth Form -->
+      <form id="authForm" onsubmit="return submitForm(event)">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+        <div class="form-group" id="passwordGroup">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="At least 6 characters" required minlength="6" autocomplete="current-password">
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">Sign In</button>
+      </form>
+
+      <div class="toggle-mode" id="toggleMode">
+        <span id="toggleText">No account yet?</span>
+        <a id="toggleLink" onclick="toggleForm()">Create one</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="links"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="elements.html">Elements</a><a href="abyss.html">Abyss</a><a href="weapons.html">Weapons</a><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a><a href="materials.html">Materials</a><a href="beginner.html">Beginner</a><a href="login.html">Login</a><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></div>
+  <p>This site is not affiliated with miHoYo / HoYoverse in any way.</p>
+  <p style="margin-top:4px;">© 2026 Genshin Guide Wiki</p>
+</footer>
+
+<script>
+let isLoginMode = true;
+
+// Token management
+function getToken() { return localStorage.getItem('auth_token'); }
+function setToken(t) { if (t) localStorage.setItem('auth_token', t); else localStorage.removeItem('auth_token'); }
+function getMember() { try { return JSON.parse(localStorage.getItem('auth_member')); } catch(e) { return null; } }
+function setMember(m) { if (m) localStorage.setItem('auth_member', JSON.stringify(m)); else localStorage.removeItem('auth_member'); }
+
+// Check login status on page load
+window.addEventListener('DOMContentLoaded', async () => {
+  const token = getToken();
+  if (!token) return;
+  try {
+    const res = await fetch('/api/me?token=' + encodeURIComponent(token));
+    const data = await res.json();
+    if (data.member) {
+      setToken(token);
+      setMember(data);
+      showLoggedIn(data);
+    } else {
+      setToken(null);
+      setMember(null);
+    }
+  } catch (e) {
+    const cached = getMember();
+    if (cached) showLoggedIn(cached);
+  }
+});
+
+function toggleForm() {
+  isLoginMode = !isLoginMode;
+  document.getElementById('formTitle').textContent = isLoginMode ? 'Welcome Back ✦' : 'Create Account ✦';
+  document.getElementById('formSub').textContent = isLoginMode ? 'Sign in to unlock more content' : 'Register with just email & password';
+  document.getElementById('submitBtn').textContent = isLoginMode ? 'Sign In' : 'Sign Up';
+  document.getElementById('toggleText').textContent = isLoginMode ? 'No account yet?' : 'Already have an account?';
+  document.getElementById('toggleLink').textContent = isLoginMode ? 'Create one' : 'Sign in';
+  document.getElementById('errorMsg').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'none';
+}
+
+async function submitForm(e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  const endpoint = isLoginMode ? '/api/login' : '/api/register';
+  const btn = document.getElementById('submitBtn');
+
+  if (!email) { showError('Please enter your email'); return; }
+  if (!password || password.length < 6) { showError('Password must be at least 6 characters'); return; }
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Processing...';
+
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+
+    if (data.token) {
+      setToken(data.token);
+      setMember(data.member);
+      showLoggedIn(data.member);
+      showSuccess(isLoginMode ? 'Signed in!' : 'Account created!');
+    } else {
+      showError(data.error || 'Operation failed');
+    }
+  } catch (err) {
+    showError('Network error, please try again');
+  }
+
+  btn.disabled = false;
+  btn.textContent = isLoginMode ? 'Sign In' : 'Sign Up';
+}
+
+async function logout() {
+  const token = getToken();
+  if (token) {
+    try { await fetch('/api/logout?token=' + encodeURIComponent(token), { method: 'POST' }); } catch (e) {}
+  }
+  setToken(null);
+  setMember(null);
+  showLoggedOut();
+}
+
+function showLoggedIn(data) {
+  document.getElementById('loginCard').style.display = 'none';
+  const bar = document.getElementById('statusBar');
+  bar.style.display = 'flex';
+  document.getElementById('statusText').textContent = 'Logged in: ' + (data.name || data.email);
+  const badgeEl = document.getElementById('statusBadge');
+  if (data.plan && data.plan !== 'free') {
+    badgeEl.textContent = '✨ ' + data.plan.charAt(0).toUpperCase() + data.plan.slice(1) + ' Member';
+    badgeEl.className = 'badge badge-member';
+  } else {
+    badgeEl.textContent = 'Free User';
+    badgeEl.className = 'badge badge-free';
+  }
+  document.getElementById('loginEmail').textContent = data.email;
+  // Redirect to home — auth data already in localStorage
+  window.location.href = '/';
+}
+
+function showLoggedOut() {
+  document.getElementById('loginCard').style.display = 'block';
+  document.getElementById('statusBar').style.display = 'none';
+  document.getElementById('email').value = '';
+  document.getElementById('password').value = '';
+}
+
+function showError(msg) {
+  const el = document.getElementById('errorMsg');
+  el.textContent = msg;
+  el.style.display = 'block';
+  document.getElementById('successMsg').style.display = 'none';
+}
+
+function showSuccess(msg) {
+  const el = document.getElementById('successMsg');
+  el.textContent = msg;
+  el.style.display = 'block';
+  document.getElementById('errorMsg').style.display = 'none';
+  setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+</script>
+    <script>
+    (function(){
+      var bgm=new Audio("/ys_bgm.mp3");bgm.loop=true;var mp=false;
+      setInterval(function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)},1000);
+      window.addEventListener("beforeunload",function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)});
+      initMusic=function(){var s=localStorage.getItem("bgm_playing");var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;if(s==="true")toggleMusic()};
+      toggleMusic=function(){var btn=document.getElementById("musicBtn");if(mp){bgm.pause();mp=false;if(btn){btn.classList.remove("playing");btn.textContent="♪"}localStorage.setItem("bgm_playing","false")}else{var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;bgm.play().then(function(){mp=true;if(btn){btn.classList.add("playing");btn.textContent="♫"}localStorage.setItem("bgm_playing","true")}).catch(function(e){console.log("BGM autoplay blocked:",e)})}};
+      document.addEventListener("click",function o(){if(typeof initMusic==="function")initMusic();document.removeEventListener("click",o)},{once:true});
+    })();
+    </script>
+<script>(function(s){s.dataset.zone='11277266',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</body>
+</html>

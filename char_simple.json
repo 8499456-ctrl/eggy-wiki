@@ -1,0 +1,722 @@
+[
+  {
+    "id": "aether",
+    "name": "Traveler (Anemo)",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_PlayerBoy",
+    "region": "Wanderer"
+  },
+  {
+    "id": "lumine",
+    "name": "Traveler (Lumine)",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_PlayerGirl",
+    "region": "Wanderer"
+  },
+  {
+    "id": "venti",
+    "name": "Venti",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Venti",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "kazuha",
+    "name": "Kazuha",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Kazuha",
+    "region": "Inazuma"
+  },
+  {
+    "id": "xiao",
+    "name": "Xiao",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Xiao",
+    "region": "Liyue"
+  },
+  {
+    "id": "wanderer",
+    "name": "Wanderer",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Wanderer",
+    "region": "Sumeru"
+  },
+  {
+    "id": "faruzan",
+    "name": "Faruzan",
+    "element": "anemo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Faruzan",
+    "region": "Sumeru"
+  },
+  {
+    "id": "jean",
+    "name": "Jean",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Jean",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "sayu",
+    "name": "Sayu",
+    "element": "anemo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Sayu",
+    "region": "Inazuma"
+  },
+  {
+    "id": "sucrose",
+    "name": "Sucrose",
+    "element": "anemo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Sucrose",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "heizou",
+    "name": "Heizou",
+    "element": "anemo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Heizou",
+    "region": "Inazuma"
+  },
+  {
+    "id": "lynnette",
+    "name": "Lynnette",
+    "element": "anemo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Lynnette",
+    "region": "Fontaine"
+  },
+  {
+    "id": "lan_yan",
+    "name": "Lan Yan",
+    "element": "anemo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_LanYan",
+    "region": "Liyue"
+  },
+  {
+    "id": "mizuki",
+    "name": "Mizuki",
+    "element": "anemo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Mizuki",
+    "region": "Natlan"
+  },
+  {
+    "id": "zhongli",
+    "name": "Zhongli",
+    "element": "geo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Zhongli",
+    "region": "Liyue"
+  },
+  {
+    "id": "albedo",
+    "name": "Albedo",
+    "element": "geo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Albedo",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "itto",
+    "name": "Arataki Itto",
+    "element": "geo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Itto",
+    "region": "Inazuma"
+  },
+  {
+    "id": "navia",
+    "name": "Navia",
+    "element": "geo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Navia",
+    "region": "Fontaine"
+  },
+  {
+    "id": "chiori",
+    "name": "Chiori",
+    "element": "geo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Chiori",
+    "region": "Fontaine"
+  },
+  {
+    "id": "gorou",
+    "name": "Gorou",
+    "element": "geo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Gorou",
+    "region": "Inazuma"
+  },
+  {
+    "id": "ningguang",
+    "name": "Ningguang",
+    "element": "geo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Ningguang",
+    "region": "Liyue"
+  },
+  {
+    "id": "noelle",
+    "name": "Noelle",
+    "element": "geo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Noelle",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "yun_jin",
+    "name": "Yun Jin",
+    "element": "geo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_YunJin",
+    "region": "Liyue"
+  },
+  {
+    "id": "xilonen",
+    "name": "Xilonen",
+    "element": "geo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Xilonen",
+    "region": "Natlan"
+  },
+  {
+    "id": "kachina",
+    "name": "Kachina",
+    "element": "geo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Kachina",
+    "region": "Natlan"
+  },
+  {
+    "id": "raiden",
+    "name": "Raiden Shogun",
+    "element": "electro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_RaidenShogun",
+    "region": "Inazuma"
+  },
+  {
+    "id": "yae",
+    "name": "Yae Miko",
+    "element": "electro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_YaeMiko",
+    "region": "Inazuma"
+  },
+  {
+    "id": "keqing",
+    "name": "Keqing",
+    "element": "electro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Keqing",
+    "region": "Liyue"
+  },
+  {
+    "id": "cyno",
+    "name": "Cyno",
+    "element": "electro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Cyno",
+    "region": "Sumeru"
+  },
+  {
+    "id": "fischl",
+    "name": "Fischl",
+    "element": "electro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Fischl",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "kuki",
+    "name": "Kuki Shinobu",
+    "element": "electro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_KukiShinobu",
+    "region": "Inazuma"
+  },
+  {
+    "id": "lisa",
+    "name": "Lisa",
+    "element": "electro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Lisa",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "razor",
+    "name": "Razor",
+    "element": "electro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Razor",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "beidou",
+    "name": "Beidou",
+    "element": "electro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Beidou",
+    "region": "Liyue"
+  },
+  {
+    "id": "clorinde",
+    "name": "Clorinde",
+    "element": "electro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Clorinde",
+    "region": "Fontaine"
+  },
+  {
+    "id": "sethos",
+    "name": "Sethos",
+    "element": "electro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Sethos",
+    "region": "Sumeru"
+  },
+  {
+    "id": "ororon",
+    "name": "Ororon",
+    "element": "electro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Ororon",
+    "region": "Natlan"
+  },
+  {
+    "id": "variesa",
+    "name": "Varesa",
+    "element": "electro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Varesa",
+    "region": "Natlan"
+  },
+  {
+    "id": "nahida",
+    "name": "Nahida",
+    "element": "dendro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Nahida",
+    "region": "Sumeru"
+  },
+  {
+    "id": "alhaitham",
+    "name": "Alhaitham",
+    "element": "dendro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Alhaitham",
+    "region": "Sumeru"
+  },
+  {
+    "id": "tighnari",
+    "name": "Tighnari",
+    "element": "dendro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Tighnari",
+    "region": "Sumeru"
+  },
+  {
+    "id": "baizhu",
+    "name": "Baizhu",
+    "element": "dendro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Baizhu",
+    "region": "Liyue"
+  },
+  {
+    "id": "kirara",
+    "name": "Kirara",
+    "element": "dendro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Kirara",
+    "region": "Inazuma"
+  },
+  {
+    "id": "yaoyao",
+    "name": "Yaoyao",
+    "element": "dendro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_YaoYao",
+    "region": "Liyue"
+  },
+  {
+    "id": "kaveh",
+    "name": "Kaveh",
+    "element": "dendro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Kaveh",
+    "region": "Sumeru"
+  },
+  {
+    "id": "collei",
+    "name": "Collei",
+    "element": "dendro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Collei",
+    "region": "Sumeru"
+  },
+  {
+    "id": "emilie",
+    "name": "Emilie",
+    "element": "dendro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Emilie",
+    "region": "Fontaine"
+  },
+  {
+    "id": "furina",
+    "name": "Furina",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Furina",
+    "region": "Fontaine"
+  },
+  {
+    "id": "neuvillette",
+    "name": "Neuvillette",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Neuvillette",
+    "region": "Fontaine"
+  },
+  {
+    "id": "yelan",
+    "name": "Yelan",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Yelan",
+    "region": "Liyue"
+  },
+  {
+    "id": "xingqiu",
+    "name": "Xingqiu",
+    "element": "hydro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Xingqiu",
+    "region": "Liyue"
+  },
+  {
+    "id": "kokomi",
+    "name": "Kokomi",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Kokomi",
+    "region": "Inazuma"
+  },
+  {
+    "id": "nilou",
+    "name": "Nilou",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Nilou",
+    "region": "Sumeru"
+  },
+  {
+    "id": "mona",
+    "name": "Mona",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Mona",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "tartaglia",
+    "name": "Tartaglia (Childe)",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Tartaglia",
+    "region": "Snezhnaya"
+  },
+  {
+    "id": "ayato",
+    "name": "Ayato",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Ayato",
+    "region": "Inazuma"
+  },
+  {
+    "id": "candace",
+    "name": "Candace",
+    "element": "hydro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Candace",
+    "region": "Sumeru"
+  },
+  {
+    "id": "barbara",
+    "name": "Barbara",
+    "element": "hydro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Barbara",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "mualani",
+    "name": "Mualani",
+    "element": "hydro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Mualani",
+    "region": "Natlan"
+  },
+  {
+    "id": "hutao",
+    "name": "Hu Tao",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_HuTao",
+    "region": "Liyue"
+  },
+  {
+    "id": "xiangling",
+    "name": "Xiangling",
+    "element": "pyro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Xiangling",
+    "region": "Liyue"
+  },
+  {
+    "id": "bennett",
+    "name": "Bennett",
+    "element": "pyro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Bennett",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "diluc",
+    "name": "Diluc",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Diluc",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "klee",
+    "name": "Klee",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Klee",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "yoimiya",
+    "name": "Yoimiya",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Yoimiya",
+    "region": "Inazuma"
+  },
+  {
+    "id": "lyney",
+    "name": "Lyney",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Lyney",
+    "region": "Fontaine"
+  },
+  {
+    "id": "dehya",
+    "name": "Dehya",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Dehya",
+    "region": "Sumeru"
+  },
+  {
+    "id": "arlecchino",
+    "name": "Arlecchino",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Arlecchino",
+    "region": "Snezhnaya"
+  },
+  {
+    "id": "amber",
+    "name": "Amber",
+    "element": "pyro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Amber",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "xinyan",
+    "name": "Xinyan",
+    "element": "pyro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Xinyan",
+    "region": "Liyue"
+  },
+  {
+    "id": "yanfei",
+    "name": "Yanfei",
+    "element": "pyro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Yanfei",
+    "region": "Liyue"
+  },
+  {
+    "id": "thoma",
+    "name": "Thoma",
+    "element": "pyro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Thoma",
+    "region": "Inazuma"
+  },
+  {
+    "id": "chevreuse",
+    "name": "Chevreuse",
+    "element": "pyro",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Chevreuse",
+    "region": "Fontaine"
+  },
+  {
+    "id": "mavuika",
+    "name": "Mavuika",
+    "element": "pyro",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Mavuika",
+    "region": "Natlan"
+  },
+  {
+    "id": "ayaka",
+    "name": "Ayaka",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Ayaka",
+    "region": "Inazuma"
+  },
+  {
+    "id": "ganyu",
+    "name": "Ganyu",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Ganyu",
+    "region": "Liyue"
+  },
+  {
+    "id": "shenhe",
+    "name": "Shenhe",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Shenhe",
+    "region": "Liyue"
+  },
+  {
+    "id": "eula",
+    "name": "Eula",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Eula",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "chongyun",
+    "name": "Chongyun",
+    "element": "cryo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Chongyun",
+    "region": "Liyue"
+  },
+  {
+    "id": "qiqi",
+    "name": "Qiqi",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Qiqi",
+    "region": "Liyue"
+  },
+  {
+    "id": "diona",
+    "name": "Diona",
+    "element": "cryo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Diona",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "rosaria",
+    "name": "Rosaria",
+    "element": "cryo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Rosaria",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "layla",
+    "name": "Layla",
+    "element": "cryo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Layla",
+    "region": "Sumeru"
+  },
+  {
+    "id": "mika",
+    "name": "Mika",
+    "element": "cryo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Mika",
+    "region": "Mondstadt"
+  },
+  {
+    "id": "freminet",
+    "name": "Freminet",
+    "element": "cryo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Freminet",
+    "region": "Fontaine"
+  },
+  {
+    "id": "wriothesley",
+    "name": "Wriothesley",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Wriothesley",
+    "region": "Fontaine"
+  },
+  {
+    "id": "charlotte",
+    "name": "Charlotte",
+    "element": "cryo",
+    "rarity": 4,
+    "img": "UI_AvatarIcon_Charlotte",
+    "region": "Fontaine"
+  },
+  {
+    "id": "citlali",
+    "name": "Citlali",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Citlali",
+    "region": "Natlan"
+  },
+  {
+    "id": "capitano",
+    "name": "Capitano",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Capitano",
+    "region": "Snezhnaya"
+  },
+  {
+    "id": "columbina",
+    "name": "Columbina",
+    "element": "cryo",
+    "rarity": 5,
+    "img": "UI_AvatarIcon_Columbina",
+    "region": "Snezhnaya"
+  }
+]

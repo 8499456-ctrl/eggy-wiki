@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Genshin Impact Materials Calendar & Farming Guide (v6.3)</title>
+<meta name="description" content="Genshin Impact materials farming schedule. Daily talent books, weapon materials, and boss materials for all characters — updated for version 6.3.">
+<link rel="canonical" href="https://genshin-wiki.pages.dev/materials.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#d4a84b;--teal:#4bc4b3;--bg:#0d1117;--card:#161b22;--text:#e6e6e6;--dim:#8b949e;--border:#30363d}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:14px}
+a{color:var(--gold);text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:6px 20px;background:rgba(13,17,23,0.94);backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid var(--border);height:52px}
+nav .logo img{height:40px;width:auto}
+nav ul{list-style:none;display:flex;gap:10px}
+nav ul li a{color:var(--dim);font-size:13px;padding:4px 10px;border-radius:6px}
+nav ul li a:hover{color:var(--gold);background:rgba(212,168,75,0.1)}
+.container{max-width:960px;margin:0 auto;padding:0 16px 30px}
+.hero{padding:76px 16px 20px;text-align:center;min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;background:linear-gradient(180deg,rgba(93,191,154,0.08),transparent 80%),url(images/bg_anemo.jpg) center/cover fixed;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover} .hero::before{content:"";position:absolute;inset:0;background:rgba(13,17,23,0.6);z-index:0} .hero>*{position:relative;z-index:1}
+.hero h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.hero p{font-size:13px;color:var(--dim)}
+.t{font-size:17px;font-weight:700;color:var(--gold);margin:24px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--border)}
+.today-badge{display:inline-block;background:var(--gold);color:#0d1117;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;margin-left:8px}
+.calendar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:16px}
+.day-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px;transition:.2s}
+.day-card.today{border-color:var(--gold);box-shadow:0 0 12px rgba(212,168,75,0.15)}
+.day-card .day-name{font-size:13px;font-weight:700;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+.day-card .day-name .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.day-card.today .dot{background:var(--gold)}
+.day-card .section-label{font-size:10px;color:var(--dim);font-weight:600;margin:6px 0 3px;text-transform:uppercase;letter-spacing:0.5px}
+.day-card .item{padding:2px 0;font-size:11px;color:var(--text)}
+.day-card .item small{color:var(--dim)}
+.mat-table{width:100%;border-collapse:collapse;margin-bottom:12px;font-size:12px}
+.mat-table th{text-align:left;padding:6px 8px;background:var(--card);border-bottom:2px solid var(--gold);color:var(--gold);font-size:11px;text-transform:uppercase}
+.mat-table td{padding:5px 8px;border-bottom:1px solid var(--border);color:var(--dim)}
+.mat-table tr:hover td{color:var(--text);background:rgba(255,255,255,0.02)}
+.mat-table .char-link{color:var(--text);cursor:pointer}
+.mat-table .char-link:hover{color:var(--gold)}
+.el-tag{display:inline-block;padding:1px 6px;border-radius:8px;font-size:9px;margin:0 2px}
+@media(max-width:600px){.calendar-grid{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo"><a href="index.html"><img src="images/logo.png" alt="Genshin Guide"></a></div>
+<div style="display:flex;align-items:center;gap:6px"><a href="index.html">← Home</a></div>
+<ul><li><a href="index.html">Home</a></li><li><a href="characters.html">Characters</a></li><li><a href="elements.html">Elements</a></li><li><a href="tierlist.html">Tier List</a></li><li><a href="abyss.html">Abyss</a></li><li><a href="download.html">Download</a></li><li><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></li></ul>
+</nav>
+<div class="container">
+
+<div class="hero">
+<h1>📅 <span data-i18n="mat.calendar.title">Materials Farming Calendar</span></h1>
+<p data-i18n="mat.calendar.subtitle">Check what talent books and weapon materials are available each day (v6.3)</p>
+</div>
+
+<div class="t">📆 Weekly Schedule <div id="todayLabel" class="today-badge"></div></div>
+<div class="calendar-grid" id="calendarGrid"></div>
+
+<div class="t">📖 Talent Books by Character</div>
+<p style="font-size:12px;color:var(--dim);margin-bottom:8px">Each region has its own talent material domain. Characters use books from their affiliated region.</p>
+<div class="mat-table" id="talentTable"></div>
+
+<div class="t">⚔️ Weapon Materials by Character</div>
+<p style="font-size:12px;color:var(--dim);margin-bottom:8px">Weapon ascension materials also follow a weekly schedule. Check the calendar above.</p>
+<div class="mat-table" id="weaponTable"></div>
+
+<div style="margin:24px 0;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--dim);text-align:center">
+💡 <span data-i18n="mat.domains">Domains rotate daily</span>. Talent books: Mon/Thu, Tue/Fri, Wed/Sat. Weapon materials: Mon/Thu, Tue/Fri, Wed/Sat. <strong>Sunday = everything available!</strong>
+</div>
+
+</div>
+
+<footer>
+<div class="links">
+<a href="index.html">Home</a><a href="characters.html">Characters</a><a href="tierlist.html">Tier List</a><a href="elements.html">Elements</a><a href="abyss.html">Abyss</a><a href="weapons.html">Weapons</a><a href="artifacts.html">Artifacts</a><a href="materials.html">Materials</a><a href="download.html">Download</a><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li><a href="privacy.html">Privacy</a>
+</div>
+<p>© 2026 Genshin Guide · Not affiliated with HoYoverse</p>
+</footer>
+
+<script>
+const elColors = {anemo:'#5dbfa9',geo:'#d4a84b',electro:'#b47bd4',dendro:'#7bc47b',hydro:'#4a9dd6',pyro:'#d9604a',cryo:'#7bc4d0'};
+
+// Schedule data: [dayIndex] -> { books: {group:items}, weapons: {group:items} }
+// dayIndex: 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat, 6=Sun
+const schedule = [
+  { day:'Monday', books:{'Freedom':'Ballad','Prosperity':'Prosperity','Transience':'Transience'}, weapons:{'Decarabian':'Decarabian','Guyun':'Guyun','Narukami':'Narukami'} },
+  { day:'Tuesday', books:{'Resistance':'Resistance','Diligence':'Diligence','Elegance':'Elegance'}, weapons:{'Boreal Wolf':'Boreal Wolf','Mist Veiled':'Mist Veiled','Inazuma':'Tachibana'} },
+  { day:'Wednesday', books:{'Ballad':'Ballad','Gold':'Gold','Light':'Light'}, weapons:{'Decarabian':'Decarabian','Guyun':'Guyun','Narukami':'Narukami'} },
+  { day:'Thursday', books:{'Freedom':'Freedom','Prosperity':'Prosperity','Transience':'Transience'}, weapons:{'Boreal Wolf':'Boreal Wolf','Mist Veiled':'Mist Veiled','Inazuma':'Tachibana'} },
+  { day:'Friday', books:{'Resistance':'Resistance','Diligence':'Diligence','Elegance':'Elegance'}, weapons:{'Decarabian':'Decarabian','Guyun':'Guyun','Narukami':'Narukami'} },
+  { day:'Saturday', books:{'Ballad':'Ballad','Gold':'Gold','Light':'Light'}, weapons:{'Boreal Wolf':'Boreal Wolf','Mist Veiled':'Mist Veiled','Inazuma':'Tachibana'} },
+  { day:'Sunday', books:{'All':'Everything available!'}, weapons:{'All':'Everything available!'} }
+];
+
+const dayNames = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const dayNamesShort = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+// Character -> talent book mapping (region-based)
+const regionBooks = {
+  'Mondstadt': 'Freedom / Resistance / Ballad',
+  'Liyue': 'Prosperity / Diligence / Gold',
+  'Inazuma': 'Transience / Elegance / Light',
+  'Sumeru': 'Admonition / Ingenuity / Praxis',
+  'Fontaine': 'Equity / Justice / Order',
+  'Natlan': 'Contention / Kindling / Conflict',
+  'Snezhnaya': 'Theater / Mirror / Fire'
+};
+
+// Character -> weapon material mapping (simplified)
+const regionWeapons = {
+  'Mondstadt': 'Decarabian / Boreal Wolf',
+  'Liyue': 'Guyun / Mist Veiled',
+  'Inazuma': 'Narukami / Tachibana',
+  'Sumeru': 'Oasis / Forest',
+  'Fontaine': 'Ancient / Sea',
+  'Natlan': 'Night / Blaze',
+  'Snezhnaya': 'Frost / Winter'
+};
+
+// Characters data
+const charList = [
+  {id:"venti",name:"Venti",element:"anemo",region:"Mondstadt"},
+  {id:"kazuha",name:"Kazuha",element:"anemo",region:"Inazuma"},
+  {id:"xiao",name:"Xiao",element:"anemo",region:"Liyue"},
+  {id:"wanderer",name:"Wanderer",element:"anemo",region:"Sumeru"},
+  {id:"faruzan",name:"Faruzan",element:"anemo",region:"Sumeru"},
+  {id:"jean",name:"Jean",element:"anemo",region:"Mondstadt"},
+  {id:"sayu",name:"Sayu",element:"anemo",region:"Inazuma"},
+  {id:"sucrose",name:"Sucrose",element:"anemo",region:"Mondstadt"},
+  {id:"heizou",name:"Heizou",element:"anemo",region:"Inazuma"},
+  {id:"lynnette",name:"Lynnette",element:"anemo",region:"Fontaine"},
+  {id:"lan_yan",name:"Lan Yan",element:"anemo",region:"Liyue"},
+  {id:"mizuki",name:"Mizuki",element:"anemo",region:"Inazuma"},
+  {id:"zhongli",name:"Zhongli",element:"geo",region:"Liyue"},
+  {id:"albedo",name:"Albedo",element:"geo",region:"Mondstadt"},
+  {id:"itto",name:"Arataki Itto",element:"geo",region:"Inazuma"},
+  {id:"navia",name:"Navia",element:"geo",region:"Fontaine"},
+  {id:"chiori",name:"Chiori",element:"geo",region:"Inazuma"},
+  {id:"gorou",name:"Gorou",element:"geo",region:"Inazuma"},
+  {id:"ningguang",name:"Ningguang",element:"geo",region:"Liyue"},
+  {id:"noelle",name:"Noelle",element:"geo",region:"Mondstadt"},
+  {id:"yun_jin",name:"Yun Jin",element:"geo",region:"Liyue"},
+  {id:"xilonen",name:"Xilonen",element:"geo",region:"Natlan"},
+  {id:"kachina",name:"Kachina",element:"geo",region:"Natlan"},
+  {id:"raiden",name:"Raiden Shogun",element:"electro",region:"Inazuma"},
+  {id:"yae",name:"Yae Miko",element:"electro",region:"Inazuma"},
+  {id:"keqing",name:"Keqing",element:"electro",region:"Liyue"},
+  {id:"cyno",name:"Cyno",element:"electro",region:"Sumeru"},
+  {id:"fischl",name:"Fischl",element:"electro",region:"Mondstadt"},
+  {id:"kuki",name:"Kuki Shinobu",element:"electro",region:"Inazuma"},
+  {id:"lisa",name:"Lisa",element:"electro",region:"Mondstadt"},
+  {id:"razor",name:"Razor",element:"electro",region:"Mondstadt"},
+  {id:"beidou",name:"Beidou",element:"electro",region:"Liyue"},
+  {id:"clorinde",name:"Clorinde",element:"electro",region:"Fontaine"},
+  {id:"sethos",name:"Sethos",element:"electro",region:"Sumeru"},
+  {id:"ororon",name:"Ororon",element:"electro",region:"Natlan"},
+  {id:"variesa",name:"Varesa",element:"electro",region:"Natlan"},
+  {id:"nahida",name:"Nahida",element:"dendro",region:"Sumeru"},
+  {id:"alhaitham",name:"Alhaitham",element:"dendro",region:"Sumeru"},
+  {id:"tighnari",name:"Tighnari",element:"dendro",region:"Sumeru"},
+  {id:"baizhu",name:"Baizhu",element:"dendro",region:"Liyue"},
+  {id:"kirara",name:"Kirara",element:"dendro",region:"Inazuma"},
+  {id:"yaoyao",name:"Yaoyao",element:"dendro",region:"Liyue"},
+  {id:"kaveh",name:"Kaveh",element:"dendro",region:"Sumeru"},
+  {id:"collei",name:"Collei",element:"dendro",region:"Sumeru"},
+  {id:"emilie",name:"Emilie",element:"dendro",region:"Fontaine"},
+  {id:"furina",name:"Furina",element:"hydro",region:"Fontaine"},
+  {id:"yelan",name:"Yelan",element:"hydro",region:"Liyue"},
+  {id:"xingqiu",name:"Xingqiu",element:"hydro",region:"Liyue"},
+  {id:"kokomi",name:"Kokomi",element:"hydro",region:"Inazuma"},
+  {id:"nilou",name:"Nilou",element:"hydro",region:"Sumeru"},
+  {id:"mona",name:"Mona",element:"hydro",region:"Mondstadt"},
+  {id:"tartaglia",name:"Tartaglia (Childe)",element:"hydro",region:"Snezhnaya"},
+  {id:"ayato",name:"Ayato",element:"hydro",region:"Inazuma"},
+  {id:"candace",name:"Candace",element:"hydro",region:"Sumeru"},
+  {id:"barbara",name:"Barbara",element:"hydro",region:"Mondstadt"},
+  {id:"mualani",name:"Mualani",element:"hydro",region:"Natlan"},
+  {id:"neuvillette",name:"Neuvillette",element:"hydro",region:"Fontaine"},
+  {id:"hutao",name:"Hu Tao",element:"pyro",region:"Liyue"},
+  {id:"xiangling",name:"Xiangling",element:"pyro",region:"Liyue"},
+  {id:"bennett",name:"Bennett",element:"pyro",region:"Mondstadt"},
+  {id:"diluc",name:"Diluc",element:"pyro",region:"Mondstadt"},
+  {id:"klee",name:"Klee",element:"pyro",region:"Mondstadt"},
+  {id:"yoimiya",name:"Yoimiya",element:"pyro",region:"Inazuma"},
+  {id:"lyney",name:"Lyney",element:"pyro",region:"Fontaine"},
+  {id:"dehya",name:"Dehya",element:"pyro",region:"Sumeru"},
+  {id:"arlecchino",name:"Arlecchino",element:"pyro",region:"Snezhnaya"},
+  {id:"amber",name:"Amber",element:"pyro",region:"Mondstadt"},
+  {id:"xinyan",name:"Xinyan",element:"pyro",region:"Liyue"},
+  {id:"yanfei",name:"Yanfei",element:"pyro",region:"Liyue"},
+  {id:"thoma",name:"Thoma",element:"pyro",region:"Inazuma"},
+  {id:"chevreuse",name:"Chevreuse",element:"pyro",region:"Fontaine"},
+  {id:"mavuika",name:"Mavuika",element:"pyro",region:"Natlan"},
+  {id:"ayaka",name:"Ayaka",element:"cryo",region:"Inazuma"},
+  {id:"ganyu",name:"Ganyu",element:"cryo",region:"Liyue"},
+  {id:"shenhe",name:"Shenhe",element:"cryo",region:"Liyue"},
+  {id:"eula",name:"Eula",element:"cryo",region:"Mondstadt"},
+  {id:"chongyun",name:"Chongyun",element:"cryo",region:"Liyue"},
+  {id:"qiqi",name:"Qiqi",element:"cryo",region:"Liyue"},
+  {id:"diona",name:"Diona",element:"cryo",region:"Mondstadt"},
+  {id:"rosaria",name:"Rosaria",element:"cryo",region:"Mondstadt"},
+  {id:"layla",name:"Layla",element:"cryo",region:"Sumeru"},
+  {id:"mika",name:"Mika",element:"cryo",region:"Mondstadt"},
+  {id:"freminet",name:"Freminet",element:"cryo",region:"Fontaine"},
+  {id:"wriothesley",name:"Wriothesley",element:"cryo",region:"Fontaine"},
+  {id:"charlotte",name:"Charlotte",element:"cryo",region:"Fontaine"},
+  {id:"citlali",name:"Citlali",element:"cryo",region:"Natlan"},
+  {id:"capitano",name:"Capitano",element:"cryo",region:"Snezhnaya"},
+  {id:"columbina",name:"Columbina",element:"cryo",region:"Snezhnaya"},
+];
+
+function renderCalendar() {
+  const today = new Date().getDay(); // 0=Sun, 1=Mon, ...
+  const grid = document.getElementById('calendarGrid');
+  grid.innerHTML = '';
+  
+  dayNames.forEach((day, i) => {
+    const s = schedule[i];
+    const isToday = (i === (today === 0 ? 6 : today - 1));
+    const card = document.createElement('div');
+    card.className = 'day-card' + (isToday ? ' today' : '');
+    
+    let html = `<div class="day-name">${day}${isToday ? ' <span class="dot"></span>' : ''}</div>`;
+    
+    if (i === 6) {
+      html += '<div class="item" style="color:var(--gold);font-weight:600">All domains open!</div>';
+    } else {
+      html += '<div class="section-label">📖 Talent Books</div>';
+      for (const [book, domain] of Object.entries(s.books)) {
+        html += `<div class="item">${book}</div>`;
+      }
+      html += '<div class="section-label">⚔️ Weapon Materials</div>';
+      for (const [weapon, domain] of Object.entries(s.weapons)) {
+        html += `<div class="item">${weapon}</div>`;
+      }
+    }
+    
+    card.innerHTML = html;
+    grid.appendChild(card);
+    
+    if (isToday) {
+      document.getElementById('todayLabel').textContent = 'Today: ' + day;
+    }
+  });
+}
+
+function renderTables() {
+  // Group by region
+  const byRegion = {};
+  charList.forEach(c => {
+    if (!byRegion[c.region]) byRegion[c.region] = [];
+    byRegion[c.region].push(c);
+  });
+  
+  // Talent table
+  let talentHtml = '<table class="mat-table"><tr><th>Region</th><th>Talent Books</th><th>Characters</th></tr>';
+  Object.keys(byRegion).sort().forEach(region => {
+    const chars = byRegion[region];
+    const books = regionBooks[region] || 'Various';
+    const charLinks = chars.map(c => 
+      `<span class="char-link" onclick="window.location='characters/${c.id}.html'" style="color:${elColors[c.element]||'#fff'}">${c.name}</span>`
+    ).join(', ');
+    talentHtml += `<tr><td><strong>${region}</strong></td><td>${books}</td><td>${charLinks}</td></tr>`;
+  });
+  talentHtml += '</table>';
+  document.getElementById('talentTable').innerHTML = talentHtml;
+  
+  // Weapon table (simplified)
+  let weaponHtml = '<table class="mat-table"><tr><th>Region</th><th>Weapon Materials</th><th>Characters</th></tr>';
+  Object.keys(byRegion).sort().forEach(region => {
+    const chars = byRegion[region];
+    const weapons = regionWeapons[region] || 'Various';
+    const charLinks = chars.map(c => 
+      `<span class="char-link" onclick="window.location='characters/${c.id}.html'" style="color:${elColors[c.element]||'#fff'}">${c.name}</span>`
+    ).join(', ');
+    weaponHtml += `<tr><td><strong>${region}</strong></td><td>${weapons}</td><td>${charLinks}</td></tr>`;
+  });
+  weaponHtml += '</table>';
+  document.getElementById('weaponTable').innerHTML = weaponHtml;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderCalendar();
+  renderTables();
+});
+</script>
+<script src="i18n.js"></script>
+    <script>
+    (function(){
+      var bgm=new Audio("/ys_bgm.mp3");bgm.loop=true;var mp=false;
+      setInterval(function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)},1000);
+      window.addEventListener("beforeunload",function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)});
+      initMusic=function(){var s=localStorage.getItem("bgm_playing");var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;if(s==="true")toggleMusic()};
+      toggleMusic=function(){var btn=document.getElementById("musicBtn");if(mp){bgm.pause();mp=false;if(btn){btn.classList.remove("playing");btn.textContent="♪"}localStorage.setItem("bgm_playing","false")}else{var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;bgm.play().then(function(){mp=true;if(btn){btn.classList.add("playing");btn.textContent="♫"}localStorage.setItem("bgm_playing","true")}).catch(function(e){console.log("BGM autoplay blocked:",e)})}};
+      document.addEventListener("click",function o(){if(typeof initMusic==="function")initMusic();document.removeEventListener("click",o)},{once:true});
+    })();
+    </script>
+<script>(function(s){s.dataset.zone='11277266',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</body>
+</html>

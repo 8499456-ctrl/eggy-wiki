@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Genshin Guide Premium Membership — Unlock Exclusive Content</title>
+    <meta name="description" content="Upgrade to Genshin Guide Premium for exclusive character analysis, Spiral Abyss strategies, real-time bug tracking, and ad-free browsing.">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --bg:#0d1117; --bg-card:#151b23; --bg-card-hover:#1c2333; --border:#21262d; --gold:#d4a84b; --gold-light:#e8c75a; --gold-dark:#c49a3a; --text:#e6edf3; --text-dim:#8b949e; --text-muted:#484f58; --anemo:#5dbf9a; --electro:#b47bd4; --cryo:#7bc4d0; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,'Segoe UI','Helvetica Neue',sans-serif; }
+nav { position:fixed; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:12px 28px; background:rgba(13,17,23,0.94); backdrop-filter:blur(12px); z-index:100; border-bottom:1px solid var(--border); }
+.logo { font-size:18px; font-weight:700; }
+.logo span { color:var(--gold); }
+nav ul { list-style:none; display:flex; gap:16px; flex-wrap:wrap; }
+nav ul li a { color:var(--text-dim); text-decoration:none; font-size:13px; padding:4px 8px; border-radius:6px; transition:all .2s; }
+nav ul li a:hover, nav ul li a.active { color:var(--gold); background:rgba(212,168,75,0.1); }
+.page-header { padding:76px 28px 20px; text-align:center; min-height:260px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; background:linear-gradient(180deg,rgba(212,168,75,0.08),transparent 80%), url(images/bg_geo.jpg) center/cover fixed;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover; } .page-header::before{content:"";position:absolute;inset:0;background:rgba(13,17,23,0.6);z-index:0;} .page-header>*{position:relative;z-index:1;}
+.page-header h1 { font-size:26px; }
+.page-header p { color:var(--text-dim); font-size:14px; margin-top:4px; }
+.container { max-width:1000px; margin:0 auto; padding:0 16px 40px; }
+.section-title { font-size:20px; font-weight:700; margin-bottom:10px; color:var(--gold); text-align:center; }
+.section-sub { text-align:center; font-size:14px; color:var(--text-dim); margin-bottom:28px; line-height:1.6; }
+
+.pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:40px; }
+.price-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:32px 24px; text-align:center; transition:all .3s; position:relative; }
+.price-card:hover { background:var(--bg-card-hover); border-color:var(--gold-dark); transform:translateY(-4px); }
+.price-card.featured { border-color:var(--gold); background:linear-gradient(180deg,rgba(212,168,75,0.08),var(--bg-card)); }
+.price-card .badge { position:absolute; top:-10px; left:50%; transform:translateX(-50%); padding:4px 16px; border-radius:20px; font-size:11px; font-weight:600; background:var(--gold); color:#000; white-space:nowrap; }
+.price-card .plan-name { font-size:15px; color:var(--text-dim); font-weight:500; margin-bottom:4px; }
+.price-card .price { font-size:36px; font-weight:700; color:var(--text); }
+.price-card .price small { font-size:14px; font-weight:400; color:var(--text-dim); }
+.price-card .price-desc { font-size:13px; color:var(--text-muted); margin:4px 0 16px; }
+.price-card ul { list-style:none; text-align:left; padding:0; }
+.price-card ul li { padding:6px 0; font-size:13px; color:var(--text-dim); display:flex; align-items:center; gap:8px; border-bottom:1px solid rgba(255,255,255,.04); }
+.price-card ul li:last-child { border-bottom:none; }
+.price-card ul li .check { color:var(--gold-light); font-size:14px; }
+.price-card ul li .xmark { color:var(--text-muted); font-size:12px; }
+.price-btn { display:block; margin-top:20px; padding:12px; border-radius:8px; background:linear-gradient(135deg,var(--gold-dark),var(--gold)); color:#000; font-weight:600; font-size:14px; border:none; cursor:pointer; transition:all .25s; width:100%; text-decoration:none; }
+.price-btn:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(212,168,75,.3); }
+.price-btn-outline { display:block; margin-top:20px; padding:12px; border-radius:8px; background:transparent; color:var(--text); font-weight:600; font-size:14px; border:1px solid var(--border); cursor:pointer; transition:all .25s; width:100%; text-decoration:none; text-align:center; }
+.price-btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+
+.credit-section { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px; margin-bottom:24px; }
+.credit-section h3 { font-size:16px; margin-bottom:8px; }
+.credit-section p { font-size:13px; color:var(--text-dim); line-height:1.7; }
+
+.faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.faq-item { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; }
+.faq-item .q { font-size:14px; font-weight:600; margin-bottom:4px; }
+.faq-item .a { font-size:13px; color:var(--text-dim); line-height:1.6; }
+
+footer { border-top:1px solid var(--border); padding:24px 16px; text-align:center; color:var(--text-dim); font-size:13px; }
+footer .links { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
+footer .links a { color:var(--text-dim); font-size:13px; text-decoration:none; }
+footer .links a:hover { color:var(--gold); }
+
+@media (max-width:768px) {
+  nav { padding:10px 12px; flex-wrap:wrap; gap:6px; }
+  nav ul { gap:6px; }
+  nav ul li a { font-size:12px; padding:3px 6px; }
+  .page-header { padding:70px 12px 16px; }
+  .page-header h1 { font-size:20px; }
+  .container { padding:0 10px 24px; }
+  .pricing-grid { grid-template-columns:1fr; }
+  .faq-grid { grid-template-columns:1fr; }
+}
+</style>
+    <meta property="og:title" content="💎 Membership — Unlock Premium Genshin Impact Guides">
+    <meta property="og:description" content="Upgrade to Genshin Guide membership for exclusive content: advanced team analysis, weapon comparison charts, artifact optimizer, and priority support.">
+    <meta property="og:url" content="https://genshin-wiki.pages.dev/membership.html">
+    <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://genshin-wiki.pages.dev/" />
+</head>
+<body>
+<nav>
+  <div class="logo"><span>✦</span> Genshin Wiki</div>
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="characters.html">Characters</a></li>
+<li><a href="elements.html">Elements</a></li>
+<li><a href="abyss.html">Abyss</a></li>
+<li><a href="weapons.html">Weapons</a></li>
+<li><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a></li>
+<li><a href="materials.html">Materials</a></li>
+<li><a href="download.html">📥 Download</a><a href="beginner.html">Guides</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="membership.html" class="active" style="color:var(--gold);">💎 Membership</a></li>
+<li><a href="forum.html">Forum</a></li>
+<li><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></li>
+        <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play / Pause BGM">♪</button>
+</ul>
+</nav>
+<div class="page-header">
+  <h1>💎 Membership</h1>
+  <p>Unlock the full Genshin Wiki experience — premium guides, credits, and exclusive perks</p>
+</div>
+<div class="container">
+
+<div class="section-title">💎 Choose Your Plan</div>
+<div class="section-sub">Unlock premium guides, ad-free browsing, and exclusive tools to supercharge your Genshin journey.</div>
+
+<div class="pricing-grid">
+  <!-- Free -->
+  <div class="price-card">
+    <div class="plan-name">Free</div>
+    <div class="price" style="color:var(--text-dim);">$0</div>
+    <div class="price-desc">Browse basic guides for free</div>
+    <ul>
+      <li><span class="check">✓</span> Browse public guides</li>
+      <li><span class="check">✓</span> Character database</li>
+      <li><span class="check">✓</span> Team builds & elements</li>
+      <li><span class="xmark">✗</span> Access to premium guides</li>
+      <li><span class="xmark">✗</span> Ad-free experience</li>
+      <li><span class="xmark">✗</span> Priority support</li>
+        
+    </ul>
+    <div class="price-btn-outline">Current Plan</div>
+  </div>
+
+  <!-- Weekly -->
+  <div class="price-card featured">
+    <div class="badge">🔥 Most Popular</div>
+    <div class="plan-name">Weekly Pass</div>
+    <div class="price">$10 <small>/ week</small></div>
+    <div class="price-desc">Full access for a week</div>
+    <ul>
+      <li><span class="check">✓</span> <b style="color:var(--text);">Unlock all premium guides</b></li>
+      <li><span class="check">✓</span> Ad-free experience</li>
+      <li><span class="check">✓</span> Advanced team simulations</li>
+      <li><span class="check">✓</span> Detailed artifact optimizer</li>
+      <li><span class="check">✓</span> Monthly abyss tier analysis</li>
+      <li><span class="xmark">✗</span> Priority support</li>
+        
+    </ul>
+    <a class="price-btn" href="https://buy.stripe.com/5kQ6oI0EP7FffAv737b3q01" target="_blank">Subscribe — $10/wk</a>
+  </div>
+
+  <!-- Monthly -->
+  <div class="price-card">
+    <div class="plan-name">Monthly Pass</div>
+    <div class="price">$25 <small>/ month</small></div>
+    <div class="price-desc">Save with monthly subscription</div>
+    <ul>
+      <li><span class="check">✓</span> <b style="color:var(--text);">Everything in Weekly, plus:</b></li>
+      <li><span class="check">✓</span> Exclusive supporter badge</li>
+      <li><span class="check">✓</span> Early access to new guides</li>
+      <li><span class="check">✓</span> Priority build review requests</li>
+      <li><span class="check">✓</span> Discord supporter role</li>
+      <li><span class="check">✓</span> Priority support</li>
+        
+    </ul>
+    <a class="price-btn" href="https://buy.stripe.com/4gM8wQbjt9NngEz2MRb3q02" target="_blank">Subscribe — $25/mo</a>
+  </div>
+
+  <!-- Yearly -->
+  <div class="price-card">
+    <div class="plan-name">Annual Premium</div>
+    <div class="price">$60 <small>/ year</small></div>
+    <div class="price-desc" style="color:var(--gold-light);font-weight:500;">Save 75% vs weekly</div>
+    <ul>
+      <li><span class="check">✓</span> <b style="color:var(--text);">Everything in Monthly, plus:</b></li>
+      <li><span class="check">✓</span> Unlimited access</li>
+      <li><span class="check">✓</span> Supporter badge</li>
+      <li><span class="check">✓</span> Early access</li>
+      <li><span class="check">✓</span> Discord supporter role</li>
+      <li><span class="check">✓</span> Priority support</li>
+        
+    </ul>
+    <a class="price-btn" href="https://buy.stripe.com/4gM28safpe3D0FBevzb3q03" target="_blank">Subscribe — $60/yr</a>
+  </div>
+</div>
+
+<div class="section-title" style="margin-top:32px;">❓ Frequently Asked Questions</div>
+<div class="faq-grid">
+  <div class="faq-item">
+    <div class="q">Can I switch plans later?</div>
+    <div class="a">Yes! Upgrade or downgrade anytime. Your subscription will be prorated.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q">What payment methods are accepted?</div>
+    <div class="a">We support Visa, Mastercard, Apple Pay, Google Pay, and more via Stripe.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q">What happens at the end of my subscription?</div>
+    <div class="a">Your access will revert to the Free plan. You can resubscribe anytime.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q">Can I get a refund?</div>
+    <div class="a">Yes, we offer a 7-day money-back guarantee on all subscriptions. Contact us at st.sqa@163.com.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q">Is the free plan useful?</div>
+    <div class="a">Absolutely! You get access to all basic guides, character database, and public team builds — no credit card needed.</div>
+  </div>
+  <div class="faq-item">
+    <div class="q">Can businesses/teams purchase?</div>
+    <div class="a">Yes, contact st.sqa@163.com for bulk pricing and team plans.</div>
+  </div>
+</div>
+
+</div>
+<footer>
+  <div class="links"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="elements.html">Elements</a><a href="abyss.html">Abyss</a><a href="weapons.html">Weapons</a><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a><a href="materials.html">Materials</a><a href="download.html">📥 Download</a><a href="beginner.html">Guides</a><a href="login.html">Login</a><a href="membership.html">Membership</a><a href="forum.html">Forum</a><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></div>
+  <p>This website is not affiliated with miHoYo / HoYoverse.</p><p>All game artwork, visual assets, and intellectual property are the property of their respective owners. This is a fan-made guide website and is not affiliated with HoYoverse.</p>
+  <p style="margin-top:4px;">© 2026 Genshin Wiki</p>
+</footer>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e6f9bb41564ccead265168e47540c9"}'></script>
+<!-- End Cloudflare Web Analytics -->
+  <!-- ===== Membership Check ===== -->
+  <script>
+  (async function() {
+    try {
+      const r = await fetch('/api/me');
+      const d = await r.json();
+      document.querySelectorAll('.member-only').forEach(el => {
+        el.style.display = d.member ? '' : 'none';
+      });
+      document.querySelectorAll('.guest-only').forEach(el => {
+        el.style.display = !d.member ? '' : 'none';
+      });
+    } catch(e) {}
+  })();
+  </script>
+    <script>
+    (function(){
+      var bgm=new Audio("/ys_bgm.mp3");bgm.loop=true;var mp=false;
+      setInterval(function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)},1000);
+      window.addEventListener("beforeunload",function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)});
+      initMusic=function(){var s=localStorage.getItem("bgm_playing");var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;if(s==="true")toggleMusic()};
+      toggleMusic=function(){var btn=document.getElementById("musicBtn");if(mp){bgm.pause();mp=false;if(btn){btn.classList.remove("playing");btn.textContent="♪"}localStorage.setItem("bgm_playing","false")}else{var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;bgm.play().then(function(){mp=true;if(btn){btn.classList.add("playing");btn.textContent="♫"}localStorage.setItem("bgm_playing","true")}).catch(function(e){console.log("BGM autoplay blocked:",e)})}};
+      document.addEventListener("click",function o(){if(typeof initMusic==="function")initMusic();document.removeEventListener("click",o)},{once:true});
+    })();
+    </script>
+<script>(function(s){s.dataset.zone='11277266',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</body>
+</html>

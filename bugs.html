@@ -1,252 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWNKEBXX68"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GWNKEBXX68');
-</script>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>(function(s){s.dataset.zone="11277266",s.src="https://nap5k.com/tag.min.js"})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement("script")))</script>
-  <title>Report a Bug — Eggy Wiki</title>
-  <meta name="description" content="Report bugs in Eggy Party or issues with Eggy Wiki. Help us improve the community.">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--shadow:0 4px 24px rgba(255,107,157,0.08)}
-    html{scroll-behavior:smooth}
-    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
-    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
-    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-    .logo{font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.1)}.logo span{color:var(--yellow)}
-    nav{display:flex;gap:6px;flex-wrap:wrap}
-    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
-    .container{max-width:700px;margin:0 auto;padding:0 24px}
-    .page-header{padding:32px 0 16px;text-align:center}
-    .page-header h1{font-size:30px;font-weight:800;color:var(--pink);margin-bottom:4px}.page-header p{font-size:15px;color:var(--text-dim)}
-    .bug-card{background:var(--bg-card);border-radius:24px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px}
-    .bug-card h2{font-size:18px;color:var(--pink);margin-bottom:10px}
-    .bug-card p,.bug-card ol{font-size:14px;color:var(--text-dim);line-height:1.8}
-    .bug-card ol{padding-left:20px}.bug-card ol li{margin-bottom:6px}
-    .form-group{margin-bottom:14px}
-    .form-group label{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
-    .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:2px solid #FFE0EC;border-radius:14px;font-size:14px;font-family:inherit;outline:none;transition:all .2s;background:#fff;color:var(--text)}
-    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--pink);box-shadow:0 0 0 4px rgba(255,107,157,0.08)}
-    .form-group textarea{min-height:120px;resize:vertical}
-    .form-group select{appearance:auto;cursor:pointer}
-    .btn-submit{padding:14px 32px;border:none;border-radius:30px;background:var(--pink);color:#fff;font-size:16px;font-weight:700;cursor:pointer;transition:all .2s;font-family:inherit}
-    .btn-submit:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,157,0.3)}
-    .btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
-    .submit-ok{background:rgba(76,175,80,0.08);border:2px solid var(--green);border-radius:16px;padding:24px;text-align:center;display:none}
-    .submit-ok h3{color:var(--green);font-size:18px;margin-bottom:6px}.submit-ok p{color:var(--text-dim);font-size:14px}
-    .existing-bugs{margin-top:16px}
-    .bug-item{background:var(--bg-card);border-radius:16px;padding:16px;box-shadow:var(--shadow);margin-bottom:10px;border-left:4px solid var(--pink)}
-    .bug-item .status{display:inline-block;padding:2px 10px;border-radius:8px;font-size:11px;font-weight:700;margin-bottom:4px}
-    .status-open{background:rgba(255,107,157,0.12);color:var(--pink)}.status-fixed{background:rgba(76,175,80,0.12);color:var(--green)}.status-wip{background:rgba(107,203,255,0.12);color:var(--blue)}
-    .bug-item h3{font-size:15px;color:var(--text);margin-bottom:2px}.bug-item p{font-size:13px;color:var(--text-dim)}
-    .bug-item .meta{font-size:12px;color:var(--text-dim);margin-top:4px}
-    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
-    footer .container{max-width:1100px;margin:0 auto}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
-    .footer-bottom{font-size:13px;opacity:0.7}
-    @media(max-width:640px){.page-header h1{font-size:24px}}
-      .share-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 24px;max-width:1100px;margin:0 auto;flex-wrap:wrap}.share-bar span{font-size:14px;color:var(--text-dim);font-weight:600}.share-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:13px;font-weight:700;color:#fff;text-decoration:none;transition:all .2s}.share-btn:hover{transform:scale(1.1);color:#fff}.share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);border:none;cursor:pointer;font-size:16px;padding:0;color:#fff}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Genshin Impact Bug Tracker — Known Issues & Fixes (v6.3)</title>
+<meta name="description" content="Tracked bugs and known issues in Genshin Impact version 6.3. Combat, exploration, co-op, and visual glitches with workarounds and fix status. Updated daily.">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --bg:#0d1117; --bg-card:#151b23; --bg-card-hover:#1c2333; --border:#21262d; --gold:#d4a84b; --gold-light:#e8c75a; --text:#e6edf3; --text-dim:#8b949e; }
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:880px;margin:0 auto;padding:20px}
+.nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;padding:10px 0;border-bottom:1px solid var(--border)}
+.nav a{color:var(--text-dim);font-size:13px;padding:4px 10px;border-radius:4px}
+.nav a:hover{color:var(--gold);background:var(--bg-card)}
+.header{text-align:center;padding:40px 20px 20px;min-height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;background:linear-gradient(180deg,rgba(180,123,212,0.08),transparent 80%),url(images/bg_electro.jpg) center/cover fixed;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover} .header::before{content:"";position:absolute;inset:0;background:rgba(13,17,23,0.6);z-index:0} .header>*{position:relative;z-index:1}
+.header h1{font-size:28px;font-weight:600;color:var(--gold-light);letter-spacing:0.5px}
+.header p{color:var(--text-dim);font-size:14px;margin-top:6px}
+.section-title{font-size:20px;font-weight:600;color:var(--gold-light);margin:32px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.bug-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:12px;transition:border-color 0.15s}
+.bug-card:hover{border-color:var(--gold)}
+.bug-card .bug-title{font-size:15px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.bug-card .bug-status{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;text-transform:uppercase}
+.status-confirmed{background:#2d1b3e;color:#c084fc}
+.status-investigating{background:#1b2838;color:#60a5fa}
+.status-fixed{background:#1a3020;color:#4ade80}
+.status-workaround{background:#322a1a;color:#fbbf24}
+.bug-card .bug-desc{font-size:13px;color:var(--text-dim);margin:8px 0 4px;line-height:1.6}
+.bug-card .bug-meta{font-size:12px;color:var(--text-dim);display:flex;gap:16px;flex-wrap:wrap}
+.bug-card .bug-meta span{display:flex;align-items:center;gap:4px}
+.bug-tag{font-size:11px;padding:1px 6px;border-radius:3px;background:var(--border);color:var(--text-dim)}
+.premium-section{background:linear-gradient(135deg,#1a1520,#151b23);border:1px solid var(--gold);border-radius:8px;padding:16px;margin:24px 0}
+.premium-section .lock-icon{font-size:18px}
+.shield-note{font-size:12px;color:var(--text-dim);text-align:center;margin-top:20px}
+footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);text-align:center;font-size:12px;color:var(--text-dim);line-height:1.8}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+footer .links a{color:var(--text-dim)}
+.loading{text-align:center;padding:20px;color:var(--text-dim)}
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-497248KSLQ");
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5558231572373849" crossorigin="anonymous"></script>
+<link rel="alternate" hreflang="en" href="https://genshin-wiki.pages.dev/" />
 </head>
 <body>
-<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="blog/index.html">Blog</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;">🔍</a></nav></div></header>
 <div class="container">
-  <div class="page-header">
-    <h1>🐛 Report a Bug</h1>
-    <p>Found a bug in Eggy Party or an issue on the wiki? Let us know!</p>
-  </div>
 
-  <div class="bug-card">
-    <h2>📝 Submit a Bug Report</h2>
-    <div id="bugForm">
-      <div class="form-group">
-        <label>Bug Type</label>
-        <select id="bugType">
-          <option value="game">In-Game Bug (Eggy Party)</option>
-          <option value="wiki">Website Issue (Eggy Wiki)</option>
-          <option value="map">Map Bug (Race / Survival / Team)</option>
-          <option value="character">Character Bug</option>
-          <option value="code">Code Not Working</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Your Name (optional)</label>
-        <input type="text" id="bugAuthor" placeholder="Anonymous" spellcheck="false">
-      </div>
-      <div class="form-group">
-        <label>Title *</label>
-        <input type="text" id="bugTitle" placeholder="Brief description of the bug..." spellcheck="false" required>
-      </div>
-      <div class="form-group">
-        <label>Description *</label>
-        <textarea id="bugDesc" placeholder="Steps to reproduce, what you expected vs what happened, device/version info..." spellcheck="false" required></textarea>
-      </div>
-      <button class="btn-submit" id="submitBtn" onclick="submitBug()">🐛 Submit Bug Report</button>
-    </div>
-    <div class="submit-ok" id="submitOk">
-      <h3>✅ Bug Reported!</h3>
-      <p>Thanks for helping improve Eggy Party and the wiki! Your report has been saved.</p>
-      <button class="btn-submit" style="margin-top:12px;" onclick="resetForm()">Report Another Bug</button>
-    </div>
-  </div>
-
-  <div class="bug-card">
-    <h2>🎬 Featured Bug Report</h2>
-    <div style="margin-bottom:10px;">
-      <div class="bug-item" style="border-left-color:#E74C3C;">
-        <span class="status status-open">Under Review</span>
-        <h3>🎮 [Video] Weird physics bug — player gets launched across the map</h3>
-        <p>Submitted by a player: Penguin Egg collides with a disappearing tile at a specific angle and gets launched across the entire Candy Arena. Reproduction steps unclear but the clip shows it clearly.</p>
-        <div style="margin-top:10px;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000;">
-            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/Hmk_sbYyPxQ" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="meta" style="margin-top:8px;">🎬 Source: Community submission · July 2026</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="bug-card">
-    <h2>📹 More Bug Videos</h2>
-    <div>
-      <div class="bug-item" style="border-left-color:#E74C3C;">
-        <span class="status status-wip">Investigating</span>
-        <h3>🎮 [Video] Glitch — Character stuck in falling animation loop</h3>
-        <p>Community-submitted bug clip. Reproduction steps TBD — the video shows the behavior clearly.</p>
-        <div style="margin-top:10px;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000;">
-            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/L9KYw3mKQQQ" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="meta" style="margin-top:8px;">🎬 Source: Community submission · July 2026</div>
-      </div>
-
-      <div class="bug-item" style="border-left-color:#E74C3C;">
-        <span class="status status-wip">Investigating</span>
-        <h3>🎮 [Video] Bug — Collision detection fails on rotating platforms</h3>
-        <p>Community-submitted bug clip. Reproduction steps TBD — the video shows the behavior clearly.</p>
-        <div style="margin-top:10px;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000;">
-            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/dr70mShtYzk" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="meta" style="margin-top:8px;">🎬 Source: Community submission · July 2026</div>
-      </div>
-
-      <div class="bug-item" style="border-left-color:#E74C3C;">
-        <span class="status status-wip">Investigating</span>
-        <h3>🎮 [Video] Exploit — Invisible wall lets player skip checkpoint</h3>
-        <p>Community-submitted bug clip. Reproduction steps TBD — the video shows the behavior clearly.</p>
-        <div style="margin-top:10px;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000;">
-            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/6BzRDeCr2JQ" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="meta" style="margin-top:8px;">🎬 Source: Community submission · July 2026</div>
-      </div>
-
-      <div class="bug-item" style="border-left-color:#E74C3C;">
-        <span class="status status-wip">Investigating</span>
-        <h3>🎮 [Video] Weird interaction — Power-up causes infinite jump</h3>
-        <p>Community-submitted bug clip. Reproduction steps TBD — the video shows the behavior clearly.</p>
-        <div style="margin-top:10px;">
-          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000;">
-            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/fIZDiIZt11I" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="meta" style="margin-top:8px;">🎬 Source: Community submission · July 2026</div>
-      </div>
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="characters.html">Characters</a>
+  <a href="weapons.html">Weapons</a>
+  <a href="elements.html">Elements</a>
+  <a href="abyss.html">Abyss</a>
+  <a href="bugs.html" style="color:var(--gold)">🐛 Bugs</a>
+  <a href="artifacts.html">Artifacts</a>
+  <a href="materials.html">Materials</a>
+  <a href="download.html">📥 Download</a><a href="beginner.html">Guides</a>
+  <a href="login.html">Login</a>
+  <a href="membership.html">Membership</a>
 </div>
-  </div>
 
-  <div class="bug-card existing-bugs">
-    <h2>📋 Reported Bugs (last 7 days)</h2>
-    <div id="bugList">
-      <!-- Dynamically populated -->
-    </div>
-    <p style="font-size:13px;color:var(--text-dim);text-align:center;margin-top:8px;">Bugs are saved in your browser and visible to you. For public bug tracking, visit the <a href="forum.html">Forum</a>.</p>
+<div class="header">
+  <h1>🐛 Genshin Impact — Bug Tracker</h1>
+  <p>Known bugs, glitches & issues for version 6.3 "Moon of Four" • Last updated Jun 30, 2026</p>
+</div>
+
+<!-- ===== Stats Bar ===== -->
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;justify-content:center">
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 20px;text-align:center;min-width:100px">
+    <div style="font-size:22px;font-weight:700;color:#c084fc">5</div>
+    <div style="font-size:11px;color:var(--text-dim)">Confirmed</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 20px;text-align:center;min-width:100px">
+    <div style="font-size:22px;font-weight:700;color:#60a5fa">3</div>
+    <div style="font-size:11px;color:var(--text-dim)">Investigating</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 20px;text-align:center;min-width:100px">
+    <div style="font-size:22px;font-weight:700;color:#4ade80">8</div>
+    <div style="font-size:11px;color:var(--text-dim)">Fixed</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 20px;text-align:center;min-width:100px">
+    <div style="font-size:22px;font-weight:700;color:#fbbf24">6</div>
+    <div style="font-size:11px;color:var(--text-dim)">Workaround</div>
   </div>
 </div>
-<div class="share-bar"><span>Share:</span><a href="https://twitter.com/intent/tweet?url=https://eggywiki.com&text=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-tw">X</a><a href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com" target="_blank" rel="noopener nofollow" class="share-btn share-fb">f</a><a href="https://www.reddit.com/submit?url=https://eggywiki.com&title=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-rd">R</a><button onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent=u2705).catch(()=>{})" class="share-btn share-copy" title="Copy link">U0001f517</button></div>
-<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div>  <div class="container" style="text-align:center;padding-top:8px;font-size:13px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
+
+<!-- ===== Combat Bugs ===== -->
+<div class="section-title">⚔️ Combat & Skills</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Capitano's Burst — Skill not triggering below 40% HP
+    <span class="bug-status status-investigating">Investigating</span>
+  </div>
+  <div class="bug-desc">
+    When Capitano's HP drops below 40% while his burst animation is active, the Cryo field may fail to deploy. The burst still goes on cooldown. Community reports suggest this occurs most frequently in co-op.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 28</span>
+    <span>🔄 Affected: v6.3</span>
+    <span class="bug-tag">Capitano</span>
+    <span class="bug-tag">Burst</span>
+    <span class="bug-tag">Co-op</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Columbina's Skill — Enhanced E DMG not applying after swap
+    <span class="bug-status status-confirmed">Confirmed</span>
+  </div>
+  <div class="bug-desc">
+    After swapping Columbina out and back in during her enhanced state, the increased Skill DMG bonus is lost. The visual effect (blue aura) persists but damage numbers revert to base. Restarting the rotation fixes it.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 25</span>
+    <span>🔄 Affected: v6.3</span>
+    <span class="bug-tag">Columbina</span>
+    <span class="bug-tag">Skill</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Vaporize damage bonus not applying to Charged Attacks with certain catalysts
+    <span class="bug-status status-workaround">Workaround</span>
+  </div>
+  <div class="bug-desc">
+    Catalyst users (Mizuki, Mualani) sometimes fail to trigger the full 2.0x Vaporize multiplier on charged attacks. The issue correlates with high latency (&gt;150ms). Switching to Normal Attack combos resolves it.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 20</span>
+    <span>🔄 Affected: v6.2+</span>
+    <span class="bug-tag">Reactions</span>
+    <span class="bug-tag">Catalyst</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Nightsoul Burst proccing twice from a single skill (Natlan)
+    <span class="bug-status status-confirmed">Confirmed</span>
+  </div>
+  <div class="bug-desc">
+    When using a Natlan character with Nightsoul Blessing active, the Nightsoul Burst can double-proc under certain conditions (overlapping frames with party healing). Provides unintended energy and DMG bonus. HoYoverse has acknowledged the issue.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 22</span>
+    <span>🔄 Affected: v6.2+</span>
+    <span class="bug-tag">Natlan</span>
+    <span class="bug-tag">Nightsoul</span>
+    <span class="bug-tag">Exploit</span>
+  </div>
+</div>
+
+<!-- ===== Exploration Bugs ===== -->
+<div class="section-title">🗺️ Exploration & World</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Mizuki's Skill — unable to interact with certain terrain after landing
+    <span class="bug-status status-workaround">Workaround</span>
+  </div>
+  <div class="bug-desc">
+    After using Mizuki's hold Skill to travel over gaps, landing on uneven terrain (rocky cliffs, tree roots) prevents interaction prompts (investigate, climb) from appearing for ~3 seconds. Sprint cancels the lock.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 27</span>
+    <span>🔄 Affected: v6.3</span>
+    <span class="bug-tag">Mizuki</span>
+    <span class="bug-tag">Movement</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Natlan Saurian — climbing stamina inconsistency
+    <span class="bug-status status-confirmed">Confirmed</span>
+  </div>
+  <div class="bug-desc">
+    The Tepetlisaur (Geo) consumes 30% more stamina than displayed when climbing crystalline walls. Only affects the Saurian form — the character climbing ability works correctly. HoYoverse is working on a fix.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 19</span>
+    <span>🔄 Affected: v6.0+</span>
+    <span class="bug-tag">Saurian</span>
+    <span class="bug-tag">Natlan</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    "Moon of Four" domain — second wave enemies not spawning
+    <span class="bug-status status-fixed">Fixed (Jun 29)</span>
+  </div>
+  <div class="bug-desc">
+    Players could not complete the new artifact domain because the second enemy wave failed to trigger after clearing the first. A hotfix was deployed on June 29. Restart the game if you still encounter this.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Fixed: Jun 29</span>
+    <span>🔄 Affected: v6.3.0 only</span>
+    <span class="bug-tag">Domain</span>
+    <span class="bug-tag">Critical</span>
+  </div>
+</div>
+
+<!-- ===== Visual Bugs ===== -->
+<div class="section-title">🎨 Visual & Display</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Grass textures flickering on iPhone 15 Pro Max
+    <span class="bug-status status-workaround">Workaround</span>
+  </div>
+  <div class="bug-desc">
+    After the v6.3 update, grass shaders flicker aggressively on Apple A17 Pro chipsets. Reducing "Visual Effects" to Medium resolves the issue. Affects all mobile devices using MetalFX upscaling.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 24</span>
+    <span>🔄 Affected: v6.3</span>
+    <span class="bug-tag">Graphics</span>
+    <span class="bug-tag">iOS</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Character portrait not updating in party setup after ascension
+    <span class="bug-status status-fixed">Fixed (Jun 27)</span>
+  </div>
+  <div class="bug-desc">
+    Ascending a character past level 60/70 did not update the portrait thumbnail in the party setup screen until a full game restart. Resolved in the v6.3 patch on Jun 27.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Fixed: Jun 27</span>
+    <span>🔄 Affected: v6.2–6.3</span>
+    <span class="bug-tag">UI</span>
+    <span class="bug-tag">Minor</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Serenitea Pot — furnishings disappearing after placing a character
+    <span class="bug-status status-workaround">Workaround</span>
+  </div>
+  <div class="bug-desc">
+    Assigning a companion to a seat can cause nearby furnishings (particularly small decor items) to become invisible. They return when you enter Edit mode. Avoid placing companions near clustered decor.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 15</span>
+    <span>🔄 Affected: v6.2+</span>
+    <span class="bug-tag">Teapot</span>
+    <span class="bug-tag">Cosmetic</span>
+  </div>
+</div>
+
+<!-- ===== Co-op Bugs ===== -->
+<div class="section-title">👥 Co-op & Multiplayer</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Host migration crash when player disconnects during boss fight
+    <span class="bug-status status-investigating">Investigating</span>
+  </div>
+  <div class="bug-desc">
+    If a co-op member disconnects during a world boss encounter (especially weekly bosses), the host's game may freeze for 5-10 seconds. In some cases, the boss's health bar desyncs from actual HP. No known workaround — avoid 4-player co-op on weekly bosses.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 21</span>
+    <span>🔄 Affected: v6.2+</span>
+    <span class="bug-tag">Co-op</span>
+    <span class="bug-tag">Boss</span>
+    <span class="bug-tag">Crash</span>
+  </div>
+</div>
+
+<div class="bug-card">
+  <div class="bug-title">
+    Puzzle progress not syncing for non-host players in Natlan
+    <span class="bug-status status-confirmed">Confirmed</span>
+  </div>
+  <div class="bug-desc">
+    In co-op mode, environmental puzzles in the new Natlan area (Flameheart Basin) may show as solved for one player but unsolved for another. The host's progress is always correct. Non-hosts should temporarily leave and rejoin to sync.
+  </div>
+  <div class="bug-meta">
+    <span>📅 Reported: Jun 26</span>
+    <span>🔄 Affected: v6.3</span>
+    <span class="bug-tag">Co-op</span>
+    <span class="bug-tag">Natlan</span>
+  </div>
+</div>
+
+<!-- ===== Fixed / Resolved ===== -->
+<div class="section-title">✅ Recently Fixed (v6.3 Patches)</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+      <span style="color:#4ade80;font-size:14px">✅</span>
+      <span style="font-weight:600">Xilonen C2 DEF shred not applying</span>
+    </div>
+    <div style="color:var(--text-dim)">Fixed Jun 29 • C2 now correctly shreds enemy DEF</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+      <span style="color:#4ade80;font-size:14px">✅</span>
+      <span style="font-weight:600">Fontaine fishing spots not refreshing</span>
+    </div>
+    <div style="color:var(--text-dim)">Fixed Jun 27 • Fish spawn timer corrected</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+      <span style="color:#4ade80;font-size:14px">✅</span>
+      <span style="font-weight:600">Resin overflow not applying after daily reset</span>
+    </div>
+    <div style="color:var(--text-dim)">Fixed Jun 26 • Condensed resin now counts correctly</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+      <span style="color:#4ade80;font-size:14px">✅</span>
+      <span style="font-weight:600">Mavuika Nightsoul gauge desync (PC only)</span>
+    </div>
+    <div style="color:var(--text-dim)">Fixed Jun 25 • Visual gauge now matches server</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+      <span style="color:#4ade80;font-size:14px">✅</span>
+      <span style="font-weight:600">Alhaitham's Chisel-Light Mirror count incorrect</span>
+    </div>
+    <div style="color:var(--text-dim)">Fixed Jun 24 • 3rd mirror now generates correctly</div>
+  </div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+      <span style="color:#4ade80;font-size:14px">✅</span>
+      <span style="font-weight:600">Audio cutting out on PS5 after extended play</span>
+    </div>
+    <div style="color:var(--text-dim)">Fixed Jun 24 • Memory leak in audio buffer patched</div>
+  </div>
+</div>
+
+<!-- ===== Premium ===== -->
+<div class="premium-section member-only" style="display:none">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <span class="lock-icon">🔒</span>
+    <strong style="color:var(--gold);font-size:16px">Premium: Real-Time Bug Watch</strong>
+  </div>
+  <div style="font-size:13px;line-height:1.7">
+    <div style="margin-bottom:8px;padding:8px;background:var(--bg-card);border-radius:6px">
+      <strong>📊 Weekly Trend</strong><br>
+      Bug reports this week: +18% (36 total) — 2 new confirmed, 1 escalated to Critical<br>
+      Most active category: Combat/Skills (42% of reports)
+    </div>
+    <div style="margin-bottom:8px;padding:8px;background:var(--bg-card);border-radius:6px">
+      <strong>🔥 Hot on Reddit</strong><br>
+      Thread "Nightsoul Burst double-proc" at 2.3k upvotes — discussion split on whether it's a feature<br>
+      HoYoverse response expected within 72h
+    </div>
+    <div style="padding:8px;background:var(--bg-card);border-radius:6px">
+      <strong>📅 Known Upcoming Fixes (v6.4)</strong><br>
+      • Columbina enhanced E state preservation<br>
+      • Co-op host migration stability improvements<br>
+      • Capitano burst HP threshold issue
+    </div>
+  </div>
+</div>
+
+<p class="shield-note">Information compiled from HoYoverse bug reports, Reddit, and player submissions. Submit a bug via <a href="forum.html">Forum</a>.</p>
+
+<footer>
+  <div class="links"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="weapons.html">Weapons</a><a href="elements.html">Elements</a><a href="abyss.html">Abyss</a><a href="bugs.html">Bugs</a><a href="artifacts.html">Artifacts</a><a href="materials.html">Materials</a><a href="download.html">📥 Download</a><a href="beginner.html">Guides</a><a href="login.html">Login</a><a href="membership.html">Membership</a><a href="forum.html">Forum</a><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></div>
+  <p>Not affiliated with HoYoverse. Fan-made guide website.</p>
+  <p>© 2026 Genshin Guide</p>
 </footer>
+</div>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e6f9bb41564ccead265168e47540c9"}'></script>
+<!-- End Cloudflare Web Analytics -->
 <script>
-  function loadBugs() {
-    const list = document.getElementById('bugList');
-    const bugs = JSON.parse(localStorage.getItem('eggy_bugs') || '[]');
-    if (bugs.length === 0) {
-      list.innerHTML = '<p style="text-align:center;padding:24px;color:var(--text-dim);font-size:14px;">No bug reports yet. Be the first!</p>';
-      return;
-    }
-    const recent = bugs.slice(-10).reverse(); // Last 10, newest first
-    let html = '';
-    const typeIcons = { game: '🎮', wiki: '🌐', map: '🗺️', character: '🥚', code: '🎁', other: '📌' };
-    recent.forEach(b => {
-      const icon = typeIcons[b.type] || '📌';
-      html += '<div class="bug-item"><span class="status status-open">Reported</span>';
-      html += '<h3>' + icon + ' ' + escapeHtml(b.title) + '</h3>';
-      html += '<p>' + escapeHtml(b.desc.substring(0, 120)) + (b.desc.length > 120 ? '...' : '') + '</p>';
-      html += '<div class="meta">' + (b.author || 'Anonymous') + ' · ' + new Date(b.ts).toLocaleDateString() + '</div></div>';
+(async function() {
+  try {
+    const r = await fetch('/api/me');
+    const d = await r.json();
+    document.querySelectorAll('.member-only').forEach(el => {
+      el.style.display = d.member ? '' : 'none';
     });
-    list.innerHTML = html;
-  }
-
-  function submitBug() {
-    const type = document.getElementById('bugType').value;
-    const author = document.getElementById('bugAuthor').value.trim();
-    const title = document.getElementById('bugTitle').value.trim();
-    const desc = document.getElementById('bugDesc').value.trim();
-    if (!title || !desc) { alert('Please fill in Title and Description.'); return; }
-    const bugs = JSON.parse(localStorage.getItem('eggy_bugs') || '[]');
-    bugs.push({ type, author: author || 'Anonymous', title, desc, ts: Date.now() });
-    localStorage.setItem('eggy_bugs', JSON.stringify(bugs));
-    document.getElementById('bugForm').style.display = 'none';
-    document.getElementById('submitOk').style.display = 'block';
-    loadBugs();
-  }
-
-  function resetForm() {
-    document.getElementById('bugForm').style.display = 'block';
-    document.getElementById('submitOk').style.display = 'none';
-    document.getElementById('bugTitle').value = '';
-    document.getElementById('bugDesc').value = '';
-    document.getElementById('bugAuthor').value = '';
-  }
-
-  function escapeHtml(t) {
-    const d = document.createElement('div');
-    d.appendChild(document.createTextNode(t));
-    return d.innerHTML;
-  }
-
-  loadBugs();
+  } catch(e) {}
+})();
 </script>
-<script type="text/javascript">
-var infolinks_pid = 3446501;
-var infolinks_wsid = 0;
-</script>
-<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+    <script>
+    (function(){
+      var bgm=new Audio("/ys_bgm.mp3");bgm.loop=true;var mp=false;
+      setInterval(function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)},1000);
+      window.addEventListener("beforeunload",function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)});
+      initMusic=function(){var s=localStorage.getItem("bgm_playing");var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;if(s==="true")toggleMusic()};
+      toggleMusic=function(){var btn=document.getElementById("musicBtn");if(mp){bgm.pause();mp=false;if(btn){btn.classList.remove("playing");btn.textContent="♪"}localStorage.setItem("bgm_playing","false")}else{var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;bgm.play().then(function(){mp=true;if(btn){btn.classList.add("playing");btn.textContent="♫"}localStorage.setItem("bgm_playing","true")}).catch(function(e){console.log("BGM autoplay blocked:",e)})}};
+      document.addEventListener("click",function o(){if(typeof initMusic==="function")initMusic();document.removeEventListener("click",o)},{once:true});
+    })();
+    </script>
+<script>(function(s){s.dataset.zone='11277266',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 </body>
 </html>

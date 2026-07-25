@@ -1,0 +1,25 @@
+/* ===== Comment Embed — inline styles for pages that use comment-section ===== */
+.comment-section { max-width:900px; margin:30px auto; padding:0 16px; }
+.comment-section h2 { font-size:20px; margin-bottom:4px; color:var(--gold); }
+.comment-section .sub { font-size:13px; color:var(--text-dim); margin-bottom:16px; }
+.cform { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:20px; }
+.cform .crow { display:flex; gap:12px; margin-bottom:10px; flex-wrap:wrap; }
+.cform input[type="text"] { flex:1; min-width:160px; padding:10px 12px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:14px; outline:none; }
+.cform input:focus { border-color:var(--gold); }
+.cform textarea { width:100%; padding:10px 12px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:14px; outline:none; resize:vertical; min-height:80px; font-family:inherit; }
+.cform textarea:focus { border-color:var(--gold); }
+.cform .bwrap { display:flex; justify-content:space-between; align-items:center; margin-top:10px; }
+.cform .btn-post { padding:10px 24px; border-radius:8px; border:none; background:linear-gradient(135deg,var(--gold-dark),var(--gold)); color:#000; font-weight:600; font-size:14px; cursor:pointer; transition:all .25s; }
+.cform .btn-post:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(212,168,75,.3); }
+.cform .btn-post:disabled { opacity:.5; cursor:not-allowed; transform:none; box-shadow:none; }
+.cform .charcount { font-size:12px; color:var(--text-muted); }
+.cform .member-tag { font-size:11px; color:var(--gold-light); background:rgba(212,168,75,0.15); padding:3px 10px; border-radius:6px; }
+.citem { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; margin-bottom:12px; }
+.citem .meta { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+.citem .name { font-size:13px; font-weight:600; color:var(--text); }
+.citem .mbadge { font-size:10px; padding:2px 6px; border-radius:4px; background:rgba(212,168,75,0.15); color:var(--gold-light); }
+.citem .time { font-size:11px; color:var(--text-muted); }
+.citem .ctext { font-size:14px; line-height:1.6; color:var(--text-dim); word-break:break-word; }
+.cempty { text-align:center; padding:32px 16px; color:var(--text-muted); font-size:14px; }
+.cspin { text-align:center; padding:24px; color:var(--text-muted); font-size:13px; }
+.cerror { background:rgba(217,96,74,0.1); border:1px solid rgba(217,96,74,0.2); color:var(--red); padding:10px 14px; border-radius:8px; font-size:13px; margin-bottom:12px; display:none; }

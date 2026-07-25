@@ -1,295 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWNKEBXX68"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GWNKEBXX68');
-</script>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>(function(s){s.dataset.zone="11277266",s.src="https://nap5k.com/tag.min.js"})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement("script")))</script>
-  <title>Forum — Eggy Wiki Community</title>
-  <meta name="description" content="Eggy Party community forum — discuss strategies, share tips, and connect with other players.">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--shadow:0 4px 24px rgba(255,107,157,0.08);--border:#FFE0EC;--radius:24px}
-    html{scroll-behavior:smooth}
-    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
-    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
-    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-    .logo{font-size:22px;font-weight:800;color:var(--gold);text-shadow:0 2px 8px rgba(0,0,0,0.1);background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.logo span{color:var(--gold-light);-webkit-text-fill-color:var(--gold-light)}
-    nav{display:flex;gap:6px;flex-wrap:wrap}
-    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
-    .container{max-width:850px;margin:0 auto;padding:0 24px}
-    .page-header{padding:32px 0 16px;text-align:center}
-    .page-header h1{font-size:30px;font-weight:800;color:var(--pink);margin-bottom:4px}
-    .page-header p{font-size:15px;color:var(--text-dim)}
-    .forum-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:20px}
-    .forum-nav a{padding:10px 20px;border-radius:30px;font-size:14px;font-weight:700;transition:all .2s}
-    .forum-nav a.active{background:var(--pink);color:#fff}
-    .forum-nav a:not(.active){background:var(--bg-card);color:var(--text-dim);box-shadow:var(--shadow)}
-    .forum-nav a:not(.active):hover{background:var(--pink);color:#fff}
-    .thread-card{background:var(--bg-card);border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow);margin-bottom:10px;display:flex;align-items:flex-start;gap:14px;transition:all .2s;text-decoration:none!important;color:inherit!important}
-    .thread-card:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(255,107,157,0.12)}
-    .thread-icon{font-size:28px;flex-shrink:0;margin-top:2px}
-    .thread-body{flex:1;min-width:0}
-    .thread-body h3{font-size:16px;color:var(--pink);margin-bottom:2px}
-    .thread-body .meta{font-size:12px;color:var(--text-dim);margin-bottom:4px}
-    .thread-body .excerpt{font-size:13px;color:var(--text-dim);line-height:1.5}
-    .thread-meta{flex-shrink:0;text-align:right;font-size:12px;color:var(--text-dim)}
-    .thread-meta .replies{display:inline-block;background:rgba(255,107,157,0.08);border-radius:12px;padding:2px 10px;font-weight:700;color:var(--pink)}
-    .category-tag{display:inline-block;padding:2px 10px;border-radius:8px;font-size:11px;font-weight:700}
-    .cat-general{background:var(--blue);color:#fff}.cat-guide{background:var(--green);color:#fff}.cat-bug{background:#E74C3C;color:#fff}.cat-discuss{background:var(--yellow);color:#333}.cat-fan{background:#9B59B6;color:#fff}
-    .pagination{display:flex;justify-content:center;gap:6px;margin:24px 0}
-    .pagination a{padding:8px 14px;border-radius:10px;font-size:14px;background:var(--bg-card);box-shadow:var(--shadow)}.pagination a.active{background:var(--pink);color:#fff}
-    .pagination a:not(.active){color:var(--text-dim)}
-    .rules-box{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:20px;font-size:14px;line-height:1.9}
-    .rules-box h2{font-size:18px;color:var(--pink);margin-bottom:8px}
-    .rules-box li{color:var(--text-dim);margin-left:20px;margin-bottom:4px}
-    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
-    footer .container{max-width:1100px;margin:0 auto}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;justify-content:center}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
-    .footer-bottom{font-size:13px;opacity:0.7}
-    @media(max-width:640px){.thread-card{flex-direction:column;gap:6px}.thread-meta{text-align:left}}
-      .music-btn {
-      background: #FF6B9D; border: 2px solid #FF6B9D;
-      color: #fff; font-size: 20px;
-      width: 38px; height: 38px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all .25s;
-      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
-    }
-    .music-btn:hover { background: #E85382; border-color: #E85382; transform: scale(1.05); }
-    .music-btn.playing { 
-      background: #4CAF50; border-color: #4CAF50; color: #fff;
-      box-shadow: 0 0 12px rgba(76,175,80,0.4);
-    }
-
-        .share-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 24px;max-width:1100px;margin:0 auto;flex-wrap:wrap}.share-bar span{font-size:14px;color:var(--text-dim);font-weight:600}.share-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:13px;font-weight:700;color:#fff;text-decoration:none;transition:all .2s}.share-btn:hover{transform:scale(1.1);color:#fff}.share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);border:none;cursor:pointer;font-size:16px;padding:0;color:#fff}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Genshin Impact Community Forum — Discussions & Guides</title>
+    <meta name="description" content="Join the Genshin Impact community. Discuss character builds, team compositions, Spiral Abyss strategies, and share tips with other players.">
+<link rel="stylesheet" href="comment-embed.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --bg:#0d1117; --bg-card:#151b23; --bg-card-hover:#1c2333; --border:#21262d; --gold:#d4a84b; --gold-light:#e8c75a; --gold-dark:#c49a3a; --text:#e6edf3; --text-dim:#8b949e; --text-muted:#484f58; --anemo:#5dbf9a; --geo:#d4a84b; --electro:#b47bd4; --dendro:#7bc47b; --hydro:#4a9dd6; --pyro:#d9604a; --cryo:#7bc4d0; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif; }
+nav { position:fixed; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:12px 28px; background:rgba(13,17,23,0.94); backdrop-filter:blur(12px); z-index:100; border-bottom:1px solid var(--border); }
+.logo { font-size:18px; font-weight:700; }
+.logo span { color:var(--gold); }
+nav ul { list-style:none; display:flex; gap:16px; flex-wrap:wrap; }
+nav ul li a { color:var(--text-dim); text-decoration:none; font-size:13px; padding:4px 8px; border-radius:6px; transition:all .2s; }
+nav ul li a:hover, nav ul li a.active { color:var(--gold); background:rgba(212,168,75,0.1); }
+.page-header { padding:76px 28px 20px; text-align:center; min-height:260px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; background:linear-gradient(180deg,rgba(180,123,212,0.08),transparent 80%), url(images/bg_electro.jpg) center/cover fixed;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover; } .page-header::before{content:"";position:absolute;inset:0;background:rgba(13,17,23,0.6);z-index:0;} .page-header>*{position:relative;z-index:1;}
+.page-header h1 { font-size:26px; }
+.page-header p { color:var(--text-dim); font-size:14px; margin-top:4px; }
+.container { max-width:900px; margin:0 auto; padding:0 16px 30px; }
+.forum-actions { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; flex-wrap:wrap; gap:10px; }
+.btn-new { padding:10px 22px; border-radius:8px; background:linear-gradient(135deg,var(--gold-dark),var(--gold)); color:#0d1117; font-weight:600; font-size:14px; border:none; cursor:pointer; transition:all .25s; }
+.btn-new:hover { transform:translateY(-2px); box-shadow:0 4px 16px rgba(212,168,75,.3); }
+.search-box { display:flex; gap:8px; }
+.search-box input { padding:8px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text); font-size:13px; width:200px; outline:none; transition:border-color .2s; }
+.search-box input:focus { border-color:var(--gold); }
+.search-box input::placeholder { color:var(--text-muted); }
+.tabs { display:flex; gap:4px; margin-bottom:18px; border-bottom:1px solid var(--border); padding-bottom:0; }
+.tab { padding:8px 16px; font-size:13px; color:var(--text-dim); cursor:pointer; border-radius:8px 8px 0 0; transition:all .2s; }
+.tab:hover { color:var(--text); background:rgba(255,255,255,.03); }
+.tab.active { color:var(--gold); background:rgba(212,168,75,.08); font-weight:600; }
+.thread { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin-bottom:10px; transition:all .2s; cursor:default; }
+.thread:hover { background:var(--bg-card-hover); border-color:var(--gold-dark); }
+.thread-top { display:flex; justify-content:space-between; align-items:start; gap:12px; }
+.thread-title { font-size:16px; font-weight:600; color:var(--text); cursor:pointer; }
+.thread-title:hover { color:var(--gold-light); }
+.thread-meta { font-size:12px; color:var(--text-muted); margin-top:4px; display:flex; gap:16px; flex-wrap:wrap; }
+.thread-meta span { display:flex; align-items:center; gap:4px; }
+.thread-meta .author { color:var(--gold-light); font-weight:500; }
+.thread-tags { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
+.tag { display:inline-block; padding:2px 10px; border-radius:20px; font-size:11px; background:rgba(212,168,75,0.15); color:var(--gold-light); }
+.tag-c1 { background:rgba(75,196,179,0.15); color:var(--anemo); }
+.tag-c2 { background:rgba(212,168,75,0.15); color:var(--geo); }
+.tag-c3 { background:rgba(180,123,212,0.15); color:var(--electro); }
+.tag-c4 { background:rgba(74,157,214,0.15); color:var(--hydro); }
+.latest-reply { margin-top:8px; padding-top:8px; border-top:1px solid var(--border); font-size:13px; color:var(--text-dim); line-height:1.5; }
+.latest-reply .reply-author { color:var(--electro); font-weight:500; }
+.reply-badge { background:rgba(212,168,75,0.1); padding:0 8px; border-radius:10px; font-size:11px; color:var(--gold-light); }
+footer { border-top:1px solid var(--border); padding:24px 16px; text-align:center; color:var(--text-dim); font-size:13px; }
+footer .links { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
+footer .links a { color:var(--text-dim); font-size:13px; text-decoration:none; }
+footer .links a:hover { color:var(--gold); }
+.pin { color:var(--gold); font-size:12px; background:rgba(212,168,75,0.1); padding:1px 8px; border-radius:4px; }
+@media (max-width:768px) {
+  nav { padding:10px 12px; flex-wrap:wrap; gap:6px; }
+  nav ul { gap:6px; }
+  nav ul li a { font-size:12px; padding:3px 6px; }
+  .page-header { padding:70px 12px 16px; }
+  .page-header h1 { font-size:20px; }
+  .container { padding:0 10px 20px; }
+  .search-box input { width:140px; }
+  .forum-actions { flex-direction:column; align-items:stretch; }
+}
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-497248KSLQ");
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5558231572373849" crossorigin="anonymous"></script>
+    <meta property="og:title" content="Genshin Impact Community Forum — Discussions & Build Sharing">
+    <meta property="og:description" content="Join the Genshin Impact community forum. Discuss character builds, team comps, abyss strategies, share your builds, and help other travelers.">
+    <meta property="og:url" content="https://genshin-wiki.pages.dev/forum.html">
+    <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://genshin-wiki.pages.dev/" />
 </head>
 <body>
-      <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
-<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="seasons.html">Seasons</a><a href="leaderboard.html">Rankings</a><a href="leaderboard.html">Rankings</a><a href="achievements.html">Achievements</a><a href="items.html">Items</a><a href="forum.html">Forum</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;">🔍</a></nav></div></header>
-<div class="container">
+  <nav>
+    <div class="logo"><span>✦</span> Genshin Wiki</div>
+    <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="characters.html">Characters</a></li>
+<li><a href="elements.html">Elements</a></li>
+<li><a href="abyss.html">Abyss</a></li>
+<li><a href="weapons.html">Weapons</a></li>
+<li><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a></li>
+<li><a href="materials.html">Materials</a></li>
+<li><a href="download.html">📥 Download</a><a href="beginner.html">Guides</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="forum.html" class="active">Forum</a></li>
+<li><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></li>
+        <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play / Pause BGM">♪</button>
+</ul>
+  </nav>
   <div class="page-header">
     <h1>💬 Community Forum</h1>
-    <p>Discuss strategies, share tips, and connect with Eggy Party players worldwide</p>
+    <p>Chat with fellow Travelers · Share tips · Team builds</p>
   </div>
-
-  <div class="forum-nav">
-    <a href="#" class="active">📋 All</a>
-    <a href="#">🔥 Trending</a>
-    <a href="#">🆕 Latest</a>
-    <a href="#">⭐ Guides</a>
-    <a href="#">🎨 Fan Art</a>
-  </div>
-
-  <div class="rules-box">
-    <h2>📜 Forum Rules</h2>
-    <ol>
-      <li>Be respectful — everyone started as a beginner</li>
-      <li>No spam, self-promotion, or cheating discussions</li>
-      <li>Search before posting — your question may already be answered</li>
-      <li>Keep posts in the appropriate category</li>
-      <li>No NSFW content — this is a family-friendly community</li>
-    </ol>
-  </div>
-
-  <a href="thread.html?id=season4-discussion" class="thread-card">
-    <span class="thread-icon">🥚</span>
-    <div class="thread-body">
-      <h3>Season 4 Discussion Thread — What do you think so far?</h3>
-      <div class="meta">
-        <span class="category-tag cat-discuss">Discussion</span>
-        <span> by <strong>Wiki</strong> · 3 hours ago</span>
-      </div>
-      <div class="excerpt">The new Candy Arena changes are interesting! The rotating platforms feel faster this season. Anyone else noticed? Also, the new Dragon Egg rerun — finally!...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">12 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 234</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=best-character" class="thread-card">
-    <span class="thread-icon">🐰</span>
-    <div class="thread-body">
-      <h3>How to unlock Bunny Egg quickly? Need tips!</h3>
-      <div class="meta">
-        <span class="category-tag cat-guide">Guide</span>
-        <span> by <strong>NewPlayer99</strong> · yesterday</span>
-      </div>
-      <div class="excerpt">I've been playing for 3 days but still haven't reached Level 15. Any tips on leveling up faster? I really want Bunny Egg for the jump boost on Volcano Rush...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">8 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 156</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=penguin-op" class="thread-card">
-    <span class="thread-icon">🐼</span>
-    <div class="thread-body">
-      <h3>Panda Egg is underrated — here's why</h3>
-      <div class="meta">
-        <span class="category-tag cat-general">General</span>
-        <span> by <strong>EggMaster</strong> · 2 days ago</span>
-      </div>
-      <div class="excerpt">Everyone sleeps on Panda Egg because it's slow. But in Team mode, a good Panda player is literally unkillable. I went on a 15-win streak yesterday playing flag carrier...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">24 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 412</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=bug-candy-arena" class="thread-card">
-    <span class="thread-icon">🐛</span>
-    <div class="thread-body">
-      <h3>[Bug] Frozen Peak ice cave shortcut not working?</h3>
-      <div class="meta">
-        <span class="category-tag cat-bug">Bug Report</span>
-        <span> by <strong>SpeedrunnerAlex</strong> · 3 days ago</span>
-      </div>
-      <div class="excerpt">After the latest patch (v2.4.1), I can't get through the ice cave wall crack on Frozen Peak. I've tried from both sides. Is this a known issue or am I missing something?...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">6 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 89</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=fanart-showcase" class="thread-card">
-    <span class="thread-icon">🎨</span>
-    <div class="thread-body">
-      <h3>Fan art: My Dragon Egg OC — "Blaze"</h3>
-      <div class="meta">
-        <span class="category-tag cat-fan">Fan Art</span>
-        <span> by <strong>ArtzyEggzy</strong> · 4 days ago</span>
-      </div>
-      <div class="excerpt">Drew my Dragon Egg OC! I call him Blaze. He has a little fire crown and a sassy expression. Let me know what you think! (Credit if reposting please)...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">31 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 567</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=team-voice-chat" class="thread-card">
-    <span class="thread-icon">🎵</span>
-    <div class="thread-body">
-      <h3>What's your favorite Eggy Party soundtrack?</h3>
-      <div class="meta">
-        <span class="category-tag cat-discuss">Discussion</span>
-        <span> by <strong>MusicLover</strong> · 5 days ago</span>
-      </div>
-      <div class="excerpt">The Candy Arena theme is such a banger. I catch myself humming it while I'm at work. What's everyone else's favorite track? Also please add a jukebox feature NetEase!...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">18 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 298</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=free-gems-guide" class="thread-card">
-    <span class="thread-icon">📚</span>
-    <div class="thread-body">
-      <h3>Complete Beginner FAQ — Read before posting!</h3>
-      <div class="meta">
-        <span class="category-tag cat-guide">Guide</span>
-        <span> by <strong>Wiki</strong> · pinned</span>
-      </div>
-      <div class="excerpt">Welcome to Eggy Party! This thread covers the most frequently asked questions: How to unlock characters, best starter character, what to spend gems on, how to get free outfits, and more...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">Pinned</div>
-      <div style="margin-top:4px;font-size:11px;">📌</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=frozen-peak-speedrun" class="thread-card">
-    <span class="thread-icon">❄️</span>
-    <div class="thread-body">
-      <h3>Frozen Peak speedrun competition — submit your times!</h3>
-      <div class="meta">
-        <span class="category-tag cat-general">General</span>
-        <span> by <strong>SpeedrunComm</strong> · 1 week ago</span>
-      </div>
-      <div class="excerpt">We're hosting a Frozen Peak speedrun challenge! Current record is 1:42.32 by FoxEggPro. Can you beat it? Submit your video recording in this thread. Winner gets bragging rights + a shoutout!...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">43 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 892</div>
-    </div>
-  </a>
-
-  <div class="pagination">
-    <a href="#" class="active">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">→</a>
-  </div>
-
-  <div style="text-align:center;margin:8px 0 30px;">
-    <a href="contact.html" style="display:inline-block;padding:12px 30px;background:var(--pink);color:#fff!important;border-radius:30px;font-weight:700;">📝 Create New Post</a>
-  </div>
-
-  <!-- ===== Giscus Comments ===== -->
-  <div style="max-width:850px;margin:0 auto 30px;padding:0 24px;">
-    <h2 style="font-size:20px;color:var(--pink);margin-bottom:16px;">💬 Visitor Comments</h2>
+  <div class="container">
+    <!-- Comments Section (top of forum) — Giscus (GitHub Discussions) -->
     <div id="giscus-comments"></div>
     <script src="https://giscus.app/client.js"
-      data-repo="8499456-ctrl/eggy-wiki"
-      data-repo-id="R_kgDOTQdJXg"
-      data-category="General"
-      data-category-id="DIC_kwDOTQdJXs4DAzRY"
+      data-repo="8499456-ctrl/genshinwiki"
+      data-repo-id="R_kgDOTNHtZQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTNHtZc4DA8bQ"
       data-mapping="pathname"
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"
       data-input-position="top"
-      data-theme="https://giscus.app/themes/noborder_light.css"
+      data-theme="noborder_light"
       data-lang="en"
       crossorigin="anonymous"
       async>
     </script>
     <style>
-      /* Override Giscus to match Eggy Wiki pink theme */
-      .giscus-frame, .giscus { --color-prettylights-syntax-comment: #888; }
+      .giscus, .giscus-frame { --color-prettylights-syntax-comment: #8b949e; }
       .giscus-frame-wrapper { background: transparent; }
-      .giscus { font-family: 'Nunito', -apple-system, 'PingFang SC', sans-serif; }
-        .share-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 24px;max-width:1100px;margin:0 auto;flex-wrap:wrap}.share-bar span{font-size:14px;color:var(--text-dim);font-weight:600}.share-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:13px;font-weight:700;color:#fff;text-decoration:none;transition:all .2s}.share-btn:hover{transform:scale(1.1);color:#fff}.share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);border:none;cursor:pointer;font-size:16px;padding:0;color:#fff}
-</style>
+    </style>
+
+    <div class="forum-actions">
+      <button class="btn-new" onclick="alert('New post feature coming soon — please login first')">✏️ New Post</button>
+      <div class="search-box">
+        <input type="text" placeholder="Search posts..." onkeydown="if(event.key==='Enter')alert('Search coming soon')">
+        <button class="btn-new" style="padding:8px 16px;font-size:13px;" onclick="alert('Search coming soon')">🔍</button>
+      </div>
+    </div>
+    <div class="tabs">
+      <div class="tab active">📋 Latest</div>
+      <div class="tab" onclick="alert('Coming soon')">🔥 Hot</div>
+      <div class="tab" onclick="alert('Coming soon')">💡 Featured</div>
+      <div class="tab" onclick="alert('Coming soon')">❓ Help</div>
+    </div>
+    <div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=rules'"><span class="pin">📌 Pinned</span> 📢 [Pinned] Community Rules — Read Before Posting</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">WindWalker</span></span>
+        <span>📅 2026-06-27</span>
+        <span>💬 48 replies</span>
+        <span>👁️ 980</span>
+      </div>
+      <div class="thread-tags"><span class="tag">Announcement</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> Keep it civil, no hate speech, no advertising. This is a place to share Genshin joy!
+  </div>
+</div><div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=natlan-fav'">🔥 Natlan is here! Which area is your favorite?</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">RockDaddy</span></span>
+        <span>📅 2026-06-26</span>
+        <span>💬 76 replies</span>
+        <span>👁️ 2.8k</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c1">Discussion</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> The volcano region bgm is incredible! Combined with the new characters, I can't stop playing.
+  </div>
+</div><div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=hyperbloom-4th'">💡 New player: Who is the best 4th slot for Hyperbloom?</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">TravelerOne</span></span>
+        <span>📅 2026-06-25</span>
+        <span>💬 52 replies</span>
+        <span>👁️ 1.9k</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c4">Question</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> I see Zhongli/Alhaitham/Fischl recommended. Which is best for C0?
+  </div>
+</div><div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=abyss-flex'">⚔️ This Abyss rotation is crazy! Full stars flex thread</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">Prinzessin</span></span>
+        <span>📅 2026-06-24</span>
+        <span>💬 98 replies</span>
+        <span>👁️ 4.7k</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c3">Flex</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> Rational top half + Neuvillette bottom half, one shot! What teams did you use?
+  </div>
+</div><div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=hutao-fanart'">🎨 Hu Tao fanart I drew (process pics included)</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">WangshengVIP</span></span>
+        <span>📅 2026-06-23</span>
+        <span>💬 187 replies</span>
+        <span>👁️ 7.6k</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c1">Discussion</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> Been learning digital painting for 3 months. Drew a Hu Tao wallpaper, feedback welcome!
+  </div>
+</div><div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=furina-worth'">❓ Is Furina C0 worth pulling if I have Neuvillette?</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">BlueGem</span></span>
+        <span>📅 2026-06-22</span>
+        <span>💬 71 replies</span>
+        <span>👁️ 2.7k</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c4">Question</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> Have Neuv C1, not sure if I should pull Furina or wait for rerun. Limited primos.
+  </div>
+</div><div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=mobile-controls'">🎮 Mobile players! Best control settings thread</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">TeaPotGuy</span></span>
+        <span>📅 2026-06-21</span>
+        <span>💬 41 replies</span>
+        <span>👁️ 1.3k</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c2">Share</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> New phone runs smooth now. Sharing my button layout and sensitivity settings.
+  </div>
+</div><div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=artifact-hell'">🎯 Artifact hell diary Day 180 — when will I graduate?</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">EmblemDog</span></span>
+        <span>📅 2026-06-20</span>
+        <span>💬 134 replies</span>
+        <span>👁️ 10.2k</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c3">Flex</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> 6 months in Emblem domain, zero double-crit Electro goblets. Share your worst artifacts!
   </div>
 </div>
-<div class="share-bar"><span>Share:</span><a href="https://twitter.com/intent/tweet?url=https://eggywiki.com&text=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-tw">X</a><a href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com" target="_blank" rel="noopener nofollow" class="share-btn share-fb">f</a><a href="https://www.reddit.com/submit?url=https://eggywiki.com&title=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-rd">R</a><button onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent=u2705).catch(()=>{})" class="share-btn share-copy" title="Copy link">U0001f517</button></div>
-<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="seasons.html">Seasons</a><a href="leaderboard.html">Rankings</a><a href="leaderboard.html">Rankings</a><a href="achievements.html">Achievements</a><a href="items.html">Items</a><a href="forum.html">Forum</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div>  <div class="container" style="text-align:center;padding-top:8px;font-size:13px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
-</footer>
-<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
-<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
-<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
-<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
-<script type="text/javascript">
-var infolinks_pid = 3446501;
-var infolinks_wsid = 0;
-</script>
-<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+<!-- Gift Guide Post -->
+<div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=gift-guide'">🎁 I made a Genshin gift guide with Amazon links — check it out!</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">Wiki</span></span>
+        <span>📅 2026-07-03</span>
+        <span>💬 0 replies</span>
+        <span>👁️ 0</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c1">Guide</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> Found some cool Genshin merch and gaming gear on Amazon — put together a list of 10 gifts!
+  </div>
+</div>
+<!-- Accelerator Post -->
+<div class="thread">
+  <div class="thread-top">
+    <div>
+      <div class="thread-title" onclick="window.location.href='thread.html?id=accelerator'">🚀 Free 50h game accelerator — code WIKI50 for Genshin players!</div>
+      <div class="thread-meta">
+        <span>by: <span class="author">Wiki</span></span>
+        <span>📅 2026-07-03</span>
+        <span>💬 0 replies</span>
+        <span>👁️ 0</span>
+      </div>
+      <div class="thread-tags"><span class="tag tag-c1">Guide</span></div>
+    </div>
+  </div>
+  <div class="latest-reply">
+    <span class="reply-author">💬 Latest:</span> Free accelerator trial — use code WIKI50 for 50h of low-ping gaming. Works on EU and NA servers!
+  </div>
+</div>
+  </div>
+  <footer>
+    <div class="links"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="elements.html">Elements</a><a href="abyss.html">Abyss</a><a href="weapons.html">Weapons</a><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a><a href="materials.html">Materials</a><a href="download.html">📥 Download</a><a href="beginner.html">Guides</a><a href="login.html">Login</a><a href="forum.html">Forum</a>
+<a href="blog/index.html">📝 Blog</a>
+<a href="login.html">Login</a><a href="membership.html">Membership</a><a href="forum.html">Forum</a><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></div>
+    <p>This website is not affiliated with miHoYo / HoYoverse.</p><p>All game artwork, visual assets, and intellectual property are the property of their respective owners. This is a fan-made guide website and is not affiliated with HoYoverse.</p>
+    <p style="margin-top:4px;">© 2026 Genshin Wiki</p>
+  </footer>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e6f9bb41564ccead265168e47540c9"}'></script>
+<!-- End Cloudflare Web Analytics -->
+  <!-- ===== Membership Check ===== -->
+  <script>
+  (async function() {
+    try {
+      const r = await fetch('/api/me');
+      const d = await r.json();
+      document.querySelectorAll('.member-only').forEach(el => {
+        el.style.display = d.member ? '' : 'none';
+      });
+      document.querySelectorAll('.guest-only').forEach(el => {
+        el.style.display = !d.member ? '' : 'none';
+      });
+    } catch(e) {}
+  })();
+  </script>
+  <script src="char_avatars.js"></script>
+  <script src="enhanced-search.js"></script>
+
+    <script>
+    (function(){
+      var bgm=new Audio("/ys_bgm.mp3");bgm.loop=true;var mp=false;
+      setInterval(function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)},1000);
+      window.addEventListener("beforeunload",function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)});
+      initMusic=function(){var s=localStorage.getItem("bgm_playing");var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;if(s==="true")toggleMusic()};
+      toggleMusic=function(){var btn=document.getElementById("musicBtn");if(mp){bgm.pause();mp=false;if(btn){btn.classList.remove("playing");btn.textContent="♪"}localStorage.setItem("bgm_playing","false")}else{var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;bgm.play().then(function(){mp=true;if(btn){btn.classList.add("playing");btn.textContent="♫"}localStorage.setItem("bgm_playing","true")}).catch(function(e){console.log("BGM autoplay blocked:",e)})}};
+      document.addEventListener("click",function o(){if(typeof initMusic==="function")initMusic();document.removeEventListener("click",o)},{once:true});
+    })();
+    </script>
+<script>(function(s){s.dataset.zone='11277266',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 </body>
 </html>

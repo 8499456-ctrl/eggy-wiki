@@ -1,0 +1,46 @@
+[
+  {
+    "code": "GENSHINGIFT",
+    "rewards": "Primogems \u00d760 \u00b7 Adventurer XP \u00d710000",
+    "status": "active",
+    "added": "2026-06-20"
+  },
+  {
+    "code": "6GS7VJ9S7SDK",
+    "rewards": "Primogems \u00d7100 \u00b7 Mora \u00d750000",
+    "status": "active",
+    "added": "2026-06-22"
+  },
+  {
+    "code": "ETN23PJ5LKJ9",
+    "rewards": "Mystic Enhancement Ore \u00d75 \u00b7 Hero's Wit \u00d73",
+    "status": "active",
+    "added": "2026-06-24"
+  },
+  {
+    "code": "3B6R6SD7H89H",
+    "rewards": "Fragile Resin \u00d71",
+    "status": "unknown",
+    "added": "2026-06-25"
+  },
+  {
+    "code": "KUNAI54GKDNG",
+    "rewards": "Mora \u00d720000 \u00b7 Enhancement Ore \u00d73",
+    "status": "unknown",
+    "added": "2026-06-26"
+  },
+  {
+    "code": "SBACKQDP9HJD",
+    "rewards": "Primogems \u00d760 \u00b7 Hero's Wit \u00d75",
+    "status": "expired",
+    "added": "2026-06-10",
+    "note": "Expired"
+  },
+  {
+    "code": "WWW7VJ9S7SDK",
+    "rewards": "Primogems \u00d780 \u00b7 Mora \u00d730000",
+    "status": "expired",
+    "added": "2026-06-08",
+    "note": "Expired"
+  }
+]

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Genshin Impact Resin Timer — Auto Calculate Resin Refresh</title>
+<meta name="description" content="Real-time Genshin Impact resin calculator. Track your Original Resin, calculate when it refills, set reminders for max resin, and plan your farming schedule.">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d1117;--bg-card:#151b23;--bg-card-hover:#1c2333;--border:#21262d;--gold:#d4a84b;--gold-light:#e8c75a;--gold-dark:#c49a3a;--text:#e6edf3;--text-dim:#8b949e;--text-muted:#484f58;--resin:#4a9dd6;--resin-light:#6bcbff;--mora:#f0d78c}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif;line-height:1.8}
+nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:12px 28px;background:rgba(13,17,23,0.94);backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid var(--border)}
+.logo{font-size:18px;font-weight:700}.logo span{color:var(--gold)}.logo a{color:var(--text);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:16px;flex-wrap:wrap}
+nav ul li a{color:var(--text-dim);text-decoration:none;font-size:13px;padding:4px 8px;border-radius:6px;transition:all .2s}
+nav ul li a:hover,nav ul li a.active{color:var(--gold);background:rgba(212,168,75,0.1)}
+.page-header{padding:76px 28px 24px;text-align:center;background:linear-gradient(180deg,rgba(74,157,214,0.08),transparent 80%);min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.page-header h1{font-size:26px}.page-header p{color:var(--text-dim);font-size:14px;margin-top:6px}
+.container{max-width:700px;margin:0 auto;padding:0 16px 48px}
+.section-title{font-size:20px;margin:32px 0 16px;padding-bottom:6px;border-bottom:1px solid var(--border);color:var(--gold-light)}
+
+/* Resin Timer Card */
+.resin-card{background:linear-gradient(135deg,rgba(74,157,214,0.06),rgba(13,17,23,1));border:1px solid var(--border);border-radius:16px;padding:28px;margin-top:20px}
+.resin-current{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.resin-big{font-size:64px;font-weight:800;color:var(--resin-light);line-height:1}
+.resin-big span{font-size:24px;color:var(--text-dim);font-weight:400}
+.resin-slider{flex:1;min-width:200px}
+.resin-slider input[type=range]{width:100%;-webkit-appearance:none;background:var(--border);height:8px;border-radius:4px;outline:none}
+.resin-slider input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--resin-light);cursor:pointer;box-shadow:0 0 12px rgba(74,157,214,0.4)}
+.resin-slider input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--resin-light);cursor:pointer;border:none}
+.resin-presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.resin-presets button{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-dim);font-size:12px;cursor:pointer;transition:all .2s}
+.resin-presets button:hover{background:var(--resin);color:#fff;border-color:var(--resin)}
+
+.resin-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.info-box{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg-card)}
+.info-box .label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+.info-box .value{font-size:22px;font-weight:700;color:var(--resin-light)}
+.info-box .sub{font-size:12px;color:var(--text-dim);margin-top:2px}
+.info-box.full .value{color:var(--gold-light)}
+.resin-bar-bg{height:12px;border-radius:6px;background:var(--border);overflow:hidden;margin:16px 0 4px;position:relative}
+.resin-bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--resin),var(--resin-light));transition:width .3s;position:relative}
+.resin-bar-fill::after{content:attr(data-pct);position:absolute;right:4px;top:-16px;font-size:10px;color:var(--resin-light)}
+.resin-bar-label{display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted)}
+
+/* Condensed Resin */
+.condensed-box{margin-top:16px;padding:16px;border:1px dashed var(--border);border-radius:12px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.condensed-box label{font-size:13px;color:var(--text-dim)}
+.condensed-box input{width:60px;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text);font-size:16px;text-align:center;outline:none}
+.condensed-box input:focus{border-color:var(--resin-light)}
+.condensed-box .total-resin{font-size:18px;font-weight:700;color:var(--gold-light)}
+
+/* Notification */
+.notif-box{margin-top:20px;padding:16px;border-radius:12px;background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);display:none;align-items:center;gap:12px}
+.notif-box.show{display:flex}
+
+/* History / Activities */
+.activity-card{border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:10px;background:var(--bg-card);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.activity-card .act-name{font-weight:600;color:var(--text)}
+.activity-card .act-cost{color:var(--resin-light);font-weight:700}
+.activity-card .act-count{display:flex;align-items:center;gap:8px}
+.activity-card .act-count button{width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:var(--bg);color:var(--text);cursor:pointer;font-size:16px;line-height:1;transition:all .2s}
+.activity-card .act-count button:hover{background:var(--resin);color:#fff;border-color:var(--resin)}
+.activity-card .act-count span{font-size:16px;font-weight:700;min-width:20px;text-align:center}
+
+/* Helper text */
+.help-text{font-size:13px;color:var(--text-dim);margin-top:12px;text-align:center}
+.help-text a{color:var(--resin-light)}
+footer{border-top:1px solid var(--border);padding:28px 16px 20px;text-align:center;color:var(--text-dim);font-size:13px}
+footer .links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+footer .links a{color:var(--text-dim);text-decoration:none;font-size:13px}
+footer .links a:hover{color:var(--gold)}
+@media(max-width:640px){.resin-info-grid{grid-template-columns:1fr}.resin-big{font-size:48px}.page-header h1{font-size:22px}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo"><a href="index.html"><span>Genshin</span> Guide</a></div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="characters.html">Characters</a></li>
+<li><a href="elements.html">Elements</a></li>
+<li><a href="abyss.html">Abyss</a></li>
+<li><a href="weapons.html">Weapons</a></li>
+<li><a href="videos.html">🎬 Videos</a>
+<a href="resin-timer.html">⏳ Resin Timer</a></li>
+<li><a href="forum.html">Forum</a></li>
+<li><a href="blog/index.html">📝 Blog</a></li>
+<li><a href="codes.html">Codes</a>
+<li><a href="resin-timer.html">⏳ Resin</a></li></li>
+<li><a href="resin-timer.html" class="active">⏳ Resin</a></li>
+</ul>
+</nav>
+
+<div class="page-header">
+<h1>⏳ Resin Timer</h1>
+<p>Track your Original Resin in real time — auto-calculates when you'll be full</p>
+</div>
+
+<div class="container">
+
+<div class="resin-card">
+<div class="resin-current">
+<div class="resin-big"><span id="resinDisplay">20</span><span>/200</span></div>
+<div class="resin-slider">
+<input type="range" id="resinSlider" min="0" max="200" value="20" step="1">
+<div class="resin-presets">
+<button onclick="setResin(0)">0</button>
+<button onclick="setResin(20)">20</button>
+<button onclick="setResin(40)">40</button>
+<button onclick="setResin(60)">60</button>
+<button onclick="setResin(80)">80</button>
+<button onclick="setResin(100)">100</button>
+<button onclick="setResin(120)">120</button>
+<button onclick="setResin(140)">140</button>
+<button onclick="setResin(160)">160</button>
+</div>
+</div>
+</div>
+
+<div class="resin-bar-bg">
+<div class="resin-bar-fill" id="resinBar" style="width:10%" data-pct="10%"></div>
+</div>
+<div class="resin-bar-label"><span>0</span><span>200</span></div>
+
+<div class="resin-info-grid">
+<div class="info-box">
+<div class="label">Full Refill In</div>
+<div class="value" id="fullTime">--:--:--</div>
+<div class="sub" id="fullDate"></div>
+</div>
+<div class="info-box">
+<div class="label">1 Resin Every</div>
+<div class="value" style="color:var(--gold-light)">8 min</div>
+<div class="sub">⚡ 180 resin/day max</div>
+</div>
+<div class="info-box">
+<div class="label">Next Milestone (160)</div>
+<div class="value" id="milestoneTime">--:--:--</div>
+<div class="sub" id="milestoneDate"></div>
+</div>
+<div class="info-box" id="dailyRecovery">
+<div class="label">Daily Recovery</div>
+<div class="value" style="color:var(--gold-light)">180</div>
+<div class="sub">per full day (24h)</div>
+</div>
+</div>
+
+<div class="condensed-box">
+<label for="condensedCount">Condensed Resin:</label>
+<input type="number" id="condensedCount" value="0" min="0" max="5" oninput="calcAll()">
+<span style="font-size:13px;color:var(--text-dim)">× 40 resin = </span>
+<span class="total-resin" id="condensedTotal">0</span>
+<span style="font-size:13px;color:var(--text-dim)">resin stored</span>
+</div>
+
+<div id="notifBox" class="notif-box">
+<span style="font-size:20px;">🔔</span>
+<span id="notifText" style="font-size:14px;color:var(--text-dim);"></span>
+</div>
+</div>
+
+<h2 class="section-title">🎯 Spent Resin Activities</h2>
+<p style="font-size:13px;color:var(--text-dim);margin-bottom:8px;">Click + / − to subtract resin. Helps track how much you'll recover.</p>
+
+<div id="activities">
+<div class="activity-card">
+<div class="act-name">🌱 Mora Leyline</div>
+<div class="act-count">
+<button onclick="adjustAct(0,-1)">−</button>
+<span id="act0">0</span>
+<button onclick="adjustAct(0,1)">+</button>
+</div>
+<div class="act-cost">20 resin each</div>
+</div>
+<div class="activity-card">
+<div class="act-name">📖 EXP Leyline</div>
+<div class="act-count">
+<button onclick="adjustAct(1,-1)">−</button>
+<span id="act1">0</span>
+<button onclick="adjustAct(1,1)">+</button>
+</div>
+<div class="act-cost">20 resin each</div>
+</div>
+<div class="activity-card">
+<div class="act-name">🗡️ Domain (Artifact/Boss)</div>
+<div class="act-count">
+<button onclick="adjustAct(2,-1)">−</button>
+<span id="act2">0</span>
+<button onclick="adjustAct(2,1)">+</button>
+</div>
+<div class="act-cost">20 resin each</div>
+</div>
+<div class="activity-card">
+<div class="act-name">🐉 Weekly Boss</div>
+<div class="act-count">
+<button onclick="adjustAct(3,-1)">−</button>
+<span id="act3">0</span>
+<button onclick="adjustAct(3,1)">+</button>
+</div>
+<div class="act-cost">30/60 resin</div>
+</div>
+<div class="activity-card">
+<div class="act-name">🔥 World Boss</div>
+<div class="act-count">
+<button onclick="adjustAct(4,-1)">−</button>
+<span id="act4">0</span>
+<button onclick="adjustAct(4,1)">+</button>
+</div>
+<div class="act-cost">40 resin each</div>
+</div>
+<div class="activity-card">
+<div class="act-name">🏆 Trounce Domain (Childe/Azhdaha/etc)</div>
+<div class="act-count">
+<button onclick="adjustAct(5,-1)">−</button>
+<span id="act5">0</span>
+<button onclick="adjustAct(5,1)">+</button>
+</div>
+<div class="act-cost">30 resin each</div>
+</div>
+</div>
+
+<div class="help-text">
+<p>💾 Your resin data is saved in your browser — close and come back later, it remembers!</p>
+<p style="margin-top:6px;">Need more tools? Check out our <a href="blog/index.html">guides blog</a> or <a href="forum.html">community forum</a>.</p>
+</div>
+
+</div>
+
+<footer>
+<div class="links">
+<a href="index.html">Home</a>
+<a href="characters.html">Characters</a>
+<a href="elements.html">Elements</a>
+<a href="abyss.html">Abyss</a>
+<a href="weapons.html">Weapons</a>
+<a href="artifacts.html">Artifacts</a>
+<a href="forum.html">Forum</a>
+<a href="blog/index.html">📝 Blog</a>
+<a href="resin-timer.html">⏳ Resin Timer</a>
+</div>
+<p>Not affiliated with HoYoverse. Fan-made guide. © 2026</p>
+</footer>
+
+<script>
+// Resin Timer Logic
+const RESIN_PER_MIN = 1/8; // 1 resin per 8 minutes
+const MAX_RESIN = 200;
+const MILESTONE = 160;
+const STORAGE_KEY = 'genshinwiki_resin';
+
+// State
+let currentResin = 20;
+let lastSaved = Date.now();
+let activities = [0,0,0,0,0,0];
+let condensed = 0;
+let timerInterval = null;
+
+// Load from localStorage
+function loadState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if (saved) {
+      const elapsed = (Date.now() - saved.timestamp) / 60000; // minutes
+      const gained = Math.floor(elapsed * RESIN_PER_MIN);
+      currentResin = Math.min(MAX_RESIN, saved.resin + gained);
+      activities = saved.activities || [0,0,0,0,0,0];
+      condensed = saved.condensed || 0;
+      lastSaved = saved.timestamp;
+    }
+  } catch(e) { /* use defaults */ }
+}
+
+function saveState() {
+  const state = {
+    resin: currentResin,
+    timestamp: Date.now(),
+    activities: activities,
+    condensed: condensed
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  lastSaved = Date.now();
+}
+
+function calcAll() {
+  // Get condensed count
+  const c = document.getElementById('condensedCount');
+  condensed = parseInt(c.value) || 0;
+  document.getElementById('condensedTotal').textContent = condensed * 40;
+
+  // Update display
+  const display = Math.floor(currentResin);
+  document.getElementById('resinDisplay').textContent = display;
+  document.getElementById('resinSlider').value = display;
+
+  const pct = (display / MAX_RESIN * 100).toFixed(1);
+  const bar = document.getElementById('resinBar');
+  bar.style.width = pct + '%';
+  bar.setAttribute('data-pct', pct + '%');
+
+  // Calculate times
+  const resinToFull = MAX_RESIN - display;
+  const minToFull = resinToFull / RESIN_PER_MIN;
+  const fullTime = new Date(Date.now() + minToFull * 60000);
+
+  // Full time
+  document.getElementById('fullTime').textContent = formatCountdown(minToFull);
+  document.getElementById('fullDate').textContent = fullTime.toLocaleString('en-US', {
+    month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+  });
+
+  // Milestone (160)
+  const resinToMilestone = Math.max(0, MILESTONE - display);
+  const minToMilestone = resinToMilestone / RESIN_PER_MIN;
+  const mTime = new Date(Date.now() + minToMilestone * 60000);
+  if (resinToMilestone <= 0) {
+    document.getElementById('milestoneTime').textContent = '✅ Reached!';
+    document.getElementById('milestoneDate').textContent = '';
+  } else {
+    document.getElementById('milestoneTime').textContent = formatCountdown(minToMilestone);
+    document.getElementById('milestoneDate').textContent = mTime.toLocaleString('en-US', {
+      month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  // Notifications
+  const notifBox = document.getElementById('notifBox');
+  const notifText = document.getElementById('notifText');
+  if (display >= 180) {
+    notifBox.classList.add('show');
+    notifText.textContent = '⚠️ Resin almost full! Consider using some soon to avoid waste.';
+  } else if (display >= 160) {
+    notifBox.classList.add('show');
+    notifText.textContent = '⚡ Resin at 160+! You are at the condensed resin cap — use it or lose it!';
+  } else {
+    notifBox.classList.remove('show');
+  }
+
+  // Total spent
+  const totalSpent = activities[0]*20 + activities[1]*20 + activities[2]*20 +
+    activities[3]*30 + activities[4]*40 + activities[5]*30;
+
+  saveState();
+}
+
+function setResin(val) {
+  currentResin = val;
+  document.getElementById('resinSlider').value = val;
+  calcAll();
+}
+
+// Slider input
+document.getElementById('resinSlider').addEventListener('input', function() {
+  currentResin = parseInt(this.value);
+  calcAll();
+});
+
+function adjustAct(idx, delta) {
+  activities[idx] = Math.max(0, activities[idx] + delta);
+  document.getElementById('act' + idx).textContent = activities[idx];
+  calcAll();
+}
+
+function formatCountdown(minutes) {
+  if (minutes <= 0) return '00:00';
+  const h = Math.floor(minutes / 60);
+  const m = Math.floor(minutes % 60);
+  return String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0');
+}
+
+// Real-time tick
+function tick() {
+  currentResin = Math.min(MAX_RESIN, currentResin + RESIN_PER_MIN);
+  calcAll();
+}
+
+// Init
+loadState();
+calcAll();
+
+// Start the live timer — tick every 60 seconds
+timerInterval = setInterval(tick, 60000);
+
+// Save on page unload
+window.addEventListener('beforeunload', function() {
+  // Save current time so we can continue from exact resin
+  saveState();
+});
+
+// Also save every 30 seconds
+setInterval(saveState, 30000);
+
+// Initialize condensed from state
+document.getElementById('condensedCount').value = condensed;
+calcAll();
+</script>
+</body>
+</html>
