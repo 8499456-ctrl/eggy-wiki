@@ -1,302 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Genshin Impact Beginner Guide 2026 — Start Smart, Progress Fast</title>
-    <meta name="description" content="New to Genshin Impact? Learn the basics: how to build your first team, which characters to invest in, resin management, exploration tips, and early game mistakes to avoid.">
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-:root { --bg:#0d1117; --bg-card:#151b23; --bg-card-hover:#1c2333; --border:#21262d; --gold:#d4a84b; --gold-light:#e8c75a; --text:#e6edf3; --text-dim:#8b949e; }
-body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif; }
-nav { position:fixed; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:12px 28px; background:rgba(13,17,23,0.94); backdrop-filter:blur(12px); z-index:100; border-bottom:1px solid var(--border); }
-.logo { font-size:18px; font-weight:700; }
-.logo span { color:var(--gold); }
-nav ul { list-style:none; display:flex; gap:16px; flex-wrap:wrap; }
-nav ul li a { color:var(--text-dim); text-decoration:none; font-size:13px; padding:4px 8px; border-radius:6px; transition:all .2s; }
-nav ul li a:hover, nav ul li a.active { color:var(--gold); background:rgba(212,168,75,0.1); }
-.page-header { padding:76px 28px 20px; text-align:center; min-height:260px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; background:linear-gradient(180deg,rgba(74,157,214,0.08),transparent 80%), url(images/bg_hydro.jpg) center/cover fixed;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover; } .page-header::before{content:"";position:absolute;inset:0;background:rgba(13,17,23,0.6);z-index:0;} .page-header>*{position:relative;z-index:1;}
-.page-header h1 { font-size:26px; }
-.page-header p { color:var(--text-dim); font-size:14px; margin-top:4px; }
-.container { max-width:900px; margin:0 auto; padding:0 16px 30px; }
-.section-title { font-size:20px; font-weight:700; margin-bottom:12px; color:var(--gold); margin-top:28px; }
-.section-title:first-child { margin-top:0; }
-.card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:14px; }
-.card h3 { font-size:17px; margin-bottom:8px; }
-.card p, .card li { color:var(--text-dim); font-size:14px; line-height:1.8; }
-.card ul { padding-left:20px; }
-.card b { color:var(--text); }
-.card .highlight { color:var(--gold-light); font-weight:600; }
-.tag { display:inline-block; padding:2px 10px; border-radius:20px; font-size:11px; background:rgba(212,168,75,0.15); color:var(--gold-light); margin-right:6px; margin-bottom:4px; }
-.imp { background:rgba(212,168,75,0.08); border-left:3px solid var(--gold); }
-footer { border-top:1px solid var(--border); padding:24px 16px; text-align:center; color:var(--text-dim); font-size:13px; }
-footer .links { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
-footer .links a { color:var(--text-dim); font-size:13px; text-decoration:none; }
-footer .links a:hover { color:var(--gold); }
-@media (max-width:768px) {
-  nav { padding:10px 12px; flex-wrap:wrap; gap:6px; }
-  nav ul { gap:6px; }
-  nav ul li a { font-size:12px; padding:3px 6px; }
-  .page-header { padding:70px 12px 16px; }
-  .page-header h1 { font-size:20px; }
-  .container { padding:0 10px 20px; }
-}
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWNKEBXX68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GWNKEBXX68');
+</script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(s){s.dataset.zone="11277266",s.src="https://nap5k.com/tag.min.js"})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement("script")))</script>
+  <title>Beginner's Guide — Eggy Wiki</title>
+  <meta name="description" content="Complete Eggy Party beginner's guide — download, game modes, controls, characters, ranked climbing, outfits, team strategies, map shortcuts, event tips, and settings optimization for 2026.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--text-muted:#bbb;--shadow:0 4px 24px rgba(255,107,157,0.08)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
+    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:22px;font-weight:800;color:var(--gold);text-shadow:0 2px 8px rgba(0,0,0,0.1);background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.logo span{color:var(--gold-light);-webkit-text-fill-color:var(--gold-light)}
+    nav{display:flex;gap:6px;flex-wrap:wrap}
+    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
+    .page-header{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,rgba(255,240,245,0.9),rgba(255,248,225,0.9))}
+    .page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}.page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
+    .container{max-width:800px;margin:0 auto;padding:0 24px}
+    section{padding:28px 0}
+    .toc{background:var(--bg-card);border-radius:24px;padding:20px 24px;margin-bottom:24px;box-shadow:var(--shadow)}
+    .toc h3{font-size:16px;color:var(--pink);margin-bottom:8px}.toc ul{list-style:none}.toc ul li{margin-bottom:4px;font-size:14px}
+    .toc ul li a{color:var(--text-dim)}.toc ul li a:hover{color:var(--pink)}
+    .guide-card{background:var(--bg-card);border-radius:24px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px;transition:all .2s}
+    .guide-card:hover{box-shadow:0 8px 32px rgba(255,107,157,0.12)}
+    .guide-card h2{font-size:20px;color:var(--pink);margin-bottom:10px}
+    .guide-card h2 .num{display:inline-block;width:32px;height:32px;background:var(--pink);color:#fff;text-align:center;line-height:32px;border-radius:50%;font-size:16px;margin-right:10px}
+    .guide-card h3{font-size:16px;color:var(--text);margin:14px 0 6px}
+    .guide-card p{font-size:14px;color:var(--text-dim);margin-bottom:8px}
+    .guide-card ul{padding-left:20px;margin:8px 0;list-style:none}
+    .guide-card ul li{font-size:14px;color:var(--text-dim);margin-bottom:6px;padding-left:18px;position:relative}
+    .guide-card ul li::before{content:'🥚';position:absolute;left:-4px;font-size:12px}
+    .highlight-green{background:rgba(76,175,80,0.06);border-left:3px solid #4CAF50;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text-dim)}
+    .highlight-pink{background:rgba(255,107,157,0.06);border-left:3px solid var(--pink);border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text-dim)}
+    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
+    footer .container{max-width:1100px;margin:0 auto}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+    .footer-bottom{font-size:13px;opacity:0.7}
+    @media(max-width:640px){.page-header h1{font-size:24px}.header-inner{flex-direction:column;gap:10px}nav{justify-content:center}}
+      .music-btn {
+      background: #FF6B9D; border: 2px solid #FF6B9D;
+      color: #fff; font-size: 20px;
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .25s;
+      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
+    }
+    .music-btn:hover { background: #E85382; border-color: #E85382; transform: scale(1.05); }
+    .music-btn.playing { 
+      background: #4CAF50; border-color: #4CAF50; color: #fff;
+      box-shadow: 0 0 12px rgba(76,175,80,0.4);
+    }
 
-    .member-lock { position:relative; overflow:hidden; margin-bottom:24px; }
-    .member-lock::after {
-      content:''; position:absolute; bottom:0; left:0; right:0; height:120px;
-      background:linear-gradient(transparent,rgba(13,17,23,0.95));
-      pointer-events:none; z-index:2;
-    }
-    .member-overlay {
-      position:absolute; bottom:0; left:0; right:0; z-index:3;
-      padding:60px 24px 24px; text-align:center;
-      background:linear-gradient(transparent,rgba(13,17,23,0.98));
-    }
-    .member-overlay .lock-icon { font-size:28px; margin-bottom:6px; }
-    .member-overlay .lock-title { font-size:15px; font-weight:600; color:var(--text); margin-bottom:4px; }
-    .member-overlay .lock-desc { font-size:12px; color:var(--text-dim); margin-bottom:10px; line-height:1.5; }
-    .member-btn { display:inline-block; padding:8px 20px; border-radius:8px; background:linear-gradient(135deg,var(--gold-dark),var(--gold)); color:#000; font-weight:600; font-size:13px; border:none; cursor:pointer; text-decoration:none; transition:all .25s; }
-    .member-btn:hover { transform:translateY(-2px); box-shadow:0 4px 16px rgba(212,168,75,.3); }
-</style>
-    <meta property="og:title" content="Genshin Impact Beginner Guide — Tips & Progression Roadmap">
-    <meta property="og:description" content="New to Genshin Impact? Start here: beginner tips, AR progression roadmap, resin management, character building priorities, and common mistakes to avoid.">
-    <meta property="og:url" content="https://genshin-wiki.pages.dev/beginner.html">
-    <meta property="og:type" content="website">
-  <link rel="alternate" hreflang="en" href="https://genshin-wiki.pages.dev/" />
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-497248KSLQ");
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5558231572373849" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav>
-  <div class="logo"><span>✦</span> Genshin Guide</div>
-  <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="characters.html">Characters</a></li>
-<li><a href="elements.html">Elements</a></li>
-<li><a href="abyss.html">Abyss</a></li>
-<li><a href="weapons.html">Weapons</a></li>
-<li><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a></li>
-<li><a href="materials.html">Materials</a></li>
-<li><a href="beginner.html" class="active">Guides</a></li>
-<li><a href="login.html" style="color:var(--gold);">Login</a></li>
-<li><a href="membership.html" style="color:var(--gold);">💎 Membership</a></li>
-<li><a href="forum.html">Forum</a></li>
-<li><a href="codes.html">Codes</a>
-<li><a href="resin-timer.html">⏳ Resin</a></li></li>
-        <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play / Pause BGM">♪</button>
-</ul>
-</nav>
-<div class="page-header">
-  <h1>📖 Beginner's Guide</h1>
-  <p>Roadmap · Resource planning · Must-build characters · Common mistakes</p>
-</div>
-<div class="container">
+      <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="blog/index.html">Blog</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;">🔍</a></nav></div></header>
+<div class="page-header"><h1>🎮 Beginner's Guide</h1><p>New to Eggy Party? This comprehensive guide covers everything from download to your first win.</p></div>
 
-<div class="section-title">🗺️ Roadmap</div>
-<div class="card">
-  <h3>📌 Adventure Rank 1-25 (Exploration Phase)</h3>
-  <ul>
-    <li>Follow the main story quests, unlock teleport waypoints and Statues of The Seven</li>
-    <li>Pick up Oculi when you see them, mark their locations (Anemoculus/Geoculus)</li>
-    <li>Daily commissions are a must (4 per day, main Primogem source)</li>
-    <li>Use resin on Ley Lines: EXP books + Mora</li>
-    <li>Don't farm artifact domains (waste of resin before AR 45)</li>
-    <li><b class="highlight">Focus on 1-2 characters</b> and level them to cap</li>
-        
-  </ul>
-</div>
-<div class="card">
-  <h3>📌 AR 25-35 (Transition Phase)</h3>
-  <ul>
-    <li>After world level increases, immediately farm boss ascension materials</li>
-    <li>Run talent domains and weapon material domains (rotates Tue/Thu/Sat etc.)</li>
-    <li>Start thinking about team comps — even though it doesn't need to be perfect yet</li>
-    <li>Weekly bosses: Stormterror and Wolf of the North</li>
-    <li>Don't spend Primogems on the standard banner! Only pull on limited character banners</li>
-        
-  </ul>
-</div>
-<div class="card">
-  <h3>📌 AR 35-45 (Growth Phase)</h3>
-  <ul>
-    <li>Keep leveling characters and talents</li>
-    <li>Craft 4-star weapons (Sapwood Blade/Amenoma Kageuchi etc.)</li>
-    <li>Start saving Condensed Resin (for artifact farming at AR 45+)</li>
-    <li>Clear Abyss up to floor 8-3 (to get Xiangling)</li>
-    <li><b class="highlight">Start building a second team</b></li>
-        
-  </ul>
-</div>
-<div class="card">
-  <h3>📌 AR 45+ (Welcome to Artifact Hell)</h3>
-  <ul>
-    <li>Finally, gold artifacts are available!</li>
-    <li>Focus on getting correct main stats first, don't chase substats</li>
-    <li>Keep doing weekly bosses (Azhdaha/Raiden/Scaramouche etc.)</li>
-    <li>Attempt Abyss floors 9-12</li>
-    <li><b class="highlight">Resin = Artifacts</b> (unless character levels/weapons/talents aren't maxed)</li>
-        
-  </ul>
-</div>
-
-<div class="section-title">💎 Resource Priority</div>
-<div class="card imp">
-  <h3>🔑 How to Spend Primogems</h3>
-  <ul>
-    <li><b class="highlight">Only pull on limited character event banners</b> — Don't touch the standard banner!</li>
-    <li>Don't use Primogems for resin refresh (buying once a day is OK, but beginners should save)</li>
-    <li>Priority picks: <b>Kazuha / Raiden Shogun / Nahida / Zhongli</b> (universal T0 supports)</li>
-    <li>4-star characters will all reach C6 eventually — no need to pull hard for them</li>
-    <li>Blessing of the Welkin Moon (Gnostic Hymn) is the best value purchase</li>
-        
-  </ul>
-</div>
-<div class="card">
-  <h3>⚡ How to Use Resin (Ranked Priority)</h3>
-  <ul>
-    <li><b>1. Weekly Bosses</b> — 3 half-price runs per week, must-do</li>
-    <li><b>2. Character/Weapon Ascension Materials</b> — Prioritize leveling to 80/90</li>
-    <li><b>3. Talent Books</b> — Get core skills to level 8</li>
-    <li><b>4. Artifacts (after AR 45)</b> — The endless grind</li>
-    <li><b>5. Ley Lines</b> — Run when you need Mora/EXP</li>
-    <li><b>6. Weapon Ascension Materials</b> — Only when needed</li>
-        
-  </ul>
-</div>
-
-<div class="section-title">🌟 Must-Build 4-Star Characters</div>
-<div class="card">
-  <p>The following 4-star characters are worth building and irreplaceable in many teams:</p>
-  <ul style="margin-top:6px;">
-    <li><b class="highlight">Bennett</b> — 6-star Pyro Archon! ATK buff + healing. NEVER C6 HIM!</li>
-    <li><b class="highlight">Xingqiu</b> — 6-star Hydro God! Best off-field Hydro application.</li>
-    <li><b class="highlight">Xiangling</b> — Free, off-field Pyro ceiling</li>
-    <li><b class="highlight">Kuki Shinobu</b> — Core of Hyperbloom, EM-scaling healer</li>
-    <li><b class="highlight">Fischl</b> — Sub-DPS Electro applier, core for Aggravate</li>
-    <li><b class="highlight">Sucrose</b> — Budget EM buffer, crowd control</li>
-    <li><b class="highlight">Faruzan</b> — Anemo specialist support (C6 game-changer)</li>
-    <li><b class="highlight">Rosaria</b> — Crit rate buffer, energy battery</li>
-        
-  </ul>
-</div>
-
-
-<div class="member-lock">
-  <div class="card" style="opacity:0.3;filter:blur(2px);pointer-events:none;user-select:none;">
-    <h3>📊 AR 45+ Advanced Optimization</h3>
+<section class="container">
+  <div class="toc">
+    <h3>📋 Table of Contents</h3>
     <ul>
-      <li>Optimal resin spending strategy for patch 4.x — which domains to prioritize first</li>
-      <li>Complete artifact pre-farming route: which bosses drop the most useful materials</li>
-      <li>Primogem income calculator: F2P vs Welkin vs BP, exact monthly totals</li>
-      <li>Weapon banner pity system explained: when to pull and when to skip</li>
-      <li>Detailed 4-star character roadmap: which cons matter most and why</li>
-        
+      <li><a href="#download">1. Download & Installation</a></li>
+      <li><a href="#modes">2. Game Modes Explained</a></li>
+      <li><a href="#controls">3. Controls & Mechanics</a></li>
+      <li><a href="#characters">4. Choosing Your Character</a></li>
+      <li><a href="#currencies">5. Currencies & Items</a></li>
+      <li><a href="#tips">6. Tips for Beginners</a></li>
+      <li><a href="#goals">7. First Week Goals</a></li>
+      <li><a href="#ranked">8. Ranked Mode Guide</a></li>
+      <li><a href="#outfits">9. Outfits & Customization</a></li>
+      <li><a href="#teams">10. Team Strategies</a></li>
+      <li><a href="#maps">11. Map-Specific Tips</a></li>
+      <li><a href="#events">12. Event Guide</a></li>
+      <li><a href="#settings">13. Settings Optimization</a></li>
     </ul>
   </div>
-  <div class="member-overlay">
-    <div class="lock-icon">🔒</div>
-    <div class="lock-title">Unlock Advanced Optimization Guide</div>
-    <div class="lock-desc">Get the full AR 45+ roadmap with primogem calculators, resin optimization, and detailed 4-star priority breakdowns.</div>
-    <a class="member-btn" href="membership.html">💎 Upgrade to Unlock</a>
+
+  <div class="guide-card" id="download">
+    <h2><span class="num">1</span>Download & Installation</h2>
+    <p>Eggy Party is a free-to-play mobile and PC game developed by NetEase. It's available on all major platforms:</p>
+    <ul>
+      <li><strong>iOS</strong> — Search "Eggy Party" on the App Store. ~1.2 GB download.</li>
+      <li><strong>Android</strong> — Available on Google Play and the official NetEase website. ~900 MB.</li>
+      <li><strong>PC</strong> — Download from the official Eggy Party website. ~2 GB.</li>
+    </ul>
+    <div class="highlight-green"><strong>💡 Tip:</strong> Download over Wi-Fi — the initial download is large but subsequent updates are much smaller.</div>
+    <p>The game supports cross-platform play, so you can play with friends regardless of device.</p>
+  </div>
+
+  <div class="guide-card" id="modes">
+    <h2><span class="num">2</span>Game Modes Explained</h2>
+    <p>Eggy Party has three permanent game modes plus a rotating event mode:</p>
+    <h3>🏁 Race Mode (8 Players)</h3>
+    <p>The most popular mode. 8 players race through obstacle-filled tracks to reach the finish line. First three to finish get ranked rewards. Key mechanics include jumping over gaps, dodging obstacles, and using shortcuts.</p>
+    <h3>🛡️ Survival Mode (8 Players)</h3>
+    <p>Last egg standing wins. Platforms shrink, disappear, or become hazardous over time. Players can knock each other off platforms. Each match lasts 2-4 minutes.</p>
+    <h3>👥 Team Mode (4v4)</h3>
+    <p>Two teams of four compete in objective-based matches. Modes include Capture the Flag, King of the Hill, and Egg Collection. Communication is key — use the in-game quick chat!</p>
+    <h3>🎪 Event Mode (Limited Time)</h3>
+    <p>Rotating special modes that change every 1-2 weeks. Past events include Egg Frenzy (16-player free-for-all), Zombie Mode, and Gravity Shift.</p>
+  </div>
+
+  <div class="guide-card" id="controls">
+    <h2><span class="num">3</span>Controls & Mechanics</h2>
+    <p>Master these controls to gain an edge over other players:</p>
+    <ul>
+      <li><strong>Move</strong> — Swipe/drag to move your egg in any direction</li>
+      <li><strong>Jump</strong> — Tap to jump. Jump again mid-air for a double jump</li>
+      <li><strong>Dash</strong> — Swipe quickly in a direction to dash (has cooldown)</li>
+      <li><strong>Grab</strong> — Tap the grab button near another player to push or hold them</li>
+      <li><strong>Item Use</strong> — Tap item button when you have a power-up</li>
+    </ul>
+    <h3>Advanced Techniques</h3>
+    <ul>
+      <li><strong>Short Hop</strong> — Quick tap to barely leave the ground. Useful for platform edges.</li>
+      <li><strong>Dash + Jump</strong> — Dash off a platform edge then jump for extended distance.</li>
+      <li><strong>Edge Grab</strong> — If you fall off a platform, you can grab the edge and pull yourself back up if you're close enough.</li>
+    </ul>
+    <div class="highlight-pink"><strong>⚡ Pro tip:</strong> Reduce input lag with a game accelerator. High ping makes advanced techniques nearly impossible. Check our <a href="free-accelerator.html">free accelerator page</a>.</div>
+  </div>
+
+  <div class="guide-card" id="characters">
+    <h2><span class="num">4</span>Choosing Your Character</h2>
+    <p>Your character choice matters! Each egg has unique stats and abilities:</p>
+    <ul>
+      <li><strong>🥚 Classic Egg</strong> — All-rounder. Great for learning the game. Balanced speed and jump.</li>
+      <li><strong>🐰 Bunny Egg</strong> — Higher jump. Ideal for race maps with lots of vertical sections.</li>
+      <li><strong>🦊 Fox Egg</strong> — Faster dash cooldown. Best for advanced players who use dash frequently.</li>
+      <li><strong>🐱 Cat Egg</strong> — Soft landing + faster recovery. #1 recommended for Survival mode.</li>
+      <li><strong>🐼 Panda Egg</strong> — Harder to knock over. Good for Team mode as a defender.</li>
+      <li><strong>🐧 Penguin Egg</strong> — Faster on ice. Situational but dominates ice maps.</li>
+    </ul>
+    <p>Visit our <a href="characters.html">full characters page</a> for detailed stats, unlock conditions, and tier rankings.</p>
+  </div>
+
+  <div class="guide-card" id="currencies">
+    <h2><span class="num">5</span>Currencies & Items</h2>
+    <p>Eggy Party has several currencies. Here's what you need to know:</p>
+    <ul>
+      <li><strong>💎 Gems</strong> — Premium currency. Earned through gameplay, events, and codes. Used for outfits, crates, and battle pass.</li>
+      <li><strong>🪙 Coins</strong> — Free currency. Earned from matches and daily missions. Used for basic items.</li>
+      <li><strong>🎫 Tickets</strong> — Required to enter ranked matches. You get 5 free per day + more from missions.</li>
+      <li><strong>📦 Crates</strong> — Random rewards. Open for a chance at outfits, gems, or coins.</li>
+    </ul>
+    <div class="highlight-green"><strong>💡 Tip:</strong> Save your gems for limited-time outfits. Don't spend them on crates — the drop rates are low. Use our <a href="codes.html">codes page</a> for free gems!</div>
+  </div>
+
+  <div class="guide-card" id="tips">
+    <h2><span class="num">6</span>Tips for Beginners</h2>
+    <h3>🏁 Race Mode Tips</h3>
+    <ul>
+      <li>Learn the shortcuts on each map — they can shave 3-5 seconds off your time</li>
+      <li>Don't always take the shortest path — sometimes the safer route is faster if you avoid mistakes</li>
+      <li>Use double jump conservatively — save it for crossing wide gaps</li>
+      <li>Watch the starting countdown — a good start puts you ahead of half the players immediately</li>
+    </ul>
+    <h3>🛡️ Survival Mode Tips</h3>
+    <ul>
+      <li>Stay on the edges during the first 30 seconds — the center is a war zone</li>
+      <li>Let other players fight — avoid confrontation until the late game</li>
+      <li>Always have an escape route planned</li>
+      <li>Save shield power-ups for the final moments</li>
+    </ul>
+    <h3>👥 Team Mode Tips</h3>
+    <ul>
+      <li>Stick with your team — solo players get picked off easily</li>
+      <li>Use quick chat to communicate (tap the speech bubble icon)</li>
+      <li>Designate roles: 1-2 attackers, 1 defender, 1 flex</li>
+    </ul>
+  </div>
+
+  <div class="guide-card" id="goals">
+    <h2><span class="num">7</span>First Week Goals</h2>
+    <p>Follow this roadmap to go from complete beginner to competitive player in one week:</p>
+    <ul>
+      <li><strong>Day 1-2:</strong> Complete all tutorial missions. Play 10 casual races. Unlock your first outfit.</li>
+      <li><strong>Day 3-4:</strong> Try Survival mode. Practice advanced techniques (dash+jump, edge grab). Join a club.</li>
+      <li><strong>Day 5-6:</strong> Play ranked mode. Learn 2-3 race map shortcuts. Complete daily missions for rewards.</li>
+      <li><strong>Day 7:</strong> Aim for top 5 in ranked consistently. Start saving for a premium outfit. Join the <a href="forum.html">community forum</a>!</li>
+    </ul>
+    <div class="highlight-pink"><strong>✨ Remember:</strong> Eggy Party is meant to be fun! Don't stress about winning — focus on improving one skill at a time. See you on the leaderboard!</div>
+  </div>
+
+  <div class="guide-card" id="ranked">
+    <h2><span class="num">8</span>🏆 Ranked Mode Guide</h2>
+    <p>Ranked mode is where the real competition begins. Here's everything you need to climb the ladder:</p>
+    
+    <h3>Tier System</h3>
+    <ul>
+      <li><strong>Egg V → Egg I</strong> (Bronze equivalent) — Every player starts here. Learn the basics in a competitive setting.</li>
+      <li><strong>Silver V → Silver I</strong> — Players understand basic mechanics. Focus on consistency.</li>
+      <li><strong>Gold V → Gold I</strong> — Advanced techniques expected. Short hops, dash+jump combos, and map knowledge required.</li>
+      <li><strong>Platinum V → Platinum I</strong> — Top 15% of players. Competitive matches with skilled opponents.</li>
+      <li><strong>Diamond V → Diamond I</strong> — Top 3% of players. Near-perfect execution expected.</li>
+      <li><strong>Legend</strong> — Top 100 players on the server. The elite.</li>
+    </ul>
+    
+    <h3>Climbing Strategies</h3>
+    <ul>
+      <li><strong>Warm up before ranked:</strong> Play 2-3 casual matches to get in the zone before jumping into ranked.</li>
+      <li><strong>Focus on consistency, not flashy plays:</strong> Finishing 3rd every game is better than 1st one game and 8th the next.</li>
+      <li><strong>Know when to take breaks:</strong> After 2 consecutive losses, take a 5-minute break. Tilted play leads to more losses.</li>
+      <li><strong>Master 3 maps at a time:</strong> Don't try to learn all maps at once. Focus on 3, learn every shortcut, then move on.</li>
+      <li><strong>Watch replays of top players:</strong> After a loss, watch the replay from the winner's perspective.</li>
+    </ul>
+    
+    <h3>Ranked Rewards</h3>
+    <ul>
+      <li><strong>Season End Rewards:</strong> Exclusive outfits, gems, and title based on highest tier achieved.</li>
+      <li><strong>Weekly Milestones:</strong> Bonus gems for reaching certain point thresholds each week.</li>
+      <li><strong>Placement Matches:</strong> First 10 ranked matches determine your starting tier. Try your absolute hardest!</li>
+    </ul>
+    
+    <div class="highlight-pink"><strong>⚡ Pro tip:</strong> Use a game accelerator for ranked matches. High ping causes delayed inputs that can cost you a win. Check our <a href="free-accelerator.html">free accelerator page</a>.</div>
+  </div>
+
+  <div class="guide-card" id="outfits">
+    <h2><span class="num">9</span>🎭 Outfits & Customization</h2>
+    <p>Express yourself with hundreds of outfits, accessories, and effects. Here's how the system works:</p>
+    
+    <h3>Outfit Rarity Tiers</h3>
+    <ul>
+      <li><strong>Common (⚪)</strong> — Basic color variants. Earned from leveling up or cheap coin purchases.</li>
+      <li><strong>Rare (🔵)</strong> — Themed costumes. Available in the shop for gems or from crate drops.</li>
+      <li><strong>Epic (🟣)</strong> — Detailed costumes with special effects. Often tied to events or battle pass.</li>
+      <li><strong>Legendary (🟠)</strong> — Premium costumes with unique animations, effects, and sounds. Limited availability.</li>
+    </ul>
+    
+    <h3>Battle Pass System</h3>
+    <ul>
+      <li><strong>Free Track:</strong> Earn basic rewards — coins, common crates, a few gems.</li>
+      <li><strong>Premium Track ($4.99/month):</strong> Unlock exclusive epic outfits, premium crates, and bonus gems.</li>
+      <li><strong>Deluxe Track ($9.99/month):</strong> Everything in Premium + instant tier skips, a legendary outfit, and exclusive nameplate.</li>
+      <li>The battle pass lasts one season (approx. 6-8 weeks). Levels carry over between seasons.</li>
+    </ul>
+    
+    <h3>Limited & Collab Outfits</h3>
+    <ul>
+      <li>Eggy Party regularly collaborates with popular franchises (Sanrio, SpongeBob, and more).</li>
+      <li>Collab outfits are available for a limited time only — usually 2 weeks.</li>
+      <li>If you miss a collab outfit, it may never return. Grab it while it's available!</li>
+      <li>Limited outfits often cost 960-1,440 gems each.</li>
+    </ul>
+    
+    <div class="highlight-green"><strong>💡 Tip:</strong> Save your gems for limited-time collaboration outfits. Regular premium outfits rotate back eventually, but collabs may not.</div>
+  </div>
+
+  <div class="guide-card" id="teams">
+    <h2><span class="num">10</span>🤝 Team Strategies</h2>
+    <p>Team mode is all about coordination. Here's how to dominate as a group:</p>
+    
+    <h3>Role Assignments</h3>
+    <ul>
+      <li><strong>Attacker (1-2 players):</strong> Fast characters (Fox Egg, Minty). Focus on objective and pressuring opponents.</li>
+      <li><strong>Defender (1 player):</strong> Tanky characters (Panda Egg, Rocky). Protect your base and flag carrier.</li>
+      <li><strong>Flex (1 player):</strong> Balanced character (Classic Egg, Yeggy). Adapt to whatever the team needs.</li>
+    </ul>
+    
+    <h3>Communication Tips</h3>
+    <ul>
+      <li>Use the quick chat wheel — "Help!", "Retreat!", "Follow me!", "Watch out!"</li>
+      <li>Pre-set your quick chat phrases before the match starts.</li>
+      <li>In Capture the Flag: Always call out "Enemy has the flag!" with the quick chat.</li>
+      <li>In King of the Hill: "Gather at the hill!" is the most important call.</li>
+    </ul>
+    
+    <h3>Team Compositions</h3>
+    <ul>
+      <li><strong>Speed Comp:</strong> 2x Fox Egg + 1x Minty + 1x Cat Egg — Hyper-aggressive, fast objective play.</li>
+      <li><strong>Defense Comp:</strong> 2x Panda Egg + 1x Rocky + 1x Yeggy — Slow but nearly unkillable.</li>
+      <li><strong>Balanced Comp:</strong> 1 of each role with flexible characters — Safe but effective.</li>
+      <li><strong>Support Comp:</strong> Unicorn Egg (speed boost aura) + 3 fast attackers — Devastating in coordinated teams.</li>
+    </ul>
+    
+    <div class="highlight-pink"><strong>🤝 Pro tip:</strong> Play with the same team regularly. Chemistry and unspoken coordination is worth more than individual skill.</div>
+  </div>
+
+  <div class="guide-card" id="maps">
+    <h2><span class="num">11</span>🗺️ Map-Specific Tips</h2>
+    <p>Each map has unique shortcuts and strategies. Here are tips for the most popular maps:</p>
+    
+    <h3>Candy Arena</h3>
+    <ul>
+      <li><strong>Key shortcut:</strong> On the candy cane section, bounce off the top of the red stripe for extra height — this skips an entire platform section.</li>
+      <li><strong>Best character:</strong> Bunny Egg (high jump makes the vertical sections much easier).</li>
+      <li><strong>Watch out for:</strong> The collapsing gumdrop platforms near the end — time your jump carefully.</li>
+    </ul>
+    
+    <h3>Frozen Peak</h3>
+    <ul>
+      <li><strong>Key shortcut:</strong> On the ice slide, stay to the far right edge — there's a hidden speed boost ramp.</li>
+      <li><strong>Best character:</strong> Penguin Egg (slides on ice without losing speed — this is a massive advantage).</li>
+      <li><strong>Watch out for:</strong> The icicle trap section. Count to 3 after the warning sound, then dash through.</li>
+    </ul>
+    
+    <h3>Sunflower Sprint</h3>
+    <ul>
+      <li><strong>Key shortcut:</strong> On the rotating sunflower section, jump from the highest petal directly to the second-to-last platform.</li>
+      <li><strong>Best character:</strong> Fox Egg (flat terrain rewards speed over jump height).</li>
+      <li><strong>Watch out for:</strong> The wind gust traps between sections — they push you back if you don't time your dash.</li>
+    </ul>
+    
+    <h3>Underwater Escape</h3>
+    <ul>
+      <li><strong>Key shortcut:</strong> After the air bubble section, drop down immediately and swim left — there's a hidden tunnel.</li>
+      <li><strong>Best character:</strong> Bulu (faster on water surfaces).</li>
+      <li><strong>Watch out for:</strong> The rising tide mechanic at the 45-second mark — stay on high ground.</li>
+    </ul>
+    
+    <div class="highlight-green"><strong>💡 Tip:</strong> Practice each map's shortcut 10 times in casual mode before trying it in ranked. Consistency beats hero plays.</div>
+  </div>
+
+  <div class="guide-card" id="events">
+    <h2><span class="num">12</span>💎 Event Guide</h2>
+    <p>Limited-time events are the best way to earn free rewards. Here's how to maximize every event:</p>
+    
+    <h3>Event Types</h3>
+    <ul>
+      <li><strong>Festival Events</strong> — Seasonal celebrations (Lunar New Year, Halloween, Summer Festival). Usually 2-3 weeks long with exclusive free outfits.</li>
+      <li><strong>Collab Events</strong> — Brand partnerships (SpongeBob, Kuromi, etc.). Limited-time themed content and outfits.</li>
+      <li><strong>Competitive Events</strong> — Tournament-style events with leaderboard rankings. Top players earn exclusive titles and rewards.</li>
+      <li><strong>Login Events</strong> — Just log in daily for free rewards. Never miss these — they take 30 seconds.</li>
+    </ul>
+    
+    <h3>Maximizing Event Rewards</h3>
+    <ul>
+      <li><strong>Check events daily:</strong> Open the event tab every day when you log in. Many events have daily missions that reset.</li>
+      <li><strong>Prioritize limited exclusive items:</strong> If an event offers an exclusive outfit, make that your #1 goal before the event ends.</li>
+      <li><strong>Use event currency efficiently:</strong> Don't spend event currency on consumables — save for the exclusive items.</li>
+      <li><strong>Stack missions:</strong> If multiple events are active, check if their missions overlap (e.g., "Play 5 races" counts for both).</li>
+      <li><strong>Last-day rush:</strong> Events often have a 2x points bonus on the final day. Save some missions for this boost.</li>
+    </ul>
+    
+    <h3>Event Calendar (2026)</h3>
+    <ul>
+      <li><strong>January-March:</strong> Lunar New Year Festival — Exclusive zodiac outfit, red envelope rewards.</li>
+      <li><strong>April-June:</strong> Spring Celebration — Cherry blossom themed outfits and housing items.</li>
+      <li><strong>July-September:</strong> Summer Splash — Beach outfits, water-themed maps, swimsuit collection.</li>
+      <li><strong>October-December:</strong> Halloween Fest + Winter Wonderland — Spooky costumes, snow maps, holiday outfits.</li>
+      <li>Events rotate every 1-2 weeks between major festivals. New collaborations are announced monthly.</li>
+    </ul>
+    
+    <div class="highlight-pink"><strong>⚡ Pro tip:</strong> Join the official Eggy Party Discord or follow their social media for event announcements before they go live. You can plan your gem spending in advance!</div>
+  </div>
+
+  <div class="guide-card" id="settings">
+    <h2><span class="num">13</span>📱 Settings Optimization</h2>
+    <p>Proper settings can give you a significant competitive advantage. Here's the optimal setup:</p>
+    
+    <h3>Graphics Settings (Mobile)</h3>
+    <ul>
+      <li><strong>Frame Rate:</strong> Set to "High" (60fps). On weaker devices, "Medium" (30fps) is acceptable but puts you at a disadvantage.</li>
+      <li><strong>Resolution:</strong> "High" if your device can handle it. Low resolution makes distant obstacles harder to see.</li>
+      <li><strong>Effects Quality:</strong> "Low" — reduces visual clutter from other players' abilities and makes the path clearer.</li>
+      <li><strong>Shadow Quality:</strong> "Off" — shadows consume GPU resources and provide no gameplay benefit.</li>
+    </ul>
+    
+    <h3>Control Settings (Mobile)</h3>
+    <ul>
+      <li><strong>Button Layout:</strong> Customize your layout. Put dash button where your thumb naturally rests.</li>
+      <li><strong>Sensitivity:</strong> Start at 100% and adjust up if you find movement sluggish. Pro players use 120-150%.</li>
+      <li><strong>Auto-Aim:</strong> Turn it OFF for competitive play. Auto-aim can pull your camera in the wrong direction.</li>
+      <li><strong>Vibration:</strong> Off — saves battery and removes distracting feedback during intense moments.</li>
+    </ul>
+    
+    <h3>Network Optimization</h3>
+    <ul>
+      <li><strong>WiFi vs Mobile Data:</strong> 5G/4G is often more stable than public WiFi for gaming.</li>
+      <li><strong>Ping Check:</strong> Play with ping under 80ms for competitive modes. Above 120ms = noticeable lag.</li>
+      <li><strong>Background Apps:</strong> Close all background apps before playing. Streaming music also adds latency.</li>
+      <li><strong>Game Accelerator:</strong> For players in Asia connecting to international servers, a game accelerator is essential. Check our <a href="free-accelerator.html">recommended list</a>.</li>
+    </ul>
+    
+    <h3>PC Settings</h3>
+    <ul>
+      <li><strong>Window Mode:</strong> Fullscreen > Borderless > Windowed. Fullscreen gives the best performance.</li>
+      <li><strong>VSync:</strong> OFF — adds input lag. Use your GPU's Fast Sync option if you experience screen tearing.</li>
+      <li><strong>Anti-Aliasing:</strong> Low or Off — reduces blur and keeps the image sharp for spotting obstacles.</li>
+      <li><strong>Textures:</strong> Medium is enough. High textures don't help gameplay but consume VRAM.</li>
+    </ul>
+    
+    <div class="highlight-green"><strong>💡 Tip:</strong> After changing graphics settings, play 2-3 casual matches to ensure everything feels smooth. Never change settings right before a ranked match!</div>
+  </div>
+</section>
+
+<!-- ===== Game Boosters ===== -->
+<div style="max-width:1100px;margin:0 auto 24px;padding:0 24px;">
+  <div style="background:#fff;border-radius:24px;padding:16px 20px;box-shadow:0 4px 24px rgba(255,107,157,0.08);display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+    <span style="font-size:28px;">⚡</span>
+    <div style="flex:1;min-width:200px;">
+      <div style="font-size:14px;font-weight:700;color:var(--pink);">Game Boosters</div>
+      <div style="font-size:12px;color:var(--text-dim);">Download slow? Lag in-game? Try a game accelerator.</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;font-size:13px;">
+      <a href="https://gearup.sjv.io/c/7462059/3204502/40222" target="_blank" rel="noopener nofollow" style="color:var(--pink);font-weight:600;">🚀 GearUP Booster</a>
+      <a href="free-accelerator.html" target="_blank" rel="noopener nofollow" style="color:var(--pink);font-weight:600;">🚀 雷神加速器</a>
+      <a href="https://tg.xunyou.com/command/?id=1563075&password=genshinwiki" target="_blank" rel="noopener nofollow" style="color:var(--pink);font-weight:600;">⚡ 迅游加速器</a>
+      <a href="https://www.exitlag.com/refer/10324758" target="_blank" rel="noopener nofollow" style="color:var(--pink);font-weight:600;">🌍 ExitLag (欧美)</a>
+    </div>
+    <span style="font-size:10px;color:#bbb;border:1px solid #eee;border-radius:3px;padding:2px 6px;">Ad</span>
   </div>
 </div>
 
-<div class="section-title">⚠️ Common Mistakes</div>
-<div class="card">
-  <ul>
-    <li>❌ <b>Don't spend Primogems on the standard banner</b> — Use free blue Fates only</li>
-    <li>❌ <b>Don't farm artifacts before AR 45</b> — No gold drops, wasted resin</li>
-    <li>❌ <b>Don't C6 Bennett</b> — Will limit many team comps</li>
-    <li>❌ <b>Don't level all characters evenly</b> — Focus resources on one team first</li>
-    <li>❌ <b>Don't ignore Elemental Resonance</b> — Double Pyro +25% ATK, Double Hydro +35% Healing</li>
-    <li>❌ <b>First 3 weekly bosses cost 30 resin</b> — Always clear first 3 runs each week</li>
-    <li>❌ <b>Don't use Fragile Resin on normal materials</b> — Save them for artifact farming at AR 45</li>
-        
-  </ul>
+<!-- ===== AdSense Placeholder ===== -->
+<div style="text-align:center;padding:20px;margin:24px auto;max-width:1100px;background:rgba(255,107,157,0.04);border:2px dashed #FFD0DE;border-radius:16px;font-size:13px;color:#bbb;">
+  <span style="font-size:9px;color:#ccc;border:1px solid #ddd;border-radius:3px;padding:0 6px;">Ad</span>
+  <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
 </div>
 
-<div class="section-title">🎯 Early Game Goals</div>
-<div class="card imp">
-  <ul>
-    <li><b>One complete team</b> — Main DPS Lv80 + weapon Lv80 + core talent Lv8</li>
-    <li><b>Hyperbloom</b> — Nahida + Xingqiu + Kuki, cheapest T0 team</li>
-    <li><b>Raiden National</b> — Raiden + Xingqiu + Xiangling + Bennett, one team clears Abyss</li>
-    <li><b>Monthly Abyss full clear</b> — 600 Primogems × 2, stable income</li>
-    <li><b>100% World Exploration</b> — Chests + Oculi + quests give plenty of Primogems</li>
-        
-  </ul>
-</div>
-
-</div>
-
-<!-- ============ Game Accelerator Recommendations ============ -->
-<div style="max-width:900px;margin:0 auto;padding:0 16px 20px;">
-  <div class="section-title">⚡ Playing from Abroad?</div>
-  <div style="font-size:13px;color:var(--text-dim);margin-bottom:16px;line-height:1.6;text-align:center;">
-    If you're playing Genshin Impact <strong>on a different server</strong> (Asia/EU/NA), a game accelerator can help reduce lag. Many players report 150-200ms → 30-50ms improvement.
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:8px;">
-    <a href="https://gearup.sjv.io/c/7462059/3204502/40222" target="_blank" rel="noopener nofollow" style="background:var(--bg-card);border:1px solid var(--teal);border-radius:10px;padding:16px;text-decoration:none;color:inherit;transition:all .2s;display:flex;align-items:center;gap:12px;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--teal)'">
-      <div style="font-size:28px;">🚀</div>
-      <div style="flex:1;">
-        <div style="font-size:14px;font-weight:600;color:var(--teal);">GearUP Booster</div>
-        <div style="font-size:12px;color:var(--text-dim);">Low ping · Stable connection</div>
-      </div>
-      <div style="font-size:12px;color:var(--gold);">Try →</div>
-    </a>
-    <a href="https://tg.xunyou.com/command/?id=1563075&password=genshinwiki" target="_blank" rel="noopener nofollow" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;text-decoration:none;color:inherit;transition:all .2s;display:flex;align-items:center;gap:12px;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor=''">
-      <div style="font-size:28px;">⚡</div>
-      <div style="flex:1;">
-        <div style="font-size:14px;font-weight:600;color:var(--text);">雷神加速器</div>
-        <div style="font-size:12px;color:var(--text-dim);">Pause anytime · 1000+ games</div>
-      </div>
-      <div style="font-size:12px;color:var(--gold);">Try →</div>
-    </a>
-    <a href="https://tg.xunyou.com/command/?id=1563075&password=genshinwiki" target="_blank" rel="noopener nofollow" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;text-decoration:none;color:inherit;transition:all .2s;display:flex;align-items:center;gap:12px;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor=''">
-      <div style="font-size:28px;">🚀</div>
-      <div style="flex:1;">
-        <div style="font-size:14px;font-weight:600;color:var(--text);">迅游加速器</div>
-        <div style="font-size:12px;color:var(--text-dim);">Low latency · 7-day trial</div>
-      </div>
-      <div style="font-size:12px;color:var(--gold);">Try →</div>
-    </a>
-  </div>
-  <div style="text-align:center;font-size:11px;color:var(--text-dim);padding:4px;">Ad · Help us keep this guide free</div>
-</div>
-
-<footer>
-  <div class="links"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="elements.html">Elements</a><a href="abyss.html">Abyss</a><a href="weapons.html">Weapons</a><a href="bugs.html">🐛 Bugs</a><a href="artifacts.html">Artifacts</a><a href="materials.html">Materials</a><a href="download.html">📥 Download</a><a href="beginner.html">Guides</a><a href="login.html">Login</a><a href="membership.html">Membership</a><a href="forum.html">Forum</a><a href="codes.html">Codes</a>
-<li><a href="resin-timer.html">⏳ Resin</a></li></div>
-  <p>This website is not affiliated with miHoYo / HoYoverse.</p><p>All game artwork, visual assets, and intellectual property are the property of their respective owners. This is a fan-made guide website and is not affiliated with HoYoverse.</p>
-  <p style="margin-top:4px;">© 2026 Genshin Guide</p>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><a href="download.html">Download</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div>  <div class="container" style="text-align:center;padding-top:8px;font-size:13px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
 </footer>
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e6f9bb41564ccead265168e47540c9"}'></script>
-<!-- End Cloudflare Web Analytics -->
-  <!-- ===== Membership Check ===== -->
-  <script>
-  (async function() {
-    try {
-      const r = await fetch('/api/me');
-      const d = await r.json();
-      document.querySelectorAll('.member-only').forEach(el => {
-        el.style.display = d.member ? '' : 'none';
-      });
-      document.querySelectorAll('.guest-only').forEach(el => {
-        el.style.display = !d.member ? '' : 'none';
-      });
-    } catch(e) {}
-  })();
-  </script>
-    <script>
-    (function(){
-      var bgm=new Audio("/ys_bgm.mp3");bgm.loop=true;var mp=false;
-      setInterval(function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)},1000);
-      window.addEventListener("beforeunload",function(){if(mp&&!bgm.paused)localStorage.setItem("bgm_time",bgm.currentTime)});
-      initMusic=function(){var s=localStorage.getItem("bgm_playing");var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;if(s==="true")toggleMusic()};
-      toggleMusic=function(){var btn=document.getElementById("musicBtn");if(mp){bgm.pause();mp=false;if(btn){btn.classList.remove("playing");btn.textContent="♪"}localStorage.setItem("bgm_playing","false")}else{var t=parseFloat(localStorage.getItem("bgm_time")||"0");if(t>0&&t<bgm.duration)bgm.currentTime=t;bgm.play().then(function(){mp=true;if(btn){btn.classList.add("playing");btn.textContent="♫"}localStorage.setItem("bgm_playing","true")}).catch(function(e){console.log("BGM autoplay blocked:",e)})}};
-      document.addEventListener("click",function o(){if(typeof initMusic==="function")initMusic();document.removeEventListener("click",o)},{once:true});
-    })();
-    </script>
-<script>(function(s){s.dataset.zone='11277266',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
+<script type="text/javascript">
+var infolinks_pid = 3446501;
+var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </body>
 </html>
