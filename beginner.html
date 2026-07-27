@@ -45,6 +45,13 @@
     .guide-card ul li::before{content:'🥚';position:absolute;left:-4px;font-size:12px}
     .highlight-green{background:rgba(76,175,80,0.06);border-left:3px solid #4CAF50;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text-dim)}
     .highlight-pink{background:rgba(255,107,157,0.06);border-left:3px solid var(--pink);border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text-dim)}
+
+    .next-steps{background:var(--bg-card);border-radius:24px;padding:22px 24px;margin:24px auto;box-shadow:var(--shadow)}
+    .next-steps h2{font-size:20px;color:var(--pink);margin-bottom:8px}
+    .next-steps p{font-size:14px;color:var(--text-dim);margin-bottom:12px}
+    .next-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+    .next-grid a{display:block;padding:14px;border-radius:16px;background:rgba(255,107,157,.07);font-size:14px;font-weight:800}
+    .next-grid span{display:block;color:var(--text-dim);font-size:12px;font-weight:600;margin-top:4px}
     footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
     footer .container{max-width:1100px;margin:0 auto}
     .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
@@ -77,7 +84,7 @@ gtag("config", "G-497248KSLQ");
 </head>
 <body>
       <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
-<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="blog/index.html">Blog</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;">🔍</a></nav></div></header>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;">🔍</a></nav></div></header>
 <div class="page-header"><h1>🎮 Beginner's Guide</h1><p>New to Eggy Party? This comprehensive guide covers everything from download to your first win.</p></div>
 
 <section class="container">
@@ -406,6 +413,18 @@ gtag("config", "G-497248KSLQ");
     
     <div class="highlight-green"><strong>💡 Tip:</strong> After changing graphics settings, play 2-3 casual matches to ensure everything feels smooth. Never change settings right before a ranked match!</div>
   </div>
+  <div class="next-steps">
+    <h2>Next Steps After This Guide</h2>
+    <p>Keep visitors moving through the core Eggy Wiki pages after they finish the beginner guide.</p>
+    <div class="next-grid">
+      <a href="characters.html">Choose a character<span>Compare eggs and abilities</span></a>
+      <a href="maps.html">Learn maps<span>Shortcuts and survival tips</span></a>
+      <a href="codes.html">Claim codes<span>Free gems and rewards</span></a>
+      <a href="tierlist.html">Check tier list<span>Best picks by mode</span></a>
+      <a href="forum.html">Ask the forum<span>Share questions and tips</span></a>
+    </div>
+  </div>
+
 </section>
 
 <!-- ===== Game Boosters ===== -->
@@ -432,10 +451,24 @@ gtag("config", "G-497248KSLQ");
   <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
 </div>
 
-<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><a href="download.html">Download</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div>  <div class="container" style="text-align:center;padding-top:8px;font-size:13px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
+<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div>  <div class="container" style="text-align:center;padding-top:8px;font-size:13px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
 </footer>
 <audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
-<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
+<script>
+function tm() {
+  const audio = document.getElementById('bgMusic');
+  const button = document.getElementById('musicBtn');
+  if (audio.paused) {
+    audio.play().then(() => button.classList.add('playing')).catch(e => {
+      console.log(e);
+      alert('Click anywhere first');
+    });
+  } else {
+    audio.pause();
+    button.classList.remove('playing');
+  }
+}
+</script>
 <script type="text/javascript">
 var infolinks_pid = 3446501;
 var infolinks_wsid = 0;
