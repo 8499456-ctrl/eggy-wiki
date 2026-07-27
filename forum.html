@@ -1,335 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWNKEBXX68"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GWNKEBXX68');
-</script>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>(function(s){s.dataset.zone="11277266",s.src="https://nap5k.com/tag.min.js"})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement("script")))</script>
-  <title>Forum — Eggy Wiki Community</title>
-  <meta name="description" content="Eggy Party community forum — discuss strategies, share tips, and connect with other players.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum - Eggy Wiki Community</title>
+  <meta name="description" content="Eggy Party community forum with Google login. Share tips, ask questions, and talk with other Eggy Party players.">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWNKEBXX68"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GWNKEBXX68');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-497248KSLQ");
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5558231572373849" crossorigin="anonymous"></script>
+  <script>(function(s){s.dataset.zone="11277266",s.src="https://nap5k.com/tag.min.js"})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement("script")))</script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--pink:#FF6B9D;--pink-dark:#E85382;--yellow:#FFD93D;--blue:#6BCBFF;--green:#4CAF50;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--shadow:0 4px 24px rgba(255,107,157,0.08);--border:#FFE0EC;--radius:24px}
-    html{scroll-behavior:smooth}
-    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-    a{color:var(--pink);text-decoration:none}a:hover{color:var(--pink-dark)}
-    header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
-    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-    .logo{font-size:22px;font-weight:800;color:var(--gold);text-shadow:0 2px 8px rgba(0,0,0,0.1);background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.logo span{color:var(--gold-light);-webkit-text-fill-color:var(--gold-light)}
-    nav{display:flex;gap:6px;flex-wrap:wrap}
-    nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25);color:#fff}
-    .container{max-width:850px;margin:0 auto;padding:0 24px}
-    .page-header{padding:32px 0 16px;text-align:center}
-    .page-header h1{font-size:30px;font-weight:800;color:var(--pink);margin-bottom:4px}
-    .page-header p{font-size:15px;color:var(--text-dim)}
-    .forum-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:20px}
-    .forum-nav a{padding:10px 20px;border-radius:30px;font-size:14px;font-weight:700;transition:all .2s}
-    .forum-nav a.active{background:var(--pink);color:#fff}
-    .forum-nav a:not(.active){background:var(--bg-card);color:var(--text-dim);box-shadow:var(--shadow)}
-    .forum-nav a:not(.active):hover{background:var(--pink);color:#fff}
-    .thread-card{background:var(--bg-card);border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow);margin-bottom:10px;display:flex;align-items:flex-start;gap:14px;transition:all .2s;text-decoration:none!important;color:inherit!important}
-    .thread-card:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(255,107,157,0.12)}
-    .thread-icon{font-size:28px;flex-shrink:0;margin-top:2px}
-    .thread-body{flex:1;min-width:0}
-    .thread-body h3{font-size:16px;color:var(--pink);margin-bottom:2px}
-    .thread-body .meta{font-size:12px;color:var(--text-dim);margin-bottom:4px}
-    .thread-body .excerpt{font-size:13px;color:var(--text-dim);line-height:1.5}
-    .thread-meta{flex-shrink:0;text-align:right;font-size:12px;color:var(--text-dim)}
-    .thread-meta .replies{display:inline-block;background:rgba(255,107,157,0.08);border-radius:12px;padding:2px 10px;font-weight:700;color:var(--pink)}
-    .category-tag{display:inline-block;padding:2px 10px;border-radius:8px;font-size:11px;font-weight:700}
-    .cat-general{background:var(--blue);color:#fff}.cat-guide{background:var(--green);color:#fff}.cat-bug{background:#E74C3C;color:#fff}.cat-discuss{background:var(--yellow);color:#333}.cat-fan{background:#9B59B6;color:#fff}
-    .pagination{display:flex;justify-content:center;gap:6px;margin:24px 0}
-    .pagination a{padding:8px 14px;border-radius:10px;font-size:14px;background:var(--bg-card);box-shadow:var(--shadow)}.pagination a.active{background:var(--pink);color:#fff}
-    .pagination a:not(.active){color:var(--text-dim)}
-    .rules-box{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:20px;font-size:14px;line-height:1.9}
-    .rules-box h2{font-size:18px;color:var(--pink);margin-bottom:8px}
-    .rules-box li{color:var(--text-dim);margin-left:20px;margin-bottom:4px}
-    footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff;text-align:center}
-    footer .container{max-width:1100px;margin:0 auto}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;justify-content:center}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
-    .footer-bottom{font-size:13px;opacity:0.7}
-    @media(max-width:640px){.thread-card{flex-direction:column;gap:6px}.thread-meta{text-align:left}}
-      .music-btn {
-      background: #FF6B9D; border: 2px solid #FF6B9D;
-      color: #fff; font-size: 20px;
-      width: 38px; height: 38px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all .25s;
-      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
-    }
-    .music-btn:hover { background: #E85382; border-color: #E85382; transform: scale(1.05); }
-    .music-btn.playing { 
-      background: #4CAF50; border-color: #4CAF50; color: #fff;
-      box-shadow: 0 0 12px rgba(76,175,80,0.4);
-    }
-
-        .share-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 24px;max-width:1100px;margin:0 auto;flex-wrap:wrap}.share-bar span{font-size:14px;color:var(--text-dim);font-weight:600}.share-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:13px;font-weight:700;color:#fff;text-decoration:none;transition:all .2s}.share-btn:hover{transform:scale(1.1);color:#fff}.share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);border:none;cursor:pointer;font-size:16px;padding:0;color:#fff}
-</style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-497248KSLQ");
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5558231572373849" crossorigin="anonymous"></script>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --pink:#FF6B9D; --pink-dark:#E85382; --yellow:#FFD93D; --blue:#6BCBFF; --green:#4CAF50; --bg:#FFF5F8; --bg-card:#fff; --text:#2D2D2D; --text-dim:#777; --border:#FFE0EC; --shadow:0 4px 24px rgba(255,107,157,.1); }
+    body { font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    a { color:var(--pink); text-decoration:none; } a:hover { color:var(--pink-dark); }
+    header { background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue)); padding:14px 24px; position:sticky; top:0; z-index:100; box-shadow:0 2px 16px rgba(255,107,157,.2); }
+    .header-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .logo { font-size:22px; font-weight:800; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.12); } .logo span { color:var(--yellow); }
+    nav { display:flex; gap:6px; flex-wrap:wrap; align-items:center; } nav a { color:#fff; padding:7px 13px; border-radius:30px; font-size:13px; font-weight:700; } nav a:hover, nav a.active { background:rgba(255,255,255,.25); color:#fff; }
+    .music-btn { background:#FF6B9D; border:2px solid #FF6B9D; color:#fff; font-size:18px; width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; transition:all .25s; box-shadow:0 2px 8px rgba(255,107,157,.3); }
+    .music-btn:hover { background:#E85382; border-color:#E85382; transform:scale(1.05); } .music-btn.playing { background:#4CAF50; border-color:#4CAF50; }
+    .hero { padding:44px 24px 30px; text-align:center; background:linear-gradient(135deg,rgba(255,240,245,.95),rgba(255,248,225,.92),rgba(240,249,255,.94)), url('images/eggy_hero1.jpg') center/cover no-repeat; }
+    .hero h1 { color:var(--pink); font-size:34px; font-weight:800; margin-bottom:8px; } .hero p { color:var(--text-dim); max-width:620px; margin:0 auto; font-size:16px; }
+    .container { max-width:920px; margin:0 auto; padding:24px; }
+    .toolbar { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:18px; }
+    .user-box, .composer, .post-card, .rules-box { background:var(--bg-card); border:1px solid var(--border); border-radius:20px; box-shadow:var(--shadow); }
+    .user-box { display:flex; align-items:center; gap:12px; padding:12px 14px; min-height:58px; }
+    .avatar { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--pink),var(--blue)); display:inline-flex; align-items:center; justify-content:center; color:#fff; font-weight:800; overflow:hidden; flex:0 0 auto; } .avatar img { width:100%; height:100%; object-fit:cover; display:block; }
+    .user-meta strong { display:block; font-size:14px; } .user-meta span { color:var(--text-dim); font-size:12px; }
+    button { border:none; border-radius:30px; padding:10px 18px; font-family:inherit; font-weight:800; cursor:pointer; transition:all .2s; } button:hover { transform:translateY(-1px); }
+    .btn-primary { background:var(--pink); color:#fff; box-shadow:0 4px 16px rgba(255,107,157,.22); } .btn-danger { background:#fff; color:#c0392b; border:2px solid #ffd6d0; }
+    .composer { padding:18px; margin-bottom:20px; } .composer h2, .rules-box h2 { color:var(--pink); font-size:20px; margin-bottom:10px; } .composer form { display:grid; gap:10px; }
+    input, textarea { width:100%; border:1px solid var(--border); border-radius:14px; padding:12px 14px; font:inherit; background:#fff; color:var(--text); outline:none; } input:focus, textarea:focus { border-color:var(--pink); box-shadow:0 0 0 3px rgba(255,107,157,.12); } textarea { min-height:118px; resize:vertical; }
+    .rules-box { padding:16px 18px; margin-bottom:18px; color:var(--text-dim); font-size:14px; } .rules-box ul { margin-left:20px; }
+    .posts-title { font-size:22px; color:var(--pink); margin:20px 0 12px; } .post-list { display:grid; gap:12px; } .post-card { padding:16px 18px; }
+    .post-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; } .post-author strong { display:block; color:var(--pink); font-size:14px; } .post-author span { color:var(--text-dim); font-size:12px; }
+    .post-card h3 { font-size:18px; margin-bottom:6px; color:var(--text); } .post-card p { color:var(--text-dim); white-space:pre-wrap; } .empty, .status { color:var(--text-dim); text-align:center; padding:20px; }
+    .share-bar { display:flex; align-items:center; justify-content:center; gap:10px; padding:20px 24px; max-width:1100px; margin:0 auto; flex-wrap:wrap; } .share-bar span { font-size:14px; color:var(--text-dim); font-weight:700; }
+    .share-btn { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; font-size:13px; font-weight:800; color:#fff; text-decoration:none; } .share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);padding:0}
+    footer { background:linear-gradient(135deg,var(--pink),var(--blue)); padding:28px 24px 20px; margin-top:24px; color:#fff; text-align:center; } .footer-links { display:flex; gap:18px; flex-wrap:wrap; justify-content:center; margin-bottom:14px; } .footer-links a { color:rgba(255,255,255,.85); font-size:14px; } .footer-links a:hover { color:#fff; } .footer-bottom { font-size:13px; opacity:.75; }
+    @media (max-width:640px) { .hero h1{font-size:27px}.container{padding:18px 14px}.toolbar{align-items:stretch}.user-box{width:100%}nav{justify-content:center} }
+  </style>
 </head>
 <body>
-      <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
-<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="seasons.html">Seasons</a><a href="leaderboard.html">Rankings</a><a href="leaderboard.html">Rankings</a><a href="achievements.html">Achievements</a><a href="items.html">Items</a><a href="forum.html">Forum</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="bugs.html">🐛 Bugs</a><a href="search.html" style="font-size:15px;">🔍</a></nav></div></header>
-<div class="container">
-  <div class="page-header">
-    <h1>💬 Community Forum</h1>
-    <p>Discuss strategies, share tips, and connect with Eggy Party players worldwide</p>
-  </div>
-
-  <div class="forum-nav">
-    <a href="#" class="active">📋 All</a>
-    <a href="#">🔥 Trending</a>
-    <a href="#">🆕 Latest</a>
-    <a href="#">⭐ Guides</a>
-    <a href="#">🎨 Fan Art</a>
-  </div>
-
-  <div class="rules-box">
-    <h2>📜 Forum Rules</h2>
-    <ol>
-      <li>Be respectful — everyone started as a beginner</li>
-      <li>No spam, self-promotion, or cheating discussions</li>
-      <li>Search before posting — your question may already be answered</li>
-      <li>Keep posts in the appropriate category</li>
-      <li>No NSFW content — this is a family-friendly community</li>
-    </ol>
-  </div>
-
-  <a href="thread.html?id=season4-discussion" class="thread-card">
-    <span class="thread-icon">🥚</span>
-    <div class="thread-body">
-      <h3>Season 4 Discussion Thread — What do you think so far?</h3>
-      <div class="meta">
-        <span class="category-tag cat-discuss">Discussion</span>
-        <span> by <strong>Wiki</strong> · 3 hours ago</span>
-      </div>
-      <div class="excerpt">The new Candy Arena changes are interesting! The rotating platforms feel faster this season. Anyone else noticed? Also, the new Dragon Egg rerun — finally!...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">12 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 234</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=best-character" class="thread-card">
-    <span class="thread-icon">🐰</span>
-    <div class="thread-body">
-      <h3>How to unlock Bunny Egg quickly? Need tips!</h3>
-      <div class="meta">
-        <span class="category-tag cat-guide">Guide</span>
-        <span> by <strong>NewPlayer99</strong> · yesterday</span>
-      </div>
-      <div class="excerpt">I've been playing for 3 days but still haven't reached Level 15. Any tips on leveling up faster? I really want Bunny Egg for the jump boost on Volcano Rush...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">8 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 156</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=penguin-op" class="thread-card">
-    <span class="thread-icon">🐼</span>
-    <div class="thread-body">
-      <h3>Panda Egg is underrated — here's why</h3>
-      <div class="meta">
-        <span class="category-tag cat-general">General</span>
-        <span> by <strong>EggMaster</strong> · 2 days ago</span>
-      </div>
-      <div class="excerpt">Everyone sleeps on Panda Egg because it's slow. But in Team mode, a good Panda player is literally unkillable. I went on a 15-win streak yesterday playing flag carrier...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">24 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 412</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=bug-candy-arena" class="thread-card">
-    <span class="thread-icon">🐛</span>
-    <div class="thread-body">
-      <h3>[Bug] Frozen Peak ice cave shortcut not working?</h3>
-      <div class="meta">
-        <span class="category-tag cat-bug">Bug Report</span>
-        <span> by <strong>SpeedrunnerAlex</strong> · 3 days ago</span>
-      </div>
-      <div class="excerpt">After the latest patch (v2.4.1), I can't get through the ice cave wall crack on Frozen Peak. I've tried from both sides. Is this a known issue or am I missing something?...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">6 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 89</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=fanart-showcase" class="thread-card">
-    <span class="thread-icon">🎨</span>
-    <div class="thread-body">
-      <h3>Fan art: My Dragon Egg OC — "Blaze"</h3>
-      <div class="meta">
-        <span class="category-tag cat-fan">Fan Art</span>
-        <span> by <strong>ArtzyEggzy</strong> · 4 days ago</span>
-      </div>
-      <div class="excerpt">Drew my Dragon Egg OC! I call him Blaze. He has a little fire crown and a sassy expression. Let me know what you think! (Credit if reposting please)...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">31 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 567</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=team-voice-chat" class="thread-card">
-    <span class="thread-icon">🎵</span>
-    <div class="thread-body">
-      <h3>What's your favorite Eggy Party soundtrack?</h3>
-      <div class="meta">
-        <span class="category-tag cat-discuss">Discussion</span>
-        <span> by <strong>MusicLover</strong> · 5 days ago</span>
-      </div>
-      <div class="excerpt">The Candy Arena theme is such a banger. I catch myself humming it while I'm at work. What's everyone else's favorite track? Also please add a jukebox feature NetEase!...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">18 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 298</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=free-gems-guide" class="thread-card">
-    <span class="thread-icon">📚</span>
-    <div class="thread-body">
-      <h3>Complete Beginner FAQ — Read before posting!</h3>
-      <div class="meta">
-        <span class="category-tag cat-guide">Guide</span>
-        <span> by <strong>Wiki</strong> · pinned</span>
-      </div>
-      <div class="excerpt">Welcome to Eggy Party! This thread covers the most frequently asked questions: How to unlock characters, best starter character, what to spend gems on, how to get free outfits, and more...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">Pinned</div>
-      <div style="margin-top:4px;font-size:11px;">📌</div>
-    </div>
-  </a>
-
-  <a href="thread.html?id=frozen-peak-speedrun" class="thread-card">
-    <span class="thread-icon">❄️</span>
-    <div class="thread-body">
-      <h3>Frozen Peak speedrun competition — submit your times!</h3>
-      <div class="meta">
-        <span class="category-tag cat-general">General</span>
-        <span> by <strong>SpeedrunComm</strong> · 1 week ago</span>
-      </div>
-      <div class="excerpt">We're hosting a Frozen Peak speedrun challenge! Current record is 1:42.32 by FoxEggPro. Can you beat it? Submit your video recording in this thread. Winner gets bragging rights + a shoutout!...</div>
-    </div>
-    <div class="thread-meta">
-      <div class="replies">43 replies</div>
-      <div style="margin-top:4px;font-size:11px;">👁️ 892</div>
-    </div>
-  </a>
-
-  <div class="pagination">
-    <a href="#" class="active">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">→</a>
-  </div>
-  <!-- ===== Giscus Comments ===== -->
-  <div style="max-width:850px;margin:0 auto 30px;padding:0 24px;">
-   <h2 style="font-size:20px;color:var(--pink);margin-bottom:16px;">💬 Community Posts</h2>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<div class="auth-panel" style="background:#151b23;border:1px solid #21262d;border-radius:12px;padding:16px 20px;margin-bottom:14px;">
-  <strong style="color:#ffd166;">Community Login</strong>
-  <p id="authStatus" style="color:#8b949e;margin:8px 0;">Sign in with Google to post in the Eggy Party forum.</p>
-  <button id="googleLoginBtn" style="padding:10px 18px;border-radius:8px;border:0;background:#ffd166;color:#111827;font-weight:700;cursor:pointer;">Continue with Google</button>
-  <button id="logoutBtn" style="display:none;padding:10px 18px;border-radius:8px;border:1px solid #21262d;background:#1c2333;color:#e6edf3;font-weight:700;cursor:pointer;">Sign out</button>
-</div>
-
-<div class="thread" id="postBox" style="display:none;">
-  <div class="thread-title">Create a New Post</div>
-  <input id="postTitle" placeholder="Post title" style="width:100%;margin:10px 0;padding:10px;border-radius:8px;border:1px solid #21262d;background:#0f141c;color:#e6edf3;">
-  <textarea id="postContent" placeholder="Write your post..." style="width:100%;min-height:110px;padding:10px;border-radius:8px;border:1px solid #21262d;background:#0f141c;color:#e6edf3;"></textarea>
-  <button id="publishPostBtn" class="btn-new" style="margin-top:10px;">Publish Post</button>
-  <p id="postStatus" style="color:#8b949e;margin-top:8px;"></p>
-</div>
-
-<div id="supabasePosts"></div>
-
-<script>
-const SUPABASE_URL = 'https://rlesoghxrftwdlucqcga.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_mh_KVX1YXG74zpomCR7KaA_cmVxx6mg';
-const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-let currentUser = null;
-
-function esc(v){return String(v || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function authorName(u){return u?.user_metadata?.full_name || u?.user_metadata?.name || u?.email || 'Player';}
-
-async function refreshAuth(){
-  const { data } = await sb.auth.getSession();
-  currentUser = data.session?.user || null;
-  document.getElementById('googleLoginBtn').style.display = currentUser ? 'none' : '';
-  document.getElementById('logoutBtn').style.display = currentUser ? '' : 'none';
-  document.getElementById('postBox').style.display = currentUser ? '' : 'none';
-  document.getElementById('authStatus').textContent = currentUser ? 'Signed in as ' + authorName(currentUser) : 'Sign in with Google to post in the Eggy Party forum.';
-}
-
-async function loadPosts(){
-  const box = document.getElementById('supabasePosts');
-  const { data, error } = await sb.from('eggy_forum_posts').select('*').order('created_at',{ascending:false}).limit(20);
-  if(error){ box.innerHTML = '<p style="color:#d9604a;">Could not load posts: '+esc(error.message)+'</p>'; return; }
-  box.innerHTML = (data || []).map(p => `
-    <div class="thread">
-      <div class="thread-title">${esc(p.title)}</div>
-      <div class="thread-meta"><span>by: <span class="author">${esc(p.author_name)}</span></span><span>${new Date(p.created_at).toLocaleString()}</span></div>
-      <div class="thread-tags"><span class="tag">${esc(p.tag || 'Discussion')}</span></div>
-      <div class="latest-reply">${esc(p.content)}</div>
-    </div>
-  `).join('');
-}
-
-document.getElementById('googleLoginBtn').onclick = () => sb.auth.signInWithOAuth({
-  provider:'google',
-  options:{ redirectTo: window.location.origin + window.location.pathname }
-});
-document.getElementById('logoutBtn').onclick = async () => { await sb.auth.signOut(); refreshAuth(); };
-document.getElementById('publishPostBtn').onclick = async () => {
-  const title = document.getElementById('postTitle').value.trim();
-  const content = document.getElementById('postContent').value.trim();
-  if(!title || !content) return;
-  const { error } = await sb.from('eggy_forum_posts').insert({ title, content, tag:'Discussion', author_name:authorName(currentUser) });
-  document.getElementById('postStatus').textContent = error ? error.message : 'Post published.';
-  if(!error){ document.getElementById('postTitle').value=''; document.getElementById('postContent').value=''; loadPosts(); }
-};
-sb.auth.onAuthStateChange(refreshAuth);
-refreshAuth();
-loadPosts();
-</script>
-     </div>
-</div>
-<div class="share-bar"><span>Share:</span><a href="https://twitter.com/intent/tweet?url=https://eggywiki.com&text=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-tw">X</a><a href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com" target="_blank" rel="noopener nofollow" class="share-btn share-fb">f</a><a href="https://www.reddit.com/submit?url=https://eggywiki.com&title=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-rd">R</a><button onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent=u2705).catch(()=>{})" class="share-btn share-copy" title="Copy link">U0001f517</button></div>
-<footer><div class="container"><div class="footer-links"><a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="seasons.html">Seasons</a><a href="leaderboard.html">Rankings</a><a href="leaderboard.html">Rankings</a><a href="achievements.html">Achievements</a><a href="items.html">Items</a><a href="forum.html">Forum</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div>  <div class="container" style="text-align:center;padding-top:8px;font-size:13px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
-</footer>
-<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
-<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
-<audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
-<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
-<script type="text/javascript">
-var infolinks_pid = 3446501;
-var infolinks_wsid = 0;
-</script>
-<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+  <header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a><a href="gallery.html">Gallery</a><a href="forum.html" class="active">Forum</a><a href="search.html">Search</a><button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">♪</button></nav></div></header>
+  <section class="hero"><h1>💬 Eggy Party Forum</h1><p>Log in with Google to post. Share tips, ask questions, and talk about maps, outfits, codes, and events.</p></section>
+  <main class="container">
+    <div class="toolbar"><div class="user-box" id="userBox"><span class="avatar">?</span><div class="user-meta"><strong>Not signed in</strong><span>Use Google login to create a post.</span></div></div><div><button class="btn-primary" id="loginBtn">Sign in with Google</button><button class="btn-danger" id="logoutBtn" style="display:none;">Sign out</button></div></div>
+    <section class="rules-box"><h2>Forum Rules</h2><ul><li>Be friendly and helpful to new players.</li><li>No spam, scams, cheating tools, or unsafe links.</li><li>Keep posts about Eggy Party, guides, codes, events, maps, and outfits.</li></ul></section>
+    <section class="composer" id="composer" style="display:none;"><h2>Create a New Post</h2><form id="postForm"><input id="postTitle" maxlength="120" placeholder="Post title" required><textarea id="postContent" maxlength="3000" placeholder="Write your post..." required></textarea><button class="btn-primary" type="submit">Publish Post</button></form></section>
+    <div class="status" id="status">Loading forum...</div><h2 class="posts-title">Latest Posts</h2><section class="post-list" id="postList"></section>
+  </main>
+  <div class="share-bar"><span>Share:</span><a href="https://twitter.com/intent/tweet?url=https://eggywiki.com/forum.html&text=Eggy+Wiki+Forum" target="_blank" rel="noopener nofollow" class="share-btn share-tw">X</a><a href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com/forum.html" target="_blank" rel="noopener nofollow" class="share-btn share-fb">f</a><a href="https://www.reddit.com/submit?url=https://eggywiki.com/forum.html&title=Eggy+Wiki+Forum" target="_blank" rel="noopener nofollow" class="share-btn share-rd">R</a><button onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='✓').catch(()=>{})" class="share-btn share-copy" title="Copy link">🔗</button></div>
+  <footer><div class="footer-links"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="codes.html">Codes</a><a href="download.html">Download</a><a href="gallery.html">Gallery</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div><div style="padding-top:8px;font-size:13px;">Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:#fff;font-weight:800;">Genshin Impact Guide</a></div></footer>
+  <audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+  <script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(()=>{})}else{a.pause();b.classList.remove('playing')}}</script>
+  <script>
+    const SUPABASE_URL = 'https://rlesoghxrftwdlucqcga.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_mh_KVX1YXG74zpomCR7KaA_cmVxx6mg';
+    const TABLE_NAME = 'eggy_forum_posts';
+    const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    const loginBtn = document.getElementById('loginBtn'), logoutBtn = document.getElementById('logoutBtn'), composer = document.getElementById('composer'), userBox = document.getElementById('userBox'), statusEl = document.getElementById('status'), postList = document.getElementById('postList'), postForm = document.getElementById('postForm');
+    let currentUser = null;
+    function escapeHtml(v){return String(v||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;')}
+    function formatDate(v){return v ? new Date(v).toLocaleString([], {year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}) : 'just now'}
+    function profileFromUser(u){const m=u&&u.user_metadata?u.user_metadata:{};return {name:m.full_name||m.name||u.email||'Eggy Player', avatar:m.avatar_url||m.picture||'', email:u.email||''}}
+    function renderUser(u){currentUser=u;if(!u){userBox.innerHTML='<span class="avatar">?</span><div class="user-meta"><strong>Not signed in</strong><span>Use Google login to create a post.</span></div>';loginBtn.style.display='';logoutBtn.style.display='none';composer.style.display='none';return}const p=profileFromUser(u), av=p.avatar?`<img src="${escapeHtml(p.avatar)}" alt="">`:escapeHtml(p.name.slice(0,1).toUpperCase());userBox.innerHTML=`<span class="avatar">${av}</span><div class="user-meta"><strong>${escapeHtml(p.name)}</strong><span>${escapeHtml(p.email)}</span></div>`;loginBtn.style.display='none';logoutBtn.style.display='';composer.style.display=''}
+    function renderPosts(posts){statusEl.textContent='';if(!posts||!posts.length){postList.innerHTML='<div class="empty">No posts yet. Sign in with Google and start the first Eggy Party discussion.</div>';return}postList.innerHTML=posts.map(post=>{const name=post.author_name||post.username||'Eggy Player', av=post.avatar_url?`<img src="${escapeHtml(post.avatar_url)}" alt="">`:escapeHtml(String(name).slice(0,1).toUpperCase());return `<article class="post-card"><div class="post-head"><span class="avatar">${av}</span><div class="post-author"><strong>${escapeHtml(name)}</strong><span>${formatDate(post.created_at)}</span></div></div><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.content)}</p></article>`}).join('')}
+    async function loadPosts(){statusEl.textContent='Loading forum...';const {data,error}=await client.from(TABLE_NAME).select('*').order('created_at',{ascending:false}).limit(50);if(error){console.error(error);statusEl.textContent='Forum loading failed. Please check the Supabase table settings.';return}renderPosts(data||[])}
+    loginBtn.addEventListener('click', async()=>{await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:window.location.origin+window.location.pathname}})});
+    logoutBtn.addEventListener('click', async()=>{await client.auth.signOut();renderUser(null);await loadPosts()});
+    postForm.addEventListener('submit', async e=>{e.preventDefault();if(!currentUser)return;const title=document.getElementById('postTitle').value.trim(), content=document.getElementById('postContent').value.trim();if(!title||!content)return;const p=profileFromUser(currentUser);statusEl.textContent='Publishing...';const {error}=await client.from(TABLE_NAME).insert({title,content,author_name:p.name,avatar_url:p.avatar,user_id:currentUser.id});if(error){console.error(error);statusEl.textContent='Post failed. Please check table permissions.';return}postForm.reset();await loadPosts()});
+    client.auth.onAuthStateChange((_event,session)=>renderUser(session&&session.user?session.user:null));
+    (async function(){const {data}=await client.auth.getSession();renderUser(data&&data.session?data.session.user:null);await loadPosts()})();
+  </script>
+  <script type="text/javascript">var infolinks_pid=3446501;var infolinks_wsid=0;</script><script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"abb76d96c7dc43f5bba5ff4c4387a7fa"}'></script>
 </body>
 </html>
