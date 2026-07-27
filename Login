@@ -443,7 +443,8 @@ gtag("config", "G-497248KSLQ");
   <a href="videos.html"><span class="emoji">🎬</span>Videos</a><a href="seasons.html"><span class="emoji">📅</span>Seasons</a><a href="achievements.html"><span class="emoji">🏅</span>Achievements</a><a href="leaderboard.html"><span class="emoji">🏆</span>Rankings</a><a href="items.html"><span class="emoji">📦</span>Items</a><a href="blog/index.html"><span class="emoji">📝</span>Blog</a>
   <a href="download.html"><span class="emoji">📥</span>Download</a>
   <a href="tierlist.html"><span class="emoji">🏆</span>Tier List</a>
-  <a href="gallery.html"><span class="emoji">🖼️</span>Gallery</a>
+  <a href="gall
+    ery.html"><span class="emoji">🖼️</span>Gallery</a>
   <a href="forum.html"><span class="emoji">💬</span>Forum</a>
   <a href="about.html"><span class="emoji">ℹ️</span>About</a>
   <a href="faq.html"><span class="emoji">❓</span>FAQ</a>
