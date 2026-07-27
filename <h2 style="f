@@ -248,8 +248,7 @@ gtag("config", "G-497248KSLQ");
   </div>
   <!-- ===== Giscus Comments ===== -->
   <div style="max-width:850px;margin:0 auto 30px;padding:0 24px;">
-    <h2 style="font-size:20px;color:var(--pink);margin-bottom:16px;">💬 Visitor Comments</h2>
-    <div id="giscus-comments"></div>
+   <h2 style="font-size:20px;color:var(--pink);margin-bottom:16px;">💬 Community Posts</h2>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <div class="auth-panel" style="background:#151b23;border:1px solid #21262d;border-radius:12px;padding:16px 20px;margin-bottom:14px;">
