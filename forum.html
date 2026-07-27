@@ -71,12 +71,23 @@
   <div class="share-bar"><span>Share:</span><a href="https://twitter.com/intent/tweet?url=https://eggywiki.com/forum.html&text=Eggy+Wiki+Forum" target="_blank" rel="noopener nofollow" class="share-btn share-tw">X</a><a href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com/forum.html" target="_blank" rel="noopener nofollow" class="share-btn share-fb">f</a><a href="https://www.reddit.com/submit?url=https://eggywiki.com/forum.html&title=Eggy+Wiki+Forum" target="_blank" rel="noopener nofollow" class="share-btn share-rd">R</a><button onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='✓').catch(()=>{})" class="share-btn share-copy" title="Copy link">🔗</button></div>
   <footer><div class="footer-links"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="maps.html">Maps</a><a href="codes.html">Codes</a><a href="download.html">Download</a><a href="gallery.html">Gallery</a><a href="forum.html">Forum</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div><div style="padding-top:8px;font-size:13px;">Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:#fff;font-weight:800;">Genshin Impact Guide</a></div></footer>
   <audio id="bgMusic" src="audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
-  <script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(()=>{})}else{a.pause();b.classList.remove('playing')}}</script>
+  <script>
+    function tm() {
+      const audio = document.getElementById('bgMusic');
+      const button = document.getElementById('musicBtn');
+      if (audio.paused) {
+        audio.play().then(() => button.classList.add('playing')).catch(() => {});
+      } else {
+        audio.pause();
+        button.classList.remove('playing');
+      }
+    }
+  </script>
   <script>
     const SUPABASE_URL = 'https://rlesoghxrftwdlucqcga.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_mh_KVX1YXG74zpomCR7KaA_cmVxx6mg';
     const TABLE_NAME = 'eggy_forum_posts';
-    const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { flowType: 'implicit', detectSessionInUrl: true, persistSession: true, autoRefreshToken: true } });
     const loginBtn = document.getElementById('loginBtn'), logoutBtn = document.getElementById('logoutBtn'), composer = document.getElementById('composer'), userBox = document.getElementById('userBox'), statusEl = document.getElementById('status'), postList = document.getElementById('postList'), postForm = document.getElementById('postForm');
     let currentUser = null;
     function escapeHtml(v){return String(v||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;')}
@@ -85,7 +96,7 @@
     function renderUser(u){currentUser=u;if(!u){userBox.innerHTML='<span class="avatar">?</span><div class="user-meta"><strong>Not signed in</strong><span>Use Google login to create a post.</span></div>';loginBtn.style.display='';logoutBtn.style.display='none';composer.style.display='none';return}const p=profileFromUser(u), av=p.avatar?`<img src="${escapeHtml(p.avatar)}" alt="">`:escapeHtml(p.name.slice(0,1).toUpperCase());userBox.innerHTML=`<span class="avatar">${av}</span><div class="user-meta"><strong>${escapeHtml(p.name)}</strong><span>${escapeHtml(p.email)}</span></div>`;loginBtn.style.display='none';logoutBtn.style.display='';composer.style.display=''}
     function renderPosts(posts){statusEl.textContent='';if(!posts||!posts.length){postList.innerHTML='<div class="empty">No posts yet. Sign in with Google and start the first Eggy Party discussion.</div>';return}postList.innerHTML=posts.map(post=>{const name=post.author_name||post.username||'Eggy Player', av=post.avatar_url?`<img src="${escapeHtml(post.avatar_url)}" alt="">`:escapeHtml(String(name).slice(0,1).toUpperCase());return `<article class="post-card"><div class="post-head"><span class="avatar">${av}</span><div class="post-author"><strong>${escapeHtml(name)}</strong><span>${formatDate(post.created_at)}</span></div></div><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.content)}</p></article>`}).join('')}
     async function loadPosts(){statusEl.textContent='Loading forum...';const {data,error}=await client.from(TABLE_NAME).select('*').order('created_at',{ascending:false}).limit(50);if(error){console.error(error);statusEl.textContent='Forum loading failed. Please check the Supabase table settings.';return}renderPosts(data||[])}
-    loginBtn.addEventListener('click', async()=>{await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:'https://eggywiki.com/forum.html'}})});
+    loginBtn.addEventListener('click', async()=>{localStorage.setItem('eggy_forum_login_redirect','1');await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:'https://eggywiki.com/forum.html'}})});
     logoutBtn.addEventListener('click', async()=>{await client.auth.signOut();renderUser(null);await loadPosts()});
     postForm.addEventListener('submit', async e=>{e.preventDefault();if(!currentUser)return;const title=document.getElementById('postTitle').value.trim(), content=document.getElementById('postContent').value.trim();if(!title||!content)return;const p=profileFromUser(currentUser);statusEl.textContent='Publishing...';const {error}=await client.from(TABLE_NAME).insert({title,content,author_name:p.name,avatar_url:p.avatar,user_id:currentUser.id});if(error){console.error(error);statusEl.textContent='Post failed. Please check table permissions.';return}postForm.reset();await loadPosts()});
     client.auth.onAuthStateChange((_event,session)=>renderUser(session&&session.user?session.user:null));
