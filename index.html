@@ -1,836 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWNKEBXX68"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-GWNKEBXX68');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    (function() {
-      var hasAuthReturn = location.search.indexOf('code=') !== -1 || location.hash.indexOf('access_token=') !== -1 || location.hash.indexOf('refresh_token=') !== -1;
-      var wantsForum = localStorage.getItem('eggy_forum_login_redirect') === '1';
-      if (hasAuthReturn && wantsForum && location.pathname.indexOf('forum.html') === -1) {
-        location.replace('/forum.html' + location.search + location.hash);
-      }
-    })();
-  </script>
+</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>(function(s){s.dataset.zone="11277266",s.src="https://nap5k.com/tag.min.js"})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement("script")))</script>
-  <title>Eggy Wiki — Eggy Party Guides, Tips & Community</title>
-  <meta name="description" content="Complete Eggy Party guide. Character builds, map strategies, outfit collections, and tips to help you win — updated regularly!">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --pink: #FF6B9D;
-      --pink-light: #FF8DB5;
-      --pink-dark: #E85382;
-      --yellow: #FFD93D;
-      --yellow-light: #FFE680;
-      --blue: #6BCBFF;
-      --blue-light: #A0DDFF;
-      --bg: #FFF5F8;
-      --bg-card: #FFFFFF;
-      --bg-card-hover: #FFF0F5;
-      --text: #2D2D2D;
-      --text-dim: #888888;
-      --text-light: #AAAAAA;
-      --border: #FFE0EC;
-      --shadow: 0 4px 24px rgba(255,107,157,0.08);
-      --radius: 24px;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--pink); text-decoration: none; transition: color .2s; }
-    a:hover { color: var(--pink-dark); }
-
-    /* ===== Header ===== */
-    header {
-      background: linear-gradient(135deg, var(--pink), var(--yellow), var(--blue));
-      padding: 16px 24px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 16px rgba(255,107,157,0.2);
-    }
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      color: #fff;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .logo span { color: var(--yellow); }
-    nav { flex: 1; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-    nav a {
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: all .2s;
-    }
-    nav a:hover {
-      background: rgba(255,255,255,0.25);
-      color: #fff;
-    }
-
-    /* ===== Hero ===== */
-    .hero {
-      background: linear-gradient(135deg, rgba(255,240,245,0.92) 0%, rgba(255,248,225,0.92) 50%, rgba(240,249,255,0.92) 100%),
-                  url('images/eggy_hero1.jpg') center/cover no-repeat;
-      padding: 56px 24px 44px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--pink) 0%, transparent 70%);
-      opacity: 0.06;
-      top: -150px;
-      right: -100px;
-      transform: perspective(800px) rotateX(10deg);
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--blue) 0%, transparent 70%);
-      opacity: 0.06;
-      bottom: -100px;
-      left: -100px;
-      transform: perspective(800px) rotateX(-10deg);
-    }
-    .hero h1 {
-      font-size: 42px;
-      font-weight: 800;
-      margin-bottom: 12px;
-      position: relative;
-      text-shadow: 0 2px 10px rgba(255,107,157,0.10);
-    }
-    .hero h1 span:nth-child(1) { color: var(--pink); }
-    .hero h1 span:nth-child(2) { color: var(--yellow); }
-    .hero h1 span:nth-child(3) { color: var(--blue); }
-    .hero p {
-      font-size: 18px;
-      color: var(--text-dim);
-      max-width: 600px;
-      margin: 0 auto 32px;
-      position: relative;
-    }
-    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
-    .hero-btns a {
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 16px;
-      transition: all .2s;
-    }
-    .btn-primary {
-      background: var(--pink);
-      color: #fff !important;
-      box-shadow: 0 4px 16px rgba(255,107,157,0.3);
-    }
-    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); }
-    .btn-secondary {
-      background: #fff;
-      color: var(--pink) !important;
-      border: 2px solid var(--border);
-      border-radius: 40px;
-    }
-    .btn-secondary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(255,107,157,0.08); }
-
-    /* ===== Sections ===== */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 36px 0; }
-    .section-title {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: var(--pink);
-    }
-    .section-sub {
-      font-size: 15px;
-      color: var(--text-dim);
-      margin-bottom: 20px;
-    }
-
-    /* ===== Cards Grid ===== */
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 14px;
-    }
-    .card {
-      background: var(--bg-card);
-      border-radius: 28px;
-      padding: 20px 16px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(255,107,157,0.08), 0 1px 3px rgba(0,0,0,0.04);
-      transition: all .3s cubic-bezier(.34,1.56,.64,1);
-      cursor: pointer;
-      transform: perspective(800px) rotateX(0deg) rotateY(0deg);
-    }
-    .card:hover {
-      transform: perspective(800px) rotateX(2deg) rotateY(2deg) translateY(-6px);
-      box-shadow: 0 12px 40px rgba(255,107,157,0.15), 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .card-icon { font-size: 48px; margin-bottom: 12px; }
-    .card h3 { font-size: 18px; margin-bottom: 6px; }
-    .card p { font-size: 13px; color: var(--text-dim); }
-
-    /* ===== Featured Content ===== */
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .featured-card {
-      background: var(--bg-card);
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(255,107,157,0.08), 0 1px 3px rgba(0,0,0,0.04);
-      transition: all .3s cubic-bezier(.34,1.56,.64,1);
-      transform: perspective(800px) rotateX(0deg);
-    }
-    .featured-card:hover {
-      transform: perspective(800px) rotateX(2deg) translateY(-6px);
-      box-shadow: 0 12px 40px rgba(255,107,157,0.12), 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .featured-img {
-      width: 100%;
-      height: 140px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-    }
-    .featured-body { padding: 14px; }
-    .featured-body h3 { font-size: 17px; margin-bottom: 6px; }
-    .featured-body p { font-size: 13px; color: var(--text-dim); margin-bottom: 12px; }
-    .featured-tag {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      background: var(--yellow);
-      color: #fff;
-    }
-
-    /* ===== Ad / Promo Banner ===== */
-    .ad-wrap {
-      background: var(--bg-card);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      transition: all .2s;
-      margin: 0 auto 40px;
-      max-width: 1100px;
-    }
-    .ad-wrap:hover { box-shadow: 0 8px 32px rgba(255,107,157,0.10); }
-    .ad-banner {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 20px 24px;
-      text-decoration: none !important;
-      color: var(--text) !important;
-    }
-    .icon-ad { font-size: 32px; flex-shrink: 0; }
-    .text-ad { flex: 1; }
-    .title-ad { font-size: 16px; font-weight: 700; color: var(--pink); }
-    .desc-ad { font-size: 13px; color: var(--text-dim); }
-    .ad-tag {
-      font-size: 11px;
-      background: var(--border);
-      padding: 4px 10px;
-      border-radius: 12px;
-      color: var(--text-light);
-      flex-shrink: 0;
-    }
-    /* ===== Ad Rent Section ===== */
-    .ad-rent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 20px 0; }
-    .ad-rent-card { background: var(--bg-card); border-radius: 20px; padding: 20px; text-align: center; box-shadow: var(--shadow); transition: all .3s; border: 2px solid var(--border); }
-    .ad-rent-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(255,107,157,0.12); }
-    .ad-rent-card .price { font-size: 24px; font-weight: 800; color: var(--pink); margin: 8px 0; }
-    .ad-rent-card .price span { font-size: 14px; font-weight: 400; color: var(--text-dim); }
-    .ad-rent-card .desc { font-size: 13px; color: var(--text-dim); margin-bottom: 12px; }
-    .ad-rent-card .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; background: var(--yellow); color: #fff; margin-bottom: 8px; }
-    .btn-rent { display: inline-block; padding: 8px 20px; border-radius: 30px; background: var(--pink); color: #fff !important; font-size: 13px; font-weight: 700; transition: all .2s; }
-    .btn-rent:hover { background: var(--pink-dark); transform: scale(1.02); }
-
-    /* ===== PictTool partner feature ===== */
-    .pict-feature { margin: 8px auto 38px; max-width: 1100px; border-radius: 28px; overflow: hidden; background: linear-gradient(135deg, #25114D 0%, #51258C 54%, #7C3AED 100%); box-shadow: 0 14px 36px rgba(93,42,155,.22); color: #fff; }
-    .pict-feature-inner { display: flex; align-items: center; gap: 22px; padding: 28px 32px; }
-    .pict-feature-icon { width: 68px; height: 68px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 22px; background: rgba(255,255,255,.15); font-size: 34px; box-shadow: inset 0 1px 0 rgba(255,255,255,.22); }
-    .pict-feature-copy { flex: 1; min-width: 0; }
-    .pict-feature-kicker { display: inline-block; margin-bottom: 6px; padding: 3px 9px; border-radius: 99px; background: rgba(255,255,255,.14); font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
-    .pict-feature h2 { margin: 0 0 5px; color: #fff; font-size: 24px; line-height: 1.2; }
-    .pict-feature p { margin: 0; color: rgba(255,255,255,.84); font-size: 14px; max-width: 650px; }
-    .pict-feature-btn { flex: 0 0 auto; padding: 12px 18px; border-radius: 99px; background: #fff; color: #5B21B6 !important; font-weight: 800; font-size: 14px; box-shadow: 0 4px 14px rgba(16,4,40,.22); }
-    .pict-feature-btn:hover { color: #4C1D95 !important; transform: translateY(-2px); }
-
-    /* ===== Footer ===== */
-    footer {
-      background: linear-gradient(135deg, var(--pink), var(--blue));
-      padding: 28px 24px 20px;
-      margin-top: 24px;
-      color: #fff;
-    }
-    footer .container { max-width: 1100px; margin: 0 auto; }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
-    .footer-links a { color: rgba(255,255,255,0.8); font-size: 14px; }
-    .footer-links a:hover { color: #fff; }
-    .footer-bottom { font-size: 13px; opacity: 0.7; }
-
-    /* ===== Share Buttons ===== */
-    .share-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 24px;max-width:1100px;margin:0 auto;flex-wrap:wrap}.share-bar span{font-size:14px;color:var(--text-dim);font-weight:600}.share-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:13px;font-weight:700;color:#fff;text-decoration:none;transition:all .2s}.share-btn:hover{transform:scale(1.1);color:#fff}.share-tw{background:#1DA1F2}.share-fb{background:#1877F2}.share-rd{background:#FF4500}.share-copy{background:var(--pink);border:none;cursor:pointer;font-size:16px;padding:0;color:#fff}
-
-    /* ===== Responsive ===== */
-    @media (max-width: 640px) {
-      .hero h1 { font-size: 28px; }
-      .header-inner { flex-direction: column; gap: 12px; }
-      nav { justify-content: center; }
-      .grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .pict-feature-inner { align-items: flex-start; flex-wrap: wrap; padding: 24px 20px; gap: 15px; }
-      .pict-feature-icon { width: 54px; height: 54px; border-radius:18px; font-size:28px; }
-      .pict-feature h2 { font-size: 20px; }
-      .pict-feature-btn { width: 100%; text-align: center; }
-    }
-    .music-btn {
-      background: #FF6B9D; border: 2px solid #FF6B9D;
-      color: #fff; font-size: 20px;
-      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
-      width: 38px; height: 38px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all .25s;
-      box-shadow: 0 2px 8px rgba(255,107,157,0.3);
-    }
-    .music-btn:hover { background: #E85382; border-color: #E85382; transform: scale(1.05); }
-    .music-btn.playing { 
-      background: #4CAF50; border-color: #4CAF50; color: #fff;
-      box-shadow: 0 0 12px rgba(76,175,80,0.4);
-    }
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 4px rgba(76,175,80,0.2); }
-      50% { box-shadow: 0 0 12px rgba(76,175,80,0.4); }
-    }
-
-    /* ===== Sidebar ===== */
-    nav .nav-more { display: none; }
-    .sidebar-toggle {
-      background: rgba(255,255,255,0.2);
-      border: none; color: #fff; font-size: 20px;
-      width: 36px; height: 36px; border-radius: 50%;
-      cursor: pointer; display: flex;
-      align-items: center; justify-content: center;
-      transition: all .2s;
-    }
-    .sidebar-toggle:hover { background: rgba(255,255,255,0.35); }
-    .sidebar-overlay {
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.3);
-      z-index: 200; display: none; opacity: 0; transition: opacity .3s;
-    }
-    .sidebar-overlay.open { display: block; opacity: 1; }
-    .sidebar {
-      position: fixed; top: 0; left: -280px;
-      width: 260px; height: 100vh;
-      background: #fff; z-index: 201;
-      box-shadow: 4px 0 24px rgba(0,0,0,0.1);
-      transition: left .3s cubic-bezier(.34,1.56,.64,1);
-      padding: 24px 16px; overflow-y: auto;
-    }
-    .sidebar.open { left: 0; }
-    .sidebar .close-btn {
-      position: absolute; top: 12px; right: 12px;
-      background: none; border: none; font-size: 24px;
-      cursor: pointer; color: var(--text-dim);
-    }
-    .sidebar .close-btn:hover { color: var(--text); }
-    .sidebar h4 {
-      font-size: 14px; color: var(--pink);
-      margin: 20px 0 8px; padding-bottom: 4px;
-      border-bottom: 2px solid var(--border);
-    }
-    .sidebar a {
-      display: block; padding: 10px 12px; border-radius: 12px;
-      color: var(--text); font-size: 14px; font-weight: 600;
-      transition: all .2s;
-    }
-    .sidebar a:hover { background: var(--bg); color: var(--pink); }
-    .sidebar a .emoji { margin-right: 8px; }
-
-    /* ===== Left Side Nav ===== */
-    .page-layout { display: flex; gap: 8px; max-width: 1100px; margin: 0 auto; padding: 0; }
-    .page-main { flex: 1; min-width: 0; }
-    .side-nav { display: none; }
-    .side-nav-inner { display: none; }
-    .side-nav h4 { display: none; }
-    .side-nav a { display: none; }
-    @media (min-width: 901px) { .side-nav { display: none; } }
-    @media (max-width: 900px) {
-      .page-layout { flex-direction: column; }
-      .side-nav { display: none; }
-    }
-
-    /* ===== Top Quick Links Bar ===== */
-    .top-links-bar {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 6px; padding: 16px 24px; max-width: 1100px; margin: 0 auto;
-    }
-    .top-links-bar a {
-      display: inline-flex; align-items: center; gap: 4px;
-      background: var(--bg-card); padding: 8px 16px; border-radius: 30px;
-      font-size: 13px; font-weight: 600; color: var(--text);
-      box-shadow: var(--shadow); transition: all .2s; text-decoration: none;
-    }
-    .top-links-bar a:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(255,107,157,0.15); color: var(--pink); }
-
-    </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-497248KSLQ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-497248KSLQ");
-</script>
+<title>Blog — Eggy Wiki</title>
+<meta name="description" content="Eggy Party blog — latest news, tips, and guides.">
+<link rel="canonical" href="https://eggywiki.com/blog/">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--pink:#FF6B9D;--yellow:#FFD93D;--blue:#6BCBFF;--bg:#FFF5F8;--bg-card:#FFF;--text:#2D2D2D;--text-dim:#888;--gold:#D4A84B;--gold-light:#F0D78C;--gold-gradient:linear-gradient(135deg,#D4A84B,#F0D78C);--shadow:0 4px 24px rgba(255,107,157,0.08)}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--pink);text-decoration:none}a:hover{color:#E85382}
+header{background:linear-gradient(135deg,var(--pink),var(--yellow),var(--blue));padding:14px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(255,107,157,0.2)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;color:var(--gold);text-shadow:0 2px 8px rgba(0,0,0,0.1);background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.logo span{color:var(--gold-light);-webkit-text-fill-color:var(--gold-light)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{color:#fff;padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600;transition:all .2s}nav a:hover{background:rgba(255,255,255,0.25)}
+.page-header{text-align:center;padding:48px 24px 32px;background:linear-gradient(135deg,rgba(255,240,245,0.9),rgba(255,248,225,0.9))}
+.page-header h1{font-size:32px;font-weight:800;color:var(--pink);margin-bottom:8px}.page-header p{color:var(--text-dim);max-width:600px;margin:0 auto}
+.container{max-width:800px;margin:0 auto;padding:0 24px}section{padding:36px 0}
+.blog-card{background:var(--bg-card);border-radius:24px;padding:20px 24px;margin-bottom:16px;box-shadow:var(--shadow);display:block;color:var(--text)!important;transition:all .3s cubic-bezier(.34,1.56,.64,1);transform:perspective(800px) rotateX(0deg)}
+.blog-card:hover{transform:perspective(800px) rotateX(1deg) translateY(-3px);box-shadow:0 8px 32px rgba(255,107,157,0.12)}
+.blog-card h2{font-size:18px;color:var(--pink);margin-bottom:4px}
+.blog-card .meta{font-size:12px;color:#bbb;margin-bottom:6px}
+.blog-card p{font-size:14px;color:var(--text-dim)}
+.tag{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;background:var(--blue);color:#fff;margin-right:6px}
+footer{background:linear-gradient(135deg,var(--pink),var(--blue));padding:28px 24px 20px;margin-top:24px;color:#fff}
+footer .container{max-width:1100px;margin:0 auto}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}.footer-links a{color:rgba(255,255,255,0.8);font-size:14px}.footer-links a:hover{color:#fff}
+.footer-bottom{font-size:13px;opacity:0.7}
+@media(max-width:640px){.page-header h1{font-size:24px}.header-inner{flex-direction:column;gap:10px}nav{justify-content:center}}
+</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5558231572373849" crossorigin="anonymous"></script>
 </head>
 <body>
-
-<!-- ===== Header ===== -->
-<header>
-  <div class="header-inner">
-    <button class="sidebar-toggle" onclick="toggleSidebar()" title="More pages">☰</button>
-    <div class="logo">🥚 Eggy<span>Wiki</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="characters.html">Characters</a>
-      <a href="maps.html">Maps</a>
-      <a href="blog/index.html">Blog</a>
-    <button class="music-btn" id="musicBtn" onclick="tm()" title="Play Eggy Party theme">🎵</button>
-    </nav>
-  </div>
-</header>
-
-<!-- ===== Sidebar Panel ===== -->
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
-<div class="sidebar" id="sidebar">
-  <button class="close-btn" onclick="toggleSidebar()">✕</button>
-  <h4>📚 More</h4>
-  <a href="videos.html"><span class="emoji">🎬</span>Videos</a><a href="seasons.html"><span class="emoji">📅</span>Seasons</a><a href="achievements.html"><span class="emoji">🏅</span>Achievements</a><a href="leaderboard.html"><span class="emoji">🏆</span>Rankings</a><a href="items.html"><span class="emoji">📦</span>Items</a><a href="blog/index.html"><span class="emoji">📝</span>Blog</a>
-  <a href="download.html"><span class="emoji">📥</span>Download</a>
-  <a href="tierlist.html"><span class="emoji">🏆</span>Tier List</a>
-  <a href="gallery.html"><span class="emoji">🖼️</span>Gallery</a>
-  <a href="forum.html"><span class="emoji">💬</span>Forum</a>
-  <a href="about.html"><span class="emoji">ℹ️</span>About</a>
-  <a href="faq.html"><span class="emoji">❓</span>FAQ</a>
-  <a href="privacy.html"><span class="emoji">🔒</span>Privacy</a>
-  <a href="contact.html"><span class="emoji">📧</span>Contact</a>
-  <a href="bugs.html"><span class="emoji">🐛</span>Bugs</a>
-  <a href="search.html"><span class="emoji">🔍</span>Search</a>
-</div>
-
-<!-- ===== Hero ===== -->
-<section class="hero">
-  <h1><span>Eggy</span> <span>Party</span> <span>Wiki</span></h1>
-  <p>Your ultimate guide to Eggy Party — character builds, map tips, outfit collections, and the latest codes. Let's roll! 🥚</p>
-  <div class="hero-btns">
-    <a href="download.html" class="btn-primary">📥 Download Game</a>
-    <a href="beginner.html" class="btn-secondary">🎮 Get Started</a>
-    <a href="codes.html" class="btn-secondary">🎁 Latest Codes</a>
-  </div>
+<header><div class="header-inner"><div class="logo">🥚 Eggy<span>Wiki</span></div><nav><a href="../index.html">Home</a><a href="../characters.html">Characters</a><a href="../maps.html">Maps</a><a href="../outfits.html">Outfits</a><a href="../beginner.html">Guide</a><a href="../codes.html">Codes</a><a href="index.html">Blog</a><a href="../gallery.html">Gallery</a><a href="../videos.html">Videos</a><a href="../seasons.html">Seasons</a><a href="../leaderboard.html">Rankings</a><a href="../leaderboard.html">Rankings</a><a href="../achievements.html">Achievements</a><a href="../items.html">Items</a><a href="../forum.html">Forum</a><a href="../about.html">About</a><a href="../faq.html">FAQ</a></nav></div></header>
+<div class="page-header"><h1>📝 Blog</h1><p>Latest Eggy Party news, tips, and updates.</p></div>
+<section class="container">
+  <a href="s6-advanced-tips.html" class="blog-card"><span class="tag">Advanced</span><span class="tag">S6</span><h2>🏆 S6 Advanced Tips — Edge-Cancel, Item Combos & Shortcuts</h2><div class="meta">July 23, 2026</div><p>Techniques the top 1% use — edge-canceling, punch-bunny hopping, item combo engine, per-map shortcuts, and survival mode positioning. Go from good to unstoppable.</p></a>
+  <a href="s6-battle-pass-guide.html" class="blog-card"><span class="tag">Guide</span><span class="tag">S6</span><h2>🎮 Season 6 Battle Pass Guide — Fast Track & Rewards</h2><div class="meta">July 22, 2026</div><p>Complete Eggy Party Season 6 Battle Pass guide. Compare paid vs free tracks, fastest XP strategies, all rewards listed, and tips to hit level 100.</p></a>
+  <a href="s6-map-guide.html" class="blog-card"><span class="tag">Maps</span><span class="tag">Guide</span><h2>🗺️ Season 6 Map Guide — Best Routes & Shortcuts</h2><div class="meta">August 21, 2026</div><p>Complete map guide for Season 6. Best routes, dive-roll shortcuts, and character picks for Neon Pipeline, Sky Garden, and Molten Core. Includes item strategy by map.</p></a>
+  <a href="underrated-characters-s6.html" class="blog-card"><span class="tag">Characters</span><h2>🥚 5 Underrated Characters to Try in Season 6</h2><div class="meta">August 18, 2026</div><p>Hidden gems that can carry you to Eggcellent. Fennec, Torterra, Pippin, Chameleo and Brundle — learn their strengths, best maps, and why they deserve a spot in your rotation.</p></a>
+  <a href="summer-splash-2026.html" class="blog-card"><span class="tag">Event</span><span class="tag">Summer 2026</span><h2>🏖️ Summer Splash 2026 — Full Event Guide</h2><div class="meta">July 20, 2026</div><p>Summer Splash 2026 event guide — free Yeggy Sunset Surfer outfit, 3 new maps (Coconut Beach, Deep Dive, Melon Mayhem), event missions, and all rewards.</p></a>
+  <a href="s6-ranked-tips.html" class="blog-card"><span class="tag">Ranked</span><h2>🏆 Season 6 Ranked Mode Tips — Climb the Leaderboard</h2><div class="meta">August 1, 2026</div><p>Complete ranked mode guide for Eggy Party Season 6. Best characters, map strategies, positioning tips, and how to climb from Gold to Eggcellent.</p></a>
+  <a href="s6-characters-review.html" class="blog-card"><span class="tag">Characters</span><h2>🎮 Season 6 New Characters Review — Best Picks & Abilities</h2><div class="meta">August 1, 2026</div><p>Review of all new Season 6 characters: Nova, Zephyr, and Shard. New abilities, tier ranking, and which ones are worth unlocking first.</p></a>
+  <a href="august-2026-codes.html" class="blog-card"><span class="tag">Codes</span><h2>🎁 August 2026 Code List — Active & Working</h2><div class="meta">August 1, 2026</div><p>All active codes for August 2026 — updated weekly. Free gems, outfits, and exclusive items.</p></a>
+  <a href="race-mode-tips.html" class="blog-card"><span class="tag">Guide</span><h2>Race Mode Speed Tips — Win More Rounds</h2><div class="meta">July 15, 2026</div><p>Master start boosts, racing lines, and map shortcuts to shave seconds off your lap times and consistently podium in Race Mode.</p></a>
+  <a href="team-mode-tactics.html" class="blog-card"><span class="tag">Guide</span><h2>Team Mode Tactics — How to Win with Friends</h2><div class="meta">July 15, 2026</div><p>Team revival strategies, role assignments, and communication tips to dominate ranked Team Mode with your squad.</p></a>
+  <a href="survival-mode-strategy.html" class="blog-card"><span class="tag">Guide</span><h2>Survival Mode Guide — How to Outlast Everyone</h2><div class="meta">July 15, 2026</div><p>Positioning, item strategy, and map-specific tactics to consistently place top 3 in Eggy Party Survival Mode.</p></a>
+  <a href="eggy-tips-10-things.html" class="blog-card"><span class="tag">Guide</span><h2>10 Tips and Tricks — Things I Wish I Knew</h2><div class="meta">July 12, 2026</div><p>Master the dive roll, learn map shortcuts, and win more rounds with these 10 essential tips for new and returning players.</p></a>
+  <a href="season-5-preview.html" class="blog-card"><span class="tag">News</span><h2>Season 5 Preview — New Maps, Outfits & Co-op Mode</h2><div class="meta">July 12, 2026</div><p>Everything we know about Season 5: Sky Garden map, Neon Boulevard, co-op challenge mode, and new Galactic Explorer outfit set.</p></a>
+  <a href="best-characters-tier-list.html" class="blog-card"><span class="tag">Guide</span><h2>Best Characters Tier List</h2><div class="meta">July 10, 2026</div><p>Complete Eggy Party character tier list ranking every character from S-tier to C-tier.</p></a>
+  <a href="newbie-mistakes.html" class="blog-card"><span class="tag">Guide</span><h2>Top 10 Newbie Mistakes in Eggy Party</h2><div class="meta">July 10, 2026</div><p>Avoid these 10 common beginner mistakes and level up fast in Eggy Party.</p></a>
+  <a href="frozen-peak-guide.html" class="blog-card"><span class="tag">Maps</span><h2>Frozen Peak Map Guide</h2><div class="meta">July 10, 2026</div><p>Master Frozen Peak with ice slide tips, snowball strategies, and the best routes.</p></a>
+  <a href="new-season-4-preview.html" class="blog-card"><span class="tag">News</span><h2>Season 4 Preview: What's Coming</h2><div class="meta">July 6, 2026</div><p>New maps, outfits, and game modes coming in Season 4. Here's everything we know so far.</p></a>
+  <a href="survival-mode-tips.html" class="blog-card"><span class="tag">Guide</span><h2>How to Win at Survival Mode</h2><div class="meta">July 5, 2026</div><p>Pro tips for surviving longer and being the last egg standing.</p></a>
+  <a href="july-2026-codes.html" class="blog-card"><span class="tag">Codes</span><h2>July 2026 Code List</h2><div class="meta">July 1, 2026</div><p>All active codes for July 2026 — updated weekly.</p></a>
 </section>
-
-<!-- ===== Top Quick Links Bar ===== -->
-<div class="top-links-bar">
-  <a href="videos.html">🎬 Videos</a>
-  <a href="seasons.html">📅 Seasons</a>
-  <a href="achievements.html">🏅 Achievements</a>
-  <a href="leaderboard.html">🏆 Rankings</a>
-  <a href="items.html">📦 Items</a>
-  <a href="blog/index.html">📝 Blog</a>
-  <a href="download.html">📥 Download</a>
-  <a href="tierlist.html">🏆 Tier List</a>
-  <a href="gallery.html">🖼️ Gallery</a>
-  <a href="forum.html">💬 Forum</a>
-  <a href="about.html">ℹ️ About</a>
-  <a href="faq.html">❓ FAQ</a>
-  <a href="privacy.html">🔒 Privacy</a>
-  <a href="contact.html">📧 Contact</a>
-  <a href="bugs.html">🐛 Bugs</a>
-  <a href="search.html">🔍 Search</a>
-</div>
-
-<div class="page-layout">
-<div class="page-main">
-
-<!-- ===== Quick Links ===== -->
-<section>
-  <div class="container">
-    <h2 class="section-title">🎯 Quick Guides</h2>
-    <p class="section-sub">Everything you need to know, all in one place.</p>
-    <div class="grid-4">
-      <a href="characters.html" class="card" style="text-decoration:none;color:inherit;">
-        <div class="card-icon">🐣</div>
-        <h3>Characters</h3>
-        <p>All egg characters and their special abilities</p>
-      </a>
-      <a href="maps.html" class="card" style="text-decoration:none;color:inherit;">
-        <div class="card-icon">🗺️</div>
-        <h3>Maps</h3>
-        <p>Race & survival map strategies</p>
-      </a>
-      <a href="outfits.html" class="card" style="text-decoration:none;color:inherit;">
-        <div class="card-icon">👗</div>
-        <h3>Outfits</h3>
-        <p>Complete outfit & skin collection guide</p>
-      </a>
-      <a href="tierlist.html" class="card" style="text-decoration:none;color:inherit;">
-        <div class="card-icon">🏆</div>
-        <h3>Tier List</h3>
-        <p>Best characters ranked for each mode</p>
-      </a>
-      <a href="seasons.html" class="card" style="text-decoration:none;color:inherit;">
-        <div class="card-icon">📅</div>
-        <h3>Seasons</h3>
-        <p>Season updates, events & patch notes</p>
-      </a>
-      <a href="achievements.html" class="card" style="text-decoration:none;color:inherit;">
-        <div class="card-icon">🏅</div>
-        <h3>Achievements</h3>
-        <p>How to unlock every achievement</p>
-      </a>
-      <a href="items.html" class="card" style="text-decoration:none;color:inherit;">
-        <div class="card-icon">📦</div>
-        <h3>Items & Props</h3>
-        <p>Power-ups, loot boxes & currencies</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Video Section ===== -->
-<section>
-  <div class="container">
-    <h2 class="section-title">🎬 Videos</h2>
-    <p class="section-sub">Watch Eggy Party gameplay, tutorials, and highlight reels.</p>
-    <div style="max-width:800px;margin:0 auto;border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(255,107,157,0.12);">
-      <video controls playsinline style="width:100%;display:block;" poster="video/eggy-video-poster.jpg">
-        <source src="video/eggy-video.mp4" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Ad / Promo Banner ===== -->
-<div class="container" style="padding:0 24px;">
-  <div class="ad-wrap">
-    <a href="https://www.exitlag.com/refer/10324758" class="ad-banner" target="_blank" rel="noopener nofollow">
-      <span class="icon-ad">🚀</span>
-      <div class="text-ad">
-        <div class="title-ad">ExitLag — Reduce Ping, Play Smoother</div>
-        <div class="desc-ad">Lower your Eggy Party ping with ExitLag. Trusted by millions. Try free for 3 days!</div>
-      </div>
-      <span class="ad-tag">Ad</span>
-    </a>
-  </div>
-</div>
-
-<!-- ===== Game Boosters ===== -->
-<div class="container" style="padding:0 24px;">
-  <div class="ad-wrap">
-    <div class="ad-banner" style="cursor:default;">
-      <span class="icon-ad">⚡</span>
-      <div class="text-ad">
-        <div class="title-ad">Game Boosters</div>
-        <div class="desc-ad">Download slow? Lag in-game? Try one of these game accelerators.</div>
-        <div style="margin-top:8px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://gearup.sjv.io/c/7462059/3204502/40222" style="font-size:13px;color:var(--pink);font-weight:600;" target="_blank" rel="noopener nofollow">🚀 GearUP Booster →</a>
-          <a href="free-accelerator.html" style="font-size:13px;color:var(--pink);font-weight:600;" target="_blank" rel="noopener nofollow">🚀 雷神加速器 →</a>
-          <a href="https://tg.xunyou.com/command/?id=1563075&password=genshinwiki" style="font-size:13px;color:var(--pink);font-weight:600;" target="_blank" rel="noopener nofollow">⚡ 迅游加速器 →</a>
-          <a href="https://www.exitlag.com/refer/10324758" style="font-size:13px;color:var(--pink);font-weight:600;" target="_blank" rel="noopener nofollow">🌍 ExitLag (欧美) →</a>
-        </div>
-      </div>
-      <span class="ad-tag">Ad</span>
-    </div>
-  </div>
-</div>
-
-<!-- ===== PictTool Partner Feature ===== -->
-<section style="padding:0 24px;">
-  <div class="pict-feature">
-    <div class="pict-feature-inner">
-      <div class="pict-feature-icon" aria-hidden="true">🎨</div>
-      <div class="pict-feature-copy">
-        <span class="pict-feature-kicker">Creator tool</span>
-        <h2>Make your game screenshots stand out</h2>
-        <p>Create an original fantasy game avatar, turn a photo into a cartoon, add text to a screenshot, or polish an image in seconds — free with PictTool.</p>
-      </div>
-      <a class="pict-feature-btn" href="https://www.picttool.com/" target="_blank" rel="noopener">Try PictTool →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Start Here Internal Links ===== -->
-<section>
-  <div class="container">
-    <h2 class="section-title">🧭 Start Here</h2>
-    <p class="section-sub">Fast paths for new visitors: learn the basics, compare characters, grab codes, then ask the community.</p>
-    <div class="featured-grid">
-      <a href="beginner.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_guide1.jpg');">🎮</div>
-        <div class="featured-body">
-          <span class="featured-tag">Guide</span>
-          <h3>Beginner Guide</h3>
-          <p>Start here for controls, game modes, first-week goals, and ranked tips.</p>
-        </div>
-      </a>
-      <a href="characters.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/yeggy.png');">🥚</div>
-        <div class="featured-body">
-          <span class="featured-tag">Characters</span>
-          <h3>Character List</h3>
-          <p>Compare starter, special, and limited eggs before choosing your main.</p>
-        </div>
-      </a>
-      <a href="codes.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_outfits.jpg');">🎁</div>
-        <div class="featured-body">
-          <span class="featured-tag">Rewards</span>
-          <h3>Latest Codes</h3>
-          <p>Check redeem codes before spending gems on outfits, crates, or events.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Latest Guides ===== -->
-<section>
-  <div class="container">
-    <h2 class="section-title">📖 Latest Guides</h2>
-    <p class="section-sub">Tips and tricks to help you win more games.</p>
-    <div class="featured-grid">
-      <a href="beginner.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_guide1.jpg');">🏃</div>
-        <div class="featured-body">
-          <span class="featured-tag">New</span>
-          <h3>Beginner's Guide: How to Start</h3>
-          <p>Everything a new player needs to know — controls, game modes, and first steps.</p>
-        </div>
-      </a>
-      <a href="guide-shortcuts.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_maps1.jpg');">🎯</div>
-        <div class="featured-body">
-          <span class="featured-tag">Popular</span>
-          <h3>Top 10 Race Map Shortcuts</h3>
-          <p>Secret paths and shortcuts on the most popular race maps.</p>
-        </div>
-      </a>
-      <a href="guide-free-outfits.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_outfits.jpg');">💎</div>
-        <div class="featured-body">
-          <span class="featured-tag">Guide</span>
-          <h3>How to Get Free Outfits</h3>
-          <p>Complete list of free outfits and how to unlock them without spending.</p>
-        </div>
-      </a>
-      <a href="guide-best-characters.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/yeggy.png');">🥚</div>
-        <div class="featured-body">
-          <span class="featured-tag">Characters</span>
-          <h3>Best Eggy Party Characters</h3>
-          <p>Pick the best egg for race, survival, team modes, and beginner progress.</p>
-        </div>
-      </a>
-      <a href="guide-ranked-tips.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_maps1.jpg');">🏆</div>
-        <div class="featured-body">
-          <span class="featured-tag">Ranked</span>
-          <h3>Ranked Tips to Climb Faster</h3>
-          <p>A clean routine for better finishes, safer routes, and fewer point-losing mistakes.</p>
-        </div>
-      </a>
-      <a href="guide-how-to-win-races.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_maps1.jpg');">🏁</div>
-        <div class="featured-body">
-          <span class="featured-tag">Racing</span>
-          <h3>How to Win More Races</h3>
-          <p>Use safer lines, better jump timing, and smarter dash decisions before taking risky shortcuts.</p>
-        </div>
-      </a>
-      <a href="guide-best-skills-racing.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_maps1.jpg');">⚡</div>
-        <div class="featured-body">
-          <span class="featured-tag">Skills</span>
-          <h3>Best Skills for Racing</h3>
-          <p>Learn edge jumps, dash timing, recovery habits, and shortcut discipline for cleaner races.</p>
-        </div>
-      </a>
-      <a href="guide-codes-not-working.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_outfits.jpg');">🎁</div>
-        <div class="featured-body">
-          <span class="featured-tag">Codes</span>
-          <h3>Codes Not Working?</h3>
-          <p>Fix invalid, expired, region-locked, and already-redeemed Eggy Party codes.</p>
-        </div>
-      </a>
-      <a href="guide-best-maps-beginners.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_maps1.jpg');">🗺️</div>
-        <div class="featured-body">
-          <span class="featured-tag">Beginner</span>
-          <h3>Best Maps for Beginners</h3>
-          <p>Practice easy routes first, learn safe shortcuts, and stop losing early rounds.</p>
-        </div>
-      </a>
-      <a href="guide-get-outfits-fast.html" class="featured-card">
-        <div class="featured-img" style="background-image:url('images/eggy_outfits.jpg');">👗</div>
-        <div class="featured-body">
-          <span class="featured-tag">Outfits</span>
-          <h3>How to Get Outfits Fast</h3>
-          <p>Use codes, events, missions, and smarter gem saving before opening random crates.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Ad Space for Rent ===== -->
-<section style="padding:36px 24px;background:#fff;">
-  <div class="container">
-    <h2 class="section-title">📢 Advertise Here</h2>
-    <p class="section-sub" style="text-align:center;max-width:600px;margin:0 auto 24px;">Reach thousands of Eggy Party players worldwide. Premium ad spots available for your brand, product, or service.</p>
-    <div class="ad-rent-grid">
-      <div class="ad-rent-card">
-        <div class="badge">⭐ Featured</div>
-        <div class="price">$49<span>/month</span></div>
-        <div class="desc">Hero banner spot — top of homepage. Highest visibility. 728×90 or custom.</div>
-        <a href="contact.html" class="btn-rent">Book Now →</a>
-      </div>
-      <div class="ad-rent-card">
-        <div class="badge">Popular</div>
-        <div class="price">$29<span>/month</span></div>
-        <div class="desc">Sidebar / in-content banner. Appears on all guide pages. 300×250.</div>
-        <a href="contact.html" class="btn-rent">Book Now →</a>
-      </div>
-      <div class="ad-rent-card">
-        <div class="badge">Budget</div>
-        <div class="price">$99<span>/3 months</span></div>
-        <div class="desc">Footer banner or blog post placement. Best value for long-term campaigns.</div>
-        <a href="contact.html" class="btn-rent">Book Now →</a>
-      </div>
-    </div>
-    <p style="text-align:center;font-size:13px;color:var(--text-dim);margin-top:8px;">Questions? <a href="contact.html">Contact us</a> for custom packages and partnerships.</p>
-  </div>
-</section>
+<section style="padding:24px;background:rgba(255,240,245,0.3);margin:24px 0;border-radius:20px;"><div class="container" style="text-align:center;"><p style="font-size:14px;color:var(--pink);font-weight:700;margin-bottom:4px;">📢 Advertise Here</p><p style="font-size:13px;color:var(--text-dim);margin-bottom:8px;">Reach Eggy Party players worldwide. <a href="contact.html" style="color:var(--pink);font-weight:600;">Contact us</a> for rates.</p></div></section>
 
 <!-- ===== AdSense Placeholder ===== -->
-<div class="container" style="padding:0 24px;">
-  <div style="text-align:center;padding:20px;margin:24px 0;background:rgba(255,107,157,0.04);border:2px dashed #FFD0DE;border-radius:16px;font-size:13px;color:#bbb;">
-    <span style="font-size:9px;color:#ccc;border:1px solid #ddd;border-radius:3px;padding:0 6px;">Ad</span>
-    <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
-  </div>
+<div style="text-align:center;padding:20px;margin:24px auto;max-width:1100px;background:rgba(255,107,157,0.04);border:2px dashed #FFD0DE;border-radius:16px;font-size:13px;color:#bbb;">
+  <span style="font-size:9px;color:#ccc;border:1px solid #ddd;border-radius:3px;padding:0 6px;">Ad</span>
+  <div style="margin-top:8px;">📢 Google AdSense — Ad Unit Placeholder</div>
 </div>
 
-</div><!-- /page-main -->
-</div><!-- /page-layout -->
-
-<!-- ===== Share Buttons ===== -->
-<div class="share-bar">
-  <span>Share this page:</span>
-  <a href="https://twitter.com/intent/tweet?url=https://eggywiki.com&text=Eggy+Wiki+%E2%80%94+Egg+Party+Guide" target="_blank" rel="noopener nofollow" class="share-btn share-tw">X</a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://eggywiki.com" target="_blank" rel="noopener nofollow" class="share-btn share-fb">f</a>
-  <a href="https://www.reddit.com/submit?url=https://eggywiki.com&title=Eggy+Wiki" target="_blank" rel="noopener nofollow" class="share-btn share-rd">R</a>
-  <button onclick="navigator.clipboard.writeText('https://eggywiki.com').then(()=>this.textContent='✅').catch(()=>{})" class="share-btn share-copy" title="Copy link">🔗</button>
-</div>
-
-<!-- ===== Footer ===== -->
-<footer>
-  <div class="container">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="videos.html">Videos</a><a href="blog/index.html">Blog</a><a href="download.html">Download</a>
-      <a href="forum.html">Forum</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a><a href="download.html">Download</a>
-    </div>
-    <div class="footer-bottom">
-      © 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.<br>
-      Built with 🥚 for the community.
-    </div>
-  </div>
-  <div class="container" style="text-align:center;padding-top:8px;font-size:13px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
+<footer><div class="container"><div class="footer-links"><a href="../index.html">Home</a><a href="index.html">Blog</a><a href="../gallery.html">Gallery</a><a href="../videos.html">Videos</a><a href="../seasons.html">Seasons</a><a href="../leaderboard.html">Rankings</a><a href="../leaderboard.html">Rankings</a><a href="../achievements.html">Achievements</a><a href="../items.html">Items</a><a href="../forum.html">Forum</a><a href="../about.html">About</a><a href="../faq.html">FAQ</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></div><div class="footer-bottom">© 2026 Eggy Wiki. Not affiliated with NetEase or Eggy Party.</div></div><div style="text-align:center;margin-bottom:8px;">✨ Also check out: <a href="https://genshinwiki.cn" target="_blank" style="color:var(--gold);font-weight:600;">Genshin Impact Guide →</a></div>
 </footer>
-
-<script>
-  var bgm = new Audio('audio/eggy-theme.mp3');
-  bgm.loop = true;
-  var musicPlaying = false;
-
-  function tm() {
-    var btn = document.getElementById('musicBtn');
-    if (musicPlaying) {
-      bgm.pause();
-      musicPlaying = false;
-      btn.classList.remove('playing');
-    } else {
-      bgm.play().then(function() {
-        musicPlaying = true;
-        btn.classList.add('playing');
-      }).catch(function(e) {
-        console.log('BGM blocked:', e);
-      });
-    }
-  }
-</script>
-
-<script>
-  function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('open');
-    document.getElementById('sidebarOverlay').classList.toggle('open');
-  }
-</script>
-
+<audio id="bgMusic" src="../audio/eggy-theme.mp3" loop preload="auto" style="display:none;"></audio>
+<script>function tm(){const a=document.getElementById('bgMusic'),b=document.getElementById('musicBtn');if(a.paused){a.play().then(()=>b.classList.add('playing')).catch(e=>{console.log(e);alert('Click anywhere first')})}else{a.pause();b.classList.remove('playing')}}</script>
 <script type="text/javascript">
 var infolinks_pid = 3446501;
 var infolinks_wsid = 0;
 </script>
 <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "abb76d96c7dc43f5bba5ff4c4387a7fa"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <!-- ===== Giscus Comments ===== -->
+  <section style="padding:36px 24px;background:var(--bg);">
+    <div class="container">
+      <h2 class="section-title">💬 Leave a Comment</h2>
+      <p class="section-sub" style="text-align:center;max-width:500px;margin:0 auto 24px;">Share your thoughts about this article — tips, questions, or just say hi!</p>
+      <div id="giscus-blog"></div>
+      <script src="https://giscus.app/client.js"
+        data-repo="8499456-ctrl/eggy-wiki"
+        data-repo-id="R_kgDOTQdJXg"
+        data-category="General"
+        data-category-id="DIC_kwDOTQdJXs4DAzRY"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="https://giscus.app/themes/noborder_light.css"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  </section>
+
 </body>
 </html>
